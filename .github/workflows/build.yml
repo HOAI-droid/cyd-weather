@@ -51,15 +51,29 @@ jobs:
           name: cyd-wetter-firmware
           path: out/*.bin
 
-      - name: Release "firmware" aktualisieren
+      # Standard-Branch -> Release "firmware" (stabile Version).
+      # Jeder andere Branch bekommt ein eigenes Vorab-Release
+      # "firmware-<branch>", damit neue Versionen die alte nicht überschreiben.
+      - name: Release aktualisieren
         if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
-          NOTES="Fertige Firmware zum Flashen an Adresse 0x0 (siehe README, Abschnitt 'Flashen im Browser'). Stand: ${GITHUB_SHA::7}"
-          if gh release view firmware >/dev/null 2>&1; then
-            gh release edit firmware --notes "$NOTES"
+          BRANCH="${GITHUB_REF_NAME}"
+          if [ "$BRANCH" = "$DEFAULT_BRANCH" ]; then
+            TAG=firmware
+            TITLE="Aktuelle Firmware"
+            EXTRA=""
           else
-            gh release create firmware --title "Aktuelle Firmware" --notes "$NOTES" --target "$GITHUB_SHA"
+            TAG="firmware-$(echo "$BRANCH" | sed 's#^claude/##; s#[^A-Za-z0-9._-]#-#g')"
+            TITLE="Test-Firmware ($BRANCH)"
+            EXTRA="--prerelease"
           fi
-          gh release upload firmware out/*.bin --clobber
+          NOTES="Fertige Firmware zum Flashen an Adresse 0x0 (siehe README, Abschnitt 'Flashen im Browser'). Branch: $BRANCH, Stand: ${GITHUB_SHA::7}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --notes "$NOTES"
+          else
+            gh release create "$TAG" --title "$TITLE" --notes "$NOTES" --target "$GITHUB_SHA" $EXTRA
+          fi
+          gh release upload "$TAG" out/*.bin --clobber
