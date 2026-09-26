@@ -21,6 +21,8 @@ d = {
             "temperature_2m_max": [t0 + 2, 21, 16, 14, 15, 13], "temperature_2m_min": [t0 - 7, 11, 9, 8, 7, 6],
             "sunrise": [now - 12 * 3600 - 7200 + 7 * 3600 + 120 + i * 86400 for i in range(6)],
             "sunset": [now - 12 * 3600 - 7200 + 18 * 3600 + 59 * 60 + i * 86400 for i in range(6)],
-            "uv_index_max": [3.2, 4, 1.5, 2, 3, 2], "precipitation_probability_max": [20, 0, 80, 60, 10, 30]}
+            "uv_index_max": [3.2, 4, 1.5, 2, 3, 2], "precipitation_probability_max": [20, 0, 80, 60, 10, 30]},
+  "minutely_15": {"time": [now + 1800 + i * 900 for i in range(9)],
+                  "precipitation": [0, 0, 0, 0.1, 0.35, 0.7, 0.5, 0.2, 0.1] if cfg in ("partly", "rain") else [0] * 9}
 }
 print(json.dumps(d))

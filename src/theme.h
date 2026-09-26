@@ -36,9 +36,22 @@ constexpr uint16_t ink       = rgb(24, 34, 47);
 constexpr uint16_t heart     = rgb(255, 107, 129);
 constexpr uint16_t matrix    = rgb(0, 255, 90);
 constexpr uint16_t alert     = rgb(255, 210, 63);
+
+// ---- Design "Instrument": Graphit, warmes Weiß, Champagner-Gold ----
+constexpr uint16_t text      = rgb(236, 232, 225);  // Haupttext
+constexpr uint16_t muted     = rgb(138, 143, 152);  // Beschriftungen
+constexpr uint16_t gold      = rgb(216, 188, 138);  // Akzent
+constexpr uint16_t goldDim   = rgb(120, 106, 82);
+constexpr uint16_t teal      = rgb(111, 195, 201);  // Regen, Feuchte
+constexpr uint16_t tealDark  = rgb(62, 142, 143);
+constexpr uint16_t coral     = rgb(224, 122, 95);   // Starkregen, Warnung
+constexpr uint16_t panel     = rgb(24, 27, 32);     // Kartenfläche
+constexpr uint16_t panelEdge = rgb(46, 51, 59);     // Kartenrand
+constexpr uint16_t tick      = rgb(58, 63, 72);     // Skalenstriche
+constexpr uint16_t tickMajor = rgb(106, 112, 122);
+constexpr uint16_t mapLow    = rgb(13, 15, 19);     // Radar-Karte dunkel
+constexpr uint16_t mapHigh   = rgb(176, 181, 190);  // Radar-Karte hell
 }  // namespace col
 
-// Transparenzen für "Glas"-Karten und Sekundärtext (0..255)
-constexpr uint8_t A_GLASS     = 36;
-constexpr uint8_t A_GLASS_TOP = 56;
-constexpr uint8_t A_SECONDARY = 190;
+// Transparenzen für Sekundärtext (0..255, Weiß über Hintergrund bzw. Karte)
+constexpr uint8_t A_SECONDARY = 150;

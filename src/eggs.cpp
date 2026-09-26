@@ -473,10 +473,12 @@ static uint32_t cornerTime = 0;
 bool eggCornerTap(int x, int y) {
   const int C = 48;
   int corner = -1;
-  if (x < C && y < C) corner = 0;
-  else if (x > 320 - C && y < C) corner = 1;
-  else if (x > 320 - C && y > 240 - C) corner = 2;
-  else if (x < C && y > 240 - C) corner = 3;
+  // Reihenfolge: oben rechts -> unten rechts -> unten links -> oben links
+  // (oben links zuletzt, weil ein Tipp auf den Stadtnamen sonst die Ortswahl öffnet)
+  if (x > 320 - C && y < C) corner = 0;
+  else if (x > 320 - C && y > 240 - C) corner = 1;
+  else if (x < C && y > 240 - C) corner = 2;
+  else if (x < C && y < C) corner = 3;
   if (corner < 0) return false;
   uint32_t now = hwMillis();
   if (now - cornerTime > 4000) cornerStep = 0;

@@ -13,11 +13,12 @@ void buildWeatherUrl(char* buf, int len, float lat, float lon) {
            "weather_code,cloud_cover,pressure_msl,wind_speed_10m,wind_direction_10m,wind_gusts_10m"
            "&hourly=temperature_2m,precipitation_probability,weather_code,is_day&forecast_hours=24"
            "&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,"
-           "precipitation_probability_max&forecast_days=6&timezone=auto&timeformat=unixtime",
+           "precipitation_probability_max&forecast_days=6&minutely_15=precipitation&forecast_minutely_15=9"
+           "&timezone=auto&timeformat=unixtime",
            lat, lon);
 }
 
-void buildGeocodeUrl(char* buf, int len, const char* query) {
+void buildGeocodeUrl(char* buf, int len, const char* query, int count) {
   // Nur den Ortsnamen suchen ("Leipzig, Sachsen" -> "Leipzig"), UTF-8 prozent-kodiert
   char enc[160];
   int o = 0;
@@ -30,7 +31,7 @@ void buildGeocodeUrl(char* buf, int len, const char* query) {
   enc[o] = 0;
   const char* start = enc;
   while (strncmp(start, "%20", 3) == 0) start += 3;  // Leerzeichen am Anfang
-  snprintf(buf, len, "/v1/search?name=%s&count=1&language=de&format=json", start);
+  snprintf(buf, len, "/v1/search?name=%s&count=%d&language=de&format=json", start, count);
 }
 
 bool parseGeocode(const char* json, char* name, int nameLen, float& lat, float& lon) {
@@ -42,6 +43,40 @@ bool parseGeocode(const char* json, char* name, int nameLen, float& lat, float& 
   lon = r["longitude"] | 0.0f;
   snprintf(name, nameLen, "%s", (const char*)(r["name"] | ""));
   return name[0] != 0;
+}
+
+int parseGeocodeList(const char* json, Place* out, int maxN) {
+  JsonDocument doc;
+  if (deserializeJson(doc, json)) return 0;
+  int n = 0;
+  for (JsonObject r : doc["results"].as<JsonArray>()) {
+    if (n >= maxN) break;
+    const char* name = r["name"] | "";
+    if (!name[0]) continue;
+    Place& p = out[n++];
+    snprintf(p.name, sizeof(p.name), "%s", name);
+    const char* a1 = r["admin1"] | "";
+    const char* cc = r["country_code"] | "";
+    if (a1[0] && cc[0]) snprintf(p.region, sizeof(p.region), "%s, %s", a1, cc);
+    else snprintf(p.region, sizeof(p.region), "%s", a1[0] ? a1 : (const char*)(r["country"] | ""));
+    p.lat = r["latitude"] | 0.0f;
+    p.lon = r["longitude"] | 0.0f;
+  }
+  return n;
+}
+
+int rainOutlook(const WeatherData& w, time_t now, int& startMin, float& peak) {
+  startMin = -1;
+  peak = 0;
+  for (int i = 0; i < w.nRain15; i++) {
+    time_t t = w.rain15T0 + i * 900;
+    if (t + 900 <= now) continue;  // schon vorbei
+    float mmh = w.rain15[i] * 4;
+    if (mmh > peak) peak = mmh;
+    if (startMin < 0 && w.rain15[i] >= 0.05f) startMin = t <= now ? 0 : (int)((t - now) / 60);
+  }
+  if (startMin < 0) return 0;
+  return startMin == 0 ? 1 : 2;
 }
 
 bool parseWeather(const char* json, WeatherData& w) {
@@ -87,6 +122,12 @@ bool parseWeather(const char* json, WeatherData& w) {
     d.uv = dl["uv_index_max"][i] | 0.0f;
     d.pop = dl["precipitation_probability_max"][i] | 0;
   }
+  JsonObject m = doc["minutely_15"];
+  JsonArray mt = m["time"];
+  w.nRain15 = 0;
+  w.rain15T0 = mt.size() ? (time_t)(mt[0] | 0L) : 0;
+  for (size_t i = 0; i < mt.size() && w.nRain15 < 9; i++) w.rain15[w.nRain15++] = m["precipitation"][i] | 0.0f;
+
   w.valid = w.nDays > 0;
   return w.valid;
 }
@@ -150,21 +191,18 @@ Icon codeIcon(uint8_t c, bool day) {
   return IC_CLOUD;
 }
 
+// Graphit-Hintergrund, leicht getönt nach Wetterlage
 void themeColors(uint8_t code, bool day, uint16_t& top, uint16_t& bot) {
   Group g = codeGroup(code);
-  if (!day && (g == G_CLEAR || g == G_PARTLY)) { top = rgb(11, 18, 48); bot = rgb(30, 42, 85); return; }
+  if (!day) { top = rgb(20, 23, 32); bot = rgb(8, 9, 12); return; }
   switch (g) {
-    case G_CLEAR:   top = rgb(31, 91, 184);  bot = rgb(75, 143, 219); break;
-    case G_PARTLY:  top = rgb(45, 92, 158);  bot = rgb(94, 136, 184); break;
-    case G_CLOUD:   top = rgb(58, 74, 99);   bot = rgb(98, 114, 140); break;
-    case G_FOG:     top = rgb(75, 85, 102);  bot = rgb(123, 133, 148); break;
-    case G_SNOW:    top = rgb(63, 88, 120);  bot = rgb(127, 151, 181); break;
-    case G_THUNDER: top = rgb(35, 28, 61);   bot = rgb(62, 53, 99); break;
-    default:        top = rgb(38, 50, 74);   bot = rgb(68, 83, 107); break;
-  }
-  if (!day) {  // nachts dunkler
-    top = ((top >> 1) & 0x7BEF);
-    bot = ((bot >> 1) & 0x7BEF);
+    case G_CLEAR:   top = rgb(44, 42, 38); bot = rgb(15, 16, 18); break;
+    case G_PARTLY:  top = rgb(38, 40, 45); bot = rgb(14, 16, 19); break;
+    case G_SNOW:    top = rgb(42, 46, 54); bot = rgb(17, 19, 24); break;
+    case G_THUNDER: top = rgb(38, 32, 48); bot = rgb(14, 12, 19); break;
+    case G_DRIZZLE: case G_RAIN: case G_HEAVY:
+                    top = rgb(28, 36, 46); bot = rgb(12, 15, 19); break;
+    default:        top = rgb(36, 38, 42); bot = rgb(16, 17, 20); break;
   }
 }
 

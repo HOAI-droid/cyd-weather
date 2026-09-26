@@ -43,9 +43,8 @@ void Gfx::background(uint16_t top, uint16_t bottom) {
 uint16_t Gfx::bgAt(int y) const { return lerp565(bgTop, bgBot, y / (float)(SCREEN_H - 1)); }
 
 uint16_t Gfx::dim(uint8_t alpha, int y, bool onGlass) const {
-  uint16_t base = bgAt(y);
-  if (onGlass) base = blend565(col::white, base, A_GLASS);
-  return blend565(col::white, base, alpha);
+  uint16_t base = onGlass ? col::panel : bgAt(y);
+  return blend565(col::text, base, alpha);
 }
 
 void Gfx::fillRect(int x, int y, int w, int h, uint16_t c, uint8_t a) {
@@ -63,11 +62,11 @@ void Gfx::vgrad(int x, int y, int w, int h, uint16_t c1, uint16_t c2) {
   }
 }
 
+// Karte im Instrument-Stil: dunkle Fläche mit feinem Rand
 void Gfx::glass(int x, int y, int w, int h, int r) {
   if (!rowsVisible(y, y + h)) return;
-  rrect(x, y, w, h, r, col::white, A_GLASS);
-  // feine Lichtkante oben
-  line(x + r, y + 0.5f, x + w - r, y + 0.5f, 1, col::white, A_GLASS_TOP);
+  rrect(x, y, w, h, r, col::panelEdge);
+  rrect(x + 1, y + 1, w - 2, h - 2, r - 1, col::panel);
 }
 
 // ---------------------------------------------------------------- Formen

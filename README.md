@@ -1,18 +1,22 @@
 # CYD Wetterstation
 
-Moderne, übersichtliche Wetterstation für das **Cheap Yellow Display** (ESP32-2432S028R, 2,8" 320×240 Touch) – mit kantengeglätteten Schriften, gezeichneten Wettersymbolen, Wischgesten und einem Haufen versteckter Späße.
+Moderne, übersichtliche Wetterstation für das **Cheap Yellow Display** (ESP32-2432S028R, 2,8" 320×240 Touch) – im Design „Instrument“ (Graphit und Champagner-Gold), mit Regenradar, Luftqualität, Ortswechsel per Touch, kantengeglätteten Schriften, gezeichneten Wettersymbolen, Wischgesten und einem Haufen versteckter Späße.
 
-![Jetzt](docs/screens/partly_home.png) ![24 Stunden](docs/screens/partly_hourly.png)
+![Jetzt](docs/screens/partly_home.png) ![Regenradar](docs/screens/partly_radar.png)
+![Luftqualität](docs/screens/partly_air.png) ![24 Stunden](docs/screens/partly_hourly.png)
 ![5 Tage](docs/screens/partly_daily.png) ![Sonne & Wind](docs/screens/partly_details.png)
 
 *Die Bilder stammen direkt aus dem Firmware-Code (Host-Simulator, siehe unten).*
 
 ## Funktionen
 
-- **4 Ansichten:** Jetzt · Nächste 24 Stunden · 5-Tage-Vorhersage · Sonne & Wind
-- **Einrichtung per Handy:** WLAN, Passwort und Stadt – kein Code anfassen
+- **6 Ansichten:** Jetzt · Nächste 24 Stunden · 5-Tage-Vorhersage · Regenradar · Luftqualität · Sonne & Wind
+- **Regenradar:** Karte mit etwa 100 km Umkreis, aktuelles Radarbild, „Regen ab 15:15“ und Regenbalken für die nächsten 2 Stunden
+- **Luftqualität:** Europäischer Luftqualitätsindex als Rundinstrument, Feinstaub PM2.5/PM10, Ozon, Stickstoffdioxid und Pollenflug (Europa)
+- **Ort wechseln per Touch:** Stadtnamen antippen, bis zu 5 Orte merken, neue Orte über die Bildschirmtastatur suchen
+- **Einrichtung per Handy:** WLAN, Passwort und erster Ort – kein Code anfassen
 - Wetterdaten von [Open-Meteo](https://open-meteo.com) – kostenlos, **kein API-Schlüssel**, Aktualisierung alle 10 Minuten
-- Hintergrund passt sich der Wetterlage und Tageszeit an (Sonne, Wolken, Regen, Gewitter, Schnee, Nebel, Nacht)
+- Graphit-Hintergrund, leicht getönt nach Wetterlage und Tageszeit
 - Uhrzeit per NTP inkl. Sommerzeit, deutsches Datum
 - Nachts automatisch gedimmt (beim Antippen kurz hell)
 - Nach 60 s ohne Berührung zurück zur Hauptansicht
@@ -26,7 +30,7 @@ Moderne, übersichtliche Wetterstation für das **Cheap Yellow Display** (ESP32-
 ## Installation (ohne Programmieren)
 
 ### 1. Firmware herunterladen
-Unter **[Releases → Aktuelle Firmware](../../releases/tag/firmware)** die passende Datei laden:
+Unter **[Releases → Aktuelle Firmware](../../releases/tag/firmware)** die passende Datei laden. Testversionen aus anderen Branches liegen als eigene Vorabversion unter „Test-Firmware (…)“ bei den Releases.
 - `cyd-wetter-cyd.bin` – CYD mit **einem** Micro-USB-Anschluss
 - `cyd-wetter-cyd2usb.bin` – CYD mit **USB-C und Micro-USB**
 
@@ -46,7 +50,15 @@ Unter **[Releases → Aktuelle Firmware](../../releases/tag/firmware)** die pass
 3. **Configure WiFi** → dein WLAN wählen, Passwort und **Stadt** eintragen → **Save**.
 4. Das CYD verbindet sich, sucht den Ort und zeigt das Wetter.
 
-Passwort und Ort werden nur auf dem Gerät gespeichert. Ändern kannst du sie jederzeit: **Stadtnamen oben links 2 Sekunden gedrückt halten.**
+Passwort und Orte werden nur auf dem Gerät gespeichert.
+
+### 4. Ort wechseln
+**Stadtnamen oben links antippen.** Es erscheinen deine gespeicherten Orte:
+- Ort antippen = dorthin wechseln, lange drücken = aus der Liste löschen
+- **+ Ort suchen** öffnet die Tastatur. Namen tippen, **Suchen**, Treffer antippen – fertig. Die Taste **ÄÖÜ** schaltet auf Umlaute und Ziffern um.
+- **WLAN ändern** öffnet wieder die Einrichtung per Handy (geht auch: Stadtnamen 2 Sekunden gedrückt halten)
+
+![Orte](docs/screens/places.png) ![Suche](docs/screens/search.png) ![Treffer](docs/screens/results.png)
 
 ### Selbst kompilieren (optional)
 1. [VS Code](https://code.visualstudio.com/) + Erweiterung **PlatformIO IDE** installieren und dieses Repository öffnen.
@@ -62,7 +74,8 @@ Jeder Push baut die Firmware außerdem automatisch per GitHub Actions und aktual
 | Nach links/rechts wischen | nächste / vorige Ansicht |
 | Linkes / rechtes Drittel antippen | vorige / nächste Ansicht |
 | Punkte unten | zeigen, wo du bist |
-| Stadtnamen 2 s gedrückt halten | WLAN und Stadt ändern |
+| Stadtnamen antippen | Orte wechseln, suchen, löschen |
+| Stadtnamen 2 s gedrückt halten | WLAN ändern (Einrichtung per Handy) |
 
 ## Easter Eggs
 
@@ -73,7 +86,7 @@ Jeder Push baut die Firmware außerdem automatisch per GitHub Actions und aktual
 |---|---|---|
 | 🐸 **Wetterfrosch** | 5× schnell aufs Wettersymbol tippen | Der Frosch klettert die Leiter hoch – je besser das Wetter, desto höher – und gibt eine Bauernregel zum Besten |
 | 💧 **Tropfenfänger** | Uhrzeit 2 s gedrückt halten | Minispiel: Regentropfen mit dem Eimer fangen (Finger steuert), Sonnen = +5, Blitze kosten ein Leben. Highscore bleibt gespeichert |
-| 🟩 **Matrix-Wetter** | Ecken antippen: oben links → oben rechts → unten rechts → unten links | Grüner Zeichenregen mit „Wake up, Neo …“ |
+| 🟩 **Matrix-Wetter** | Ecken antippen: oben rechts → unten rechts → unten links → oben links | Grüner Zeichenregen mit „Wake up, Neo …“ |
 | 🕜 **Leet Time** | um 13:37 Uhr | Die Uhr leuchtet grün und flackert |
 | 🍬 **Unwetterwarnung** | am 1. April | „Ab 14 Uhr regnet es Gummibärchen.“ … April, April! |
 | 🎅 **Feiertage** | 24.–26.12. / 31.10. / Neujahr 0:00 | Weihnachtsmütze aufs Wettersymbol, Kürbis neben der Stadt, Feuerwerk |
@@ -98,6 +111,8 @@ Jeder Push baut die Firmware außerdem automatisch per GitHub Actions und aktual
 | Tipps landen daneben | `TOUCH_DEBUG true` setzen, Rohwerte im seriellen Monitor ablesen und `TOUCH_X/Y_MIN/MAX` anpassen; ggf. `TOUCH_FLIP_X/Y` |
 | Einrichtung meldet „Verbindung fehlgeschlagen“ | Passwort prüfen – der ESP32 kann nur **2,4-GHz**-WLAN |
 | „Ort nicht gefunden“ | Nur den Ortsnamen eingeben, z. B. `Leipzig` oder `Bad Honnef` |
+| Radar zeigt „Zu wenig Speicher“ | Einmal neu starten (RST); das Radar braucht rund 80 KB am Stück |
+| Radar bleibt leer | RainViewer/CARTO nicht erreichbar – das Gerät versucht es alle 2 Minuten erneut |
 | Board wird beim Flashen nicht gefunden | Datenkabel verwenden; Linux: `brltty` entfernen, Gruppe `dialout` (siehe oben) |
 | Lautsprecher zu nervig | `SOUND_ENABLED false` |
 | „Licht aus“ löst zu oft / nie aus | `LDR_DARK_DELTA` anpassen oder `LDR_EGG_ENABLED false` |
@@ -106,8 +121,11 @@ Jeder Push baut die Firmware außerdem automatisch per GitHub Actions und aktual
 
 ```
 include/config.h      Deine Einstellungen
-src/main.cpp          Einrichtung (WLAN + Ort), Zeit, Wetterabruf, Navigation, Dimmen
-src/ui.cpp            Die vier Ansichten + Startbildschirm
+src/main.cpp          Einrichtung (WLAN + Ort), Ortswahl, Zeit, Abrufe, Navigation, Dimmen
+src/net.cpp           HTTPS-Abrufe, Radar- und Kartenkacheln (PNG), Luft, Ortssuche
+src/ui.cpp            Alle Ansichten, Ortswahl und Tastatur, Startbildschirm
+src/air.cpp           Luftqualität und Pollen (Open-Meteo)
+src/radar.cpp         Kachel-Mathematik, Radarfarben -> Regenstufen
 src/icons.cpp         Gezeichnete Wettersymbole
 src/gfx.cpp           Streifen-Rendering, kantengeglättete Formen, Text
 src/weather.cpp       Open-Meteo-Parser, WMO-Codes → deutsche Texte, Sprüche
@@ -129,7 +147,13 @@ Größen, Gewichte und Zeichensatz stehen oben im Skript.
 
 ## Simulator
 
-`sim/run.sh` kompiliert den Zeichen-Code der Firmware (UI, Symbole, Easter Eggs, JSON-Parser) für den PC gegen eine kleine TFT_eSPI-Nachbildung und schreibt Screenshots nach `sim/build/`. Voraussetzung: `g++`, Python mit Pillow und die [ArduinoJson](https://github.com/bblanchon/ArduinoJson)-Quellen (Pfad per `ARDUINOJSON=.../src`).
+`sim/run.sh` kompiliert den Zeichen-Code der Firmware (UI, Symbole, Easter Eggs, JSON-Parser) für den PC gegen eine kleine TFT_eSPI-Nachbildung und schreibt Screenshots nach `sim/build/`. Radar und Luft verwenden dabei Beispieldaten (`sim/make_radar.py`, `sim/make_air.py`). Voraussetzung: `g++`, Python mit Pillow und die [ArduinoJson](https://github.com/bblanchon/ArduinoJson)-Quellen (Pfad per `ARDUINOJSON=.../src`).
+
+## Datenquellen
+
+- Wetter, Luftqualität, Pollen, Ortssuche: [Open-Meteo](https://open-meteo.com) (CC BY 4.0)
+- Radar: [RainViewer](https://www.rainviewer.com/api.html)
+- Karte: © [CARTO](https://carto.com/attributions), © [OpenStreetMap](https://www.openstreetmap.org/copyright)-Mitwirkende
 
 ## Lizenz
 

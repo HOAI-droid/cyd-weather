@@ -13,15 +13,17 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 TTF = ROOT / "tools" / "Outfit.ttf"
 OUT = ROOT / "src" / "fonts"
 
-TEXT = [chr(c) for c in range(0x20, 0x7F)] + list("ÄÖÜäöüß°·–…é")
+TEXT = [chr(c) for c in range(0x20, 0x7F)] + list("ÄÖÜäöüß°·–…éµ³")
 DIGITS = list(" 0123456789-°.:")
 
 # name, pixelgröße, gewicht, zeichensatz
 FONTS = [
+    ("font_x", 10, 600, TEXT),   # kleine Versal-Beschriftungen
     ("font_s", 13, 500, TEXT),   # Beschriftungen
     ("font_b", 16, 600, TEXT),   # Werte, Titel
     ("font_m", 20, 600, TEXT),   # Wetterlage
     ("font_c", 28, 600, TEXT),   # Uhr
+    ("font_g", 40, 300, DIGITS), # Instrument-Anzeigen (Luftindex, Radar)
     ("font_h", 64, 300, DIGITS), # große Temperatur
 ]
 

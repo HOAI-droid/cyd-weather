@@ -38,7 +38,17 @@ struct WeatherData {
   int nHours = 0;
   DayData days[6];
   int nDays = 0;
+  // Niederschlag in 15-Minuten-Schritten (mm je Viertelstunde), ab jetzt
+  float rain15[9] = {};
+  time_t rain15T0 = 0;
+  int nRain15 = 0;
   char tagline[64] = "";
+};
+
+struct Place {
+  char name[40];
+  char region[40];  // z. B. "Bayern, DE"
+  float lat, lon;
 };
 
 // JSON-Antwort der Open-Meteo-API auswerten
@@ -47,8 +57,13 @@ bool parseWeather(const char* json, WeatherData& out);
 void buildWeatherUrl(char* buf, int len, float lat, float lon);
 
 // Ortssuche (Open-Meteo Geocoding, Host: geocoding-api.open-meteo.com)
-void buildGeocodeUrl(char* buf, int len, const char* query);
+void buildGeocodeUrl(char* buf, int len, const char* query, int count = 1);
 bool parseGeocode(const char* json, char* name, int nameLen, float& lat, float& lon);
+int parseGeocodeList(const char* json, Place* out, int maxN);  // Anzahl Treffer
+
+// Regen in den nächsten 2 Stunden: 0 = keiner, 1 = regnet jetzt, 2 = beginnt in startMin Minuten.
+// peak = stärkster Wert in mm/h.
+int rainOutlook(const WeatherData& w, time_t now, int& startMin, float& peak);
 
 const char* codeText(uint8_t code, bool day);
 Icon codeIcon(uint8_t code, bool day);
