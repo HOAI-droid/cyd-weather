@@ -20,6 +20,7 @@ static int iround(float v) { return (int)lroundf(v); }
 bool uiIsLeetTime() { return app.timeValid && app.now.tm_hour == 13 && app.now.tm_min == 37; }
 bool uiHitIcon(int x, int y) { return x > 14 && x < 110 && y > 48 && y < 140; }
 bool uiHitClock(int x, int y) { return x > 210 && y < 48; }
+bool uiHitCity(int x, int y) { return x < 200 && y < 48; }
 
 static void bg(Gfx& g) {
   uint16_t t, b;
@@ -59,8 +60,8 @@ static void drawHome(Gfx& g) {
   bool halloween = app.timeValid && t.tm_mon == 9 && t.tm_mday == 31;
   bool xmas = app.timeValid && t.tm_mon == 11 && t.tm_mday >= 24 && t.tm_mday <= 26;
 
-  g.text(CITY_NAME, 14, 10, font_b, col::white);
-  if (halloween) drawPumpkin(g, 14 + g.textWidth(CITY_NAME, font_b) + 14, 17, 16);
+  g.text(app.city, 14, 10, font_b, col::white);
+  if (halloween) drawPumpkin(g, 14 + g.textWidth(app.city, font_b) + 14, 17, 16);
   if (app.timeValid) snprintf(buf, sizeof(buf), "%s, %d. %s%s", WD_LONG[t.tm_wday], t.tm_mday, MONTHS[t.tm_mon], app.offline ? " · offline" : "");
   else snprintf(buf, sizeof(buf), "Zeit wird geladen …");
   g.text(buf, 14, 31, font_s, g.dim(A_SECONDARY, 36));
@@ -332,6 +333,29 @@ void uiDrawScreen(Gfx& g) {
     case SCR_HOURLY: drawHourly(g); break;
     case SCR_DAILY: drawDaily(g); break;
     default: drawDetails(g); break;
+  }
+}
+
+void uiDrawPortal(Gfx& g, const char* apName, const char* note) {
+  g.background(rgb(20, 44, 90), rgb(60, 110, 170));
+  g.text("Einrichtung", 160, 10, font_m, col::white, AL_C);
+  char buf[96];
+  const char* steps[3];
+  snprintf(buf, sizeof(buf), "Mit dem Handy das WLAN \"%s\" verbinden.", apName);
+  steps[0] = buf;
+  steps[1] = "Die Einrichtungsseite öffnet sich. Falls nicht: im Browser 192.168.4.1 aufrufen.";
+  steps[2] = "\"Configure WiFi\" tippen, dein WLAN wählen, Passwort und Stadt eingeben, \"Save\".";
+  int y = 44;
+  for (int i = 0; i < 3; i++) {
+    g.disc(24, y + 8, 9, col::white, 60);
+    char n[2] = {(char)('1' + i), 0};
+    g.text(n, 24, y + 8, font_s, col::white, AL_C, VA_MID);
+    int lines = g.wrap(steps[i], 42, y, 264, font_s, col::white, 17);
+    y += lines * 17 + 12;
+  }
+  if (note && note[0]) {
+    g.rrect(12, 188, 296, 46, 8, col::black, 90);
+    g.wrap(note, 20, 194, 280, font_s, col::tagline, 17, AL_C);
   }
 }
 

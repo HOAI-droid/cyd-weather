@@ -234,11 +234,11 @@ static void drawMatrix(Gfx& g) {
       g.text(s, 6 + ci * 12, y, font_s, color, AL_C);
     }
   }
-  char buf[40];
+  char buf[64];
   g.rrect(70, 92, 180, 58, 6, col::black);
   g.fillRect(70, 92, 180, 1, col::matrix); g.fillRect(70, 149, 180, 1, col::matrix);
   g.fillRect(70, 92, 1, 58, col::matrix); g.fillRect(249, 92, 1, 58, col::matrix);
-  if (app.wx.valid) snprintf(buf, sizeof(buf), "%d°C  %s", (int)lroundf(app.wx.temp), CITY_NAME);
+  if (app.wx.valid) snprintf(buf, sizeof(buf), "%d°C  %s", (int)lroundf(app.wx.temp), app.city);
   else snprintf(buf, sizeof(buf), "NO SIGNAL");
   g.text(buf, 160, 100, font_b, col::matrix, AL_C);
   g.text("WAKE UP, NEO …", 160, 126, font_s, rgb(124, 255, 158), AL_C);

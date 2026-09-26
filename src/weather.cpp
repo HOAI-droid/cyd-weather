@@ -17,6 +17,33 @@ void buildWeatherUrl(char* buf, int len, float lat, float lon) {
            lat, lon);
 }
 
+void buildGeocodeUrl(char* buf, int len, const char* query) {
+  // Nur den Ortsnamen suchen ("Leipzig, Sachsen" -> "Leipzig"), UTF-8 prozent-kodiert
+  char enc[160];
+  int o = 0;
+  for (const unsigned char* p = (const unsigned char*)query; *p && *p != ',' && o < (int)sizeof(enc) - 4; p++) {
+    unsigned char c = *p;
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '-' || c == '.') enc[o++] = c;
+    else o += snprintf(enc + o, sizeof(enc) - o, "%%%02X", c);
+  }
+  while (o > 0 && enc[o - 1] == '0' && o >= 3 && enc[o - 3] == '%' && enc[o - 2] == '2') o -= 3;  // Leerzeichen am Ende
+  enc[o] = 0;
+  const char* start = enc;
+  while (strncmp(start, "%20", 3) == 0) start += 3;  // Leerzeichen am Anfang
+  snprintf(buf, len, "/v1/search?name=%s&count=1&language=de&format=json", start);
+}
+
+bool parseGeocode(const char* json, char* name, int nameLen, float& lat, float& lon) {
+  JsonDocument doc;
+  if (deserializeJson(doc, json)) return false;
+  JsonObject r = doc["results"][0];
+  if (r.isNull()) return false;
+  lat = r["latitude"] | 0.0f;
+  lon = r["longitude"] | 0.0f;
+  snprintf(name, nameLen, "%s", (const char*)(r["name"] | ""));
+  return name[0] != 0;
+}
+
 bool parseWeather(const char* json, WeatherData& w) {
   JsonDocument doc;
   if (deserializeJson(doc, json)) return false;

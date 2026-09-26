@@ -13,6 +13,8 @@ struct AppState {
   bool timeValid = false;
   bool offline = false;     // letzte Aktualisierung fehlgeschlagen
   uint8_t glitch = 0;       // Zufallswert für den 13:37-Effekt
+  char city[48] = "";       // Anzeigename des Orts (aus der Einrichtung)
+  float lat = 0, lon = 0;
 };
 
 extern AppState app;

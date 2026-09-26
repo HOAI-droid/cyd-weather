@@ -52,6 +52,7 @@ int main(int argc, char** argv) {
   while ((n = fread(b, 1, sizeof(b), f)) > 0) json.append(b, n);
   fclose(f);
   if (!gfx.begin()) return 2;
+  snprintf(app.city, sizeof(app.city), "Berlin");
   setTime(2026, 9, 26, 14, 37);
   if (!parseWeather(json.c_str(), app.wx)) { printf("Parser-Fehler\n"); return 3; }
   pickTagline(app.wx, 9, 26);
@@ -73,6 +74,7 @@ int main(int argc, char** argv) {
   setTime(2026, 9, 26, 14, 37);
   { WeatherData keep = app.wx; app.wx.valid = false; app.timeValid = false; gfx.frame([&] { uiDrawScreen(gfx); }); save("loading"); app.wx = keep; app.timeValid = true; }
   gfx.frame([&] { uiDrawBoot(gfx, "Verbinde mit WLAN …", 1); }); save("boot");
+  gfx.frame([&] { uiDrawPortal(gfx, "CYD-Wetter", "Ort \"Xyz\" nicht gefunden. Bitte Schreibweise prüfen."); }); save("portal");
 
   egg(EGG_FROG, 2400, "egg_frog");
   egg(EGG_GAME, 6000, "egg_game", {true, 150, 220});

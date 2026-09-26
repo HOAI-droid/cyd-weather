@@ -4,15 +4,13 @@
 // ============================================================================
 #pragma once
 
-// ---- WLAN -------------------------------------------------------------------
-#define WIFI_SSID       "DEIN_WLAN"
-#define WIFI_PASSWORD   "DEIN_PASSWORT"
-
-// ---- Standort ---------------------------------------------------------------
-// Koordinaten findest du z. B. per Rechtsklick in Google Maps.
-#define CITY_NAME       "Berlin"
-#define LATITUDE        52.52f
-#define LONGITUDE       13.41f
+// ---- WLAN & Ort ----------------------------------------------------------------
+// WLAN, Passwort und Stadt gibst du NICHT hier ein, sondern beim ersten Start
+// über dein Handy: Das CYD öffnet dann ein eigenes WLAN mit diesem Namen.
+// Später kommst du wieder in die Einrichtung, indem du oben links auf den
+// Stadtnamen 2 Sekunden drückst.
+#define PORTAL_AP_NAME     "CYD-Wetter"
+#define PORTAL_AP_PASSWORD ""          // leer = offenes Einrichtungs-WLAN
 
 // ---- Zeitzone (POSIX-Format) --------------------------------------------------
 // Deutschland/Österreich/Schweiz: "CET-1CEST,M3.5.0,M10.5.0/3"

@@ -4,8 +4,11 @@
 // ============================================================================
 #include <Arduino.h>
 #include <HTTPClient.h>
+#include <Preferences.h>
 #include <TFT_eSPI.h>
 #include <WiFi.h>
+#include <WiFiClientSecure.h>
+#include <WiFiManager.h>
 #include "app.h"
 #include "config.h"
 #include "eggs.h"
@@ -35,45 +38,124 @@ static void updateClock() {
   localtime_r(&now, &app.now);
 }
 
-static bool fetchWeather() {
+// HTTPS-GET, Antwort in body. Zertifikat wird nicht geprüft (öffentliche Wetterdaten).
+static bool httpsGet(const char* host, const char* path, String& body) {
   if (WiFi.status() != WL_CONNECTED) return false;
-  char path[512];
-  buildWeatherUrl(path, sizeof(path), LATITUDE, LONGITUDE);
-  String url = String("http://api.open-meteo.com") + path;
+  WiFiClientSecure client;
+  client.setInsecure();
   HTTPClient http;
   http.setTimeout(10000);
-  http.begin(url);
+  String url = String("https://") + host + path;
+  if (!http.begin(client, url)) return false;
   int code = http.GET();
-  bool ok = false;
-  if (code == 200) {
-    String body = http.getString();
-    ok = parseWeather(body.c_str(), fresh);
-  } else {
-    Serial.printf("Open-Meteo: HTTP %d\n", code);
-  }
+  bool ok = code == 200;
+  if (ok) body = http.getString();
+  else Serial.printf("%s: HTTP %d\n", host, code);
   http.end();
-  if (ok) {
-    fresh.fetchedMs = millis();
-    pickTagline(fresh, app.now.tm_mon + 1, app.now.tm_mday);
-    app.wx = fresh;
-    Serial.printf("Wetter: %.1f °C, Code %d\n", app.wx.temp, app.wx.code);
-  }
   return ok;
 }
 
-static void connectWifi() {
+static bool fetchWeather() {
+  char path[512];
+  buildWeatherUrl(path, sizeof(path), app.lat, app.lon);
+  String body;
+  if (!httpsGet("api.open-meteo.com", path, body)) return false;
+  if (!parseWeather(body.c_str(), fresh)) return false;
+  fresh.fetchedMs = millis();
+  pickTagline(fresh, app.now.tm_mon + 1, app.now.tm_mday);
+  app.wx = fresh;
+  Serial.printf("Wetter: %.1f °C, Code %d\n", app.wx.temp, app.wx.code);
+  return true;
+}
+
+// ---------------------------------------------------------------- Einrichtung (WLAN + Ort)
+static Preferences settings;
+static char portalNote[96] = "";
+
+static bool loadLocation() {
+  settings.begin("ort", true);
+  String c = settings.getString("city", "");
+  app.lat = settings.getFloat("lat", 0);
+  app.lon = settings.getFloat("lon", 0);
+  settings.end();
+  snprintf(app.city, sizeof(app.city), "%s", c.c_str());
+  return app.city[0] != 0;
+}
+
+static void saveLocation() {
+  settings.begin("ort", false);
+  settings.putString("city", app.city);
+  settings.putFloat("lat", app.lat);
+  settings.putFloat("lon", app.lon);
+  settings.end();
+}
+
+static bool findCity(const char* query) {
+  char path[256], name[48];
+  float lat, lon;
+  buildGeocodeUrl(path, sizeof(path), query);
+  String body;
+  if (!httpsGet("geocoding-api.open-meteo.com", path, body)) return false;
+  if (!parseGeocode(body.c_str(), name, sizeof(name), lat, lon)) return false;
+  snprintf(app.city, sizeof(app.city), "%s", name);
+  app.lat = lat;
+  app.lon = lon;
+  saveLocation();
+  Serial.printf("Ort: %s (%.4f, %.4f)\n", app.city, lat, lon);
+  return true;
+}
+
+static void onPortalStart(WiFiManager*) {
+  gfx.frame([&] { uiDrawPortal(gfx, PORTAL_AP_NAME, portalNote); });
+}
+
+// Öffnet die Einrichtungsseite, bis WLAN verbunden und Ort gefunden ist.
+// force = true: Seite immer zeigen (z. B. nach langem Druck auf den Stadtnamen)
+static void setupWifiAndCity(bool force) {
   WiFi.mode(WIFI_STA);
   WiFi.setHostname("cyd-wetter");
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  int step = 0;
-  uint32_t t0 = millis();
-  while (WiFi.status() != WL_CONNECTED && millis() - t0 < 20000) {
-    boot("Verbinde mit WLAN …", step++);
-    delay(250);
-  }
-  if (WiFi.status() != WL_CONNECTED) {
-    boot("WLAN nicht erreichbar – prüfe config.h", 0);
-    delay(3000);
+  bool haveCity = loadLocation();
+  bool firstTry = true;
+  while (true) {
+    WiFiManager wm;
+    WiFiManagerParameter cityParam("city", "Stadt oder Ort (z. B. Leipzig)", app.city, 40);
+    wm.addParameter(&cityParam);
+    wm.setTitle("CYD Wetterstation");
+    wm.setAPCallback(onPortalStart);
+    wm.setConnectTimeout(20);
+    wm.setConfigPortalTimeout(force ? 300 : 0);
+    std::vector<const char*> menu = {"wifi", "exit"};
+    wm.setMenu(menu);
+
+    bool connected;
+    if (force || !haveCity || !firstTry) {
+      connected = wm.startConfigPortal(PORTAL_AP_NAME, PORTAL_AP_PASSWORD[0] ? PORTAL_AP_PASSWORD : nullptr);
+    } else {
+      boot("Verbinde mit WLAN …", 0);
+      connected = wm.autoConnect(PORTAL_AP_NAME, PORTAL_AP_PASSWORD[0] ? PORTAL_AP_PASSWORD : nullptr);
+    }
+    firstTry = false;
+    if (!connected) {
+      if (force && haveCity) { WiFi.begin(); return; }  // Zeit abgelaufen: alte Einstellungen behalten
+      snprintf(portalNote, sizeof(portalNote), "Verbindung fehlgeschlagen. Bitte WLAN und Passwort prüfen.");
+      continue;
+    }
+
+    const char* wanted = cityParam.getValue();
+    if (wanted[0] && strcmp(wanted, app.city) != 0) {
+      boot("Suche Ort …", 0);
+      if (!findCity(wanted)) {
+        snprintf(portalNote, sizeof(portalNote), "Ort \"%.40s\" nicht gefunden. Bitte Schreibweise prüfen.", wanted);
+        haveCity = false;
+        continue;
+      }
+    }
+    if (!app.city[0]) {
+      snprintf(portalNote, sizeof(portalNote), "Bitte eine Stadt eintragen.");
+      continue;
+    }
+    portalNote[0] = 0;
+    return;
   }
 }
 
@@ -114,6 +196,12 @@ static void handleGesture(const Gesture& g) {
     case GE_SWIPE_RIGHT: goScreen(-1); break;
     case GE_LONG:
       if (app.screen == SCR_HOME && uiHitClock(g.x, g.y)) eggStart(EGG_GAME);
+      else if (app.screen == SCR_HOME && uiHitCity(g.x, g.y)) {
+        setupWifiAndCity(true);
+        nextFetch = 0;  // sofort neues Wetter für den (evtl. neuen) Ort
+        app.wx.valid = false;
+        needRedraw = true;
+      }
       break;
     case GE_TAP:
       if (eggCornerTap(g.x, g.y)) break;
@@ -140,7 +228,7 @@ void setup() {
   }
   inputBegin();
 
-  connectWifi();
+  setupWifiAndCity(false);
   configTzTime(TZ_INFO, NTP_SERVER, "pool.ntp.org");
   for (int i = 0; i < 40 && !app.timeValid; i++) {
     boot("Hole Uhrzeit …", i);

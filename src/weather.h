@@ -46,6 +46,10 @@ bool parseWeather(const char* json, WeatherData& out);
 // Pfad + Query für die API (Host: api.open-meteo.com)
 void buildWeatherUrl(char* buf, int len, float lat, float lon);
 
+// Ortssuche (Open-Meteo Geocoding, Host: geocoding-api.open-meteo.com)
+void buildGeocodeUrl(char* buf, int len, const char* query);
+bool parseGeocode(const char* json, char* name, int nameLen, float& lat, float& lon);
+
 const char* codeText(uint8_t code, bool day);
 Icon codeIcon(uint8_t code, bool day);
 Group codeGroup(uint8_t code);

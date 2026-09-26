@@ -10,6 +10,7 @@ Moderne, übersichtliche Wetterstation für das **Cheap Yellow Display** (ESP32-
 ## Funktionen
 
 - **4 Ansichten:** Jetzt · Nächste 24 Stunden · 5-Tage-Vorhersage · Sonne & Wind
+- **Einrichtung per Handy:** WLAN, Passwort und Stadt – kein Code anfassen
 - Wetterdaten von [Open-Meteo](https://open-meteo.com) – kostenlos, **kein API-Schlüssel**, Aktualisierung alle 10 Minuten
 - Hintergrund passt sich der Wetterlage und Tageszeit an (Sonne, Wolken, Regen, Gewitter, Schnee, Nebel, Nacht)
 - Uhrzeit per NTP inkl. Sommerzeit, deutsches Datum
@@ -22,18 +23,37 @@ Moderne, übersichtliche Wetterstation für das **Cheap Yellow Display** (ESP32-
 |---|---|---|---|---|
 | ![](docs/screens/sunny_home.png) | ![](docs/screens/rain_home.png) | ![](docs/screens/storm_home.png) | ![](docs/screens/snow_home.png) | ![](docs/screens/night_home.png) |
 
-## Installation
+## Installation (ohne Programmieren)
 
-1. [VS Code](https://code.visualstudio.com/) + Erweiterung **PlatformIO IDE** installieren.
-2. Dieses Repository öffnen.
-3. `include/config.h` anpassen: WLAN, Stadtname, Koordinaten (Rechtsklick in Google Maps zeigt sie an).
-4. CYD per USB anschließen, unten in der PlatformIO-Leiste die Umgebung wählen und **Upload** klicken:
-   - `env:cyd` – das klassische CYD mit **einem** Micro-USB-Port (ILI9341)
-   - `env:cyd2usb` – die Version mit **USB-C und Micro-USB** (ST7789)
+### 1. Firmware herunterladen
+Unter **[Releases → Aktuelle Firmware](../../releases/tag/firmware)** die passende Datei laden:
+- `cyd-wetter-cyd.bin` – CYD mit **einem** Micro-USB-Anschluss
+- `cyd-wetter-cyd2usb.bin` – CYD mit **USB-C und Micro-USB**
 
-Alternativ auf der Kommandozeile: `pio run -e cyd -t upload && pio device monitor`
+### 2. Im Browser flashen (Chrome, Chromium oder Edge)
+1. CYD per USB anschließen (Datenkabel!).
+2. <https://espressif.github.io/esptool-js/> öffnen.
+3. Baudrate **921600**, auf **Connect** klicken und den Port wählen (Linux: `ttyUSB0`, Windows: `COM…`).
+4. Bei **Flash Address** `0x0` eintragen, die `.bin`-Datei auswählen.
+5. **Program** klicken und warten, bis „Leaving…“ erscheint. Dann die **RST**-Taste am CYD drücken.
 
-Alle Bibliotheken (TFT_eSPI, XPT2046_Touchscreen, ArduinoJson) lädt PlatformIO automatisch. Die Display-Konfiguration steckt komplett in `platformio.ini`, du musst also keine `User_Setup.h` bearbeiten.
+> Linux (Ubuntu, Zorin, Mint …) einmalig vorbereiten:
+> `sudo apt remove brltty && sudo usermod -aG dialout $USER`, danach neu anmelden.
+
+### 3. WLAN und Stadt einrichten (per Handy)
+1. Das CYD zeigt „Einrichtung“ und öffnet ein eigenes WLAN **CYD-Wetter**.
+2. Handy mit diesem WLAN verbinden – die Einrichtungsseite öffnet sich (sonst `192.168.4.1` im Browser).
+3. **Configure WiFi** → dein WLAN wählen, Passwort und **Stadt** eintragen → **Save**.
+4. Das CYD verbindet sich, sucht den Ort und zeigt das Wetter.
+
+Passwort und Ort werden nur auf dem Gerät gespeichert. Ändern kannst du sie jederzeit: **Stadtnamen oben links 2 Sekunden gedrückt halten.**
+
+### Selbst kompilieren (optional)
+1. [VS Code](https://code.visualstudio.com/) + Erweiterung **PlatformIO IDE** installieren und dieses Repository öffnen.
+2. Optional `include/config.h` anpassen (Zeitzone, Helligkeit, Geburtstag, Ton …).
+3. In PlatformIO die Umgebung `cyd` oder `cyd2usb` wählen und **Upload** klicken – oder im Terminal `pio run -e cyd -t upload`.
+
+Jeder Push baut die Firmware außerdem automatisch per GitHub Actions und aktualisiert das Release.
 
 ## Bedienung
 
@@ -42,6 +62,7 @@ Alle Bibliotheken (TFT_eSPI, XPT2046_Touchscreen, ArduinoJson) lädt PlatformIO 
 | Nach links/rechts wischen | nächste / vorige Ansicht |
 | Linkes / rechtes Drittel antippen | vorige / nächste Ansicht |
 | Punkte unten | zeigen, wo du bist |
+| Stadtnamen 2 s gedrückt halten | WLAN und Stadt ändern |
 
 ## Easter Eggs
 
@@ -75,7 +96,9 @@ Alle Bibliotheken (TFT_eSPI, XPT2046_Touchscreen, ArduinoJson) lädt PlatformIO 
 | Farben falsch / invertiert | andere Umgebung (`cyd` ↔ `cyd2usb`) probieren oder in `platformio.ini` `-DTFT_INVERSION_ON=1` bzw. `OFF` tauschen |
 | Bild gespiegelt oder weiß | Umgebung `cyd2usb` testen; bei manchen Boards hilft `-DSPI_FREQUENCY=40000000` |
 | Tipps landen daneben | `TOUCH_DEBUG true` setzen, Rohwerte im seriellen Monitor ablesen und `TOUCH_X/Y_MIN/MAX` anpassen; ggf. `TOUCH_FLIP_X/Y` |
-| „WLAN nicht erreichbar“ | SSID/Passwort prüfen – der ESP32 kann nur 2,4 GHz |
+| Einrichtung meldet „Verbindung fehlgeschlagen“ | Passwort prüfen – der ESP32 kann nur **2,4-GHz**-WLAN |
+| „Ort nicht gefunden“ | Nur den Ortsnamen eingeben, z. B. `Leipzig` oder `Bad Honnef` |
+| Board wird beim Flashen nicht gefunden | Datenkabel verwenden; Linux: `brltty` entfernen, Gruppe `dialout` (siehe oben) |
 | Lautsprecher zu nervig | `SOUND_ENABLED false` |
 | „Licht aus“ löst zu oft / nie aus | `LDR_DARK_DELTA` anpassen oder `LDR_EGG_ENABLED false` |
 
@@ -83,7 +106,7 @@ Alle Bibliotheken (TFT_eSPI, XPT2046_Touchscreen, ArduinoJson) lädt PlatformIO 
 
 ```
 include/config.h      Deine Einstellungen
-src/main.cpp          WLAN, Zeit, Wetterabruf, Navigation, Dimmen
+src/main.cpp          Einrichtung (WLAN + Ort), Zeit, Wetterabruf, Navigation, Dimmen
 src/ui.cpp            Die vier Ansichten + Startbildschirm
 src/icons.cpp         Gezeichnete Wettersymbole
 src/gfx.cpp           Streifen-Rendering, kantengeglättete Formen, Text
