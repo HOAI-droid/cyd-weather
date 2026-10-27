@@ -20,8 +20,8 @@ custom_fields:
   - keyname: haltestelle
     field_type: string
     name: "Haltestelle"
-    description: "Name der Haltestelle wie in der RMV-Auskunft."
-    help_text: "Testen: <a href='https://dbf.finalrewind.org/?hafas=RMV' target='_blank'>dbf.finalrewind.org</a> öffnen, Haltestelle eingeben und den Namen genau so übernehmen."
+    description: "Haltestellen-Nummer (am sichersten, z. B. 3004xxx) oder der Name genau in RMV-Schreibweise, z. B. „Darmstadt Willy-Brandt-Platz“."
+    help_text: "Name nachsehen: in der <a href='https://www.rmv.de/c/de/fahrplan/abfahrt-ankunft' target='_blank'>RMV-Abfahrtstafel</a> die Haltestelle suchen und den vorgeschlagenen Namen exakt übernehmen. Testen: <a href='https://dbf.finalrewind.org/?hafas=RMV' target='_blank'>dbf.finalrewind.org</a>."
     default: "Im Fiedlersee, Darmstadt"
   - keyname: richtung
     field_type: string

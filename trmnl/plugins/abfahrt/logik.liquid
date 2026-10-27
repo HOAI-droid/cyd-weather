@@ -13,6 +13,7 @@
 {%- if abf == nil or abf.error -%}
   {%- assign cw_abf_fehler = abf.error | default: "Keine Daten" -%}
   {%- if cw_abf_fehler contains "ambiguous" -%}{%- assign cw_abf_fehler = "Haltestelle mehrdeutig – Namen genauer angeben" -%}{%- endif -%}
+  {%- if cw_abf_fehler contains "LOCATION" -%}{%- assign cw_abf_fehler = "Haltestelle beim RMV nicht gefunden. Namen genau in RMV-Schreibweise (z. B. „Darmstadt …“) oder die Haltestellen-Nummer eintragen." -%}{%- endif -%}
   {%- if cw_abf_fehler contains "Failed to fetch" -%}{%- assign cw_abf_fehler = "Fahrplan nicht erreichbar" -%}{%- endif -%}
 {%- endif -%}
 {%- capture abf_liste -%}
