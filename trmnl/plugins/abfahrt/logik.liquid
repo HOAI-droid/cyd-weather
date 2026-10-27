@@ -3,6 +3,7 @@
   IDX_0 = Open-Meteo, IDX_1 = Abfahrten (RMV-API oder dbf.finalrewind.org), IDX_2 = EAD-Müllkalender
 {%- endcomment -%}
 {%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
+{%- assign cw_gross = true -%}{%- if cf.schrift == "normal" -%}{%- assign cw_gross = false -%}{%- endif -%}
 {%- assign cw_ort_prefix = cf.ort | append: " " -%}
 {%- assign cw_ort_suffix = cf.ort | prepend: ", " -%}
 {%- assign cw_ort_bind = cf.ort | append: "-" -%}
@@ -30,6 +31,8 @@
 {%- comment -%} Anzeigename der Haltestelle: bei Nummern aus der Antwort nehmen {%- endcomment -%}
 {%- assign cw_halt_name = cf.haltestelle | remove: cw_ort_suffix | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}
 {%- if cw_api and fahrten[0].stop -%}{%- assign cw_halt_name = fahrten[0].stop | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}{%- endif -%}
+{%- assign hn = cf.haltestelle | strip | plus: 0 -%}
+{%- if cw_api == false and hn > 0 and fahrten[0].station -%}{%- assign cw_halt_name = fahrten[0].station | remove: cw_ort_suffix | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}{%- endif -%}
 {%- capture abf_liste -%}
 {%- for d in fahrten -%}
   {%- if cw_api -%}

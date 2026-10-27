@@ -41,6 +41,7 @@ Beide Seiten gibt es auch in den kleineren Größen für Mashups (halb waagrecht
 | Verkehrsverbund | Nur ohne Schlüssel: RMV für Darmstadt. Weitere zur Auswahl. |
 | Ortsname, Breiten- und Längengrad | Für das Wetter. Nachschlagen auf [open-meteo.com](https://open-meteo.com/en/docs) (oben Ort suchen) oder [latlong.net](https://www.latlong.net/) (auf die Karte klicken). Dezimalgrad mit Punkt, z. B. `49.87`. |
 | Straße für den Müllkalender | Straßenname wie im [EAD-Abfallkalender](https://www.ead.darmstadt.de/unser-angebot/privathaushalte/abfallkalender), **ohne Hausnummer**. Bei Straßen, die der EAD aufteilt, den Abschnitt mitschreiben, z. B. `Heinheimer Straße 1-15, 2-16`. Leer = keine Müll-Leiste. |
+| Schriftgröße | **Groß** (Standard): 5 Abfahrten, große Temperaturen und Schrift, aus der Ferne lesbar. **Normal**: bis zu 9 Abfahrten, 6 Zeitpunkte im Tagesverlauf und Wetterspruch, die frühere Ansicht ([Bild](docs/seite1-normal.png)). |
 | Müll-Erinnerung ab | Uhrzeit am Vorabend, ab der der Termin hervorgehoben wird (15–20 Uhr). |
 | Wetterspruch | Ein Spruch pro Tag wie auf der CYD. Auf Seite 1 und 2 abschaltbar. |
 

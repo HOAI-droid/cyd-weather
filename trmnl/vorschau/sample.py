@@ -54,7 +54,7 @@ for i, (d, line, dest, delay) in enumerate(plan):
                  "train_type": "", "train_line": line, "train_no": str(4100 + i), "via": ["Darmstadt Willy-Brandt-Platz"],
                  "destination": dest, "origin": dest, "platform": None, "scheduled_platform": None,
                  "is_cancelled": 1 if (szen == "ausfall" and i == 3) else 0, "delay": delay, "is_delayed": 1 if delay >= 5 else 0,
-                 "has_realtime": 1, "station": "Im Fiedlersee, Darmstadt", "linetype": "bus"})
+                 "has_realtime": 1, "station": "Darmstadt-Arheilgen Im Fiedlersee", "linetype": "bus"})
 abfahrten = {"departures": deps}
 if szen == "rmv":
     rd = []

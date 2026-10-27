@@ -46,6 +46,14 @@ custom_fields:
       - "NAH.SH (Schleswig-Holstein)": NAHSH
       - "VBN (Bremen/Niedersachsen)": VBN
     default: RMV
+  - keyname: schrift
+    field_type: select
+    name: "Schriftgröße"
+    description: "Groß: 5 Abfahrten, große Temperaturen, aus der Ferne lesbar. Normal: bis zu 9 Abfahrten und mehr Details (die frühere Ansicht)."
+    options:
+      - "Groß (aus der Ferne lesbar)": gross
+      - "Normal (mehr Abfahrten)": normal
+    default: gross
   - keyname: ort
     field_type: string
     name: "Ortsname (Anzeige)"
