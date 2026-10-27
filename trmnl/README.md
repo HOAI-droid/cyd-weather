@@ -8,7 +8,7 @@ Zwei Seiten für ein TRMNL bzw. das Seeed Studio TRMNL 7,5" (800 × 480, Schwarz
 
 **Seite 1** (alle 5 Minuten neu)
 - **links:** Abfahrten an deiner Haltestelle in eine Richtung. Die erste Fahrt, die du mit deinem Fußweg noch erreichst, steht oben im Kasten, mit „losgehen in … Min.“. Fahrten, die du nicht mehr schaffst oder die ausfallen, sind durchgestrichen. Verspätungen erscheinen als „+3“.
-- **rechts:** das Wetter des Tages. Jetzt-Wert, Höchst- und Tiefstwert, Regen in den nächsten 2 Stunden, Temperaturkurve von 0 bis 24 Uhr mit Regenbalken (gestrichelter Strich = jetzt), dazu morgens, mittags, nachmittags und abends.
+- **rechts:** das Wetter des Tages wie auf der CYD. Jetzt-Temperatur mit Symbol, Höchst-, Tiefst- und gefühlter Wert, Wetterlage und Spruch, dazu Kacheln für Feuchte, Wind, Regenwahrscheinlichkeit und UV. Darunter der Tagesverlauf: jetzt und dann alle 3 Stunden mit Symbol, Temperatur und Regenwahrscheinlichkeit.
 - **unten:** die nächsten 3 Mülltermine. Ab der eingestellten Uhrzeit am Vorabend (Standard 17:00) wird der Termin für morgen schwarz hervorgehoben: „heute Abend raus!“. Am Abholtag bleibt der Hinweis bis 10 Uhr stehen.
 
 | Erinnerung am Vorabend | Am Abholtag morgens |

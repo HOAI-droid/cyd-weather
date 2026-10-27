@@ -57,18 +57,8 @@
 {%- assign cw_auf = cw_wetter.daily.sunrise[0] | slice: 11, 5 -%}
 {%- assign cw_unter = cw_wetter.daily.sunset[0] | slice: 11, 5 -%}
 
-{%- comment -%} Tagesverlauf 0–23 Uhr (stündliche Werte beginnen um 00:00 heute). Diagramm-Koordinaten 0..230 × 0..100 {%- endcomment -%}
-{%- assign tv_min = 99 -%}{%- assign tv_max = -99 -%}
-{%- for i in (0..23) -%}{%- assign t = cw_wetter.hourly.temperature_2m[i] | plus: 0 -%}
-  {%- if t < tv_min -%}{%- assign tv_min = t -%}{%- endif -%}{%- if t > tv_max -%}{%- assign tv_max = t -%}{%- endif -%}
-{%- endfor -%}
-{%- assign tv_span = tv_max | minus: tv_min | at_least: 1 -%}
-{%- capture cw_tv_linie -%}{%- for i in (0..23) -%}{%- assign t = cw_wetter.hourly.temperature_2m[i] | plus: 0 -%}{%- assign y = tv_max | minus: t | times: 52.0 | divided_by: tv_span | plus: 14 | round: 1 -%}{{ i | times: 10 }},{{ y }} {% endfor -%}{%- endcapture -%}
-{%- capture cw_tv_regen -%}{%- for i in (0..23) -%}{%- assign p = cw_wetter.hourly.precipitation_probability[i] | default: 0 -%}{%- if p >= 10 -%}{%- assign bh = p | times: 0.3 | round: 1 -%}{%- assign by = 100 | minus: bh -%}<rect x="{{ i | times: 10 | minus: 3.5 }}" y="{{ by }}" width="7" height="{{ bh }}"/>{%- endif -%}{%- endfor -%}{%- endcapture -%}
-{%- assign tvm = cw_m | divided_by: 6.0 -%}{%- assign cw_tv_jetzt = cw_h | times: 10 | plus: tvm | round: 1 -%}
-{%- assign i_max = 0 -%}{%- assign i_min = 0 -%}
-{%- for i in (0..23) -%}{%- assign t = cw_wetter.hourly.temperature_2m[i] | plus: 0 -%}{%- if t == tv_max -%}{%- assign i_max = i -%}{%- endif -%}{%- if t == tv_min and i_min == 0 -%}{%- assign i_min = i -%}{%- endif -%}{%- endfor -%}
-{%- assign cw_tv_max_x = i_max | times: 10 -%}{%- assign cw_tv_max_t = tv_max | round -%}
+{%- assign cw_feuchte = cw_wetter.current.relative_humidity_2m | round -%}
+{%- assign cw_uv = cw_wetter.daily.uv_index_max[0] | default: 0 | round -%}
 {%- comment -%} Regen in den nächsten 2 Stunden (15-Minuten-Werte) {%- endcomment -%}
 {%- assign cw_regen = "" -%}{%- assign regen_jetzt = false -%}
 {%- for p in cw_wetter.minutely_15.precipitation -%}

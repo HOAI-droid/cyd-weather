@@ -30,14 +30,14 @@ wetter = {
     "latitude": 49.87, "longitude": 8.65, "utc_offset_seconds": OFF, "timezone": "Europe/Berlin",
     "timezone_abbreviation": "GMT+1", "elevation": 144.0,
     "current": {"time": q.strftime("%Y-%m-%dT%H:%M"), "interval": 900, "temperature_2m": 11.8,
-                "apparent_temperature": 9.4, "is_day": 1 if 7 <= lokal.hour < 17 else 0,
+                "apparent_temperature": 9.4, "relative_humidity_2m": 78, "is_day": 1 if 7 <= lokal.hour < 17 else 0,
                 "weather_code": 3, "wind_speed_10m": 14.2, "precipitation": 0.0},
     "hourly": hourly, "minutely_15": m15,
     "daily": {"time": [str(day0), str(day0 + dt.timedelta(days=1))], "weather_code": [61, 2],
               "temperature_2m_max": [13.4, 12.1], "temperature_2m_min": [6.2, 4.8],
               "precipitation_probability_max": [80, 15],
               "sunrise": [f"{day0}T07:21", f"{day0 + dt.timedelta(days=1)}T07:23"],
-              "sunset": [f"{day0}T17:05", f"{day0 + dt.timedelta(days=1)}T17:03"]},
+              "sunset": [f"{day0}T17:05", f"{day0 + dt.timedelta(days=1)}T17:03"], "uv_index_max": [2.4, 1.9]},
 }
 
 # ---------------- dbf.finalrewind.org JSON (version=3, HAFAS) ----------------

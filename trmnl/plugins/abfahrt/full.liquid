@@ -23,22 +23,20 @@
   .abf .zeile.weg .badge { background: #fff; color: #000; border: 1.5px solid #000; }
   .abf .fehler { font-size: 17px; padding: 12px 2px; }
   .abf .jetzt { gap: 10px; }
-  .abf .jetzt .t { font-size: 52px; font-weight: 700; line-height: .95; letter-spacing: -1px; }
-  .abf .jetzt .txt { font-size: 18px; font-weight: 700; }
-  .abf .jetzt .mm { font-size: 14px; margin-top: 2px; }
-  .abf .tv { position: relative; height: 92px; margin-top: 4px; }
-  .abf .tv svg { position: absolute; left: 0; top: 0; }
-  .abf .tv .ax { position: absolute; bottom: -1px; font-size: 11px; transform: translateX(-50%); }
-  .abf .tz { justify-content: space-between; margin-top: 12px; padding-top: 4px; border-top: 1px solid #000; }
-  .abf .tz .col { align-items: center; width: 25%; font-size: 15px; }
-  .abf .tz .col .h { font-size: 13px; font-weight: 600; }
-  .abf .tz .col .tt { font-weight: 700; font-size: 17px; }
-  .abf .tz .col .pp { font-size: 12px; height: 14px; }
-  .abf .tz .col.vorbei { text-decoration: none; }
-  .abf .tz .col.vorbei .h::after { content: " ✓"; }
-  .abf .info { gap: 5px; font-size: 14px; margin-top: auto; padding-top: 4px; border-top: 1px solid #000; }
-  .abf .spruch { font-size: 15px; font-style: italic; padding-top: 3px; }
-  .abf .info svg + span { margin-right: 7px; }
+  .abf .jetzt .t { font-size: 66px; font-weight: 500; line-height: .95; letter-spacing: -2px; }
+  .abf .jetzt .hl { align-items: flex-end; font-size: 18px; gap: 1px; }
+  .abf .jetzt .hl .gf { font-size: 14px; margin-top: 2px; }
+  .abf .txt { font-size: 22px; font-weight: 700; text-align: center; margin-top: 2px; }
+  .abf .spruch { font-size: 15px; font-style: italic; text-align: center; margin-top: 1px; }
+  .abf .kacheln { gap: 7px; margin-top: 9px; }
+  .abf .kachel { flex: 1 1 0; align-items: center; gap: 1px; padding: 5px 2px 4px; border: 2px solid #000; border-radius: 9px; font-size: 13px; }
+  .abf .kachel b { font-size: 17px; }
+  .abf .vl { font-size: 12px; margin-top: auto; padding-top: 5px; border-top: 2px solid #000; }
+  .abf .verlauf { justify-content: space-between; padding-top: 3px; }
+  .abf .verlauf .col { align-items: center; width: 16.6%; }
+  .abf .verlauf .h { font-size: 13px; font-weight: 600; }
+  .abf .verlauf .tt { font-weight: 700; font-size: 18px; }
+  .abf .verlauf .pp { font-size: 12px; height: 14px; }
   .abf .muell { height: 72px; border-top: 3px solid #000; display: flex; }
   .abf .muell .termin { flex: 1 1 0; gap: 10px; padding: 0 14px; border-left: 2px solid #000; min-width: 0; }
   .abf .muell .termin:first-child { border-left: 0; padding-left: 18px; }
@@ -91,46 +89,36 @@
     <div class="wetter">
       {%- if cw_w_ok -%}
       <div class="row jetzt">
-        {% render "cw_icon", code: cw_code, day: cw_day, size: 62 %}
-        <div class="t num">{{ cw_temp }}°</div>
-        <div class="col grow">
-          <div class="txt ell">{% render "cw_text", code: cw_code, day: cw_day %}</div>
-          <div class="mm num">Heute ↑ {{ cw_max }}° ↓ {{ cw_min }}° · Regen {{ cw_pop }} %</div>
-          <div class="mm num">gefühlt {{ cw_gefuehlt }}° · {{ cw_regen }}</div>
+        {% render "cw_icon", code: cw_code, day: cw_day, size: 80 %}
+        <div class="t num grow">{{ cw_temp }}°</div>
+        <div class="col hl num">
+          <span>▲ <b>{{ cw_max }}°</b></span>
+          <span>▼ <b>{{ cw_min }}°</b></span>
+          <span class="gf">Gefühlt {{ cw_gefuehlt }}°</span>
         </div>
       </div>
+      <div class="txt ell">{% render "cw_text", code: cw_code, day: cw_day %}</div>
+      <div class="spruch ell">{% if cw_spruch != "" %}„{{ cw_spruch }}“{% else %}{{ cw_regen }}{% endif %}</div>
 
-      {%- comment -%} Tagesverlauf: Temperaturkurve, Regenwahrscheinlichkeit als Balken, Strich = jetzt {%- endcomment -%}
-      <div class="tv">
-        <svg width="368" height="80" viewBox="-6 0 242 100" preserveAspectRatio="none">
-          <g fill="#000">{{ cw_tv_regen }}</g>
-          <line x1="-6" y1="100" x2="236" y2="100" stroke="#000" stroke-width="2" vector-effect="non-scaling-stroke"/>
-          {%- for x in (0..4) -%}<line x1="{{ x | times: 60 }}" y1="96" x2="{{ x | times: 60 }}" y2="100" stroke="#000" stroke-width="1.5" vector-effect="non-scaling-stroke"/>{%- endfor -%}
-          <line x1="{{ cw_tv_jetzt }}" y1="2" x2="{{ cw_tv_jetzt }}" y2="100" stroke="#000" stroke-width="1.5" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>
-          <polyline points="{{ cw_tv_linie | strip }}" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-        </svg>
-        {%- for x in (1..3) -%}{%- assign px = x | times: 60 | plus: 6 | times: 368 | divided_by: 242.0 | round -%}
-        <span class="ax num" style="left: {{ px }}px">{{ x | times: 6 }} Uhr</span>{%- endfor -%}
-        {%- assign mx = cw_tv_max_x | plus: 6 | times: 368 | divided_by: 242.0 | round -%}
-        <span class="ax b num" style="left: {{ mx }}px; bottom: auto; top: -4px; font-size: 13px;">{{ cw_tv_max_t }}°</span>
+      <div class="row kacheln">
+        <div class="col kachel"><svg width="22" height="22"><use href="#cw-drop"/></svg><b class="num">{{ cw_feuchte }} %</b><span>Feuchte</span></div>
+        <div class="col kachel"><svg width="22" height="22"><use href="#cw-wind"/></svg><b class="num">{{ cw_wind }} km/h</b><span>Wind</span></div>
+        <div class="col kachel"><svg width="22" height="22"><use href="#cw-umbrella"/></svg><b class="num">{{ cw_pop }} %</b><span>Regen</span></div>
+        <div class="col kachel"><svg width="22" height="22"><use href="#cw-uv"/></svg><b class="num">{{ cw_uv }}</b><span>UV</span></div>
       </div>
 
-      <div class="row tz">
-        {%- assign stunden = "8,12,16,20" | split: "," -%}{%- assign namen = "Morgens,Mittags,Nachmittags,Abends" | split: "," -%}
-        {%- for s in stunden -%}{%- assign i = s | plus: 0 -%}{%- assign pp = cw_wetter.hourly.precipitation_probability[i] | default: 0 -%}
+      {%- comment -%} Tagesverlauf: jetzt und dann alle 3 Stunden (stündliche Werte beginnen um 00:00 heute) {%- endcomment -%}
+      <div class="lbl vl">Tagesverlauf</div>
+      <div class="row verlauf">
+        {%- for k in (0..5) -%}{%- assign i = k | times: 3 | plus: cw_h -%}{%- assign pp = cw_wetter.hourly.precipitation_probability[i] | default: 0 -%}
         <div class="col">
-          <span class="h">{{ namen[forloop.index0] }}</span>
-          {% render "cw_icon", code: cw_wetter.hourly.weather_code[i], day: cw_wetter.hourly.is_day[i], size: 34 %}
+          <span class="h">{% if k == 0 %}Jetzt{% else %}{{ cw_wetter.hourly.time[i] | slice: 11, 2 }} Uhr{% endif %}</span>
+          {% render "cw_icon", code: cw_wetter.hourly.weather_code[i], day: cw_wetter.hourly.is_day[i], size: 40 %}
           <span class="tt num">{{ cw_wetter.hourly.temperature_2m[i] | round }}°</span>
-          <span class="pp num">{% if pp >= 20 %}{{ pp }} % Regen{% endif %}</span>
+          <span class="pp num">{% if pp >= 20 %}{{ pp }} %{% endif %}</span>
         </div>
         {%- endfor -%}
       </div>
-
-      <div class="row info"><svg width="18" height="18"><use href="#cw-wind"/></svg><span>{{ cw_wind }} km/h</span>
-        <svg width="18" height="18"><use href="#cw-sunrise"/></svg><span>{{ cw_auf }}</span>
-        <svg width="18" height="18"><use href="#cw-sunset"/></svg><span>{{ cw_unter }}</span></div>
-      {%- if cw_spruch != "" -%}<div class="spruch">„{{ cw_spruch }}“</div>{%- endif -%}
       {%- else -%}
         <div class="fehler"><b>Wetter nicht verfügbar.</b><br>Open-Meteo antwortet nicht.</div>
       {%- endif -%}

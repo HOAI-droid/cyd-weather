@@ -9,7 +9,7 @@ no_screen_padding: "yes"
 dark_mode: "no"
 # Eine Adresse pro Zeile. Reihenfolge nicht ändern: 1. Wetter, 2. Abfahrten, 3. Müll (darf fehlen).
 polling_url: |-
-  https://api.open-meteo.com/v1/forecast?latitude={{ breite }}&longitude={{ laenge }}&current=temperature_2m,apparent_temperature,is_day,weather_code,wind_speed_10m,precipitation&hourly=temperature_2m,precipitation_probability,weather_code,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&minutely_15=precipitation&timezone=auto&forecast_days=2&forecast_minutely_15=9
+  https://api.open-meteo.com/v1/forecast?latitude={{ breite }}&longitude={{ laenge }}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,wind_speed_10m,precipitation&hourly=temperature_2m,precipitation_probability,weather_code,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset,uv_index_max&minutely_15=precipitation&timezone=auto&forecast_days=2&forecast_minutely_15=9
   https://dbf.finalrewind.org/{{ haltestelle | url_encode | replace: "+", "%20" }}.json?hafas={{ verbund }}&version=3&admode=dep&limit=14&via={{ richtung | url_encode }}
   {% if strasse != blank %}https://ead.darmstadt.de/unser-angebot/privathaushalte/abfallkalender/singleStreet/?type=742394&street={{ strasse | url_encode }}{% endif %}
 custom_fields:
