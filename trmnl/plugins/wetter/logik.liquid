@@ -1,0 +1,61 @@
+{%- comment -%}
+  Seite 2 – Daten aufbereiten. IDX_0 = Open-Meteo Vorhersage, IDX_1 = Open-Meteo Luftqualität
+{%- endcomment -%}
+{%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
+{%- assign cw_w_ok = false -%}{%- if cw_wetter.current -%}{%- assign cw_w_ok = true -%}{%- endif -%}
+{%- assign cur = cw_wetter.current -%}
+{%- assign cw_temp = cur.temperature_2m | round -%}
+{%- assign cw_gefuehlt = cur.apparent_temperature | round -%}
+{%- assign cw_code = cur.weather_code | default: 3 -%}
+{%- assign cw_day = cur.is_day | default: 1 -%}
+{%- assign cw_wind = cur.wind_speed_10m | round -%}
+{%- assign cw_boeen = cur.wind_gusts_10m | round -%}
+{%- assign cw_feuchte = cur.relative_humidity_2m | round -%}
+{%- assign cw_druck = cur.pressure_msl | round -%}
+{%- assign wr = "Nord,Nordost,Ost,Südost,Süd,Südwest,West,Nordwest" | split: "," -%}
+{%- assign wi = cur.wind_direction_10m | default: 0 | plus: 22 | divided_by: 45 | modulo: 8 -%}
+{%- assign cw_windrichtung = wr[wi] -%}
+{%- assign cw_max = cw_wetter.daily.temperature_2m_max[0] | round -%}
+{%- assign cw_min = cw_wetter.daily.temperature_2m_min[0] | round -%}
+{%- assign cw_auf = cw_wetter.daily.sunrise[0] | slice: 11, 5 -%}
+{%- assign cw_unter = cw_wetter.daily.sunset[0] | slice: 11, 5 -%}
+{%- assign uv = cw_wetter.daily.uv_index_max[0] | default: 0 -%}
+{%- assign cw_uv = uv | round -%}
+{%- if uv < 3 -%}{%- assign cw_uv_text = "niedrig" -%}{%- elsif uv < 6 -%}{%- assign cw_uv_text = "mäßig" -%}{%- elsif uv < 8 -%}{%- assign cw_uv_text = "hoch" -%}{%- elsif uv < 11 -%}{%- assign cw_uv_text = "sehr hoch" -%}{%- else -%}{%- assign cw_uv_text = "extrem" -%}{%- endif -%}
+{%- comment -%} Tageslänge in Stunden und Minuten {%- endcomment -%}
+{%- assign a = cw_auf | split: ":" -%}{%- assign u = cw_unter | split: ":" -%}
+{%- assign am = a[0] | plus: 0 | times: 60 | plus: a[1] -%}{%- assign um = u[0] | plus: 0 | times: 60 | plus: u[1] -%}
+{%- assign tl = um | minus: am -%}{%- assign tlh = tl | divided_by: 60 -%}{%- assign tlm = tl | modulo: 60 -%}
+{%- capture cw_tageslaenge -%}{{ tlh }} Std. {{ tlm }} Min.{%- endcapture -%}
+
+{%- comment -%} Nächste 24 Stunden als Kurve (Koordinaten 0..240 × 0..100), Regenwahrscheinlichkeit als Balken {%- endcomment -%}
+{%- assign tv_min = 99 -%}{%- assign tv_max = -99 -%}
+{%- for i in (0..24) -%}{%- assign t = cw_wetter.hourly.temperature_2m[i] | plus: 0 -%}
+  {%- if t < tv_min -%}{%- assign tv_min = t -%}{%- endif -%}{%- if t > tv_max -%}{%- assign tv_max = t -%}{%- endif -%}
+{%- endfor -%}
+{%- assign tv_span = tv_max | minus: tv_min | at_least: 1 -%}
+{%- assign cw_24_min = tv_min | round -%}{%- assign cw_24_max = tv_max | round -%}
+{%- capture cw_24_linie -%}{%- for i in (0..24) -%}{%- assign t = cw_wetter.hourly.temperature_2m[i] | plus: 0 -%}{%- assign y = tv_max | minus: t | times: 50.0 | divided_by: tv_span | plus: 14 | round: 1 -%}{{ i | times: 10 }},{{ y }} {% endfor -%}{%- endcapture -%}
+{%- capture cw_24_regen -%}{%- for i in (0..24) -%}{%- assign p = cw_wetter.hourly.precipitation_probability[i] | default: 0 -%}{%- if p >= 10 -%}{%- assign bh = p | times: 0.3 | round: 1 -%}{%- assign by = 100 | minus: bh -%}<rect x="{{ i | times: 10 | minus: 3.5 }}" y="{{ by }}" width="7" height="{{ bh }}"/>{%- endif -%}{%- endfor -%}{%- endcapture -%}
+
+{%- comment -%} Luftqualität (Europäischer Index) und Pollen {%- endcomment -%}
+{%- assign luft = IDX_1.current -%}
+{%- assign cw_l_ok = false -%}{%- if luft.european_aqi != nil -%}{%- assign cw_l_ok = true -%}{%- endif -%}
+{%- assign aqi = luft.european_aqi | default: 0 -%}{%- assign cw_aqi = aqi | round -%}
+{%- if aqi < 20 -%}{%- assign cw_aqi_text = "Gut" -%}{%- elsif aqi < 40 -%}{%- assign cw_aqi_text = "Befriedigend" -%}{%- elsif aqi < 60 -%}{%- assign cw_aqi_text = "Mäßig" -%}{%- elsif aqi < 80 -%}{%- assign cw_aqi_text = "Schlecht" -%}{%- elsif aqi < 100 -%}{%- assign cw_aqi_text = "Sehr schlecht" -%}{%- else -%}{%- assign cw_aqi_text = "Extrem schlecht" -%}{%- endif -%}
+{%- assign cw_aqi_balken = aqi | at_most: 100 | times: 1.6 | round -%}
+{%- assign pk = "alder_pollen,birch_pollen,grass_pollen,mugwort_pollen,olive_pollen,ragweed_pollen" | split: "," -%}
+{%- assign pn = "Erle,Birke,Gräser,Beifuß,Olive,Ambrosia" | split: "," -%}
+{%- assign p1 = -1 -%}{%- assign p2 = -1 -%}{%- assign v1 = 0 -%}{%- assign v2 = 0 -%}{%- assign hat_pollen = false -%}
+{%- for k in pk -%}{%- assign v = luft[k] -%}{%- if v != nil -%}{%- assign hat_pollen = true -%}{%- endif -%}{%- assign v = v | default: 0 | plus: 0 -%}
+  {%- if v >= 1 -%}
+    {%- if v > v1 -%}{%- assign p2 = p1 -%}{%- assign v2 = v1 -%}{%- assign p1 = forloop.index0 -%}{%- assign v1 = v -%}
+    {%- elsif v > v2 -%}{%- assign p2 = forloop.index0 -%}{%- assign v2 = v -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- capture cw_pollen -%}
+{%- if hat_pollen == false -%}keine Daten
+{%- elsif p1 < 0 -%}keine Belastung
+{%- else -%}{{ pn[p1] }} {% if v1 < 20 %}gering{% elsif v1 < 100 %}mäßig{% else %}stark{% endif %}{% if p2 >= 0 %} · {{ pn[p2] }} {% if v2 < 20 %}gering{% elsif v2 < 100 %}mäßig{% else %}stark{% endif %}{% endif %}
+{%- endif -%}
+{%- endcapture -%}

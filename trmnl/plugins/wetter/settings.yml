@@ -1,0 +1,40 @@
+---
+# Seite 2: Wetter ausführlich wie auf der CYD (24 Stunden, 5 Tage, Luftqualität, Sonne & Wind)
+name: "Wetter ausführlich"
+id: cyd-wetter
+strategy: polling
+polling_verb: get
+refresh_interval: 30
+no_screen_padding: "yes"
+dark_mode: "no"
+# Eine Adresse pro Zeile. Reihenfolge nicht ändern: 1. Wetter, 2. Luftqualität.
+polling_url: |-
+  https://api.open-meteo.com/v1/forecast?latitude={{ breite }}&longitude={{ laenge }}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,pressure_msl,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m,precipitation_probability,weather_code,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,precipitation_probability_max&timezone=auto&forecast_days=6&forecast_hours=25
+  https://air-quality-api.open-meteo.com/v1/air-quality?latitude={{ breite }}&longitude={{ laenge }}&current=european_aqi,pm2_5,pm10,nitrogen_dioxide,ozone,alder_pollen,birch_pollen,grass_pollen,mugwort_pollen,olive_pollen,ragweed_pollen&timezone=auto
+custom_fields:
+  - keyname: info
+    field_type: author_bio
+    name: "Über dieses Plugin"
+    description: "Ausführliches Wetter wie auf der CYD-Wetterstation (github.com/hoai-droid/cyd-weather). Daten: Open-Meteo, ohne API-Schlüssel."
+  - keyname: ort
+    field_type: string
+    name: "Ortsname (Anzeige)"
+    default: "Darmstadt"
+  - keyname: breite
+    field_type: string
+    name: "Breitengrad"
+    description: "Dezimalgrad mit Punkt, z. B. 49.87"
+    help_text: "Nachschlagen: <a href='https://open-meteo.com/en/docs' target='_blank'>open-meteo.com</a> (oben Ort suchen) oder <a href='https://www.latlong.net/' target='_blank'>latlong.net</a> (auf die Karte klicken)."
+    default: "49.8728"
+  - keyname: laenge
+    field_type: string
+    name: "Längengrad"
+    description: "Dezimalgrad mit Punkt, z. B. 8.65"
+    default: "8.6512"
+  - keyname: spruch
+    field_type: select
+    name: "Wetterspruch anzeigen"
+    options:
+      - "Ja": "ja"
+      - "Nein": "nein"
+    default: "ja"

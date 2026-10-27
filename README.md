@@ -8,6 +8,8 @@ Moderne, übersichtliche Wetterstation für das **Cheap Yellow Display** (ESP32-
 
 *Die Bilder stammen direkt aus dem Firmware-Code (Host-Simulator, siehe unten).*
 
+> **Neu: TRMNL / E-Ink.** Abfahrten, Wetter des Tages, Müll-Erinnerung und ausführliches Wetter als Plugins für das TRMNL bzw. das Seeed Studio TRMNL 7,5" mit LaraPaper. Siehe [trmnl/README.md](trmnl/README.md).
+
 ## Funktionen
 
 - **6 Ansichten:** Jetzt · Nächste 24 Stunden · 5-Tage-Vorhersage · Regenradar · Luftqualität · Sonne & Wind

@@ -2,3 +2,6 @@
 .vscode/
 sim/build/
 __pycache__/
+trmnl/dist/
+trmnl/vorschau/.build/
+trmnl/vorschau/out/

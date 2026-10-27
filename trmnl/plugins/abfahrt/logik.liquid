@@ -1,0 +1,117 @@
+{%- comment -%}
+  Seite 1 – Daten aufbereiten. Ergebnis sind cw_*-Variablen, die alle Layouts nutzen.
+  IDX_0 = Open-Meteo, IDX_1 = Abfahrten (dbf.finalrewind.org / HAFAS), IDX_2 = EAD-Müllkalender
+{%- endcomment -%}
+{%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
+{%- assign cw_fuss = cf.fussweg | default: 0 | plus: 0 -%}
+{%- assign cw_ort_prefix = cf.ort | append: " " -%}
+{%- assign cw_ort_suffix = cf.ort | prepend: ", " -%}
+
+{%- comment -%} ===== Abfahrten ===== {%- endcomment -%}
+{%- assign abf = IDX_1 -%}
+{%- assign cw_abf_fehler = "" -%}
+{%- if abf == nil or abf.error -%}
+  {%- assign cw_abf_fehler = abf.error | default: "Keine Daten" -%}
+  {%- if cw_abf_fehler contains "ambiguous" -%}{%- assign cw_abf_fehler = "Haltestelle mehrdeutig – Namen genauer angeben" -%}{%- endif -%}
+  {%- if cw_abf_fehler contains "Failed to fetch" -%}{%- assign cw_abf_fehler = "Fahrplan nicht erreichbar" -%}{%- endif -%}
+{%- endif -%}
+{%- capture abf_liste -%}
+{%- for d in abf.departures -%}
+  {%- assign t = d.time | default: d.departure | default: d.sched_departure -%}
+  {%- if t == nil -%}{%- continue -%}{%- endif -%}
+  {%- assign tp = t | split: ":" -%}
+  {%- assign dm = tp[0] | plus: 0 | times: 60 | plus: tp[1] -%}
+  {%- assign diff = dm | minus: cw_now_min -%}
+  {%- if diff < -720 -%}{%- assign diff = diff | plus: 1440 -%}{%- endif -%}
+  {%- if diff < 0 -%}{%- continue -%}{%- endif -%}
+  {%- assign linie = d.train_line | default: d.train | default: "?" | remove: "Bus " | remove: "Tram " | remove: "STR " | strip -%}
+  {%- assign ziel = d.destination | default: "?" | remove_first: cw_ort_prefix | remove: cw_ort_suffix | strip -%}
+  {%- assign vsp = d.delay | default: 0 | plus: 0 -%}
+  {%- assign ausfall = 0 -%}{%- if d.is_cancelled == 1 or d.is_cancelled == true -%}{%- assign ausfall = 1 -%}{%- endif -%}
+  {%- assign ok = 1 -%}{%- if diff < cw_fuss -%}{%- assign ok = 0 -%}{%- endif -%}
+  {{ diff }}^{{ t }}^{{ linie }}^{{ ziel | replace: "^", " " | replace: "~", " " }}^{{ vsp }}^{{ ausfall }}^{{ ok }}~
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign cw_abf = abf_liste | strip | split: "~" -%}
+{%- comment -%} erste erreichbare, nicht ausgefallene Fahrt {%- endcomment -%}
+{%- assign cw_next = "" -%}{%- assign cw_next_i = -1 -%}
+{%- for e in cw_abf -%}{%- assign f = e | split: "^" -%}
+  {%- if f[6] == "1" and f[5] == "0" -%}{%- assign cw_next = e -%}{%- assign cw_next_i = forloop.index0 -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+{%- assign cw_nf = cw_next | split: "^" -%}
+{%- if cw_next == "" -%}{%- assign cw_nf_n = 0 -%}{%- else -%}{%- assign cw_nf_n = 1 -%}{%- endif -%}
+{%- if cw_nf_n > 0 -%}
+  {%- assign losgehen = cw_nf[0] | plus: 0 | minus: cw_fuss -%}
+{%- endif -%}
+
+{%- comment -%} ===== Wetter heute ===== {%- endcomment -%}
+{%- assign cw_w_ok = false -%}{%- if cw_wetter.current -%}{%- assign cw_w_ok = true -%}{%- endif -%}
+{%- assign cw_temp = cw_wetter.current.temperature_2m | round -%}
+{%- assign cw_gefuehlt = cw_wetter.current.apparent_temperature | round -%}
+{%- assign cw_code = cw_wetter.current.weather_code | default: 3 -%}
+{%- assign cw_day = cw_wetter.current.is_day | default: 1 -%}
+{%- assign cw_max = cw_wetter.daily.temperature_2m_max[0] | round -%}
+{%- assign cw_min = cw_wetter.daily.temperature_2m_min[0] | round -%}
+{%- assign cw_pop = cw_wetter.daily.precipitation_probability_max[0] | default: 0 -%}
+{%- assign cw_wind = cw_wetter.current.wind_speed_10m | round -%}
+{%- assign cw_auf = cw_wetter.daily.sunrise[0] | slice: 11, 5 -%}
+{%- assign cw_unter = cw_wetter.daily.sunset[0] | slice: 11, 5 -%}
+
+{%- comment -%} Tagesverlauf 0–23 Uhr (stündliche Werte beginnen um 00:00 heute). Diagramm-Koordinaten 0..230 × 0..100 {%- endcomment -%}
+{%- assign tv_min = 99 -%}{%- assign tv_max = -99 -%}
+{%- for i in (0..23) -%}{%- assign t = cw_wetter.hourly.temperature_2m[i] | plus: 0 -%}
+  {%- if t < tv_min -%}{%- assign tv_min = t -%}{%- endif -%}{%- if t > tv_max -%}{%- assign tv_max = t -%}{%- endif -%}
+{%- endfor -%}
+{%- assign tv_span = tv_max | minus: tv_min | at_least: 1 -%}
+{%- capture cw_tv_linie -%}{%- for i in (0..23) -%}{%- assign t = cw_wetter.hourly.temperature_2m[i] | plus: 0 -%}{%- assign y = tv_max | minus: t | times: 52.0 | divided_by: tv_span | plus: 14 | round: 1 -%}{{ i | times: 10 }},{{ y }} {% endfor -%}{%- endcapture -%}
+{%- capture cw_tv_regen -%}{%- for i in (0..23) -%}{%- assign p = cw_wetter.hourly.precipitation_probability[i] | default: 0 -%}{%- if p >= 10 -%}{%- assign bh = p | times: 0.3 | round: 1 -%}{%- assign by = 100 | minus: bh -%}<rect x="{{ i | times: 10 | minus: 3.5 }}" y="{{ by }}" width="7" height="{{ bh }}"/>{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- assign tvm = cw_m | divided_by: 6.0 -%}{%- assign cw_tv_jetzt = cw_h | times: 10 | plus: tvm | round: 1 -%}
+{%- assign i_max = 0 -%}{%- assign i_min = 0 -%}
+{%- for i in (0..23) -%}{%- assign t = cw_wetter.hourly.temperature_2m[i] | plus: 0 -%}{%- if t == tv_max -%}{%- assign i_max = i -%}{%- endif -%}{%- if t == tv_min and i_min == 0 -%}{%- assign i_min = i -%}{%- endif -%}{%- endfor -%}
+{%- assign cw_tv_max_x = i_max | times: 10 -%}{%- assign cw_tv_max_t = tv_max | round -%}
+{%- comment -%} Regen in den nächsten 2 Stunden (15-Minuten-Werte) {%- endcomment -%}
+{%- assign cw_regen = "" -%}{%- assign regen_jetzt = false -%}
+{%- for p in cw_wetter.minutely_15.precipitation -%}
+  {%- if p >= 0.1 -%}
+    {%- if forloop.first -%}{%- assign regen_jetzt = true -%}{%- else -%}{%- unless regen_jetzt -%}{%- assign rz = cw_wetter.minutely_15.time[forloop.index0] | slice: 11, 5 -%}{%- assign cw_regen = "Regen ab " | append: rz -%}{%- break -%}{%- endunless -%}{%- endif -%}
+  {%- elsif regen_jetzt -%}
+    {%- assign rz = cw_wetter.minutely_15.time[forloop.index0] | slice: 11, 5 -%}{%- assign cw_regen = "Regen bis etwa " | append: rz -%}{%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if cw_regen == "" -%}{%- if regen_jetzt -%}{%- assign cw_regen = "Regen in den nächsten 2 Std." -%}{%- else -%}{%- assign cw_regen = "Trocken in den nächsten 2 Std." -%}{%- endif -%}{%- endif -%}
+
+{%- comment -%} ===== Müll (EAD Darmstadt: {"28.10.2026": ["RM1","BIO"], ...}) ===== {%- endcomment -%}
+{%- assign muell = IDX_2 -%}
+{%- assign cw_muell_aktiv = false -%}{%- if cf.strasse != blank -%}{%- assign cw_muell_aktiv = true -%}{%- endif -%}
+{%- assign cw_muell_fehler = "" -%}
+{%- if cw_muell_aktiv -%}
+  {%- if muell == nil or muell.error -%}{%- assign cw_muell_fehler = "Müllkalender nicht erreichbar" -%}
+  {%- elsif muell.data -%}{%- assign cw_muell_fehler = "Straße im EAD-Kalender nicht gefunden" -%}{%- endif -%}
+{%- endif -%}
+{%- assign ml = "31,28,31,30,31,30,31,31,30,31,30,31" | split: "," -%}
+{%- assign dd = cw_tag -%}{%- assign mm = cw_monat -%}{%- assign yy = cw_jahr -%}
+{%- assign cw_muell_heute = "" -%}{%- assign cw_muell_morgen = "" -%}
+{%- capture muell_liste -%}
+{%- for i in (0..34) -%}
+  {%- capture key -%}{% if dd < 10 %}0{% endif %}{{ dd }}.{% if mm < 10 %}0{% endif %}{{ mm }}.{{ yy }}{%- endcapture -%}
+  {%- assign arten = muell[key] -%}
+  {%- if arten and arten.size > 0 -%}
+    {%- capture namen -%}{%- for a in arten -%}{%- case a -%}{%- when "RM1", "RM2", "RM4", "RM" -%}Restmüll{%- when "WET", "GS", "GT" -%}Gelbe Tonne{%- when "BIO" -%}Bio{%- when "PPK", "PAP" -%}Papier{%- else -%}{{ a }}{%- endcase -%}{%- unless forloop.last -%}{{ " + " }}{%- endunless -%}{%- endfor -%}{%- endcapture -%}
+    {%- if i == 0 -%}{%- assign cw_muell_heute = namen -%}{%- endif -%}
+    {%- if i == 1 -%}{%- assign cw_muell_morgen = namen -%}{%- endif -%}
+    {%- assign wi = cw_wt | plus: i | modulo: 7 -%}
+    {{ i }}^{{ cw_wt_kurz[wi] }} {{ dd }}.{{ mm }}.^{{ namen }}~
+  {%- endif -%}
+  {%- comment -%} nächster Tag {%- endcomment -%}
+  {%- assign mi2 = mm | minus: 1 -%}{%- assign mlen = ml[mi2] | plus: 0 -%}
+  {%- if mm == 2 -%}{%- assign r4 = yy | modulo: 4 -%}{%- assign r100 = yy | modulo: 100 -%}{%- assign r400 = yy | modulo: 400 -%}
+    {%- if r4 == 0 and r100 != 0 or r400 == 0 -%}{%- assign mlen = 29 -%}{%- endif -%}{%- endif -%}
+  {%- assign dd = dd | plus: 1 -%}
+  {%- if dd > mlen -%}{%- assign dd = 1 -%}{%- assign mm = mm | plus: 1 -%}{%- if mm > 12 -%}{%- assign mm = 1 -%}{%- assign yy = yy | plus: 1 -%}{%- endif -%}{%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign cw_muell = muell_liste | strip | split: "~" -%}{%- assign cw_muell_n = cw_muell.size -%}{%- if muell_liste == blank -%}{%- assign cw_muell_n = 0 -%}{%- endif -%}
+{%- assign erinnerung = cf.erinnerung | default: 17 | plus: 0 -%}
+{%- assign cw_muell_alarm = "" -%}
+{%- if cw_muell_morgen != "" and cw_h >= erinnerung -%}{%- assign cw_muell_alarm = "abend" -%}
+{%- elsif cw_muell_heute != "" and cw_h < 10 -%}{%- assign cw_muell_alarm = "morgen" -%}{%- endif -%}

@@ -1,0 +1,59 @@
+<div class="view view--half_horizontal">
+<style>
+  .abh { display: flex; }
+  .abh .links { width: 470px; padding: 10px 14px 6px 18px; display: flex; flex-direction: column; }
+  .abh .rechts { flex: 1 1 auto; border-left: 3px solid #000; display: flex; flex-direction: column; }
+  .abh .titel { gap: 6px; justify-content: space-between; margin-bottom: 6px; }
+  .abh .held { gap: 12px; padding: 5px 10px; border: 3px solid #000; border-radius: 10px; margin-bottom: 4px; }
+  .abh .held .badge { font-size: 26px; height: 40px; min-width: 40px; border-radius: 8px; }
+  .abh .held .in { font-size: 40px; font-weight: 800; line-height: 1; }
+  .abh .held .in small { font-size: 17px; font-weight: 700; margin-left: 2px; }
+  .abh .held .ziel { font-size: 18px; font-weight: 700; }
+  .abh .held .sub { font-size: 14px; }
+  .abh .zeile { height: 28px; gap: 8px; font-size: 17px; border-top: 1px solid #000; }
+  .abh .zeile .badge { font-size: 15px; height: 22px; min-width: 28px; }
+  .abh .zeile .uhr { width: 50px; text-align: right; font-weight: 700; }
+  .abh .zeile .min { width: 56px; text-align: right; }
+  .abh .fehler { font-size: 16px; padding: 8px 2px; }
+  .abh .wet { flex: 1 1 auto; padding: 10px 14px; gap: 10px; }
+  .abh .wet .t { font-size: 46px; font-weight: 700; line-height: 1; }
+  .abh .wet .txt { font-size: 15px; }
+  .abh .muell { min-height: 74px; padding: 6px 14px; gap: 10px; border-top: 3px solid #000; }
+  .abh .muell .gross { font-size: 21px; font-weight: 800; line-height: 1.05; }
+  .abh .muell .klein { font-size: 14px; }
+</style>
+<div class="cw abh">
+  <div class="links">
+    <div class="row titel"><span class="lbl ell" style="font-size:13px">{{ cf.haltestelle | remove: cw_ort_suffix }}{% if cf.richtung != blank %} → {{ cf.richtung }}{% endif %}</span><span class="num" style="font-size:14px">Stand {{ cw_uhr }}</span></div>
+    {%- if cw_abf_fehler != "" -%}<div class="fehler"><b>Abfahrten nicht verfügbar.</b><br>{{ cw_abf_fehler }}</div>
+    {%- elsif cw_nf_n == 0 -%}<div class="fehler"><b>Keine Abfahrten</b> in nächster Zeit.</div>
+    {%- else -%}
+      <div class="row held"><span class="badge">{{ cw_nf[2] }}</span>
+        <div class="col grow"><div class="ziel ell">{{ cw_nf[3] }}</div><div class="sub ell">ab {{ cw_nf[1] }}{% if cw_nf[4] != "0" %} · +{{ cw_nf[4] }}{% endif %}{% if cw_fuss > 0 %} · {% if losgehen <= 0 %}<b>jetzt losgehen!</b>{% else %}losgehen in {{ losgehen }} Min.{% endif %}{% endif %}</div></div>
+        <div class="in num">{% if cw_nf[0] == "0" %}jetzt{% else %}{{ cw_nf[0] }}<small>Min</small>{% endif %}</div></div>
+      {%- assign n = 0 -%}
+      {%- for e in cw_abf -%}{%- if forloop.index0 <= cw_next_i -%}{%- continue -%}{%- endif -%}{%- assign f = e | split: "^" -%}
+        <div class="row zeile"><span class="badge">{{ f[2] }}</span><span class="grow ell">{% if f[5] == "1" %}<s>{{ f[3] }}</s>{% else %}{{ f[3] }}{% endif %}</span><span class="uhr num">{{ f[1] }}</span><span class="min num">{{ f[0] }} Min</span></div>
+        {%- assign n = n | plus: 1 -%}{%- if n >= 3 -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+  <div class="rechts">
+    {%- if cw_w_ok -%}
+    <div class="row wet">{% render "cw_icon", code: cw_code, day: cw_day, size: 60 %}<div class="t num">{{ cw_temp }}°</div>
+      <div class="col grow txt"><b class="ell">{% render "cw_text", code: cw_code, day: cw_day %}</b><span class="num">↑ {{ cw_max }}° ↓ {{ cw_min }}°</span><span class="ell">{{ cw_regen }}</span></div></div>
+    {%- endif -%}
+    {%- if cw_muell_aktiv -%}
+      {%- if cw_muell_alarm == "abend" -%}
+        <div class="row muell inv"><svg width="34" height="34"><use href="#cw-bell"/></svg><div class="col grow"><div class="klein">Heute Abend rausstellen:</div><div class="gross">{{ cw_muell_morgen }}</div></div></div>
+      {%- elsif cw_muell_alarm == "morgen" -%}
+        <div class="row muell inv"><svg width="34" height="34"><use href="#cw-bell"/></svg><div class="col grow"><div class="klein">Heute wird abgeholt:</div><div class="gross">{{ cw_muell_heute }}</div></div></div>
+      {%- elsif cw_muell_fehler != "" -%}
+        <div class="row muell"><svg width="28" height="28"><use href="#cw-bin"/></svg><div class="klein">{{ cw_muell_fehler }}</div></div>
+      {%- elsif cw_muell_n > 0 -%}{%- assign f = cw_muell[0] | split: "^" -%}
+        <div class="row muell"><svg width="28" height="28"><use href="#cw-bin"/></svg><div class="col grow"><div class="klein">Nächste Abholung {% if f[0] == "1" %}morgen{% elsif f[0] == "0" %}heute{% else %}{{ f[1] }}{% endif %}</div><div class="b ell" style="font-size:17px">{{ f[2] }}</div></div></div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</div>
+</div>

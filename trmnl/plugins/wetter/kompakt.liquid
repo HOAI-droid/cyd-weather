@@ -1,0 +1,39 @@
+<div class="view view--{{ size }}">
+{%- comment -%} Kleine Größen (Mashups): eine Vorlage für halb waagrecht, halb senkrecht und Viertel {%- endcomment -%}
+{%- assign tage = 5 -%}{%- if size == "quadrant" -%}{%- assign tage = 4 -%}{%- endif -%}
+<style>
+  .wk { display: flex; flex-direction: column; }
+  .wk .jetzt { gap: 10px; padding: 10px 14px 6px; }
+  .wk .jetzt .t { font-size: 52px; font-weight: 700; line-height: .9; }
+  .wk .jetzt .txt { font-size: 16px; }
+  .wk .tage { display: flex; border-top: 3px solid #000; flex: 1 1 auto; }
+  .wk .tag { flex: 1 1 0; align-items: center; justify-content: center; border-left: 1px solid #000; font-size: 15px; }
+  .wk .tag:first-child { border-left: 0; }
+  .wk .tag .n { font-weight: 700; }
+  .wk .tag .mx { font-weight: 800; font-size: 17px; }
+  .wk .extra { border-top: 3px solid #000; padding: 8px 14px; font-size: 15px; gap: 4px; }
+</style>
+<div class="cw wk">
+  {%- if cw_w_ok -%}
+  <div class="row jetzt">{% render "cw_icon", code: cw_code, day: cw_day, size: 64 %}<div class="t num">{{ cw_temp }}°</div>
+    <div class="col grow txt"><b class="ell">{{ cf.ort }}</b><span class="ell">{% render "cw_text", code: cw_code, day: cw_day %}</span><span class="num">↑ {{ cw_max }}° ↓ {{ cw_min }}° · Stand {{ cw_uhr }}</span></div></div>
+  {%- if size == "half_vertical" -%}
+  <div class="col extra">
+    <span>Gefühlt {{ cw_gefuehlt }}° · Feuchte {{ cw_feuchte }} %</span>
+    <span>Wind {{ cw_wind }} km/h aus {{ cw_windrichtung }}</span>
+    <span>Sonne {{ cw_auf }} – {{ cw_unter }} · UV {{ cw_uv }}</span>
+    {%- if cw_l_ok -%}<span>Luft: <b>{{ cw_aqi_text }}</b> ({{ cw_aqi }}) · Pollen: {{ cw_pollen }}</span>{%- endif -%}
+    {%- if cw_spruch != "" -%}<i>„{{ cw_spruch }}“</i>{%- endif -%}
+  </div>
+  {%- endif -%}
+  <div class="tage">
+    {%- assign letzter = tage | minus: 1 -%}
+    {%- for i in (0..letzter) -%}{%- assign tag = cw_wt | plus: i | modulo: 7 -%}
+      <div class="col tag"><span class="n">{% if i == 0 %}Heute{% else %}{{ cw_wt_kurz[tag] }}{% endif %}</span>
+        {% render "cw_icon", code: cw_wetter.daily.weather_code[i], day: 1, size: 36 %}
+        <span class="num"><span class="mx">{{ cw_wetter.daily.temperature_2m_max[i] | round }}°</span> {{ cw_wetter.daily.temperature_2m_min[i] | round }}°</span></div>
+    {%- endfor -%}
+  </div>
+  {%- else -%}<div style="padding:14px">Wetter nicht verfügbar.</div>{%- endif -%}
+</div>
+</div>

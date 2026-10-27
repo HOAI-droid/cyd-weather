@@ -1,0 +1,27 @@
+{%- comment -%}
+  Wetterspruch wie auf der CYD (einer pro Tag). Braucht cw_code, cw_day, cw_temp, cw_wind, cw_w_ok und cf aus der Logik der Seite.
+{%- endcomment -%}
+{%- assign cw_spruch = "" -%}
+{%- if cf.spruch != "nein" and cw_w_ok -%}
+  {%- assign c = cw_code | plus: 0 -%}
+  {%- if c >= 95 -%}{%- assign s = "Zeus hat schlechte Laune.|Stecker raus, Popcorn rein.|Donnerwetter!" -%}
+  {%- elsif c == 65 or c == 67 or c == 82 -%}{%- assign s = "Bau schon mal eine Arche.|Heute lieber Gummistiefel.|Die Wolken haben Ausverkauf." -%}
+  {%- elsif c >= 61 and c <= 81 -%}{%- assign s = "Schirm oder Frisur, du hast die Wahl.|Gut für die Pflanzen!|Pfützenspringen erlaubt." -%}
+  {%- elsif c >= 51 and c <= 57 -%}{%- assign s = "Nieselt nur. Das zählt nicht.|Feuchtigkeitscreme gratis." -%}
+  {%- elsif c >= 71 and c <= 86 -%}{%- assign s = "Schneemann-Alarm!|Schneeballschlacht, jemand?|Winterwunderland!" -%}
+  {%- elsif cw_wind >= 50 -%}{%- assign s = "Festhalten! Die Frisur hat keine Chance.|Drachen-Wetter!" -%}
+  {%- elsif cw_temp <= -5 -%}{%- assign s = "Pinguin-Wetter!|Brrr. Handschuhe nicht vergessen." -%}
+  {%- elsif c == 45 or c == 48 -%}{%- assign s = "Sichtweite: bis zum Gartenzaun.|Heute alles etwas mysteriös.|Nebel. Die Welt lädt noch." -%}
+  {%- elsif c == 3 -%}{%- assign s = "Grau ist auch eine Farbe.|Der Himmel hat heute Homeoffice.|Perfektes Sofa-Wetter." -%}
+  {%- elsif cw_day == 0 -%}{%- assign s = "Sternklar. Wünsch dir was!|Perfekt zum Sterneschauen.|Der Mond hat heute Dienst." -%}
+  {%- elsif cw_temp >= 28 -%}{%- assign s = "Ist das noch Wetter oder schon Sauna?|Eis essen ist heute Pflicht.|Sonnencreme! Ernsthaft." -%}
+  {%- elsif cw_temp <= 5 -%}{%- assign s = "Sonnig, aber Mütze auf!|Kalt, aber schön. Wie ein Kühlschrank mit Licht." -%}
+  {%- elsif c == 1 or c == 2 -%}{%- assign s = "Wolken mit Sonnenpausen.|Die Sonne spielt Verstecken.|Gemischtes Doppel am Himmel." -%}
+  {%- else -%}{%- assign s = "Perfekter Tag für einen Spaziergang.|Sonnenbrille auf, Laune hoch!|Vitamin D zum Nulltarif." -%}
+  {%- endif -%}
+  {%- assign sl = s | split: "|" -%}{%- assign si = cw_tag0 | modulo: sl.size -%}{%- assign cw_spruch = sl[si] -%}
+  {%- if cw_monat == 12 and cw_tag >= 24 and cw_tag <= 26 -%}{%- assign cw_spruch = "Frohe Weihnachten!" -%}{%- endif -%}
+  {%- if cw_monat == 10 and cw_tag == 31 -%}{%- assign cw_spruch = "Happy Halloween! Buuuh!" -%}{%- endif -%}
+  {%- if cw_monat == 12 and cw_tag == 31 -%}{%- assign cw_spruch = "Guten Rutsch ins neue Jahr!" -%}{%- endif -%}
+{%- endif -%}
+

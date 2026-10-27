@@ -1,0 +1,164 @@
+<div class="view view--full">
+<style>
+  .abf { display: flex; flex-direction: column; }
+  .abf .kopf { height: 44px; padding: 0 18px; justify-content: space-between; border-bottom: 3px solid #000; }
+  .abf .kopf .datum { font-size: 23px; font-weight: 700; }
+  .abf .kopf .stand { font-size: 16px; }
+  .abf .mitte { flex: 1 1 auto; display: flex; min-height: 0; }
+  .abf .fahrt { width: 400px; padding: 10px 14px 6px 18px; display: flex; flex-direction: column; }
+  .abf .wetter { width: 400px; border-left: 3px solid #000; padding: 8px 16px 6px 16px; display: flex; flex-direction: column; }
+  .abf .titel { gap: 6px; margin-bottom: 7px; }
+  .abf .held { gap: 10px; padding: 5px 10px; border: 2.5px solid #000; border-radius: 10px; margin-bottom: 5px; }
+  .abf .held .badge { font-size: 22px; height: 34px; min-width: 34px; border-radius: 7px; }
+  .abf .held .in { font-size: 32px; font-weight: 800; line-height: 1; }
+  .abf .held .in small { font-size: 15px; font-weight: 700; margin-left: 2px; }
+  .abf .held .ziel { font-size: 17px; font-weight: 700; }
+  .abf .held .sub { font-size: 13px; }
+  .abf .zeile { height: 29px; gap: 8px; font-size: 17px; border-top: 1px solid #000; }
+  .abf .zeile .badge { font-size: 15px; height: 22px; min-width: 28px; }
+  .abf .zeile .uhr { width: 48px; text-align: right; font-weight: 700; }
+  .abf .zeile .min { width: 54px; text-align: right; }
+  .abf .zeile .vsp { width: 26px; font-size: 13px; font-weight: 700; }
+  .abf .zeile.weg .ziel, .abf .zeile.weg .uhr, .abf .zeile.weg .min { text-decoration: line-through; text-decoration-thickness: 1.5px; }
+  .abf .zeile.weg .badge { background: #fff; color: #000; border: 1.5px solid #000; }
+  .abf .fehler { font-size: 17px; padding: 12px 2px; }
+  .abf .jetzt { gap: 10px; }
+  .abf .jetzt .t { font-size: 52px; font-weight: 700; line-height: .95; letter-spacing: -1px; }
+  .abf .jetzt .txt { font-size: 18px; font-weight: 700; }
+  .abf .jetzt .mm { font-size: 14px; margin-top: 2px; }
+  .abf .tv { position: relative; height: 92px; margin-top: 4px; }
+  .abf .tv svg { position: absolute; left: 0; top: 0; }
+  .abf .tv .ax { position: absolute; bottom: -1px; font-size: 11px; transform: translateX(-50%); }
+  .abf .tz { justify-content: space-between; margin-top: 12px; padding-top: 4px; border-top: 1px solid #000; }
+  .abf .tz .col { align-items: center; width: 25%; font-size: 15px; }
+  .abf .tz .col .h { font-size: 13px; font-weight: 600; }
+  .abf .tz .col .tt { font-weight: 700; font-size: 17px; }
+  .abf .tz .col .pp { font-size: 12px; height: 14px; }
+  .abf .tz .col.vorbei { text-decoration: none; }
+  .abf .tz .col.vorbei .h::after { content: " ✓"; }
+  .abf .info { gap: 5px; font-size: 14px; margin-top: auto; padding-top: 4px; border-top: 1px solid #000; }
+  .abf .spruch { font-size: 15px; font-style: italic; padding-top: 3px; }
+  .abf .info svg + span { margin-right: 7px; }
+  .abf .muell { height: 72px; border-top: 3px solid #000; display: flex; }
+  .abf .muell .termin { flex: 1 1 0; gap: 10px; padding: 0 14px; border-left: 2px solid #000; min-width: 0; }
+  .abf .muell .termin:first-child { border-left: 0; padding-left: 18px; }
+  .abf .muell .wann { font-size: 15px; font-weight: 600; }
+  .abf .muell .was { font-size: 19px; font-weight: 800; line-height: 1.05; }
+  .abf .muell .hinweis { font-size: 16px; padding: 0 18px; gap: 10px; }
+</style>
+<div class="cw abf">
+  <div class="row kopf">
+    <div class="datum">{{ cw_datum_lang }}</div>
+    <div class="stand">{{ cf.ort }} · Stand {{ cw_uhr }} Uhr</div>
+  </div>
+
+  <div class="mitte">
+    <div class="fahrt">
+      <div class="row titel"><svg width="18" height="18"><use href="#cw-bus"/></svg>
+        <span class="lbl ell" style="font-size:13px">{{ cf.haltestelle | remove: cw_ort_suffix }}{% if cf.richtung != blank %} → {{ cf.richtung }}{% endif %}</span></div>
+
+      {%- if cw_abf_fehler != "" -%}
+        <div class="fehler"><b>Abfahrten nicht verfügbar.</b><br>{{ cw_abf_fehler }}</div>
+      {%- elsif cw_nf_n == 0 -%}
+        <div class="fehler"><b>Keine Abfahrten</b> in nächster Zeit.</div>
+      {%- else -%}
+        <div class="row held">
+          <span class="badge">{{ cw_nf[2] }}</span>
+          <div class="col grow">
+            <div class="ziel ell">{{ cw_nf[3] }}</div>
+            <div class="sub ell">ab {{ cw_nf[1] }}{% if cw_nf[4] != "0" %} · +{{ cw_nf[4] }} Min.{% endif %}
+              {%- if cw_fuss > 0 %} · {% if losgehen <= 0 %}<b>jetzt losgehen!</b>{% else %}losgehen in {{ losgehen }} Min.{% endif %}{% endif %}</div>
+          </div>
+          <div class="in num">{% if cw_nf[0] == "0" %}jetzt{% else %}{{ cw_nf[0] }}<small>Min</small>{% endif %}</div>
+        </div>
+        {%- assign n = 0 -%}
+        {%- for e in cw_abf -%}
+          {%- if forloop.index0 == cw_next_i -%}{%- continue -%}{%- endif -%}
+          {%- if forloop.index0 < cw_next_i and n >= 1 -%}{%- continue -%}{%- endif -%}
+          {%- assign f = e | split: "^" -%}
+          <div class="row zeile{% if f[6] == '0' or f[5] == '1' %} weg{% endif %}">
+            <span class="badge">{{ f[2] }}</span>
+            <span class="ziel grow ell">{% if f[5] == "1" %}Fällt aus · {% endif %}{{ f[3] }}</span>
+            <span class="vsp">{% if f[4] != "0" %}+{{ f[4] }}{% endif %}</span>
+            <span class="uhr num">{{ f[1] }}</span>
+            <span class="min num">{{ f[0] }} Min</span>
+          </div>
+          {%- assign n = n | plus: 1 -%}{%- if n >= 7 -%}{%- break -%}{%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+
+    <div class="wetter">
+      {%- if cw_w_ok -%}
+      <div class="row jetzt">
+        {% render "cw_icon", code: cw_code, day: cw_day, size: 62 %}
+        <div class="t num">{{ cw_temp }}°</div>
+        <div class="col grow">
+          <div class="txt ell">{% render "cw_text", code: cw_code, day: cw_day %}</div>
+          <div class="mm num">Heute ↑ {{ cw_max }}° ↓ {{ cw_min }}° · Regen {{ cw_pop }} %</div>
+          <div class="mm num">gefühlt {{ cw_gefuehlt }}° · {{ cw_regen }}</div>
+        </div>
+      </div>
+
+      {%- comment -%} Tagesverlauf: Temperaturkurve, Regenwahrscheinlichkeit als Balken, Strich = jetzt {%- endcomment -%}
+      <div class="tv">
+        <svg width="368" height="80" viewBox="-6 0 242 100" preserveAspectRatio="none">
+          <g fill="#000">{{ cw_tv_regen }}</g>
+          <line x1="-6" y1="100" x2="236" y2="100" stroke="#000" stroke-width="2" vector-effect="non-scaling-stroke"/>
+          {%- for x in (0..4) -%}<line x1="{{ x | times: 60 }}" y1="96" x2="{{ x | times: 60 }}" y2="100" stroke="#000" stroke-width="1.5" vector-effect="non-scaling-stroke"/>{%- endfor -%}
+          <line x1="{{ cw_tv_jetzt }}" y1="2" x2="{{ cw_tv_jetzt }}" y2="100" stroke="#000" stroke-width="1.5" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>
+          <polyline points="{{ cw_tv_linie | strip }}" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        </svg>
+        {%- for x in (1..3) -%}{%- assign px = x | times: 60 | plus: 6 | times: 368 | divided_by: 242.0 | round -%}
+        <span class="ax num" style="left: {{ px }}px">{{ x | times: 6 }} Uhr</span>{%- endfor -%}
+        {%- assign mx = cw_tv_max_x | plus: 6 | times: 368 | divided_by: 242.0 | round -%}
+        <span class="ax b num" style="left: {{ mx }}px; bottom: auto; top: -4px; font-size: 13px;">{{ cw_tv_max_t }}°</span>
+      </div>
+
+      <div class="row tz">
+        {%- assign stunden = "8,12,16,20" | split: "," -%}{%- assign namen = "Morgens,Mittags,Nachmittags,Abends" | split: "," -%}
+        {%- for s in stunden -%}{%- assign i = s | plus: 0 -%}{%- assign pp = cw_wetter.hourly.precipitation_probability[i] | default: 0 -%}
+        <div class="col">
+          <span class="h">{{ namen[forloop.index0] }}</span>
+          {% render "cw_icon", code: cw_wetter.hourly.weather_code[i], day: cw_wetter.hourly.is_day[i], size: 34 %}
+          <span class="tt num">{{ cw_wetter.hourly.temperature_2m[i] | round }}°</span>
+          <span class="pp num">{% if pp >= 20 %}{{ pp }} % Regen{% endif %}</span>
+        </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="row info"><svg width="18" height="18"><use href="#cw-wind"/></svg><span>{{ cw_wind }} km/h</span>
+        <svg width="18" height="18"><use href="#cw-sunrise"/></svg><span>{{ cw_auf }}</span>
+        <svg width="18" height="18"><use href="#cw-sunset"/></svg><span>{{ cw_unter }}</span></div>
+      {%- if cw_spruch != "" -%}<div class="spruch">„{{ cw_spruch }}“</div>{%- endif -%}
+      {%- else -%}
+        <div class="fehler"><b>Wetter nicht verfügbar.</b><br>Open-Meteo antwortet nicht.</div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- comment -%} Müll-Leiste: immer die nächsten 3 Termine. Ab der Erinnerungszeit am Vorabend wird der Termin von morgen schwarz. {%- endcomment -%}
+  {%- if cw_muell_aktiv -%}
+  <div class="muell">
+    {%- if cw_muell_fehler != "" -%}
+      <div class="row hinweis"><svg width="30" height="30"><use href="#cw-bin"/></svg><span>{{ cw_muell_fehler }}</span></div>
+    {%- elsif cw_muell_n == 0 -%}
+      <div class="row hinweis"><svg width="30" height="30"><use href="#cw-bin"/></svg><span>Keine Abholung in den nächsten 5 Wochen.</span></div>
+    {%- else -%}
+      {%- for e in cw_muell limit: 3 -%}{%- assign f = e | split: "^" -%}
+        {%- assign hell = false -%}
+        {%- if f[0] == "1" and cw_muell_alarm == "abend" -%}{%- assign hell = true -%}{%- endif -%}
+        {%- if f[0] == "0" and cw_muell_alarm == "morgen" -%}{%- assign hell = true -%}{%- endif -%}
+        <div class="row termin{% if hell %} inv{% endif %}">
+          <svg width="34" height="34"><use href="#cw-{% if hell %}bell{% elsif f[2] == 'Bio' %}leaf{% else %}bin{% endif %}"/></svg>
+          <div class="col grow">
+            <span class="wann">{% if f[0] == "0" %}Heute{% if hell %} – steht sie draußen?{% endif %}{% elsif f[0] == "1" %}Morgen{% if hell %} – heute Abend raus!{% endif %}{% else %}{{ f[1] }}{% endif %}</span>
+            <span class="was ell">{{ f[2] }}</span>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+  {%- endif -%}
+</div>
+</div>

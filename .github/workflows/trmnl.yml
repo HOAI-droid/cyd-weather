@@ -1,0 +1,47 @@
+# Baut die TRMNL-Plugins (für LaraPaper) als ZIP und stellt sie unter Releases bereit.
+name: TRMNL-Plugins bauen
+
+on:
+  push:
+    paths:
+      - "trmnl/**"
+      - ".github/workflows/trmnl.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ZIP-Pakete bauen
+        run: trmnl/build.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trmnl-plugins
+          path: trmnl/dist/*.zip
+
+      # Standard-Branch -> Release "trmnl", jeder andere Branch -> Vorab-Release "trmnl-<branch>"
+      - name: Release aktualisieren
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          if [ "$BRANCH" = "$DEFAULT_BRANCH" ]; then
+            TAG=trmnl; TITLE="TRMNL-Plugins"; EXTRA=""
+          else
+            TAG="trmnl-$(echo "$BRANCH" | sed 's#^claude/##; s#[^A-Za-z0-9._-]#-#g')"
+            TITLE="TRMNL-Plugins ($BRANCH)"; EXTRA="--prerelease"
+          fi
+          NOTES="ZIP-Dateien für LaraPaper: Plugins → Import Recipe Archive (siehe trmnl/README.md). Branch: $BRANCH, Stand: ${GITHUB_SHA::7}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --notes "$NOTES"
+          else
+            gh release create "$TAG" --title "$TITLE" --notes "$NOTES" --target "$GITHUB_SHA" $EXTRA
+          fi
+          gh release upload "$TAG" trmnl/dist/*.zip --clobber

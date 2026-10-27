@@ -1,0 +1,131 @@
+{%- comment -%}
+  Gemeinsame Grundlage aller Seiten: Schrift, Stil fürs E-Ink (nur Schwarz/Weiß),
+  gezeichnete Symbole und kleine Bausteine für Wettercodes.
+  Wird beim Bauen vor die Logik der jeweiligen Seite gesetzt (shared.liquid).
+{%- endcomment -%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=block">
+<style>
+  .cw, .cw * { box-sizing: border-box; margin: 0; padding: 0; }
+  .cw { position: relative; width: 100%; height: 100%; overflow: hidden; background: #fff; color: #000;
+        font-family: "Outfit", "Inter", "Helvetica Neue", Arial, sans-serif; font-weight: 500; line-height: 1.15;
+        -webkit-font-smoothing: none; font-smooth: never; }
+  .cw svg { display: block; }
+  /* Symbole: Farbe über "color" (currentColor), Füllfläche über --cw-bg – wirkt auch in <use>-Kopien */
+  .cw-ico { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .cw-fill { fill: currentColor; stroke: currentColor; }
+  .cw-bgfill { fill: var(--cw-bg, #fff); }
+  .cw .row { display: flex; align-items: center; }
+  .cw .col { display: flex; flex-direction: column; }
+  .cw .grow { flex: 1 1 auto; min-width: 0; }
+  .cw .ell { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cw .b { font-weight: 700; }
+  .cw .xb { font-weight: 800; }
+  .cw .num { font-variant-numeric: tabular-nums; }
+  .cw .lbl { font-size: 15px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+  .cw .inv { background: #000; color: #fff; --cw-bg: #000; }
+  .cw .rule { border-top: 2px solid #000; }
+  .cw .hair { border-top: 1px solid #000; }
+  .cw .badge { display: inline-flex; align-items: center; justify-content: center; background: #000; color: #fff;
+               font-weight: 800; border-radius: 6px; padding: 0 6px; }
+  .cw .badge.out { background: #fff; color: #000; border: 2px solid #000; }
+  .cw .strike { text-decoration: line-through; text-decoration-thickness: 2px; }
+  .cw .dots { background-image: radial-gradient(#000 1px, transparent 1.2px); background-size: 4px 4px; }
+</style>
+<svg width="0" height="0" style="position:absolute;color:#000" aria-hidden="true">
+  <defs>
+    <symbol id="cw-sun" viewBox="0 0 48 48"><g class="cw-ico"><circle cx="24" cy="24" r="8"/><path d="M24 5v6M24 37v6M5 24h6M37 24h6M10.6 10.6l4.2 4.2M33.2 33.2l4.2 4.2M10.6 37.4l4.2-4.2M33.2 14.8l4.2-4.2"/></g></symbol>
+    <symbol id="cw-moon" viewBox="0 0 48 48"><path class="cw-ico" d="M30 7a17 17 0 1 0 11 26A14 14 0 0 1 30 7z"/></symbol>
+        <symbol id="cw-cloud" viewBox="0 0 48 48"><path class="cw-ico cw-bgfill" d="M14 36h22a8 8 0 0 0 1-16 11 11 0 0 0-21-3A9.5 9.5 0 0 0 14 36z"/></symbol>
+    <symbol id="cw-cloud-up" viewBox="0 0 48 48"><path class="cw-ico cw-bgfill" d="M14 29h22a7.5 7.5 0 0 0 1-15 10.5 10.5 0 0 0-20-3A9 9 0 0 0 14 29z"/></symbol>
+    <symbol id="cw-partly-day" viewBox="0 0 48 48"><g class="cw-ico"><circle cx="17" cy="16" r="6"/><path d="M17 3v4M4 16h4M7.8 6.8l2.8 2.8M26.2 6.8l-2.8 2.8M7.8 25.2l2.8-2.8"/></g><path class="cw-ico cw-bgfill" d="M17 40h20a7 7 0 0 0 1-14 10 10 0 0 0-19-2.5A8.5 8.5 0 0 0 17 40z"/></symbol>
+    <symbol id="cw-partly-night" viewBox="0 0 48 48"><path class="cw-ico" d="M20 5a12 12 0 1 0 9 19A10 10 0 0 1 20 5z"/><path class="cw-ico cw-bgfill" d="M17 40h20a7 7 0 0 0 1-14 10 10 0 0 0-19-2.5A8.5 8.5 0 0 0 17 40z"/></symbol>
+    <symbol id="cw-fog" viewBox="0 0 48 48"><use href="#cw-cloud-up"/><path class="cw-ico" d="M8 35h32M12 41h24"/></symbol>
+    <symbol id="cw-drizzle" viewBox="0 0 48 48"><use href="#cw-cloud-up"/><path class="cw-ico" d="M16 35v2M24 35v2M32 35v2M20 41v2M28 41v2"/></symbol>
+    <symbol id="cw-rain" viewBox="0 0 48 48"><use href="#cw-cloud-up"/><path class="cw-ico" d="M16 34l-3 8M24 34l-3 8M32 34l-3 8"/></symbol>
+    <symbol id="cw-sleet" viewBox="0 0 48 48"><use href="#cw-cloud-up"/><path class="cw-ico" d="M16 34l-3 8M30 34l-3 8"/><circle class="cw-fill" cx="23" cy="39" r="2"/></symbol>
+    <symbol id="cw-snow" viewBox="0 0 48 48"><use href="#cw-cloud-up"/><g class="cw-ico" style="stroke-width:2.5"><path d="M16 33v8M12.5 35l7 4M12.5 39l7-4M32 33v8M28.5 35l7 4M28.5 39l7-4"/></g></symbol>
+    <symbol id="cw-thunder" viewBox="0 0 48 48"><use href="#cw-cloud-up"/><path class="cw-fill" d="M25 28l-7 11h6l-3 8 9-12h-6l3-7z" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="cw-drop" viewBox="0 0 48 48"><path class="cw-ico" d="M24 6c6 9 12 16 12 23a12 12 0 0 1-24 0c0-7 6-14 12-23z"/></symbol>
+    <symbol id="cw-wind" viewBox="0 0 48 48"><path class="cw-ico" d="M6 18h24a5 5 0 1 0-5-5M6 26h32a5 5 0 1 1-5 5M6 34h16"/></symbol>
+    <symbol id="cw-sunrise" viewBox="0 0 48 48"><g class="cw-ico"><path d="M10 34a14 14 0 0 1 28 0M4 40h40M24 8v10M18 13l6-6 6 6"/></g></symbol>
+    <symbol id="cw-sunset" viewBox="0 0 48 48"><g class="cw-ico"><path d="M10 34a14 14 0 0 1 28 0M4 40h40M24 6v10M18 11l6 6 6-6"/></g></symbol>
+    <symbol id="cw-bus" viewBox="0 0 48 48"><g class="cw-ico"><rect x="9" y="6" width="30" height="32" rx="5"/><path d="M9 24h30M9 15h30M15 38v4M33 38v4"/><circle cx="16" cy="31" r="1.5"/><circle cx="32" cy="31" r="1.5"/></g></symbol>
+    <symbol id="cw-bin" viewBox="0 0 48 48"><g class="cw-ico"><path d="M8 13h32M19 13V8h10v5M11 13l3 29h20l3-29M20 20v15M28 20v15"/></g></symbol>
+    <symbol id="cw-leaf" viewBox="0 0 48 48"><path class="cw-ico" d="M10 38C10 18 22 9 40 8c0 20-10 30-30 30zM10 38l16-16"/></symbol>
+    <symbol id="cw-bell" viewBox="0 0 48 48"><g class="cw-ico"><path d="M12 34V22a12 12 0 0 1 24 0v12l4 4H8zM20 42a4 4 0 0 0 8 0"/></g></symbol>
+    <symbol id="cw-walk" viewBox="0 0 48 48"><g class="cw-ico"><circle cx="26" cy="8" r="3.5"/><path d="M24 15l-6 6v8M24 15l3 12 7 5M24 15l7 6h5M21 30l-4 13M27 27l-2 16"/></g></symbol>
+  </defs>
+</svg>
+
+{%- comment -%} Wettercode (WMO) -> Symbol. Aufruf: {% render "cw_icon", code: 3, day: 1, size: 64 %} {%- endcomment -%}
+{% template cw_icon %}{%- assign c = code | plus: 0 -%}{%- assign d = day | plus: 0 -%}
+{%- case c -%}
+{%- when 0 -%}{%- if d == 1 -%}{%- assign k = "sun" -%}{%- else -%}{%- assign k = "moon" -%}{%- endif -%}
+{%- when 1, 2 -%}{%- if d == 1 -%}{%- assign k = "partly-day" -%}{%- else -%}{%- assign k = "partly-night" -%}{%- endif -%}
+{%- when 45, 48 -%}{%- assign k = "fog" -%}
+{%- when 51, 53, 55 -%}{%- assign k = "drizzle" -%}
+{%- when 56, 57, 66, 67 -%}{%- assign k = "sleet" -%}
+{%- when 61, 63, 65, 80, 81, 82 -%}{%- assign k = "rain" -%}
+{%- when 71, 73, 75, 77, 85, 86 -%}{%- assign k = "snow" -%}
+{%- when 95, 96, 99 -%}{%- assign k = "thunder" -%}
+{%- else -%}{%- assign k = "cloud" -%}
+{%- endcase -%}
+<svg width="{{ size | default: 48 }}" height="{{ size | default: 48 }}" viewBox="0 0 48 48"><use href="#cw-{{ k }}"/></svg>
+{%- endtemplate %}
+
+{%- comment -%} Wettercode (WMO) -> deutscher Text {%- endcomment -%}
+{% template cw_text %}{%- assign c = code | plus: 0 -%}{%- assign d = day | plus: 0 -%}
+{%- case c -%}
+{%- when 0 -%}{%- if d == 1 -%}Sonnig{%- else -%}Klar{%- endif -%}
+{%- when 1 -%}{%- if d == 1 -%}Heiter{%- else -%}Überwiegend klar{%- endif -%}
+{%- when 2 -%}Leicht bewölkt
+{%- when 3 -%}Bedeckt
+{%- when 45 -%}Nebel
+{%- when 48 -%}Reifnebel
+{%- when 51 -%}Leichter Niesel
+{%- when 53 -%}Nieselregen
+{%- when 55 -%}Starker Niesel
+{%- when 56, 57 -%}Gefrierender Niesel
+{%- when 61 -%}Leichter Regen
+{%- when 63 -%}Mäßiger Regen
+{%- when 65 -%}Starker Regen
+{%- when 66, 67 -%}Gefrierender Regen
+{%- when 71 -%}Leichter Schneefall
+{%- when 73 -%}Schneefall
+{%- when 75 -%}Starker Schneefall
+{%- when 77 -%}Schneegriesel
+{%- when 80 -%}Leichte Schauer
+{%- when 81 -%}Regenschauer
+{%- when 82 -%}Heftige Schauer
+{%- when 85, 86 -%}Schneeschauer
+{%- when 95 -%}Gewitter
+{%- when 96, 99 -%}Gewitter mit Hagel
+{%- else -%}Wechselhaft
+{%- endcase -%}
+{%- endtemplate %}
+
+{%- comment -%} ===== Zeit: lokale Uhrzeit und Kalender ohne Datumsfilter (unabhängig von der Server-Zeitzone) ===== {%- endcomment -%}
+{%- assign cw_wochentage = "Sonntag,Montag,Dienstag,Mittwoch,Donnerstag,Freitag,Samstag" | split: "," -%}
+{%- assign cw_wt_kurz = "So,Mo,Di,Mi,Do,Fr,Sa" | split: "," -%}
+{%- assign cw_monate = "Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember" | split: "," -%}
+{%- assign cw_wetter = IDX_0 -%}
+{%- assign cw_off = cw_wetter.utc_offset_seconds | default: trmnl.user.utc_offset | default: 0 | plus: 0 -%}
+{%- assign cw_now = trmnl.system.timestamp_utc | plus: cw_off -%}
+{%- assign cw_now_min = cw_now | modulo: 86400 | divided_by: 60 -%}
+{%- assign cw_h = cw_now_min | divided_by: 60 -%}
+{%- assign cw_m = cw_now_min | modulo: 60 -%}
+{%- capture cw_uhr -%}{% if cw_h < 10 %}0{% endif %}{{ cw_h }}:{% if cw_m < 10 %}0{% endif %}{{ cw_m }}{%- endcapture -%}
+{%- assign cw_tag0 = cw_now | divided_by: 86400 -%}
+{%- assign cw_wt = cw_tag0 | plus: 4 | modulo: 7 -%}
+{%- comment -%} Datum aus Tagesnummer (Algorithmus "civil_from_days") {%- endcomment -%}
+{%- assign z = cw_tag0 | plus: 719468 -%}{%- assign era = z | divided_by: 146097 -%}{%- assign doe = era | times: -146097 | plus: z -%}
+{%- assign a1 = doe | divided_by: 1460 -%}{%- assign a2 = doe | divided_by: 36524 -%}{%- assign a3 = doe | divided_by: 146096 -%}
+{%- assign yoe = doe | minus: a1 | plus: a2 | minus: a3 | divided_by: 365 -%}
+{%- assign b1 = yoe | times: 365 -%}{%- assign b2 = yoe | divided_by: 4 -%}{%- assign b3 = yoe | divided_by: 100 -%}
+{%- assign doy = doe | minus: b1 | minus: b2 | plus: b3 -%}
+{%- assign mp = doy | times: 5 | plus: 2 | divided_by: 153 -%}
+{%- assign cw_tag = mp | times: 153 | plus: 2 | divided_by: 5 | times: -1 | plus: doy | plus: 1 -%}
+{%- if mp < 10 -%}{%- assign cw_monat = mp | plus: 3 -%}{%- else -%}{%- assign cw_monat = mp | minus: 9 -%}{%- endif -%}
+{%- assign cw_jahr = era | times: 400 | plus: yoe -%}{%- if cw_monat <= 2 -%}{%- assign cw_jahr = cw_jahr | plus: 1 -%}{%- endif -%}
+{%- assign mi = cw_monat | minus: 1 -%}
+{%- capture cw_datum_lang -%}{{ cw_wochentage[cw_wt] }}, {{ cw_tag }}. {{ cw_monate[mi] }}{%- endcapture -%}
