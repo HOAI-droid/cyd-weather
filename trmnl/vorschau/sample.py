@@ -56,6 +56,21 @@ for i, (d, line, dest, delay) in enumerate(plan):
                  "is_cancelled": 1 if (szen == "ausfall" and i == 3) else 0, "delay": delay, "is_delayed": 1 if delay >= 5 else 0,
                  "has_realtime": 1, "station": "Im Fiedlersee, Darmstadt", "linetype": "bus"})
 abfahrten = {"departures": deps}
+if szen == "rmv":
+    rd = []
+    for i, (d, line, dest, delay) in enumerate(plan):
+        sched = (base + d - delay) % 1440; rt = (base + d) % 1440
+        f = lambda m: f"{m // 60:02d}:{m % 60:02d}:00"
+        stops = [{"name": "Darmstadt Im Fiedlersee", "extId": "3004999", "routeIdx": 3},
+                 {"name": "Darmstadt Willy-Brandt-Platz" if line == "K" or i % 3 else "Darmstadt Ostbahnhof", "extId": "3004111", "routeIdx": 4},
+                 {"name": dest, "extId": "3004222", "routeIdx": 9}]
+        x = {"name": f"Bus {line}", "type": "ST", "stop": "Darmstadt Im Fiedlersee", "stopExtId": "3004999",
+             "time": f(sched), "date": str(day0), "direction": dest, "Stops": {"Stop": stops},
+             "ProductAtStop": {"name": f"Bus {line}", "line": line, "displayNumber": line, "catOutL": "Bus"}}
+        if delay or i % 2: x["rtTime"] = f(rt); x["rtDate"] = str(day0)
+        if i == 4: x["cancelled"] = True
+        rd.append(x)
+    abfahrten = {"Departure": rd, "serverVersion": "2.45", "dialectVersion": "2.45"}
 if szen == "fehler":
     abfahrten = {"api_version": "6.x", "error": "ambiguous station code/name"}
 

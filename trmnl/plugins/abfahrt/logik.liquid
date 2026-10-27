@@ -1,49 +1,75 @@
 {%- comment -%}
   Seite 1 – Daten aufbereiten. Ergebnis sind cw_*-Variablen, die alle Layouts nutzen.
-  IDX_0 = Open-Meteo, IDX_1 = Abfahrten (dbf.finalrewind.org / HAFAS), IDX_2 = EAD-Müllkalender
+  IDX_0 = Open-Meteo, IDX_1 = Abfahrten (RMV-API oder dbf.finalrewind.org), IDX_2 = EAD-Müllkalender
 {%- endcomment -%}
 {%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
-{%- assign cw_fuss = cf.fussweg | default: 0 | plus: 0 -%}
 {%- assign cw_ort_prefix = cf.ort | append: " " -%}
 {%- assign cw_ort_suffix = cf.ort | prepend: ", " -%}
+{%- assign cw_ort_bind = cf.ort | append: "-" -%}
 
-{%- comment -%} ===== Abfahrten ===== {%- endcomment -%}
+{%- comment -%}
+  ===== Abfahrten =====
+  Zwei mögliche Quellen, beide werden auf dasselbe Format gebracht:
+  - mit RMV-API-Schlüssel: offizielle RMV-Schnittstelle (HAFAS ReST, "Departure"-Liste, passlist=1 für die Richtung)
+  - ohne Schlüssel: dbf.finalrewind.org ("departures"-Liste, Richtung filtert der Dienst selbst)
+  Eintrag je Fahrt: Minuten bis Abfahrt ^ Abfahrt HH:MM ^ Linie ^ Ziel ^ Verspätung ^ Ausfall (1/0) ^ Plan HH:MM
+{%- endcomment -%}
 {%- assign abf = IDX_1 -%}
+{%- assign cw_api = false -%}{%- if cf.rmv_key != blank -%}{%- assign cw_api = true -%}{%- endif -%}
+{%- assign richtung = cf.richtung | strip | downcase -%}
 {%- assign cw_abf_fehler = "" -%}
-{%- if abf == nil or abf.error -%}
-  {%- assign cw_abf_fehler = abf.error | default: "Keine Daten" -%}
+{%- if abf == nil or abf.error or abf.errorCode -%}
+  {%- assign cw_abf_fehler = abf.errorText | default: abf.error | default: "Keine Daten" -%}
   {%- if cw_abf_fehler contains "ambiguous" -%}{%- assign cw_abf_fehler = "Haltestelle mehrdeutig – Namen genauer angeben" -%}{%- endif -%}
-  {%- if cw_abf_fehler contains "LOCATION" -%}{%- assign cw_abf_fehler = "Haltestelle beim RMV nicht gefunden. Namen genau in RMV-Schreibweise (z. B. „Darmstadt …“) oder die Haltestellen-Nummer eintragen." -%}{%- endif -%}
-  {%- if cw_abf_fehler contains "Failed to fetch" -%}{%- assign cw_abf_fehler = "Fahrplan nicht erreichbar" -%}{%- endif -%}
+  {%- if cw_abf_fehler contains "LOCATION" -%}{%- assign cw_abf_fehler = "Haltestelle beim RMV nicht gefunden. Namen genau in RMV-Schreibweise (z. B. „Darmstadt-Arheilgen …“) oder mit RMV-Schlüssel die Haltestellen-Nummer eintragen." -%}{%- endif -%}
+  {%- if cw_abf_fehler contains "Failed to fetch" -%}
+    {%- if cw_api -%}{%- assign cw_abf_fehler = "RMV antwortet nicht. API-Schlüssel und Haltestellen-Nummer prüfen." -%}{%- else -%}{%- assign cw_abf_fehler = "Fahrplan nicht erreichbar" -%}{%- endif -%}
+  {%- endif -%}
 {%- endif -%}
+{%- if cw_api -%}{%- assign fahrten = abf.Departure -%}{%- else -%}{%- assign fahrten = abf.departures -%}{%- endif -%}
+{%- comment -%} Anzeigename der Haltestelle: bei Nummern aus der Antwort nehmen {%- endcomment -%}
+{%- assign cw_halt_name = cf.haltestelle | remove: cw_ort_suffix | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}
+{%- if cw_api and fahrten[0].stop -%}{%- assign cw_halt_name = fahrten[0].stop | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}{%- endif -%}
 {%- capture abf_liste -%}
-{%- for d in abf.departures -%}
-  {%- assign t = d.time | default: d.departure | default: d.sched_departure -%}
-  {%- if t == nil -%}{%- continue -%}{%- endif -%}
-  {%- assign tp = t | split: ":" -%}
-  {%- assign dm = tp[0] | plus: 0 | times: 60 | plus: tp[1] -%}
+{%- for d in fahrten -%}
+  {%- if cw_api -%}
+    {%- comment -%} Richtung: fährt die Fahrt nach unserer Haltestelle über die gesuchte? {%- endcomment -%}
+    {%- if richtung != "" -%}
+      {%- assign hier = false -%}{%- assign treffer = false -%}{%- assign gefunden_hier = false -%}
+      {%- for st in d.Stops.Stop -%}{%- if st.extId == d.stopExtId -%}{%- assign gefunden_hier = true -%}{%- endif -%}{%- endfor -%}
+      {%- unless gefunden_hier -%}{%- assign hier = true -%}{%- endunless -%}
+      {%- for st in d.Stops.Stop -%}
+        {%- if hier -%}{%- assign sn = st.name | downcase -%}{%- if sn contains richtung -%}{%- assign treffer = true -%}{%- break -%}{%- endif -%}{%- endif -%}
+        {%- if st.extId == d.stopExtId -%}{%- assign hier = true -%}{%- endif -%}
+      {%- endfor -%}
+      {%- unless treffer -%}{%- continue -%}{%- endunless -%}
+    {%- endif -%}
+    {%- assign plan = d.time | slice: 0, 5 -%}
+    {%- assign t = d.rtTime | default: d.time | slice: 0, 5 -%}
+    {%- assign linie = d.ProductAtStop.line | default: d.ProductAtStop.displayNumber | default: d.name | default: "?" -%}
+    {%- assign ziel = d.direction | default: "?" -%}
+    {%- assign ausfall = 0 -%}{%- if d.cancelled == true or d.cancelled == "true" -%}{%- assign ausfall = 1 -%}{%- endif -%}
+  {%- else -%}
+    {%- assign t = d.time | default: d.departure | default: d.sched_departure -%}
+    {%- assign plan = d.sched_departure | default: t -%}
+    {%- assign linie = d.train_line | default: d.train | default: "?" -%}
+    {%- assign ziel = d.destination | default: "?" -%}
+    {%- assign ausfall = 0 -%}{%- if d.is_cancelled == 1 or d.is_cancelled == true -%}{%- assign ausfall = 1 -%}{%- endif -%}
+  {%- endif -%}
+  {%- if t == nil or t == "" -%}{%- continue -%}{%- endif -%}
+  {%- assign tp = t | split: ":" -%}{%- assign dm = tp[0] | plus: 0 | times: 60 | plus: tp[1] -%}
+  {%- assign pp = plan | split: ":" -%}{%- assign pm = pp[0] | plus: 0 | times: 60 | plus: pp[1] -%}
+  {%- assign vsp = dm | minus: pm -%}{%- if vsp < -720 -%}{%- assign vsp = vsp | plus: 1440 -%}{%- endif -%}{%- if vsp > 720 -%}{%- assign vsp = vsp | minus: 1440 -%}{%- endif -%}
   {%- assign diff = dm | minus: cw_now_min -%}
   {%- if diff < -720 -%}{%- assign diff = diff | plus: 1440 -%}{%- endif -%}
   {%- if diff < 0 -%}{%- continue -%}{%- endif -%}
-  {%- assign linie = d.train_line | default: d.train | default: "?" | remove: "Bus " | remove: "Tram " | remove: "STR " | strip -%}
-  {%- assign ziel = d.destination | default: "?" | remove_first: cw_ort_prefix | remove: cw_ort_suffix | strip -%}
-  {%- assign vsp = d.delay | default: 0 | plus: 0 -%}
-  {%- assign ausfall = 0 -%}{%- if d.is_cancelled == 1 or d.is_cancelled == true -%}{%- assign ausfall = 1 -%}{%- endif -%}
-  {%- assign ok = 1 -%}{%- if diff < cw_fuss -%}{%- assign ok = 0 -%}{%- endif -%}
-  {{ diff }}^{{ t }}^{{ linie }}^{{ ziel | replace: "^", " " | replace: "~", " " }}^{{ vsp }}^{{ ausfall }}^{{ ok }}~
+  {%- assign linie = linie | remove: "Bus " | remove: "Tram " | remove: "STR " | strip -%}
+  {%- assign ziel = ziel | remove_first: cw_ort_prefix | remove_first: cw_ort_bind | remove: cw_ort_suffix | strip -%}
+  {{ diff }}^{{ t }}^{{ linie }}^{{ ziel | replace: "^", " " | replace: "~", " " }}^{{ vsp }}^{{ ausfall }}^{{ plan }}~
 {%- endfor -%}
 {%- endcapture -%}
 {%- assign cw_abf = abf_liste | strip | split: "~" -%}
-{%- comment -%} erste erreichbare, nicht ausgefallene Fahrt {%- endcomment -%}
-{%- assign cw_next = "" -%}{%- assign cw_next_i = -1 -%}
-{%- for e in cw_abf -%}{%- assign f = e | split: "^" -%}
-  {%- if f[6] == "1" and f[5] == "0" -%}{%- assign cw_next = e -%}{%- assign cw_next_i = forloop.index0 -%}{%- break -%}{%- endif -%}
-{%- endfor -%}
-{%- assign cw_nf = cw_next | split: "^" -%}
-{%- if cw_next == "" -%}{%- assign cw_nf_n = 0 -%}{%- else -%}{%- assign cw_nf_n = 1 -%}{%- endif -%}
-{%- if cw_nf_n > 0 -%}
-  {%- assign losgehen = cw_nf[0] | plus: 0 | minus: cw_fuss -%}
-{%- endif -%}
+{%- assign cw_abf_n = 0 -%}{%- if abf_liste != blank -%}{%- assign cw_abf_n = cw_abf.size -%}{%- endif -%}
 
 {%- comment -%} ===== Wetter heute ===== {%- endcomment -%}
 {%- assign cw_w_ok = false -%}{%- if cw_wetter.current -%}{%- assign cw_w_ok = true -%}{%- endif -%}
@@ -106,3 +132,31 @@
 {%- assign cw_muell_alarm = "" -%}
 {%- if cw_muell_morgen != "" and cw_h >= erinnerung -%}{%- assign cw_muell_alarm = "abend" -%}
 {%- elsif cw_muell_heute != "" and cw_h < 10 -%}{%- assign cw_muell_alarm = "morgen" -%}{%- endif -%}
+
+{%- comment -%} Abfahrtsliste. Aufruf: {% render "cw_abf_liste", liste: cw_abf, max: 8 %} {%- endcomment -%}
+<style>
+  .cw .abl .zeile { gap: 8px; border-top: 1px solid #000; }
+  .cw .abl .zeile:first-child { border-top: 0; }
+  .cw .abl .zeile .uhr { width: auto; min-width: 3em; text-align: right; font-weight: 800; }
+  .cw .abl .zeile .st { font-size: .8em; }
+  .cw .abl .zeile.aus .ziel, .cw .abl .zeile.aus .uhr { text-decoration: line-through; text-decoration-thickness: 2px; }
+  .cw .abl .zeile.aus .badge { background: #fff; color: #000; border: 2px solid #000; }
+  .cw .abl .zeile.erste { font-size: 1.3em; height: 1.9em; }
+  .cw .abl .zeile.erste .badge { font-size: 1em; height: 1.45em; min-width: 1.8em; }
+</style>
+{% template cw_abf_liste %}
+<div class="abl">
+{%- assign n = 0 -%}
+{%- for e in liste -%}{%- if e == "" -%}{%- continue -%}{%- endif -%}{%- assign f = e | split: "^" -%}{%- assign vsp = f[4] | default: "0" | plus: 0 -%}
+  <div class="row zeile{% if f[5] == '1' %} aus{% endif %}{% if n == 0 %} erste{% endif %}">
+    <span class="badge">{{ f[2] }}</span>
+    <span class="ziel grow ell">{{ f[3] }}</span>
+    {%- if f[5] == "1" -%}<span class="st b">fällt aus</span>
+    {%- elsif vsp > 0 -%}<span class="st b">+{{ vsp }}</span>
+    {%- elsif vsp < 0 -%}<span class="st b">{{ vsp }}</span>{%- endif -%}
+    <span class="uhr num">{% if f[5] == "1" %}{{ f[6] }}{% else %}{{ f[1] }}{% endif %}</span>
+  </div>
+  {%- assign n = n | plus: 1 -%}{%- if n >= max -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+</div>
+{% endtemplate %}

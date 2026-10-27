@@ -1,5 +1,5 @@
 ---
-# Seite 1: Abfahrten, Wetter des Tages und Müll-Erinnerung (alle 5 Minuten neu)
+# Seite 1: Abfahrtszeiten, Wetter des Tages und Mülltermine (alle 5 Minuten neu)
 name: "Abfahrt, Wetter & Müll"
 id: cyd-abfahrt
 strategy: polling
@@ -10,28 +10,34 @@ dark_mode: "no"
 # Eine Adresse pro Zeile. Reihenfolge nicht ändern: 1. Wetter, 2. Abfahrten, 3. Müll (darf fehlen).
 polling_url: |-
   https://api.open-meteo.com/v1/forecast?latitude={{ breite }}&longitude={{ laenge }}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,wind_speed_10m,precipitation&hourly=temperature_2m,precipitation_probability,weather_code,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset,uv_index_max&minutely_15=precipitation&timezone=auto&forecast_days=2&forecast_minutely_15=9
-  https://dbf.finalrewind.org/{{ haltestelle | url_encode | replace: "+", "%20" }}.json?hafas={{ verbund }}&version=3&admode=dep&limit=14&via={{ richtung | url_encode }}
+  {% if rmv_key != blank %}https://www.rmv.de/hapi/departureBoard?accessId={{ rmv_key | strip }}&id={{ haltestelle | strip | url_encode }}&format=json&maxJourneys=40&duration=180&passlist=1{% else %}https://dbf.finalrewind.org/{{ haltestelle | url_encode | replace: "+", "%20" }}.json?hafas={{ verbund }}&version=3&admode=dep&limit=14&via={{ richtung | url_encode }}{% endif %}
   {% if strasse != blank %}https://ead.darmstadt.de/unser-angebot/privathaushalte/abfallkalender/singleStreet/?type=742394&street={{ strasse | url_encode }}{% endif %}
 custom_fields:
   - keyname: info
     field_type: author_bio
     name: "Über dieses Plugin"
     description: "Abfahrten, Wetter des Tages und Müll-Erinnerung. Teil der CYD-Wetterstation (github.com/hoai-droid/cyd-weather)."
+  - keyname: rmv_key
+    field_type: password
+    name: "RMV-API-Schlüssel (optional)"
+    description: "Mit Schlüssel kommen die Abfahrten direkt vom RMV. Dann muss bei Haltestelle die Haltestellen-Nummer stehen. Ohne Schlüssel läuft es über dbf.finalrewind.org."
+    help_text: "Schlüssel beantragen: <a href='https://opendata.rmv.de' target='_blank'>opendata.rmv.de</a>"
+    optional: true
   - keyname: haltestelle
     field_type: string
     name: "Haltestelle"
-    description: "Haltestellen-Nummer (am sichersten, z. B. 3004xxx) oder der Name genau in RMV-Schreibweise, z. B. „Darmstadt Willy-Brandt-Platz“."
-    help_text: "Name nachsehen: in der <a href='https://www.rmv.de/c/de/fahrplan/abfahrt-ankunft' target='_blank'>RMV-Abfahrtstafel</a> die Haltestelle suchen und den vorgeschlagenen Namen exakt übernehmen. Testen: <a href='https://dbf.finalrewind.org/?hafas=RMV' target='_blank'>dbf.finalrewind.org</a>."
-    default: "Im Fiedlersee, Darmstadt"
+    description: "Mit RMV-Schlüssel: die Haltestellen-Nummer (extId, z. B. 3004xxx). Ohne Schlüssel: Nummer oder Name genau in RMV-Schreibweise, z. B. „Darmstadt Willy-Brandt-Platz“."
+    help_text: "Nummer nachsehen: im Browser https://www.rmv.de/hapi/location.name?accessId=DEIN_SCHLÜSSEL&input=Fiedlersee&format=json öffnen (Schlüssel einsetzen). Die Nummer steht bei „extId“, der genaue Name bei „name“. Ohne Schlüssel testen: <a href='https://dbf.finalrewind.org/?hafas=RMV' target='_blank'>dbf.finalrewind.org</a>."
+    default: "Darmstadt-Arheilgen Im Fiedlersee"
   - keyname: richtung
     field_type: string
     name: "Richtung (über)"
-    description: "Nur Fahrten, die über diese Haltestelle fahren. Leer lassen = alle Fahrten. Mehrere mit Komma trennen."
+    description: "Nur Fahrten, die danach über diese Haltestelle fahren. Ein Teil des Namens reicht, z. B. „Willy-Brandt-Platz“. Leer lassen = alle Fahrten."
     default: "Willy-Brandt-Platz"
     optional: true
   - keyname: verbund
     field_type: select
-    name: "Verkehrsverbund"
+    name: "Verkehrsverbund (nur ohne RMV-Schlüssel)"
     options:
       - "RMV (Rhein-Main)": RMV
       - "NVV (Nordhessen)": NVV
@@ -40,11 +46,6 @@ custom_fields:
       - "NAH.SH (Schleswig-Holstein)": NAHSH
       - "VBN (Bremen/Niedersachsen)": VBN
     default: RMV
-  - keyname: fussweg
-    field_type: number
-    name: "Fußweg zur Haltestelle (Minuten)"
-    description: "Fahrten, die du nicht mehr erreichst, werden ausgegraut. Die erste erreichbare Fahrt steht groß oben."
-    default: 3
   - keyname: ort
     field_type: string
     name: "Ortsname (Anzeige)"

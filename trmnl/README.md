@@ -7,7 +7,7 @@ Zwei Seiten für ein TRMNL bzw. das Seeed Studio TRMNL 7,5" (800 × 480, Schwarz
 | ![](docs/seite1.png) | ![](docs/seite2.png) |
 
 **Seite 1** (alle 5 Minuten neu)
-- **links:** Abfahrten an deiner Haltestelle in eine Richtung. Die erste Fahrt, die du mit deinem Fußweg noch erreichst, steht oben im Kasten, mit „losgehen in … Min.“. Fahrten, die du nicht mehr schaffst oder die ausfallen, sind durchgestrichen. Verspätungen erscheinen als „+3“.
+- **links:** die nächsten Abfahrtszeiten an deiner Haltestelle in eine Richtung, die nächste etwas größer. Verspätungen stehen als „+3“ dabei, ausgefallene Fahrten sind durchgestrichen und mit „fällt aus“ markiert. Es gibt bewusst keine Minuten-Countdowns, weil das Display nur alle paar Minuten neu zeichnet.
 - **rechts:** das Wetter des Tages wie auf der CYD. Jetzt-Temperatur mit Symbol, Höchst-, Tiefst- und gefühlter Wert, Wetterlage und Spruch, dazu Kacheln für Feuchte, Wind, Regenwahrscheinlichkeit und UV. Darunter der Tagesverlauf: jetzt und dann alle 3 Stunden mit Symbol, Temperatur und Regenwahrscheinlichkeit.
 - **unten:** die nächsten 3 Mülltermine. Ab der eingestellten Uhrzeit am Vorabend (Standard 17:00) wird der Termin für morgen schwarz hervorgehoben: „heute Abend raus!“. Am Abholtag bleibt der Hinweis bis 10 Uhr stehen.
 
@@ -35,10 +35,10 @@ Beide Seiten gibt es auch in den kleineren Größen für Mashups (halb waagrecht
 
 | Feld | Bedeutung |
 |---|---|
-| Haltestelle | Name wie in der RMV-Auskunft. Prüfen: [dbf.finalrewind.org/?hafas=RMV](https://dbf.finalrewind.org/?hafas=RMV), Haltestelle suchen und den Namen genau übernehmen. Standard: `Im Fiedlersee, Darmstadt` |
-| Richtung (über) | Nur Fahrten, die über diese Haltestelle fahren. Standard: `Willy-Brandt-Platz`. Leer = alle. Mehrere mit Komma trennen. |
-| Verkehrsverbund | RMV für Darmstadt. Weitere zur Auswahl. |
-| Fußweg | Minuten bis zur Haltestelle. Davon hängen „losgehen in …“ und das Durchstreichen ab. |
+| RMV-API-Schlüssel (optional) | Mit Schlüssel kommen die Abfahrten direkt von der offiziellen RMV-Schnittstelle. Dann muss bei Haltestelle die **Haltestellen-Nummer** stehen. Ohne Schlüssel läuft es über dbf.finalrewind.org. Das Feld ist ein Passwortfeld, der Schlüssel bleibt in LaraPaper. |
+| Haltestelle | Mit Schlüssel: Nummer („extId“), nachzusehen im Browser unter `https://www.rmv.de/hapi/location.name?accessId=DEIN_SCHLÜSSEL&input=Fiedlersee&format=json`. Ohne Schlüssel: Name genau in RMV-Schreibweise (Standard: `Darmstadt-Arheilgen Im Fiedlersee`). Prüfen: [dbf.finalrewind.org/?hafas=RMV](https://dbf.finalrewind.org/?hafas=RMV) |
+| Richtung (über) | Nur Fahrten, die danach über diese Haltestelle fahren. Ein Teil des Namens reicht. Standard: `Willy-Brandt-Platz`. Leer = alle. |
+| Verkehrsverbund | Nur ohne Schlüssel: RMV für Darmstadt. Weitere zur Auswahl. |
 | Ortsname, Breiten- und Längengrad | Für das Wetter. Nachschlagen auf [open-meteo.com](https://open-meteo.com/en/docs) (oben Ort suchen) oder [latlong.net](https://www.latlong.net/) (auf die Karte klicken). Dezimalgrad mit Punkt, z. B. `49.87`. |
 | Straße für den Müllkalender | Straßenname wie im [EAD-Abfallkalender](https://www.ead.darmstadt.de/unser-angebot/privathaushalte/abfallkalender), **ohne Hausnummer**. Bei Straßen, die der EAD aufteilt, den Abschnitt mitschreiben, z. B. `Heinheimer Straße 1-15, 2-16`. Leer = keine Müll-Leiste. |
 | Müll-Erinnerung ab | Uhrzeit am Vorabend, ab der der Termin hervorgehoben wird (15–20 Uhr). |
@@ -49,7 +49,7 @@ Beide Seiten gibt es auch in den kleineren Größen für Mashups (halb waagrecht
 | Was | Quelle |
 |---|---|
 | Wetter, Luftqualität, Pollen | [Open-Meteo](https://open-meteo.com) |
-| Abfahrten | [dbf.finalrewind.org](https://dbf.finalrewind.org) (DB-Infoscreen) mit der RMV-Fahrplanauskunft (HAFAS) |
+| Abfahrten | mit Schlüssel: [RMV Open Data](https://opendata.rmv.de) (`departureBoard`). Ohne: [dbf.finalrewind.org](https://dbf.finalrewind.org) (DB-Infoscreen) mit der RMV-Fahrplanauskunft (HAFAS) |
 | Müll | EAD Darmstadt, Abfallkalender nach Straße (dieselbe Schnittstelle nutzt [Waste Collection Schedule](https://github.com/mampfes/hacs_waste_collection_schedule)) |
 
 Müllarten: `RM1/RM2/RM4` = Restmüll, `WET` = Gelbe Tonne, `BIO` = Bio, `PPK` = Papier. Unbekannte Kürzel erscheinen unverändert.
@@ -58,7 +58,8 @@ Müllarten: `RM1/RM2/RM4` = Restmüll, `WET` = Gelbe Tonne, `BIO` = Bio, `PPK` =
 
 | Anzeige | Lösung |
 |---|---|
-| „Haltestelle mehrdeutig“ oder „Keine Abfahrten“ | Namen auf dbf.finalrewind.org prüfen (siehe oben). Vielleicht heißt die Haltestelle beim RMV z. B. `Darmstadt Im Fiedlersee`. |
+| „Haltestelle beim RMV nicht gefunden“ (früher `svcRestL(0).err is LOCATION`) | Der Name stimmt nicht exakt. RMV-Schlüssel eintragen und die Haltestellen-Nummer verwenden, oder den Namen genau in RMV-Schreibweise eintragen. |
+| „RMV antwortet nicht“ | API-Schlüssel prüfen, und bei Haltestelle muss die Nummer stehen, nicht der Name. |
 | Keine Fahrten mit Richtung | Schreibweise der Richtungs-Haltestelle prüfen oder das Feld testweise leeren |
 | „Straße im EAD-Kalender nicht gefunden“ | Straßenname wie im EAD-Abfallkalender schreiben, ggf. mit Abschnitt |
 | Uhrzeit falsch | Die Uhrzeit kommt aus der Zeitzone der Wetterdaten. Breiten- und Längengrad prüfen. |

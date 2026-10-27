@@ -4,16 +4,8 @@
   .abh .links { width: 470px; padding: 10px 14px 6px 18px; display: flex; flex-direction: column; }
   .abh .rechts { flex: 1 1 auto; border-left: 3px solid #000; display: flex; flex-direction: column; }
   .abh .titel { gap: 6px; justify-content: space-between; margin-bottom: 6px; }
-  .abh .held { gap: 12px; padding: 5px 10px; border: 3px solid #000; border-radius: 10px; margin-bottom: 4px; }
-  .abh .held .badge { font-size: 26px; height: 40px; min-width: 40px; border-radius: 8px; }
-  .abh .held .in { font-size: 40px; font-weight: 800; line-height: 1; }
-  .abh .held .in small { font-size: 17px; font-weight: 700; margin-left: 2px; }
-  .abh .held .ziel { font-size: 18px; font-weight: 700; }
-  .abh .held .sub { font-size: 14px; }
   .abh .zeile { height: 28px; gap: 8px; font-size: 17px; border-top: 1px solid #000; }
   .abh .zeile .badge { font-size: 15px; height: 22px; min-width: 28px; }
-  .abh .zeile .uhr { width: 50px; text-align: right; font-weight: 700; }
-  .abh .zeile .min { width: 56px; text-align: right; }
   .abh .fehler { font-size: 16px; padding: 8px 2px; }
   .abh .wet { flex: 1 1 auto; padding: 10px 14px; gap: 10px; }
   .abh .wet .t { font-size: 46px; font-weight: 700; line-height: 1; }
@@ -24,19 +16,10 @@
 </style>
 <div class="cw abh">
   <div class="links">
-    <div class="row titel"><span class="lbl ell" style="font-size:13px">{{ cf.haltestelle | remove: cw_ort_suffix }}{% if cf.richtung != blank %} → {{ cf.richtung }}{% endif %}</span><span class="num" style="font-size:14px">Stand {{ cw_uhr }}</span></div>
+    <div class="row titel"><span class="lbl ell" style="font-size:13px">{{ cw_halt_name }}{% if cf.richtung != blank %} → {{ cf.richtung }}{% endif %}</span><span class="num" style="font-size:14px;white-space:nowrap">Stand {{ cw_uhr }}</span></div>
     {%- if cw_abf_fehler != "" -%}<div class="fehler"><b>Abfahrten nicht verfügbar.</b><br>{{ cw_abf_fehler }}</div>
-    {%- elsif cw_nf_n == 0 -%}<div class="fehler"><b>Keine Abfahrten</b> in nächster Zeit.</div>
-    {%- else -%}
-      <div class="row held"><span class="badge">{{ cw_nf[2] }}</span>
-        <div class="col grow"><div class="ziel ell">{{ cw_nf[3] }}</div><div class="sub ell">ab {{ cw_nf[1] }}{% if cw_nf[4] != "0" %} · +{{ cw_nf[4] }}{% endif %}{% if cw_fuss > 0 %} · {% if losgehen <= 0 %}<b>jetzt losgehen!</b>{% else %}losgehen in {{ losgehen }} Min.{% endif %}{% endif %}</div></div>
-        <div class="in num">{% if cw_nf[0] == "0" %}jetzt{% else %}{{ cw_nf[0] }}<small>Min</small>{% endif %}</div></div>
-      {%- assign n = 0 -%}
-      {%- for e in cw_abf -%}{%- if forloop.index0 <= cw_next_i -%}{%- continue -%}{%- endif -%}{%- assign f = e | split: "^" -%}
-        <div class="row zeile"><span class="badge">{{ f[2] }}</span><span class="grow ell">{% if f[5] == "1" %}<s>{{ f[3] }}</s>{% else %}{{ f[3] }}{% endif %}</span><span class="uhr num">{{ f[1] }}</span><span class="min num">{{ f[0] }} Min</span></div>
-        {%- assign n = n | plus: 1 -%}{%- if n >= 3 -%}{%- break -%}{%- endif -%}
-      {%- endfor -%}
-    {%- endif -%}
+      {%- elsif cw_abf_n == 0 -%}<div class="fehler"><b>Keine Abfahrten</b> in den nächsten 3 Stunden.</div>
+      {%- else -%}{% render "cw_abf_liste", liste: cw_abf, max: 5 %}{%- endif -%}
   </div>
   <div class="rechts">
     {%- if cw_w_ok -%}
