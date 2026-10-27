@@ -25,12 +25,12 @@ custom_fields:
     name: "Breitengrad"
     description: "Dezimalgrad mit Punkt, z. B. 49.87"
     help_text: "Nachschlagen: <a href='https://open-meteo.com/en/docs' target='_blank'>open-meteo.com</a> (oben Ort suchen) oder <a href='https://www.latlong.net/' target='_blank'>latlong.net</a> (auf die Karte klicken)."
-    default: "49.8728"
+    default: "49.9016"
   - keyname: laenge
     field_type: string
     name: "Längengrad"
     description: "Dezimalgrad mit Punkt, z. B. 8.65"
-    default: "8.6512"
+    default: "8.6555"
   - keyname: spruch
     field_type: select
     name: "Wetterspruch anzeigen"

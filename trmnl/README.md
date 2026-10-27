@@ -25,7 +25,7 @@ Beide Seiten gibt es auch in den kleineren Größen für Mashups (halb waagrecht
 
 1. **ZIP-Dateien holen:** unter [Releases](../../releases) im Release „TRMNL-Plugins“ die Dateien `trmnl-abfahrt.zip` und `trmnl-wetter.zip` herunterladen. Für Testversionen aus einem Branch gibt es eigene Vorab-Releases „TRMNL-Plugins (Branch)“. Alternativ selbst bauen mit `trmnl/build.sh`.
 2. **Importieren:** in LaraPaper **Plugins → Import Recipe Archive**, ZIP auswählen, **Import**. Das für beide Dateien wiederholen.
-3. **Einstellen:** beim Plugin auf **Configure** klicken. Die Felder sind schon für Darmstadt, „Im Fiedlersee“ und Richtung Willy-Brandt-Platz vorbelegt (siehe unten).
+3. **Einstellen:** beim Plugin auf **Configure** klicken. Die Felder sind schon für Darmstadt-Arheilgen, Haltestelle „Im Fiedlersee“ (3024329) und Richtung Willy-Brandt-Platz vorbelegt (siehe unten).
 4. **Playlist:** beide Plugins der Playlist deines Geräts hinzufügen. Soll Seite 1 meistens zu sehen sein, Seite 2 seltener oder nur zu bestimmten Zeiten einplanen.
 5. **Aktualisierung am Gerät:** Damit die Abfahrten stimmen, muss das Gerät selbst alle 5 Minuten aufwachen. Das stellst du in LaraPaper beim **Gerät** über das Aktualisierungsintervall (Refresh Rate) auf 300 Sekunden ein. Der Akku hält dann deutlich kürzer.
 
@@ -36,7 +36,7 @@ Beide Seiten gibt es auch in den kleineren Größen für Mashups (halb waagrecht
 | Feld | Bedeutung |
 |---|---|
 | RMV-API-Schlüssel (optional) | Mit Schlüssel kommen die Abfahrten direkt von der offiziellen RMV-Schnittstelle. Dann muss bei Haltestelle die **Haltestellen-Nummer** stehen. Ohne Schlüssel läuft es über dbf.finalrewind.org. Das Feld ist ein Passwortfeld, der Schlüssel bleibt in LaraPaper. |
-| Haltestelle | Mit Schlüssel: Nummer („extId“), nachzusehen im Browser unter `https://www.rmv.de/hapi/location.name?accessId=DEIN_SCHLÜSSEL&input=Fiedlersee&format=json`. Ohne Schlüssel: Name genau in RMV-Schreibweise (Standard: `Darmstadt-Arheilgen Im Fiedlersee`). Prüfen: [dbf.finalrewind.org/?hafas=RMV](https://dbf.finalrewind.org/?hafas=RMV) |
+| Haltestelle | Mit Schlüssel: Nummer („extId“), nachzusehen im Browser unter `https://www.rmv.de/hapi/location.name?accessId=DEIN_SCHLÜSSEL&input=Fiedlersee&format=json`. Die Nummer (Spalte `HAFAS_ID` der RMV-Haltestellenliste) geht mit und ohne Schlüssel. Standard: `3024329` = Darmstadt-Arheilgen Im Fiedlersee. Ohne Schlüssel geht auch der Name genau in RMV-Schreibweise. Prüfen: [dbf.finalrewind.org/?hafas=RMV](https://dbf.finalrewind.org/?hafas=RMV) |
 | Richtung (über) | Nur Fahrten, die danach über diese Haltestelle fahren. Ein Teil des Namens reicht. Standard: `Willy-Brandt-Platz`. Leer = alle. |
 | Verkehrsverbund | Nur ohne Schlüssel: RMV für Darmstadt. Weitere zur Auswahl. |
 | Ortsname, Breiten- und Längengrad | Für das Wetter. Nachschlagen auf [open-meteo.com](https://open-meteo.com/en/docs) (oben Ort suchen) oder [latlong.net](https://www.latlong.net/) (auf die Karte klicken). Dezimalgrad mit Punkt, z. B. `49.87`. |

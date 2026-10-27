@@ -26,9 +26,9 @@ custom_fields:
   - keyname: haltestelle
     field_type: string
     name: "Haltestelle"
-    description: "Mit RMV-Schlüssel: die Haltestellen-Nummer (extId, z. B. 3004xxx). Ohne Schlüssel: Nummer oder Name genau in RMV-Schreibweise, z. B. „Darmstadt Willy-Brandt-Platz“."
-    help_text: "Nummer nachsehen: im Browser https://www.rmv.de/hapi/location.name?accessId=DEIN_SCHLÜSSEL&input=Fiedlersee&format=json öffnen (Schlüssel einsetzen). Die Nummer steht bei „extId“, der genaue Name bei „name“. Ohne Schlüssel testen: <a href='https://dbf.finalrewind.org/?hafas=RMV' target='_blank'>dbf.finalrewind.org</a>."
-    default: "Darmstadt-Arheilgen Im Fiedlersee"
+    description: "Haltestellen-Nummer (HAFAS-ID), funktioniert mit und ohne RMV-Schlüssel. Darmstadt-Arheilgen Im Fiedlersee = 3024329, Darmstadt Willy-Brandt-Platz = 3024747. Ohne Schlüssel geht auch der Name genau in RMV-Schreibweise."
+    help_text: "Nummer nachsehen: in der RMV-Haltestellenliste (Spalte HAFAS_ID, <a href='https://opendata.rmv.de' target='_blank'>opendata.rmv.de</a>) oder im Browser https://www.rmv.de/hapi/location.name?accessId=DEIN_SCHLÜSSEL&input=Fiedlersee&format=json öffnen (Schlüssel einsetzen). Die Nummer steht bei „extId“, der genaue Name bei „name“. Ohne Schlüssel testen: <a href='https://dbf.finalrewind.org/?hafas=RMV' target='_blank'>dbf.finalrewind.org</a>."
+    default: "3024329"
   - keyname: richtung
     field_type: string
     name: "Richtung (über)"
@@ -55,12 +55,12 @@ custom_fields:
     name: "Breitengrad"
     description: "Dezimalgrad mit Punkt, z. B. 49.87"
     help_text: "Nachschlagen: <a href='https://open-meteo.com/en/docs' target='_blank'>open-meteo.com</a> (oben Ort suchen) oder <a href='https://www.latlong.net/' target='_blank'>latlong.net</a> (auf die Karte klicken)."
-    default: "49.8728"
+    default: "49.9016"
   - keyname: laenge
     field_type: string
     name: "Längengrad"
     description: "Dezimalgrad mit Punkt, z. B. 8.65"
-    default: "8.6512"
+    default: "8.6555"
   - keyname: strasse
     field_type: string
     name: "Straße für den Müllkalender (EAD Darmstadt)"
