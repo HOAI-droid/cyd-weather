@@ -19,7 +19,7 @@
 <div class="cw abk">
   <div class="row kopf"><div class="datum">{{ cw_wochentage[cw_wt] }}, {{ cw_tag }}.{{ cw_monat }}.</div><div class="stand">Stand {{ cw_uhr }}</div></div>
   <div class="inhalt">
-    <div class="row titel"><svg width="18" height="18"><use href="#cw-bus"/></svg><span class="lbl ell" style="font-size:13px">{{ cw_halt_name }}{% if cf.richtung != blank %} → {{ cf.richtung }}{% endif %}</span></div>
+    <div class="row titel"><svg width="18" height="18"><use href="#cw-bus"/></svg><span class="lbl ell" style="font-size:13px">{{ cw_halt_name }}{% if cw_richtung_anzeige != "" %} → {{ cw_richtung_anzeige }}{% endif %}</span></div>
     {%- if cw_abf_fehler != "" -%}<div class="fehler"><b>Abfahrten nicht verfügbar.</b><br>{{ cw_abf_fehler }}</div>
       {%- elsif cw_abf_n == 0 -%}<div class="fehler"><b>Keine Abfahrten</b> in den nächsten 3 Stunden.</div>
       {%- else -%}{% render "cw_abf_liste", liste: cw_abf, max: 7 %}{%- endif -%}

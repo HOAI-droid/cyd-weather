@@ -18,6 +18,12 @@
 {%- assign abf = IDX_1 -%}
 {%- assign cw_api = false -%}{%- if cf.rmv_key != blank -%}{%- assign cw_api = true -%}{%- endif -%}
 {%- assign richtung = cf.richtung | strip | downcase -%}
+{%- comment -%} Richtung: Haltestellen-Nummer (z. B. 3024747) oder Teil des Namens {%- endcomment -%}
+{%- assign richtung_rest = richtung | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
+{%- assign richtung_ist_nr = false -%}{%- if richtung != "" and richtung_rest == "" -%}{%- assign richtung_ist_nr = true -%}{%- endif -%}
+{%- capture richtung_lid -%}L={{ richtung }}@{%- endcapture -%}
+{%- assign cw_richtung_anzeige = cf.richtung | strip -%}
+{%- if richtung_ist_nr and cw_api == false -%}{%- assign cw_richtung_anzeige = "alle Richtungen" -%}{%- endif -%}
 {%- assign cw_abf_fehler = "" -%}
 {%- if abf == nil or abf.error or abf.errorCode -%}
   {%- assign cw_abf_fehler = abf.errorText | default: abf.error | default: "Keine Daten" -%}
@@ -31,8 +37,8 @@
 {%- comment -%} Anzeigename der Haltestelle: bei Nummern aus der Antwort nehmen {%- endcomment -%}
 {%- assign cw_halt_name = cf.haltestelle | remove: cw_ort_suffix | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}
 {%- if cw_api and fahrten[0].stop -%}{%- assign cw_halt_name = fahrten[0].stop | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}{%- endif -%}
-{%- assign hn = cf.haltestelle | strip | plus: 0 -%}
-{%- if cw_api == false and hn > 0 and fahrten[0].station -%}{%- assign cw_halt_name = fahrten[0].station | remove: cw_ort_suffix | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}{%- endif -%}
+{%- assign hs = cf.haltestelle | strip -%}{%- assign hn_rest = hs | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
+{%- if cw_api == false and hs != "" and hn_rest == "" and fahrten[0].station -%}{%- assign cw_halt_name = fahrten[0].station | remove: cw_ort_suffix | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}{%- endif -%}
 {%- capture abf_liste -%}
 {%- for d in fahrten -%}
   {%- if cw_api -%}
@@ -42,7 +48,15 @@
       {%- for st in d.Stops.Stop -%}{%- if st.extId == d.stopExtId -%}{%- assign gefunden_hier = true -%}{%- endif -%}{%- endfor -%}
       {%- unless gefunden_hier -%}{%- assign hier = true -%}{%- endunless -%}
       {%- for st in d.Stops.Stop -%}
-        {%- if hier -%}{%- assign sn = st.name | downcase -%}{%- if sn contains richtung -%}{%- assign treffer = true -%}{%- break -%}{%- endif -%}{%- endif -%}
+        {%- if hier -%}
+          {%- if richtung_ist_nr -%}
+            {%- assign sid = st.extId | append: "" -%}{%- assign sidl = st.id | append: "" -%}
+            {%- if sid == richtung or sidl contains richtung_lid -%}{%- assign treffer = true -%}{%- endif -%}
+          {%- else -%}
+            {%- assign sn = st.name | downcase -%}{%- if sn contains richtung -%}{%- assign treffer = true -%}{%- endif -%}
+          {%- endif -%}
+          {%- if treffer -%}{%- if richtung_ist_nr -%}{%- assign cw_richtung_anzeige = st.name | remove_first: cw_ort_prefix | remove_first: cw_ort_bind -%}{%- endif -%}{%- break -%}{%- endif -%}
+        {%- endif -%}
         {%- if st.extId == d.stopExtId -%}{%- assign hier = true -%}{%- endif -%}
       {%- endfor -%}
       {%- unless treffer -%}{%- continue -%}{%- endunless -%}

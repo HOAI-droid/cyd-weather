@@ -10,7 +10,7 @@ dark_mode: "no"
 # Eine Adresse pro Zeile. Reihenfolge nicht ändern: 1. Wetter, 2. Abfahrten, 3. Müll (darf fehlen).
 polling_url: |-
   https://api.open-meteo.com/v1/forecast?latitude={{ breite }}&longitude={{ laenge }}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,wind_speed_10m,precipitation&hourly=temperature_2m,precipitation_probability,weather_code,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset,uv_index_max&minutely_15=precipitation&timezone=auto&forecast_days=2&forecast_minutely_15=9
-  {% if rmv_key != blank %}https://www.rmv.de/hapi/departureBoard?accessId={{ rmv_key | strip }}&id={{ haltestelle | strip | url_encode }}&format=json&maxJourneys=40&duration=180&passlist=1{% else %}https://dbf.finalrewind.org/{{ haltestelle | url_encode | replace: "+", "%20" }}.json?hafas={{ verbund }}&version=3&admode=dep&limit=14&via={{ richtung | url_encode }}{% endif %}
+  {% if rmv_key != blank %}https://www.rmv.de/hapi/departureBoard?accessId={{ rmv_key | strip }}&id={{ haltestelle | strip | url_encode }}&format=json&maxJourneys=40&duration=180&passlist=1{% else %}https://dbf.finalrewind.org/{{ haltestelle | url_encode | replace: "+", "%20" }}.json?hafas={{ verbund }}&version=3&admode=dep&limit=14{% assign rrest = richtung | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" %}{% if rrest != "" %}&via={{ richtung | url_encode }}{% endif %}{% endif %}
   {% if strasse != blank %}https://ead.darmstadt.de/unser-angebot/privathaushalte/abfallkalender/singleStreet/?type=742394&street={{ strasse | url_encode }}{% endif %}
 custom_fields:
   - keyname: info
@@ -32,8 +32,8 @@ custom_fields:
   - keyname: richtung
     field_type: string
     name: "Richtung (über)"
-    description: "Nur Fahrten, die danach über diese Haltestelle fahren. Ein Teil des Namens reicht, z. B. „Willy-Brandt-Platz“. Leer lassen = alle Fahrten."
-    default: "Willy-Brandt-Platz"
+    description: "Nur Fahrten, die danach über diese Haltestelle fahren. Haltestellen-Nummer (nur mit RMV-Schlüssel, z. B. 3024747 = Darmstadt Willy-Brandt-Platz) oder ein Teil des Namens (geht immer, z. B. „Willy-Brandt-Platz“). Leer lassen = alle Fahrten."
+    default: "3024747"
     optional: true
   - keyname: verbund
     field_type: select
