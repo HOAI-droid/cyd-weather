@@ -16,6 +16,16 @@ custom_fields:
     field_type: author_bio
     name: "Über dieses Plugin"
     description: "Ausführliches Wetter wie auf der CYD-Wetterstation (github.com/hoai-droid/cyd-weather). Daten: Open-Meteo, ohne API-Schlüssel."
+  - keyname: rand
+    field_type: select
+    name: "Rand (für Bilderrahmen)"
+    description: "Abstand des Inhalts zum Displayrand. In Mashups wird der halbe Rand verwendet."
+    options:
+      - "Ohne": "0"
+      - "Schmal": "12"
+      - "Mittel": "20"
+      - "Breit": "30"
+    default: "20"
   - keyname: ort
     field_type: string
     name: "Ortsname (Anzeige)"

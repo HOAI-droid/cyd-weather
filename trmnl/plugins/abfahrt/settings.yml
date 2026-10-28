@@ -54,6 +54,16 @@ custom_fields:
       - "Groß (aus der Ferne lesbar)": gross
       - "Normal (mehr Abfahrten)": normal
     default: gross
+  - keyname: rand
+    field_type: select
+    name: "Rand (für Bilderrahmen)"
+    description: "Abstand des Inhalts zum Displayrand. In Mashups wird der halbe Rand verwendet."
+    options:
+      - "Ohne": "0"
+      - "Schmal": "12"
+      - "Mittel": "20"
+      - "Breit": "30"
+    default: "20"
   - keyname: ort
     field_type: string
     name: "Ortsname (Anzeige)"

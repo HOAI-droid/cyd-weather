@@ -130,7 +130,12 @@
   {%- capture key -%}{% if dd < 10 %}0{% endif %}{{ dd }}.{% if mm < 10 %}0{% endif %}{{ mm }}.{{ yy }}{%- endcapture -%}
   {%- assign arten = muell[key] -%}
   {%- if arten and arten.size > 0 -%}
-    {%- capture namen -%}{%- for a in arten -%}{%- case a -%}{%- when "RM1", "RM2", "RM4", "RM" -%}Restmüll{%- when "WET", "GS", "GT" -%}Gelbe Tonne{%- when "BIO" -%}Bio{%- when "PPK", "PAP" -%}Papier{%- else -%}{{ a }}{%- endcase -%}{%- unless forloop.last -%}{{ " + " }}{%- endunless -%}{%- endfor -%}{%- endcapture -%}
+    {%- assign gesehen = "|" -%}
+    {%- capture namen -%}{%- for a in arten -%}
+      {%- case a -%}{%- when "RM1", "RM2", "RM4", "RM" -%}{%- assign nm = "Restmüll" -%}{%- when "WET", "GS", "GT" -%}{%- assign nm = "Gelbe Tonne" -%}{%- when "BIO" -%}{%- assign nm = "Bio" -%}{%- when "PPK", "PAP" -%}{%- assign nm = "Papier" -%}{%- else -%}{%- assign nm = a -%}{%- endcase -%}
+      {%- capture such -%}|{{ nm }}|{%- endcapture -%}
+      {%- unless gesehen contains such -%}{%- unless gesehen == "|" -%}{{ " + " }}{%- endunless -%}{{ nm }}{%- assign gesehen = gesehen | append: nm | append: "|" -%}{%- endunless -%}
+    {%- endfor -%}{%- endcapture -%}
     {%- if i == 0 -%}{%- assign cw_muell_heute = namen -%}{%- endif -%}
     {%- if i == 1 -%}{%- assign cw_muell_morgen = namen -%}{%- endif -%}
     {%- assign wi = cw_wt | plus: i | modulo: 7 -%}

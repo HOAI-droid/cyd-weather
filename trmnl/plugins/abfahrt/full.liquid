@@ -1,12 +1,12 @@
 <div class="view view--full">
 <style>
   .abf { display: flex; flex-direction: column; }
-  .abf .kopf { height: 44px; padding: 0 18px; justify-content: space-between; border-bottom: 3px solid #000; }
+  .abf .kopf { height: 44px; padding: 0 6px; justify-content: space-between; border-bottom: 3px solid #000; }
   .abf .kopf .datum { font-size: 23px; font-weight: 700; }
   .abf .kopf .stand { font-size: 16px; }
   .abf .mitte { flex: 1 1 auto; display: flex; min-height: 0; }
-  .abf .fahrt { width: 400px; padding: 10px 14px 6px 18px; display: flex; flex-direction: column; }
-  .abf .wetter { width: 400px; border-left: 3px solid #000; padding: 8px 16px 6px 16px; display: flex; flex-direction: column; }
+  .abf .fahrt { width: 50%; padding: 8px 12px 4px 4px; display: flex; flex-direction: column; }
+  .abf .wetter { width: 50%; border-left: 3px solid #000; padding: 6px 4px 4px 14px; display: flex; flex-direction: column; }
   .abf .titel { gap: 6px; margin-bottom: 7px; }
   .abf .zeile { height: 31px; font-size: 18px; }
   .abf .zeile .badge { font-size: 15px; height: 22px; min-width: 28px; }
@@ -28,10 +28,10 @@
   .abf .verlauf .pp { font-size: 12px; height: 14px; }
   .abf .muell { height: 72px; border-top: 3px solid #000; display: flex; }
   .abf .muell .termin { flex: 1 1 0; gap: 10px; padding: 0 14px; border-left: 2px solid #000; min-width: 0; }
-  .abf .muell .termin:first-child { border-left: 0; padding-left: 18px; }
+  .abf .muell .termin:first-child { border-left: 0; padding-left: 4px; }
   .abf .muell .wann { font-size: 15px; font-weight: 600; }
   .abf .muell .was { font-size: 19px; font-weight: 800; line-height: 1.05; }
-  .abf .muell .hinweis { font-size: 16px; padding: 0 18px; gap: 10px; }
+  .abf .muell .hinweis { font-size: 16px; padding: 0 4px; gap: 10px; }
 
   /* ===== Schriftgröße "groß": weniger Abfahrten, große Zahlen, aus der Ferne lesbar ===== */
   .abf.gross .kopf { height: 48px; }
@@ -39,26 +39,29 @@
   .abf.gross .kopf .stand { font-size: 18px; }
   .abf.gross .titel { margin-bottom: 4px; }
   .abf.gross .titel .lbl { font-size: 15px !important; }
-  .abf.gross .abl .zeile { height: 52px; font-size: 27px; gap: 10px; }
+  .abf.gross .abl .zeile { height: 48px; font-size: 27px; gap: 10px; }
+  .abf.gross .abl .zeile .ziel { font-size: 24px; }
   .abf.gross .abl .zeile .badge { font-size: 23px; height: 36px; min-width: 42px; border-radius: 8px; }
-  .abf.gross .abl .zeile.erste { font-size: 29px; height: 58px; }
+  .abf.gross .abl .zeile.erste { font-size: 29px; height: 54px; }
+  .abf.gross .abl .zeile.erste .ziel { font-size: 26px; }
   .abf.gross .abl .zeile.erste .badge { font-size: 27px; height: 42px; min-width: 48px; }
   .abf.gross .abl .zeile .st { font-size: 20px; }
   .abf.gross .fehler { font-size: 21px; }
   .abf.gross .wetter > * { flex-shrink: 0; }
-  .abf.gross .jetzt .t { font-size: 92px; font-weight: 600; letter-spacing: -4px; }
+  .abf.gross .jetzt .t { font-size: 84px; font-weight: 600; letter-spacing: -4px; }
   .abf.gross .jetzt .hl { font-size: 27px; }
   .abf.gross .jetzt .hl .gf { font-size: 17px; }
   .abf.gross .txt { font-size: 27px; }
   .abf.gross .kacheln { margin-top: 7px; gap: 6px; }
   .abf.gross .kachel { font-size: 13px; padding: 3px 2px; }
   .abf.gross .kachel b { font-size: 21px; white-space: nowrap; letter-spacing: -.5px; }
-  .abf.gross .vl { font-size: 14px; }
+  .abf.gross .vl { display: none; }
+  .abf.gross .verlauf { margin-top: auto; }
   .abf.gross .verlauf .col { width: 25%; }
   .abf.gross .verlauf .h { font-size: 17px; }
   .abf.gross .verlauf .tt { font-size: 30px; font-weight: 800; line-height: 1; }
   .abf.gross .verlauf .pp { font-size: 14px; height: 16px; }
-  .abf.gross .muell { height: 84px; }
+  .abf.gross .muell { height: 80px; }
   .abf.gross .muell .wann { font-size: 17px; }
   .abf.gross .muell .was { font-size: 22px; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 </style>

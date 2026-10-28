@@ -1,64 +1,63 @@
 <div class="view view--full">
 <style>
   .wtr { display: flex; flex-direction: column; }
-  .wtr .kopf { height: 44px; padding: 0 18px; justify-content: space-between; border-bottom: 3px solid #000; }
-  .wtr .kopf .datum { font-size: 23px; font-weight: 700; }
-  .wtr .kopf .stand { font-size: 16px; }
-  .wtr .oben { height: 176px; display: flex; border-bottom: 3px solid #000; }
-  .wtr .jetzt { width: 360px; padding: 10px 16px 8px 18px; gap: 4px; }
-  .wtr .jetzt .t { font-size: 76px; font-weight: 700; line-height: .9; letter-spacing: -2px; }
-  .wtr .jetzt .txt { font-size: 21px; font-weight: 700; }
-  .wtr .jetzt .mm { font-size: 15px; }
-  .wtr .jetzt .spruch { font-size: 15px; font-style: italic; margin-top: auto; }
-  .wtr .std { flex: 1 1 auto; border-left: 3px solid #000; padding: 8px 14px 6px; position: relative; }
-  .wtr .std svg.kurve { position: absolute; left: 14px; top: 30px; }
-  .wtr .std .ax { position: absolute; top: 148px; font-size: 12px; transform: translateX(-50%); white-space: nowrap; }
-  .wtr .std .ax.last { transform: translateX(-85%); }
-  .wtr .std .wert { position: absolute; font-size: 13px; font-weight: 700; transform: translateX(-50%); }
-  .wtr .tage { height: 118px; display: flex; border-bottom: 3px solid #000; }
-  .wtr .tag { flex: 1 1 0; align-items: center; justify-content: center; border-left: 1px solid #000; font-size: 16px; }
+  .wtr .kopf { height: 46px; padding: 0 6px; justify-content: space-between; border-bottom: 3px solid #000; flex-shrink: 0; }
+  .wtr .kopf .datum { font-size: 26px; font-weight: 700; }
+  .wtr .kopf .stand { font-size: 18px; }
+  .wtr .oben { height: 164px; display: flex; border-bottom: 3px solid #000; flex-shrink: 0; }
+  .wtr .jetzt { width: 318px; padding: 8px 12px 6px 6px; gap: 2px; }
+  .wtr .jetzt .t { font-size: 94px; font-weight: 700; line-height: .9; letter-spacing: -4px; }
+  .wtr .jetzt .txt { font-size: 25px; font-weight: 700; }
+  .wtr .jetzt .mm { font-size: 20px; }
+  .wtr .std { flex: 1 1 auto; border-left: 3px solid #000; padding: 8px 12px 6px; position: relative; }
+  .wtr .std svg.kurve { position: absolute; left: 12px; top: 34px; }
+  .wtr .std .ax { position: absolute; top: 132px; font-size: 17px; font-weight: 600; transform: translateX(-50%); white-space: nowrap; }
+  .wtr .std .ax.first { transform: none; }
+  .wtr .std .ax.last { transform: translateX(-100%); }
+  .wtr .std .wert { position: absolute; font-size: 20px; font-weight: 800; transform: translateX(-50%); }
+  .wtr .tage { height: 120px; display: flex; border-bottom: 3px solid #000; flex-shrink: 0; }
+  .wtr .tag { flex: 1 1 0; align-items: center; justify-content: center; border-left: 1px solid #000; font-size: 20px; gap: 1px; }
   .wtr .tag:first-child { border-left: 0; }
-  .wtr .tag .n { font-weight: 700; font-size: 16px; }
-  .wtr .tag .mx { font-weight: 800; font-size: 19px; }
-  .wtr .tag .pp { font-size: 12px; height: 14px; }
-  .wtr .unten { flex: 1 1 auto; display: flex; }
-  .wtr .feld { flex: 1 1 0; padding: 8px 16px; border-left: 3px solid #000; gap: 3px; font-size: 15px; }
-  .wtr .feld:first-child { border-left: 0; padding-left: 18px; }
-  .wtr .feld .gross { font-size: 30px; font-weight: 800; line-height: 1; }
-  .wtr .aqi { gap: 10px; }
-  .wtr .skala { position: relative; width: 160px; height: 10px; border: 2px solid #000; border-radius: 5px; margin: 3px 0 2px; }
-  .wtr .skala i { position: absolute; left: 0; top: 0; bottom: 0; background: #000; }
-  .wtr .werte { gap: 12px; font-size: 14px; }
-  .wtr .werte b { font-size: 16px; }
-  .wtr .zeile { gap: 6px; }
+  .wtr .tag .n { font-weight: 700; font-size: 21px; }
+  .wtr .tag .mx { font-weight: 800; font-size: 27px; }
+  .wtr .tag .pp { font-size: 15px; height: 17px; }
+  .wtr .unten { flex: 1 1 auto; display: flex; min-height: 0; }
+  .wtr .feld { flex: 1 1 0; padding: 6px 12px 4px; border-left: 3px solid #000; gap: 2px; font-size: 19px; justify-content: center; }
+  .wtr .feld:first-child { border-left: 0; padding-left: 6px; }
+  .wtr .feld .gross { font-size: 38px; font-weight: 800; line-height: 1; }
+  .wtr .aqi { gap: 12px; }
+  .wtr .aqi b { font-size: 23px; }
+  .wtr .werte { gap: 14px; font-size: 17px; }
+  .wtr .werte b { font-size: 19px; }
+  .wtr .zeile { gap: 7px; }
+  .wtr .zeile b { font-size: 23px; }
 </style>
 <div class="cw wtr">
   <div class="row kopf">
-    <div class="datum">{{ cf.ort }} · {{ cw_datum_lang }}</div>
-    <div class="stand">Stand {{ cw_uhr }} Uhr</div>
+    <div class="datum ell">{{ cf.ort }} · {{ cw_datum_lang }}</div>
+    <div class="stand">Stand {{ cw_uhr }}</div>
   </div>
   {%- if cw_w_ok == false -%}
-    <div style="padding: 30px 18px; font-size: 20px"><b>Wetter nicht verfügbar.</b><br>Open-Meteo antwortet nicht.</div>
+    <div style="padding: 30px 6px; font-size: 24px"><b>Wetter nicht verfügbar.</b><br>Open-Meteo antwortet nicht.</div>
   {%- else -%}
   <div class="oben">
     <div class="col jetzt">
-      <div class="row" style="gap:12px">{% render "cw_icon", code: cw_code, day: cw_day, size: 84 %}<div class="t num">{{ cw_temp }}°</div></div>
-      <div class="txt">{% render "cw_text", code: cw_code, day: cw_day %}</div>
-      <div class="mm num">↑ {{ cw_max }}° ↓ {{ cw_min }}° · gefühlt {{ cw_gefuehlt }}° · Feuchte {{ cw_feuchte }} %</div>
-      {%- if cw_spruch != "" -%}<div class="spruch">„{{ cw_spruch }}“</div>{%- endif -%}
+      <div class="row" style="gap:10px">{% render "cw_icon", code: cw_code, day: cw_day, size: 80 %}<div class="t num">{{ cw_temp }}°</div></div>
+      <div class="txt ell">{% render "cw_text", code: cw_code, day: cw_day %}</div>
+      <div class="mm num">▲ <b>{{ cw_max }}°</b>  ▼ <b>{{ cw_min }}°</b> · gefühlt {{ cw_gefuehlt }}°</div>
     </div>
     <div class="std">
-      <div class="lbl" style="font-size:13px">Nächste 24 Stunden</div>
-      <svg class="kurve" width="396" height="112" viewBox="-6 0 252 100" preserveAspectRatio="none">
+      <div class="lbl" style="font-size:15px">Nächste 24 Stunden</div>
+      <svg class="kurve" width="410" height="90" viewBox="-6 0 252 100" preserveAspectRatio="none">
         <g fill="#000">{{ cw_24_regen }}</g>
         <line x1="-6" y1="100" x2="246" y2="100" stroke="#000" stroke-width="2" vector-effect="non-scaling-stroke"/>
-        <polyline points="{{ cw_24_linie | strip }}" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        <polyline points="{{ cw_24_linie | strip }}" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
       </svg>
       {%- for i in (0..24) -%}{%- assign r = i | modulo: 6 -%}{%- if r != 0 -%}{%- continue -%}{%- endif -%}
-        {%- assign px = i | times: 10 | plus: 6 | times: 396 | divided_by: 252.0 | plus: 14 | round -%}
+        {%- assign px = i | times: 10 | plus: 6 | times: 410 | divided_by: 252.0 | plus: 12 | round -%}
         {%- assign t = cw_wetter.hourly.temperature_2m[i] | plus: 0 -%}
-        {%- assign py = tv_max | minus: t | times: 50.0 | divided_by: tv_span | plus: 14 | times: 1.12 | plus: 30 | minus: 18 | round -%}
-        <span class="ax num{% if i == 24 %} last{% endif %}" style="left: {{ px }}px">{% if i == 0 %}jetzt{% else %}{{ cw_wetter.hourly.time[i] | slice: 11, 2 }} Uhr{% endif %}</span>
+        {%- assign py = tv_max | minus: t | times: 50.0 | divided_by: tv_span | plus: 14 | times: 0.9 | plus: 34 | minus: 26 | round -%}
+        <span class="ax num{% if i == 0 %} first{% endif %}{% if i == 24 %} last{% endif %}" style="left: {{ px }}px">{% if i == 0 %}jetzt{% else %}{{ cw_wetter.hourly.time[i] | slice: 11, 2 }} Uhr{% endif %}</span>
         <span class="wert num" style="left: {{ px }}px; top: {{ py }}px">{{ t | round }}°</span>
       {%- endfor -%}
     </div>
@@ -69,7 +68,7 @@
       {%- assign tag = cw_wt | plus: i | modulo: 7 -%}{%- assign pp = cw_wetter.daily.precipitation_probability_max[i] | default: 0 -%}
       <div class="col tag">
         <span class="n">{% if i == 0 %}Heute{% elsif i == 1 %}Morgen{% else %}{{ cw_wt_kurz[tag] }}{% endif %}</span>
-        {% render "cw_icon", code: cw_wetter.daily.weather_code[i], day: 1, size: 42 %}
+        {% render "cw_icon", code: cw_wetter.daily.weather_code[i], day: 1, size: 40 %}
         <span class="num"><span class="mx">{{ cw_wetter.daily.temperature_2m_max[i] | round }}°</span> / {{ cw_wetter.daily.temperature_2m_min[i] | round }}°</span>
         <span class="pp num">{% if pp >= 20 %}{{ pp }} % Regen{% endif %}</span>
       </div>
@@ -78,19 +77,16 @@
 
   <div class="unten">
     <div class="col feld">
-      <div class="lbl" style="font-size:13px">Luftqualität</div>
       {%- if cw_l_ok -%}
-      <div class="row aqi"><span class="gross num">{{ cw_aqi }}</span><div class="col"><b>{{ cw_aqi_text }}</b><div class="skala"><i style="width: {{ cw_aqi_balken }}px"></i></div></div></div>
-      <div class="row werte num"><span>PM2.5 <b>{{ luft.pm2_5 | round }}</b></span><span>PM10 <b>{{ luft.pm10 | round }}</b></span><span>O₃ <b>{{ luft.ozone | round }}</b></span><span>NO₂ <b>{{ luft.nitrogen_dioxide | round }}</b></span></div>
+      <div class="row aqi"><span class="gross num">{{ cw_aqi }}</span><div class="col"><span class="lbl" style="font-size:14px">Luftqualität</span><b>{{ cw_aqi_text }}</b></div></div>
+      <div class="row werte num"><span>PM2.5 <b>{{ luft.pm2_5 | round }}</b></span><span>PM10 <b>{{ luft.pm10 | round }}</b></span><span>NO₂ <b>{{ luft.nitrogen_dioxide | round }}</b></span></div>
       <div class="ell">Pollen: {{ cw_pollen }}</div>
       {%- else -%}<div>Keine Luftdaten.</div>{%- endif -%}
     </div>
     <div class="col feld">
-      <div class="lbl" style="font-size:13px">Sonne &amp; Wind</div>
-      <div class="row zeile"><svg width="22" height="22"><use href="#cw-sunrise"/></svg><b>{{ cw_auf }}</b><svg width="22" height="22" style="margin-left:10px"><use href="#cw-sunset"/></svg><b>{{ cw_unter }}</b></div>
-      <div>Tag: {{ cw_tageslaenge }} · UV {{ cw_uv }} ({{ cw_uv_text }})</div>
-      <div class="row zeile"><svg width="22" height="22"><use href="#cw-wind"/></svg><span><b>{{ cw_wind }} km/h</b> aus {{ cw_windrichtung }} · Böen {{ cw_boeen }}</span></div>
-      <div>Luftdruck {{ cw_druck }} hPa</div>
+      <div class="row zeile"><svg width="28" height="28"><use href="#cw-sunrise"/></svg><b>{{ cw_auf }}</b><svg width="28" height="28" style="margin-left:14px"><use href="#cw-sunset"/></svg><b>{{ cw_unter }}</b></div>
+      <div class="row zeile"><svg width="28" height="28"><use href="#cw-wind"/></svg><span><b>{{ cw_wind }}</b> km/h aus {{ cw_windrichtung }}</span></div>
+      <div class="num">UV {{ cw_uv }} ({{ cw_uv_text }}) · {{ cw_druck }} hPa</div>
     </div>
   </div>
   {%- endif -%}
