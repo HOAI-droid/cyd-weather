@@ -93,6 +93,7 @@ def main():
     ap.add_argument("--ausgabe", default=os.environ.get("GITHUB_OUTPUT", ""), help="Datei für fertig/fehlend (GitHub Actions)")
     ap.add_argument("--teil", type=int, default=0, help="nur jeden n-ten Ort (für parallele Läufe): dieser Teil")
     ap.add_argument("--teile", type=int, default=1, help="Anzahl paralleler Teile")
+    ap.add_argument("--anzahl", type=int, default=0, help="nur die ersten n Orte zeichnen (0 = alle); fertige darüber hinaus bleiben in der Liste")
     ap.add_argument("--hochladen", default=os.environ.get("RELEASE_TAG", ""), help="jedes fertige Bild sofort in dieses Release laden")
     a = ap.parse_args()
     orte = json.load(open(a.orte, encoding="utf-8"))
@@ -110,7 +111,7 @@ def main():
                 pass
     start, neu = time.time(), 0
     for i, o in enumerate(orte):
-        if i % a.teile != a.teil:
+        if i % a.teile != a.teil or (a.anzahl and i >= a.anzahl):
             continue
         pfad = os.path.join(a.ziel, f"schwarzplan-{o['id']}.png")
         if nur:
@@ -144,7 +145,8 @@ def main():
         if os.path.exists(os.path.join(a.ziel, datei)):
             fertig.append({"tag": o.get("tag", len(fertig) + 1), "id": o["id"], "n": o["n"], "sub": o.get("sub", ""),
                            "bild": a.basis_url + datei})
-    fehlend = sum(1 for o in orte if not os.path.exists(os.path.join(a.ziel, f"schwarzplan-{o['id']}.png"))
+    zu_zeichnen = orte[:a.anzahl] if a.anzahl else orte
+    fehlend = sum(1 for o in zu_zeichnen if not os.path.exists(os.path.join(a.ziel, f"schwarzplan-{o['id']}.png"))
                   and fehl.get(o["id"], 0) < 2)
     liste = {"m_pro_px": round(M_PRO_PX, 4), "breite": BREITE, "hoehe": HOEHE, "anzahl": len(fertig), "orte": fertig,
              "quelle": "Gebäude © OpenStreetMap-Mitwirkende (ODbL)", "stand": time.strftime("%Y-%m-%d")}

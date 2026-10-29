@@ -56,7 +56,7 @@ Zwei eigenständige Plugins nach den Artefakten „Flur-Rahmen Datenkunst“ (Sc
 
 ### Schwarzplan (`trmnl-schwarzplan.zip`)
 
-- **Jeden Tag im Jahr ein anderer Ort**, 365 Schwarzpläne aus aller Welt. Am 1. Januar kommt Arheilgen. Danach wechselt die Weltgegend Tag für Tag, und dieselbe Stadt kommt frühestens nach gut drei Monaten wieder (andere Viertel derselben Stadt).
+- **Jeden Tag ein anderer Ort**: 120 Schwarzpläne aus aller Welt (die ersten 120 der Liste, dazu einige mehr, die schon gezeichnet waren). Die Liste enthält 365 Orte; mehr lassen sich jederzeit erzeugen. Am 1. Januar kommt Arheilgen. Danach wechselt die Weltgegend Tag für Tag, und dieselbe Stadt kommt frühestens nach gut drei Monaten wieder (andere Viertel derselben Stadt).
 - Nur die Gebäude aus OpenStreetMap, alle Orte im selben Maßstab (2,6 km Bildbreite, am 7,5-Zoll-Display etwa 1:17.000), dazu Nordpfeil, Maßstabsbalken und Ortsname.
 - Einstellungen: **Darstellung** (Schwarz auf Weiß oder invertiert), **Beschriftung** (mit Ortsname oder nur der Plan), Rand, Uhrzeit für den Tageswechsel.
 - Die Orte stehen mit Tag, Name, Viertel und Koordinaten in [`kunst/schwarzplan/orte.json`](kunst/schwarzplan/orte.json). Darunter sind Deutschland (40), Westeuropa (60), Südeuropa (55), Nord- und Osteuropa (50), Nahost und Afrika (45), Asien (60), Amerika (45) und Ozeanien (10).
