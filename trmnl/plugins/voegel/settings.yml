@@ -1,0 +1,48 @@
+---
+# Kunst: Vogel des Tages (Liste und Bilder erzeugt die GitHub Action "Bildarchive holen")
+name: "Vogel des Tages"
+id: cyd-voegel
+strategy: polling
+polling_verb: get
+refresh_interval: 60
+no_screen_padding: "yes"
+dark_mode: "no"
+polling_url: "{{ liste }}"
+custom_fields:
+  - keyname: info
+    field_type: author_bio
+    name: "Über dieses Plugin"
+    description: "Jeden Tag ein Vogel als historischer Holzstich, mit Namen und kurzer Beschreibung. Gemeinfrei, über Wikimedia Commons; Texte aus Wikipedia."
+  - keyname: text
+    field_type: select
+    name: "Beschreibung unter dem Bild"
+    options:
+      - "Anzeigen": ja
+      - "Weglassen": nein
+    default: ja
+  - keyname: rand
+    field_type: select
+    name: "Rand (für Bilderrahmen)"
+    options:
+      - "Ohne": "0"
+      - "Schmal": "12"
+      - "Mittel": "20"
+      - "Breit": "30"
+    default: "20"
+  - keyname: zeitzone
+    field_type: select
+    name: "Uhrzeit für den Tageswechsel"
+    options:
+      - "Deutschland (MEZ/MESZ)": deutschland
+      - "Zeitzone aus LaraPaper": larapaper
+    default: deutschland
+  - keyname: kopf
+    field_type: string
+    name: "Beschriftung rechts unten"
+    default: "Vogel"
+    optional: true
+  - keyname: liste
+    field_type: url
+    name: "Liste der Bilder"
+    description: "Nur ändern, wenn die Bilder woanders liegen."
+    default: "https://github.com/HOAI-droid/cyd-weather/releases/download/trmnl-trmnl-app/voegel.json"

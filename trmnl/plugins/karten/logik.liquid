@@ -1,0 +1,16 @@
+{%- comment -%}
+  Tagesbild (Merian, Vögel, Karten): Liste aus <sammlung>.json mit bilder[] (tag, bild, titel, zeile, text, w, h).
+  Jeden Tag im Jahr ein Eintrag (tag = Tag im Jahr), fehlt er, der Reihe nach einer der vorhandenen.
+{%- endcomment -%}
+{%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
+{%- assign tb_liste = bilder -%}
+{%- assign tb_n = 0 -%}{%- if tb_liste -%}{%- assign tb_n = tb_liste.size -%}{%- endif -%}
+{%- assign jy = cw_jahr | minus: 1 -%}{%- assign jera = jy | divided_by: 400 -%}{%- assign jyoe = jera | times: -400 | plus: jy -%}
+{%- assign j1 = jyoe | times: 365 -%}{%- assign j2 = jyoe | divided_by: 4 -%}{%- assign j3 = jyoe | divided_by: 100 -%}
+{%- assign jan1 = jera | times: 146097 | plus: j1 | plus: j2 | minus: j3 | plus: 306 | minus: 719468 -%}
+{%- assign tb_tag = cw_tag0 | minus: jan1 | plus: 1 -%}
+{%- if tb_n > 0 -%}
+  {%- assign tb = nil -%}
+  {%- for o in tb_liste -%}{%- if o.tag == tb_tag -%}{%- assign tb = o -%}{%- break -%}{%- endif -%}{%- endfor -%}
+  {%- if tb == nil -%}{%- assign tb_i = tb_tag | minus: 1 | modulo: tb_n -%}{%- assign tb = tb_liste[tb_i] -%}{%- endif -%}
+{%- endif -%}
