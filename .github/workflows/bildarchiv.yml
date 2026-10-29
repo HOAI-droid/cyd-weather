@@ -20,12 +20,16 @@ permissions:
 
 concurrency:
   group: bildarchiv-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   holen:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        sammlung: [merian, voegel, karten]
     steps:
       - uses: actions/checkout@v4
 
@@ -43,9 +47,11 @@ jobs:
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
       - name: Kandidaten auf Commons suchen
-        run: python3 trmnl/kunst/bildarchiv/entdecken.py --sammlungen trmnl/kunst/bildarchiv/sammlungen.json --ziel archiv --nur "${{ github.event.inputs.nur }}"
+        if: ${{ github.event.inputs.nur == '' || contains(github.event.inputs.nur, matrix.sammlung) }}
+        run: python3 trmnl/kunst/bildarchiv/entdecken.py --sammlungen trmnl/kunst/bildarchiv/sammlungen.json --ziel archiv --nur "${{ matrix.sammlung }}"
 
       - name: Kandidatenlisten ins Release legen
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload "${{ steps.tag.outputs.tag }}" archiv/kandidaten-*.json --clobber
+        if: ${{ github.event.inputs.nur == '' || contains(github.event.inputs.nur, matrix.sammlung) }}
+        run: gh release upload "${{ steps.tag.outputs.tag }}" archiv/kandidaten-${{ matrix.sammlung }}.json --clobber
