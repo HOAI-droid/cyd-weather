@@ -32,18 +32,54 @@ def lade(url):
     raise RuntimeError("Bild nicht ladbar")
 
 
+def dunkle_raender_weg(im):
+    """Schwarze oder dunkle Ränder (Buch fotografiert vor dunklem Grund) abschneiden."""
+    klein = im.resize((200, max(1, int(200 * im.height / im.width))))
+    w, h = klein.size
+    px = klein.load()
+    spalte = lambda x: sum(px[x, y] for y in range(h)) / h
+    zeile = lambda y: sum(px[x, y] for x in range(w)) / w
+    l, r, o, u = 0, w - 1, 0, h - 1
+    while l < w // 4 and spalte(l) < 90: l += 1
+    while r > w * 3 // 4 and spalte(r) < 90: r -= 1
+    while o < h // 4 and zeile(o) < 90: o += 1
+    while u > h * 3 // 4 and zeile(u) < 90: u -= 1
+    if (l, r, o, u) == (0, w - 1, 0, h - 1):
+        return im
+    f = im.width / w
+    rand = 2 if l or r < w - 1 or o or u < h - 1 else 0
+    return im.crop((int((l + rand) * f), int((o + rand) * f), int((r + 1 - rand) * f), int((u + 1 - rand) * f)))
+
+
 def umrechnen(daten, w, h):
     im = Image.open(io.BytesIO(daten))
     im = ImageOps.exif_transpose(im).convert("L")
     im = ImageOps.autocontrast(im, cutoff=(1, 2))
-    # Ränder (Papier, Scanrand) wegschneiden: Bereich mit Druck finden
-    maske = im.point(lambda v: 255 if v < 200 else 0).filter(ImageFilter.MaxFilter(5))
-    box = maske.getbbox()
-    if box:
-        x0, y0, x1, y1 = box
-        if (x1 - x0) > im.width * .5 and (y1 - y0) > im.height * .5:
-            r = 8
-            im = im.crop((max(0, x0 - r), max(0, y0 - r), min(im.width, x1 + r), min(im.height, y1 + r)))
+    im = dunkle_raender_weg(im)
+    # Papierton (oft grau oder gelblich) auf Weiß ziehen: der helle Großteil der Fläche ist Papier
+    hist, n, summe = im.histogram(), im.width * im.height, 0
+    papier = 255
+    for v in range(255, -1, -1):
+        summe += hist[v]
+        if summe > n * .30:
+            papier = max(v, 120)
+            break
+    im = im.point(lambda v: min(255, int(v * 255 / papier)))
+    # Ränder (Papier, Scanrand) wegschneiden: Zeilen und Spalten mit nennenswert Druck suchen,
+    # einzelne Flecken auf dem Papier zählen nicht
+    klein = im.resize((300, max(1, int(300 * im.height / im.width))))
+    kw, kh = klein.size
+    px = klein.load()
+    dunkel = lambda v: v < 150
+    spalten = [sum(dunkel(px[x, y]) for y in range(kh)) / kh for x in range(kw)]
+    zeilen = [sum(dunkel(px[x, y]) for x in range(kw)) / kw for y in range(kh)]
+    xs = [i for i, v in enumerate(spalten) if v > .06]
+    ys = [i for i, v in enumerate(zeilen) if v > .06]
+    if xs and ys:
+        x0, x1, y0, y1 = xs[0], xs[-1] + 1, ys[0], ys[-1] + 1
+        if (x1 - x0) > kw * .45 and (y1 - y0) > kh * .45:
+            f, r = im.width / kw, 1
+            im = im.crop((int(max(0, x0 - r) * f), int(max(0, y0 - r) * f), int(min(kw, x1 + r) * f), int(min(kh, y1 + r) * f)))
     im.thumbnail((w, h), Image.LANCZOS)
     im = im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
     # Papier ganz weiß, Druck kräftig: leichte Gradationskurve
