@@ -117,7 +117,31 @@
 {%- assign cw_wt_kurz = "So,Mo,Di,Mi,Do,Fr,Sa" | split: "," -%}
 {%- assign cw_monate = "Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember" | split: "," -%}
 {%- assign cw_wetter = IDX_0 -%}
-{%- assign cw_off = cw_wetter.utc_offset_seconds | default: trmnl.user.utc_offset | default: 0 | plus: 0 -%}
+{%- comment -%}
+  UTC-Versatz: aus den Wetterdaten (Open-Meteo, timezone=auto), sonst deutsche Zeit (MEZ/MESZ, Umstellung am
+  letzten Sonntag im März bzw. Oktober um 01:00 UTC), oder auf Wunsch die Zeitzone aus LaraPaper.
+{%- endcomment -%}
+{%- assign cw_ts = trmnl.system.timestamp_utc | plus: 0 -%}
+{%- if cw_wetter.utc_offset_seconds != nil -%}
+  {%- assign cw_off = cw_wetter.utc_offset_seconds | plus: 0 -%}
+{%- elsif trmnl.plugin_settings.custom_fields_values.zeitzone == "larapaper" -%}
+  {%- assign cw_off = trmnl.user.utc_offset | default: 0 | plus: 0 -%}
+{%- else -%}
+  {%- assign u = cw_ts | divided_by: 86400 | plus: 719468 -%}{%- assign uera = u | divided_by: 146097 -%}{%- assign udoe = uera | times: -146097 | plus: u -%}
+  {%- assign u1 = udoe | divided_by: 1460 -%}{%- assign u2 = udoe | divided_by: 36524 -%}{%- assign u3 = udoe | divided_by: 146096 -%}
+  {%- assign uyoe = udoe | minus: u1 | plus: u2 | minus: u3 | divided_by: 365 -%}
+  {%- assign ub1 = uyoe | times: 365 -%}{%- assign ub2 = uyoe | divided_by: 4 -%}{%- assign ub3 = uyoe | divided_by: 100 -%}
+  {%- assign udoy = udoe | minus: ub1 | minus: ub2 | plus: ub3 -%}{%- assign ump = udoy | times: 5 | plus: 2 | divided_by: 153 -%}
+  {%- assign ujahr = uera | times: 400 | plus: uyoe -%}{%- if ump >= 10 -%}{%- assign ujahr = ujahr | plus: 1 -%}{%- endif -%}
+  {%- comment -%} Tagesnummer von 31.03. und 31.10. (days_from_civil), dann zurück zum Sonntag {%- endcomment -%}
+  {%- assign ey = ujahr | divided_by: 400 -%}{%- assign eyoe = ey | times: -400 | plus: ujahr -%}
+  {%- assign ebase = eyoe | times: 365 -%}{%- assign e4 = eyoe | divided_by: 4 -%}{%- assign e100 = eyoe | divided_by: 100 -%}
+  {%- assign edoe0 = ebase | plus: e4 | minus: e100 -%}{%- assign eera = ey | times: 146097 | minus: 719468 -%}
+  {%- assign mar31 = edoe0 | plus: 30 | plus: eera -%}{%- assign okt31 = edoe0 | plus: 244 | plus: eera -%}
+  {%- assign wm = mar31 | plus: 4 | modulo: 7 -%}{%- assign wo = okt31 | plus: 4 | modulo: 7 -%}
+  {%- assign sz_start = mar31 | minus: wm | times: 86400 | plus: 3600 -%}{%- assign sz_ende = okt31 | minus: wo | times: 86400 | plus: 3600 -%}
+  {%- if cw_ts >= sz_start and cw_ts < sz_ende -%}{%- assign cw_off = 7200 -%}{%- else -%}{%- assign cw_off = 3600 -%}{%- endif -%}
+{%- endif -%}
 {%- assign cw_now = trmnl.system.timestamp_utc | plus: cw_off -%}
 {%- assign cw_now_min = cw_now | modulo: 86400 | divided_by: 60 -%}
 {%- assign cw_h = cw_now_min | divided_by: 60 -%}

@@ -1,0 +1,17 @@
+{%- comment -%}
+  Schwarzplan: Liste aus schwarzplan.json (orte, m_pro_px). Jede volle Stunde der nächste Ort,
+  jeden Tag um 7 Plätze versetzt, damit jeder Ort mit der Zeit zu jeder Stunde einmal drankommt.
+{%- endcomment -%}
+{%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
+{%- assign sp_orte = orte -%}
+{%- assign sp_n = 0 -%}{%- if sp_orte -%}{%- assign sp_n = sp_orte.size -%}{%- endif -%}
+{%- if sp_n > 0 -%}
+  {%- assign sp_i = cw_tag0 | times: 7 | plus: cw_h | modulo: sp_n -%}
+  {%- assign sp = sp_orte[sp_i] -%}
+{%- endif -%}
+{%- assign sp_mpp = m_pro_px | default: 3.4574 | plus: 0 -%}
+{%- comment -%} Maßstabsbalken 500 m; Maßstab am 7,5-Zoll-Display (800 Pixel ≈ 163 mm) {%- endcomment -%}
+{%- assign sp_balken = 500 | divided_by: sp_mpp | round -%}
+{%- assign sp_mz = sp_mpp | divided_by: 0.204 | times: 2 | round | times: 500 -%}
+{%- assign sp_k = sp_mz | divided_by: 1000 | floor -%}{%- assign sp_r = sp_mz | modulo: 1000 | floor -%}
+{%- capture sp_massstab -%}1:{{ sp_k }}.{% if sp_r == 0 %}000{% else %}500{% endif %}{%- endcapture -%}

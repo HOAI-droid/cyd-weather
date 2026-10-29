@@ -1,0 +1,96 @@
+<div class="view view--full">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=block">
+<style>
+  .tf { font-family: "IM Fell English", Georgia, serif; font-weight: 400; display: flex; flex-direction: column; }
+  .tf .sc { font-family: "IM Fell English SC", "IM Fell English", Georgia, serif; }
+  .tf .it { font-style: italic; }
+  .tf .kopf { text-align: center; flex-shrink: 0; }
+  .tf .kopf .nr { font-size: 14px; letter-spacing: .25em; }
+  .tf .kopf h1 { font-weight: 400; font-size: 28px; letter-spacing: .07em; white-space: nowrap; line-height: 1.05; margin: 1px 0 0; }
+  .tf .kopf .sub { font-size: 17px; font-style: italic; margin-top: 1px; }
+  .tf .orn { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 4px 0 3px; }
+  .tf .orn i { display: block; width: 200px; border-top: 1px solid #000; border-bottom: .5px solid #000; height: 3px; }
+  .tf .orn b { width: 9px; height: 9px; background: #000; transform: rotate(45deg); }
+  .tf .koerper { flex: 1 1 auto; display: flex; min-height: 0; border-top: 1.5px solid #000; border-bottom: 1.5px solid #000; padding: 4px 0 2px; }
+  .tf .sek { display: flex; flex-direction: column; min-width: 0; }
+  .tf .sek.j { flex: 0 0 66%; padding-right: 10px; }
+  .tf .sek.g { flex: 1 1 auto; padding-left: 12px; border-left: 3px double #000; }
+  .tf .sk { display: flex; align-items: baseline; justify-content: space-between; font-size: 16px; margin-bottom: 2px; }
+  .tf .sk .sc { font-size: 15px; margin-right: 6px; }
+  .tf .mb { display: flex; flex-direction: column; align-items: flex-end; font-size: 11px; }
+  .tf .mb .bar { display: flex; height: 5px; border: 1px solid #000; }
+  .tf .mb .bar i { width: 50%; } .tf .mb .bar i:first-child { background: #000; }
+  .tf .raster { flex: 1 1 auto; display: grid; gap: 0 10px; min-height: 0; }
+  .tf .sek.j .raster { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 1fr); }
+  .tf .sek.g .raster { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); }
+  .tf .fig { display: flex; flex-direction: column; justify-content: flex-end; min-width: 0; }
+  .tf .fig .bild { flex: 1 1 auto; display: flex; align-items: flex-end; justify-content: center; min-height: 0; }
+  .tf .fig img { display: block; max-height: 82px; max-width: 100%; }
+  .tf .fig .cap { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; border-top: .5px solid #000; padding-top: 1px; }
+  .tf .fig .cap .nm { font-size: 15px; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tf .fig .cap .nm .sc { font-style: normal; font-size: 12px; margin-right: 4px; }
+  .tf .fig .cap .zz { font-size: 13px; white-space: nowrap; }
+  .tf .leer { font-size: 15px; font-style: italic; padding: 10px 0; }
+  .tf .weitere { font-size: 13px; font-style: italic; padding: 3px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0; }
+  .tf .fuss { display: flex; justify-content: space-between; font-size: 13px; padding-top: 3px; flex-shrink: 0; }
+  .tf .hinweis { flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: center; font-size: 19px; gap: 8px; padding: 0 30px; }
+</style>
+<div class="cw tf">
+  <div class="kopf">
+    <div class="nr sc">Tafel {{ datum_text | default: "" }}</div>
+    <h1>DIE LUFTFAHRZEUGE ÜBER {{ ort | default: "ARHEILGEN" | upcase }}</h1>
+    <div class="sub">beobachtet im Umkreis von {{ fl_rw }} Kilometern in den letzten vierundzwanzig Stunden</div>
+    <div class="orn"><i></i><b></b><i></i></div>
+  </div>
+  {%- if fl_ok == false -%}
+    <div class="hinweis"><span>Noch keine Beobachtungen.</span><span class="it" style="font-size:16px">Das Sammel-Skript schickt alle paar Minuten die Flugzeuge der letzten 24 Stunden an die Webhook-Adresse dieses Plugins. Anleitung: trmnl/README.md</span></div>
+  {%- else -%}
+  <div class="koerper">
+    <div class="sek j">
+      <div class="sk"><span><span class="sc">I.</span><span class="it">Verkehrs- und Frachtflugzeuge</span></span>
+        <span class="mb"><span>20 m</span><span class="bar" style="width:61px"><i></i><i></i></span></span></div>
+      <div class="raster">
+        {%- assign nf = 0 -%}{%- assign nj = 0 -%}
+        {%- for x in typen -%}{%- if x.k == "jet" and x.bild != "" and nj < 6 -%}
+          {%- assign nj = nj | plus: 1 -%}{%- assign nf = nf | plus: 1 -%}{%- assign w = x.bw | times: 0.32 | round -%}
+          <div class="fig"><div class="bild"><img src="{{ fl_basis }}{{ x.bild }}{{ fl_endung }}" style="width: {{ w }}px" alt=""></div>
+            <div class="cap"><span class="nm"><span class="sc">Fig. {{ nf }}.</span>{{ x.name }}{% if x.neu == 1 %} *{% endif %}</span><span class="zz">{{ x.n }} × · Ø {{ x.alt | number_with_delimiter: "." }} m</span></div></div>
+        {%- endif -%}{%- endfor -%}
+        {%- if nj == 0 -%}<div class="leer">Heute keine Verkehrsflugzeuge mit Zeichnung.</div>{%- endif -%}
+      </div>
+    </div>
+    <div class="sek g">
+      <div class="sk"><span><span class="sc">II.</span><span class="it">Allgemeine Luftfahrt</span></span>
+        <span class="mb"><span>5 m</span><span class="bar" style="width:50px"><i></i><i></i></span></span></div>
+      <div class="raster">
+        {%- assign ng = 0 -%}
+        {%- for x in typen -%}{%- if x.k != "jet" and x.bild != "" and ng < 3 -%}
+          {%- assign ng = ng | plus: 1 -%}{%- assign nf = nf | plus: 1 -%}{%- assign w = x.bw | times: 0.30 | round -%}
+          <div class="fig"><div class="bild"><img src="{{ fl_basis }}{{ x.bild }}{{ fl_endung }}" style="width: {{ w }}px" alt=""></div>
+            <div class="cap"><span class="nm"><span class="sc">Fig. {{ nf }}.</span>{{ x.name }}{% if x.neu == 1 %} *{% endif %}</span><span class="zz">{{ x.n }} ×</span></div></div>
+        {%- endif -%}{%- endfor -%}
+        {%- if ng == 0 -%}<div class="leer">Heute keine kleinen Flugzeuge oder Hubschrauber mit Zeichnung.</div>{%- endif -%}
+      </div>
+    </div>
+  </div>
+  {%- comment -%} Alles, was keine Zeichnung hat oder nicht mehr auf die Tafel passt {%- endcomment -%}
+  {%- assign nj2 = 0 -%}{%- assign ng2 = 0 -%}
+  {%- capture weitere -%}
+    {%- for x in typen -%}
+      {%- assign drauf = false -%}
+      {%- if x.bild != "" -%}
+        {%- if x.k == "jet" -%}{%- assign nj2 = nj2 | plus: 1 -%}{%- if nj2 <= 6 -%}{%- assign drauf = true -%}{%- endif -%}
+        {%- else -%}{%- assign ng2 = ng2 | plus: 1 -%}{%- if ng2 <= 3 -%}{%- assign drauf = true -%}{%- endif -%}{%- endif -%}
+      {%- endif -%}
+      {%- unless drauf -%}{{ x.name }} ({{ x.n }}){{ " · " }}{%- endunless -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- if weitere != "" -%}<div class="weitere">Ferner beobachtet: {{ weitere | strip | remove_last: " ·" }}</div>{%- endif -%}
+  <div class="fuss">
+    <span class="it">Gezeichnet nach 3D-Modellen, alle im selben Maßstab</span>
+    <span>{{ anzahl_typen }} Typen · {{ ueberfluege | number_with_delimiter: "." }} Überflüge · Ø Flughöhe{% if fl_alt > 3600 %} · <b>keine neuen Daten seit {{ stand_text }}</b>{% else %} · Stand {{ stand_text }} Uhr{% endif %}</span>
+    <span class="it">Daten: adsb.lol</span>
+  </div>
+  {%- endif -%}
+</div>
+</div>

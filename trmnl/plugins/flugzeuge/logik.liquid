@@ -1,0 +1,13 @@
+{%- comment -%}
+  Tafel der Luftfahrzeuge. Daten vom Sammel-Skript (Webhook): ort, radius_km, stand, stand_text, datum_text,
+  ueberfluege, anzahl_typen, typen[] mit t, name, bild, bw (Bildbreite), k (jet/ga/heli), n, alt, neu
+{%- endcomment -%}
+{%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
+{%- assign fl_ok = false -%}{%- if typen -%}{%- assign fl_ok = true -%}{%- endif -%}
+{%- assign fl_endung = ".png" -%}{%- if cf.schraffur == "linien" -%}{%- assign fl_endung = "_linien.png" -%}{%- endif -%}
+{%- assign fl_basis = cf.bilder | default: "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/kunst/flugzeuge/bilder/" -%}
+{%- assign fl_alt = trmnl.system.timestamp_utc | minus: stand | default: 0 -%}
+{%- assign fl_radius = radius_km | default: 20 | plus: 0.5 | floor -%}
+{%- case fl_radius -%}{%- when 10 -%}{%- assign fl_rw = "zehn" -%}{%- when 15 -%}{%- assign fl_rw = "fünfzehn" -%}{%- when 20 -%}{%- assign fl_rw = "zwanzig" -%}{%- when 25 -%}{%- assign fl_rw = "fünfundzwanzig" -%}{%- when 30 -%}{%- assign fl_rw = "dreißig" -%}{%- else -%}{%- capture fl_rw -%}{{ fl_radius }}{%- endcapture -%}{%- endcase -%}
+{%- comment -%} Römische Tafelnummer = Tag im Jahr (wie bei einer fortlaufenden Sammlung) {%- endcomment -%}
+{%- assign rz = cw_tag0 | modulo: 1000 -%}

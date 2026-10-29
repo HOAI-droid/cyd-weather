@@ -46,6 +46,38 @@ Beide Seiten gibt es auch in den kleineren Größen für Mashups (halb waagrecht
 | Müll-Erinnerung ab | Uhrzeit am Vorabend, ab der der Termin hervorgehoben wird (15–20 Uhr). |
 | Wetterspruch | Ein Spruch pro Tag wie auf der CYD. Auf Seite 1 und 2 abschaltbar. |
 
+## Kunst: Schwarzplan und Tafel der Luftfahrzeuge
+
+Zwei eigenständige Plugins nach den Artefakten „Flur-Rahmen Datenkunst“ (Schwarzpläne) und „Tafel der Luftfahrzeuge“. Beide nutzen den mittleren Rand.
+
+| Schwarzplan | invertiert | Tafel der Luftfahrzeuge |
+|---|---|---|
+| ![](docs/schwarzplan.png) | ![](docs/schwarzplan-negativ.png) | ![](docs/flugzeuge.png) |
+
+### Schwarzplan (`trmnl-schwarzplan.zip`)
+
+- Jede volle Stunde ein anderer Ort, also höchstens 24 Bilder am Tag. Jeden Tag verschiebt sich die Reihenfolge um 7 Orte, so kommt jeder Ort mit der Zeit zu jeder Uhrzeit dran.
+- Nur die Gebäude aus OpenStreetMap, alle Orte im selben Maßstab (2,6 km Bildbreite, am 7,5-Zoll-Display etwa 1:17.000), dazu Nordpfeil, Maßstabsbalken und Ortsname.
+- Einstellungen: **Darstellung** (Schwarz auf Weiß oder invertiert), **Beschriftung** (mit Ortsname oder nur der Plan), Rand, Uhrzeit (Deutschland oder Zeitzone aus LaraPaper).
+- Die 24 Orte stehen in [`kunst/schwarzplan/orte.json`](kunst/schwarzplan/orte.json). Ändert man die Datei, zeichnet die GitHub Action „Schwarzpläne erzeugen“ die Pläne neu und legt sie mit der Liste `schwarzplan.json` im Release ab. Das Plugin holt sich die Liste von dort, ein neuer Import ist nicht nötig.
+
+### Tafel der Luftfahrzeuge (`trmnl-flugzeuge.zip`)
+
+- Alle Flugzeugtypen, die in den letzten 24 Stunden im Umkreis von 20 km über Arheilgen geflogen sind. Gezeigt werden sie als gestochene Seitenansichten aus der Tafel, alle im selben Maßstab: links bis zu 6 Verkehrsflugzeuge, rechts bis zu 3 kleine Flugzeuge oder Hubschrauber, jeweils mit Anzahl der Überflüge und mittlerer Flughöhe. Typen ohne Zeichnung stehen unter „Ferner beobachtet“. Ein Stern markiert Typen, die zum ersten Mal gesehen wurden.
+- Einstellung **Zeichnung**: Stich mit Schraffur oder nur Linien.
+- Die Daten kommen von [adsb.lol](https://adsb.lol), kostenlos und ohne Schlüssel, oder vom eigenen ADS-B-Empfänger. Weil die 24 Stunden mitgeschrieben werden müssen, läuft dafür ein kleines Sammel-Skript auf deinem Rechner, zum Beispiel neben LaraPaper. Es schickt die Auswertung alle 5 Minuten an das Plugin.
+
+**Sammler einrichten:**
+1. `trmnl-flugzeuge.zip` in LaraPaper importieren. Auf der Seite des Plugins steht die **Webhook URL** (`…/api/custom_plugins/…`).
+2. [`kunst/flugzeuge/sammler.py`](kunst/flugzeuge/sammler.py) auf den Rechner mit LaraPaper kopieren. Es braucht nur Python 3, keine Pakete.
+3. Eine der beiden Varianten wählen:
+   - **cron**, alle 5 Minuten:
+     `*/5 * * * * python3 /pfad/sammler.py --webhook "WEBHOOK-URL" >> /tmp/sammler.log 2>&1`
+   - **Docker:** In [`kunst/flugzeuge/docker-compose.yml`](kunst/flugzeuge/docker-compose.yml) die `WEBHOOK_URL` eintragen und im selben Ordner `docker compose up -d` ausführen.
+4. Nach 24 Stunden ist die Tafel vollständig. Testen ohne Senden: `python3 sammler.py --trocken`.
+
+Mit eigenem Empfänger (readsb/tar1090): `--quelle http://raspberrypi.local/tar1090/data/aircraft.json`. Umkreis, Ort und Koordinaten lassen sich mit `--radius`, `--ort`, `--lat` und `--lon` ändern.
+
 ## Datenquellen (alle ohne API-Schlüssel)
 
 | Was | Quelle |

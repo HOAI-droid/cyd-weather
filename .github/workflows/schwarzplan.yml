@@ -1,0 +1,69 @@
+# Erzeugt die Schwarzpläne (Gebäude aus OpenStreetMap) für das TRMNL-Plugin "Schwarzplan"
+# und legt Bilder und Liste (schwarzplan.json) im selben Release ab wie die Plugin-ZIPs.
+name: Schwarzpläne erzeugen
+
+on:
+  push:
+    paths:
+      - "trmnl/kunst/schwarzplan/**"
+      - ".github/workflows/schwarzplan.yml"
+  workflow_dispatch:
+    inputs:
+      nur:
+        description: "Nur diese Orte neu (Kürzel mit Komma, leer = alle)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  plaene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pillow installieren
+        run: pip install pillow
+
+      - name: Release-Name bestimmen
+        id: tag
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          if [ "$BRANCH" = "$DEFAULT_BRANCH" ]; then TAG=trmnl; else TAG="trmnl-$(echo "$BRANCH" | sed 's#^claude/##; s#[^A-Za-z0-9._-]#-#g')"; fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Bisherige Bilder holen (falls nur einzelne Orte neu erzeugt werden)
+        if: ${{ github.event.inputs.nur != '' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p plaene
+          gh release download "${{ steps.tag.outputs.tag }}" --pattern 'schwarzplan-*.png' --dir plaene || true
+
+      - name: Pläne aus OpenStreetMap zeichnen
+        run: |
+          python3 trmnl/kunst/schwarzplan/erzeugen.py --orte trmnl/kunst/schwarzplan/orte.json --ziel plaene \
+            --basis-url "https://github.com/${GITHUB_REPOSITORY}/releases/download/${{ steps.tag.outputs.tag }}/" \
+            --nur "${{ github.event.inputs.nur }}"
+          ls -l plaene
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: schwarzplaene
+          path: plaene/
+
+      - name: Ins Release hochladen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="${{ steps.tag.outputs.tag }}"
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "TRMNL-Plugins (${GITHUB_REF_NAME})" --notes "TRMNL-Plugins und Schwarzpläne" --target "$GITHUB_SHA" --prerelease
+          gh release upload "$TAG" plaene/*.png plaene/schwarzplan.json --clobber

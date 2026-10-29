@@ -1,0 +1,53 @@
+---
+# Kunst: jede volle Stunde ein anderer Schwarzplan (nur Gebäude, alle Orte im selben Maßstab)
+name: "Schwarzplan"
+id: cyd-schwarzplan
+strategy: polling
+polling_verb: get
+refresh_interval: 10
+no_screen_padding: "yes"
+dark_mode: "no"
+# Liste der Orte und Bilder; wird von der GitHub Action aus OpenStreetMap erzeugt (trmnl/kunst/schwarzplan)
+polling_url: "{{ liste }}"
+custom_fields:
+  - keyname: info
+    field_type: author_bio
+    name: "Über dieses Plugin"
+    description: "Jede volle Stunde ein anderer Schwarzplan: nur die Gebäude eines Ortes, alle im selben Maßstab. Gebäude © OpenStreetMap-Mitwirkende."
+  - keyname: darstellung
+    field_type: select
+    name: "Darstellung"
+    options:
+      - "Schwarz auf Weiß": normal
+      - "Weiß auf Schwarz (invertiert)": negativ
+    default: normal
+  - keyname: beschriftung
+    field_type: select
+    name: "Beschriftung"
+    description: "Ortsname, Maßstab und Nordpfeil."
+    options:
+      - "Mit Ortsname und Maßstab": ja
+      - "Nur der Plan": nein
+    default: ja
+  - keyname: rand
+    field_type: select
+    name: "Rand (für Bilderrahmen)"
+    description: "Abstand des Inhalts zum Displayrand. In Mashups wird der halbe Rand verwendet."
+    options:
+      - "Ohne": "0"
+      - "Schmal": "12"
+      - "Mittel": "20"
+      - "Breit": "30"
+    default: "20"
+  - keyname: zeitzone
+    field_type: select
+    name: "Uhrzeit für den Stundenwechsel"
+    options:
+      - "Deutschland (MEZ/MESZ)": deutschland
+      - "Zeitzone aus LaraPaper": larapaper
+    default: deutschland
+  - keyname: liste
+    field_type: url
+    name: "Liste der Pläne"
+    description: "Nur ändern, wenn die Pläne woanders liegen."
+    default: "https://github.com/HOAI-droid/cyd-weather/releases/download/trmnl-trmnl-app/schwarzplan.json"

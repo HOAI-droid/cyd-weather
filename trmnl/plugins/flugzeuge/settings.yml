@@ -1,0 +1,36 @@
+---
+# Kunst: Tafel der Luftfahrzeuge, die in den letzten 24 Stunden über den Ort geflogen sind.
+# Die Daten schickt das Sammel-Skript trmnl/kunst/flugzeuge/sammler.py an den Webhook dieses Plugins.
+name: "Tafel der Luftfahrzeuge"
+id: cyd-flugzeuge
+strategy: webhook
+refresh_interval: 15
+no_screen_padding: "yes"
+dark_mode: "no"
+custom_fields:
+  - keyname: info
+    field_type: author_bio
+    name: "Über dieses Plugin"
+    description: "Alle Flugzeugtypen der letzten 24 Stunden als gestochene Seitenansichten im selben Maßstab. Die Daten liefert das Sammel-Skript (siehe trmnl/README.md) an die Webhook-Adresse dieses Plugins."
+  - keyname: schraffur
+    field_type: select
+    name: "Zeichnung"
+    options:
+      - "Stich (mit Schraffur)": stich
+      - "Nur Linien": linien
+    default: stich
+  - keyname: rand
+    field_type: select
+    name: "Rand (für Bilderrahmen)"
+    description: "Abstand des Inhalts zum Displayrand. In Mashups wird der halbe Rand verwendet."
+    options:
+      - "Ohne": "0"
+      - "Schmal": "12"
+      - "Mittel": "20"
+      - "Breit": "30"
+    default: "20"
+  - keyname: bilder
+    field_type: url
+    name: "Adresse der Zeichnungen"
+    description: "Nur ändern, wenn die Zeichnungen woanders liegen."
+    default: "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/kunst/flugzeuge/bilder/"
