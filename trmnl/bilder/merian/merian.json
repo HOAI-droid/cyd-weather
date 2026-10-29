@@ -1,0 +1,1208 @@
+{
+"sammlung": "merian",
+"anzahl": 120,
+"bilder": [
+{
+"titel": "Frankfurt am Main",
+"zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Hassiae_081.jpg",
+"tag": 1,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-001.png",
+"w": 640,
+"h": 404
+},
+{
+"titel": "Kloppenburg",
+"zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+"jahr": 1647,
+"seite": "https://commons.wikimedia.org/wiki/File:Kloppenburg-1647-Merian.jpg",
+"tag": 2,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-002.png",
+"w": 747,
+"h": 404
+},
+{
+"titel": "Trier",
+"zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1648",
+"jahr": 1648,
+"seite": "https://commons.wikimedia.org/wiki/File:Trier_1648_Merian(045).jpg",
+"tag": 3,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-003.png",
+"w": 636,
+"h": 404
+},
+{
+"titel": "Erfurt",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Erfurt-1650-Merian.jpg",
+"tag": 4,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-004.png",
+"w": 544,
+"h": 404
+},
+{
+"titel": "Stadt Tull",
+"zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+"jahr": 1645,
+"seite": "https://commons.wikimedia.org/wiki/File:Stadt_Tull_(Merian).jpg",
+"tag": 5,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-005.png",
+"w": 532,
+"h": 404
+},
+{
+"titel": "Quedlinburg",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Quedlinburg_(Merian).jpg",
+"tag": 6,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-006.png",
+"w": 752,
+"h": 249
+},
+{
+"titel": "Lunel",
+"zeile": "Merian & Zeiller · Topographia Galliae · 1657",
+"jahr": 1657,
+"seite": "https://commons.wikimedia.org/wiki/File:Lunel_1657_Zeiller_15228.jpg",
+"tag": 7,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-007.png",
+"w": 536,
+"h": 404
+},
+{
+"titel": "Breslau",
+"zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Wratislauia_Bre%C3%9Flaw_Breslau_17.Jh.jpg",
+"tag": 8,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-008.png",
+"w": 752,
+"h": 365
+},
+{
+"titel": "Bonn",
+"zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:BONN1646.jpg",
+"tag": 9,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-009.png",
+"w": 670,
+"h": 404
+},
+{
+"titel": "Lützen",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:L%C3%BCtzen_(Merian).jpg",
+"tag": 10,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-010.png",
+"w": 752,
+"h": 242
+},
+{
+"titel": "Heidelberg",
+"zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+"jahr": 1645,
+"seite": "https://commons.wikimedia.org/wiki/File:Palatinatus_Rheni_(Merian)_b_088_1.jpg",
+"tag": 11,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-011.png",
+"w": 752,
+"h": 377
+},
+{
+"titel": "Havelberg",
+"zeile": "Matthäus Merian · Topographia Electoratus Brandenburgici · 1652",
+"jahr": 1652,
+"seite": "https://commons.wikimedia.org/wiki/File:Havelberg-1652-Merian.jpg",
+"tag": 12,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-012.png",
+"w": 752,
+"h": 289
+},
+{
+"titel": "Langenburg",
+"zeile": "Matthäus Merian · Topographia Franconiae · 1648",
+"jahr": 1648,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Frankoniae_071.jpg",
+"tag": 13,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-013.png",
+"w": 603,
+"h": 404
+},
+{
+"titel": "Leuk",
+"zeile": "Matthäus Merian · Topographia Helvetiae · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Helvetiae,_Rhaetiae_et_Valesiae_1654_(1127110).jpg",
+"tag": 14,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-014.png",
+"w": 547,
+"h": 404
+},
+{
+"titel": "Lindau",
+"zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+"jahr": 1643,
+"seite": "https://commons.wikimedia.org/wiki/File:Lindaw_im_Bodensee_-_btv1b53238666w.jpg",
+"tag": 15,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-015.png",
+"w": 682,
+"h": 404
+},
+{
+"titel": "Peurbach",
+"zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+"jahr": 1649,
+"seite": "https://commons.wikimedia.org/wiki/File:Peurbach_(Merian).jpg",
+"tag": 16,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-016.png",
+"w": 752,
+"h": 237
+},
+{
+"titel": "Orléans",
+"zeile": "Merian & Zeiller · Topographia Galliae · 1656",
+"jahr": 1656,
+"seite": "https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_J_Peeters_1656_Zeiller_15064.jpg",
+"tag": 17,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-017.png",
+"w": 752,
+"h": 263
+},
+{
+"titel": "Lübeck",
+"zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1641",
+"jahr": 1641,
+"seite": "https://commons.wikimedia.org/wiki/File:Luebeck-1641-Merian.jpg",
+"tag": 18,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-018.png",
+"w": 752,
+"h": 400
+},
+{
+"titel": "Grenoble",
+"zeile": "Matthäus Merian · Topographia Germaniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Grenoble_Tassin_15808.jpg",
+"tag": 19,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-019.png",
+"w": 752,
+"h": 346
+},
+{
+"titel": "Marburg",
+"zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Hassiae_151.jpg",
+"tag": 20,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-020.png",
+"w": 645,
+"h": 404
+},
+{
+"titel": "Leütmaritz",
+"zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Le%C3%BCtmaritz_(Merian).jpg",
+"tag": 21,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-021.png",
+"w": 644,
+"h": 404
+},
+{
+"titel": "Heidenheim an der Brenz",
+"zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+"jahr": 1643,
+"seite": "https://commons.wikimedia.org/wiki/File:Haydenheim.jpg",
+"tag": 22,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-022.png",
+"w": 699,
+"h": 404
+},
+{
+"titel": "Wittenberg",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Wittenberg_(Merian).jpg",
+"tag": 23,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-023.png",
+"w": 752,
+"h": 277
+},
+{
+"titel": "Bremen",
+"zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1641",
+"jahr": 1641,
+"seite": "https://commons.wikimedia.org/wiki/File:Bremen-1641-Merian.jpg",
+"tag": 24,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-024.png",
+"w": 519,
+"h": 404
+},
+{
+"titel": "Gascogne",
+"zeile": "Matthäus Merian · Topographia Germaniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Carte_Guienne_%26_Gascogne_15211.jpg",
+"tag": 25,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-025.png",
+"w": 537,
+"h": 404
+},
+{
+"titel": "Leuenfohrt",
+"zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+"jahr": 1647,
+"seite": "https://commons.wikimedia.org/wiki/File:Leuenfohrt_(Merian).jpg",
+"tag": 26,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-026.png",
+"w": 752,
+"h": 396
+},
+{
+"titel": "Hildesheim",
+"zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+"jahr": 1653,
+"seite": "https://commons.wikimedia.org/wiki/File:Saxoniae_Inferioris_(Merian)_b_019.jpg",
+"tag": 27,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-027.png",
+"w": 512,
+"h": 404
+},
+{
+"titel": "Heilbad Heiligenstadt",
+"zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:Heilbad_Heiligenstadt_De_Merian_Hassiae.jpg",
+"tag": 28,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-028.png",
+"w": 603,
+"h": 404
+},
+{
+"titel": "Freiburg im Breisgau",
+"zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_009.JPG",
+"tag": 29,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-029.png",
+"w": 629,
+"h": 404
+},
+{
+"titel": "Hannover",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Braunschweig_L%C3%BCneburg_(Merian)_149.jpg",
+"tag": 30,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-030.png",
+"w": 752,
+"h": 317
+},
+{
+"titel": "Opole",
+"zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Bohemiae_Moraviae_et_Silesiae_(Merian)_266.jpg",
+"tag": 31,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-031.png",
+"w": 701,
+"h": 404
+},
+{
+"titel": "Pleyburg",
+"zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+"jahr": 1649,
+"seite": "https://commons.wikimedia.org/wiki/File:Pleyburg_(Merian).jpg",
+"tag": 32,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-032.png",
+"w": 533,
+"h": 404
+},
+{
+"titel": "Lawenstein",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Lawenstein_(Merian).jpg",
+"tag": 33,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-033.png",
+"w": 744,
+"h": 404
+},
+{
+"titel": "Riquewihr",
+"zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Reichenweyer.jpg",
+"tag": 34,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-034.png",
+"w": 604,
+"h": 404
+},
+{
+"titel": "Maison Berny",
+"zeile": "Merian & Zeiller · Topographia Galliae · 1657",
+"jahr": 1657,
+"seite": "https://commons.wikimedia.org/wiki/File:Maison_Berny_1657_Zeiller_5063.jpg",
+"tag": 35,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-035.png",
+"w": 662,
+"h": 404
+},
+{
+"titel": "Kołobrzeg",
+"zeile": "Matthäus Merian · Topographia Electoratus Brandenburgici · 1652",
+"jahr": 1652,
+"seite": "https://commons.wikimedia.org/wiki/File:Kolberg_1652_(Merian).png",
+"tag": 36,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-036.png",
+"w": 662,
+"h": 404
+},
+{
+"titel": "Kaysersberg",
+"zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_012.JPG",
+"tag": 37,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-037.png",
+"w": 601,
+"h": 404
+},
+{
+"titel": "Salzburg",
+"zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+"jahr": 1649,
+"seite": "https://commons.wikimedia.org/wiki/File:Abersee_(Merian).jpg",
+"tag": 38,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-038.png",
+"w": 654,
+"h": 404
+},
+{
+"titel": "Eisenach",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1647",
+"jahr": 1647,
+"seite": "https://commons.wikimedia.org/wiki/File:Eisenach-1647-Merian.jpg",
+"tag": 39,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-039.png",
+"w": 592,
+"h": 404
+},
+{
+"titel": "Bordeaux",
+"zeile": "Merian & Zeiller · Topographia Galliae · 1661",
+"jahr": 1661,
+"seite": "https://commons.wikimedia.org/wiki/File:BOrdeaux_1661_Zeiller_15215.jpg",
+"tag": 40,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-040.png",
+"w": 752,
+"h": 303
+},
+{
+"titel": "Lautenthal",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Lautenthal_(Merian).jpg",
+"tag": 41,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-041.png",
+"w": 752,
+"h": 303
+},
+{
+"titel": "Hornberg",
+"zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+"jahr": 1643,
+"seite": "https://commons.wikimedia.org/wiki/File:Hornberg_(Merian).jpg",
+"tag": 42,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-042.png",
+"w": 666,
+"h": 404
+},
+{
+"titel": "Jena",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Jena-1650-Merian.jpg",
+"tag": 43,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-043.png",
+"w": 626,
+"h": 404
+},
+{
+"titel": "Berlin",
+"zeile": "Matthäus Merian · Topographia Electoratus Brandenburgici · 1652",
+"jahr": 1652,
+"seite": "https://commons.wikimedia.org/wiki/File:Berlin-1652-Merian-vogel.jpg",
+"tag": 44,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-044.png",
+"w": 752,
+"h": 257
+},
+{
+"titel": "Coburg",
+"zeile": "Matthäus Merian · Topographia Franconiae · 1648",
+"jahr": 1648,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Frankoniae_044.jpg",
+"tag": 45,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-045.png",
+"w": 707,
+"h": 404
+},
+{
+"titel": "Lamspring",
+"zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+"jahr": 1653,
+"seite": "https://commons.wikimedia.org/wiki/File:Lamspring_(Merian).jpg",
+"tag": 46,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-046.png",
+"w": 653,
+"h": 404
+},
+{
+"titel": "Konstanz",
+"zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+"jahr": 1643,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Sueviae_078.jpg",
+"tag": 47,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-047.png",
+"w": 593,
+"h": 404
+},
+{
+"titel": "Weimar",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Weimar-1650-Merian_bearbeitet.jpg",
+"tag": 48,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-048.png",
+"w": 585,
+"h": 404
+},
+{
+"titel": "Zürich",
+"zeile": "Matthäus Merian · Topographia Helvetiae · 1642",
+"jahr": 1642,
+"seite": "https://commons.wikimedia.org/wiki/File:Zentralbibliothek_Z%C3%BCrich_-_Z%C3%BCrich_-_991102314679705501_cropped.jpg",
+"tag": 49,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-049.png",
+"w": 750,
+"h": 404
+},
+{
+"titel": "Freiberg",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1647",
+"jahr": 1647,
+"seite": "https://commons.wikimedia.org/wiki/File:Freiberg-1647-Merian-Belagerung.jpg",
+"tag": 50,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-050.png",
+"w": 512,
+"h": 404
+},
+{
+"titel": "Leipzig",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Leipzigk_(Merian).png",
+"tag": 51,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-051.png",
+"w": 514,
+"h": 404
+},
+{
+"titel": "Olse",
+"zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Olse_(Merian).jpg",
+"tag": 52,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-052.png",
+"w": 659,
+"h": 404
+},
+{
+"titel": "St. Gallen",
+"zeile": "Matthäus Merian · Topographia Helvetiae · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Helvetiae,_Rhaetiae_et_Valesiae_1654_(1127057).jpg",
+"tag": 53,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-053.png",
+"w": 599,
+"h": 404
+},
+{
+"titel": "Dortmund",
+"zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+"jahr": 1647,
+"seite": "https://commons.wikimedia.org/wiki/File:De_merian_Westphaliae_110.jpg",
+"tag": 54,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-054.png",
+"w": 621,
+"h": 404
+},
+{
+"titel": "Orléanais",
+"zeile": "Matthäus Merian · Topographia Germaniae · 1660",
+"jahr": 1660,
+"seite": "https://commons.wikimedia.org/wiki/File:Carte_gouvernement_Orl%C3%A9ans_1660_15052.jpg",
+"tag": 55,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-055.png",
+"w": 528,
+"h": 404
+},
+{
+"titel": "Bautzen",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Bautzen_(Merian).jpg",
+"tag": 56,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-056.png",
+"w": 663,
+"h": 404
+},
+{
+"titel": "Neuenbürg",
+"zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Prospect_der_Statt_Newenburg.jpg",
+"tag": 57,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-057.png",
+"w": 642,
+"h": 404
+},
+{
+"titel": "Mainz",
+"zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1648",
+"jahr": 1648,
+"seite": "https://commons.wikimedia.org/wiki/File:Mainz_1648_Merian_(007).jpg",
+"tag": 58,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-058.png",
+"w": 752,
+"h": 378
+},
+{
+"titel": "Hamburg",
+"zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+"jahr": 1653,
+"seite": "https://commons.wikimedia.org/wiki/File:Hambvrgvm_(Merian).jpg",
+"tag": 59,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-059.png",
+"w": 568,
+"h": 404
+},
+{
+"titel": "Mante",
+"zeile": "Merian & Zeiller · Topographia Galliae · 1657",
+"jahr": 1657,
+"seite": "https://commons.wikimedia.org/wiki/File:Mante_1657_Zeiller_15061.jpg",
+"tag": 60,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-060.png",
+"w": 645,
+"h": 404
+},
+{
+"titel": "Colmar",
+"zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_007.JPG",
+"tag": 61,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-061.png",
+"w": 543,
+"h": 404
+},
+{
+"titel": "Paderborn",
+"zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+"jahr": 1647,
+"seite": "https://commons.wikimedia.org/wiki/File:De_merian_Westphaliae_143.jpg",
+"tag": 62,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-062.png",
+"w": 612,
+"h": 404
+},
+{
+"titel": "Mallersdorf",
+"zeile": "Matthäus Merian · Topographia Bavariae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Mallersdorf_(Merian).jpg",
+"tag": 63,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-063.png",
+"w": 752,
+"h": 316
+},
+{
+"titel": "Isen",
+"zeile": "Matthäus Merian · Topographia Bavariae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Isen_(Merian).jpg",
+"tag": 64,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-064.png",
+"w": 630,
+"h": 404
+},
+{
+"titel": "Keyserswerdt",
+"zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:Keyserswerdt_(Merian).jpg",
+"tag": 65,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-065.png",
+"w": 672,
+"h": 404
+},
+{
+"titel": "Klingenberg",
+"zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:Klingenberg_(Merian).jpg",
+"tag": 66,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-066.png",
+"w": 711,
+"h": 404
+},
+{
+"titel": "Herrenberg",
+"zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+"jahr": 1643,
+"seite": "https://commons.wikimedia.org/wiki/File:M_Merian_-_Ansicht_von_Herrenberg_-_Kupferst.kol._1643_(BVuHSi14).jpg",
+"tag": 67,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-067.png",
+"w": 685,
+"h": 404
+},
+{
+"titel": "Lauf an der Pegnitz",
+"zeile": "Matthäus Merian · Topographia Franconiae · 1648",
+"jahr": 1648,
+"seite": "https://commons.wikimedia.org/wiki/File:Lauff.jpg",
+"tag": 68,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-068.png",
+"w": 737,
+"h": 404
+},
+{
+"titel": "Nancy",
+"zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+"jahr": 1645,
+"seite": "https://commons.wikimedia.org/wiki/File:Palatinatus_Rheni_(Merian)_265.jpg",
+"tag": 69,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-069.png",
+"w": 596,
+"h": 404
+},
+{
+"titel": "Graz",
+"zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+"jahr": 1649,
+"seite": "https://commons.wikimedia.org/wiki/File:Graz_im_17.Jahrhundert.png",
+"tag": 70,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-070.png",
+"w": 752,
+"h": 369
+},
+{
+"titel": "Statt Blamont",
+"zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+"jahr": 1645,
+"seite": "https://commons.wikimedia.org/wiki/File:Statt_Blamont_(Merian).jpg",
+"tag": 71,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-071.png",
+"w": 646,
+"h": 404
+},
+{
+"titel": "Kitzingen",
+"zeile": "Matthäus Merian · Topographia Franconiae · 1648",
+"jahr": 1648,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Frankoniae_065.jpg",
+"tag": 72,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-072.png",
+"w": 613,
+"h": 404
+},
+{
+"titel": "Hameln",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Hameln-1654-Merian.jpg",
+"tag": 73,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-073.png",
+"w": 607,
+"h": 404
+},
+{
+"titel": "Mansfeld",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Mansfeld-1650-Merian.jpg",
+"tag": 74,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-074.png",
+"w": 617,
+"h": 404
+},
+{
+"titel": "Lyon",
+"zeile": "Matthäus Merian · Topographia Germaniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Port_royal_Lyon_15037.jpg",
+"tag": 75,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-075.png",
+"w": 612,
+"h": 404
+},
+{
+"titel": "Oppenheim",
+"zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Hassiae_287.jpg",
+"tag": 76,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-076.png",
+"w": 752,
+"h": 356
+},
+{
+"titel": "Überlingen",
+"zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+"jahr": 1643,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Sueviae_252.jpg",
+"tag": 77,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-077.png",
+"w": 528,
+"h": 404
+},
+{
+"titel": "Ober-Walsee",
+"zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+"jahr": 1649,
+"seite": "https://commons.wikimedia.org/wiki/File:Ober-Walsee_(Merian).jpg",
+"tag": 78,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-078.png",
+"w": 690,
+"h": 404
+},
+{
+"titel": "München",
+"zeile": "Matthäus Merian · Topographia Bavariae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Muenchenmarkt_merian.JPG",
+"tag": 79,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-079.png",
+"w": 601,
+"h": 404
+},
+{
+"titel": "Celle",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Celle-1654-Merian-Weinhausen.jpg",
+"tag": 80,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-080.png",
+"w": 752,
+"h": 403
+},
+{
+"titel": "Prag",
+"zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Bohemiae_Moraviae_et_Silesiae_(Merian)_102.jpg",
+"tag": 81,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-081.png",
+"w": 752,
+"h": 340
+},
+{
+"titel": "Höchst",
+"zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:H%C3%B6chst_(Merian).jpg",
+"tag": 82,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-082.png",
+"w": 630,
+"h": 404
+},
+{
+"titel": "Minden",
+"zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+"jahr": 1647,
+"seite": "https://commons.wikimedia.org/wiki/File:De_merian_Westphaliae_117.jpg",
+"tag": 83,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-083.png",
+"w": 616,
+"h": 404
+},
+{
+"titel": "Koblenz",
+"zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Mainz_Trier_K%C3%B6ln_057.jpg",
+"tag": 84,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-084.png",
+"w": 616,
+"h": 404
+},
+{
+"titel": "Meissen",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Meissen-1650-Merian.jpg",
+"tag": 85,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-085.png",
+"w": 752,
+"h": 285
+},
+{
+"titel": "Köln",
+"zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1648",
+"jahr": 1648,
+"seite": "https://commons.wikimedia.org/wiki/File:K%C3%B6ln_Plan_1648_Merian_(075).jpg",
+"tag": 86,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-086.png",
+"w": 553,
+"h": 404
+},
+{
+"titel": "Amiens",
+"zeile": "Merian & Zeiller · Topographia Galliae · 1655",
+"jahr": 1655,
+"seite": "https://commons.wikimedia.org/wiki/File:Amiens_J_Peeters_1655_Zeiller_14356.jpg",
+"tag": 87,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-087.png",
+"w": 752,
+"h": 338
+},
+{
+"titel": "Magdeburg",
+"zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+"jahr": 1653,
+"seite": "https://commons.wikimedia.org/wiki/File:Magdeburg-1653-Merian-Siebenfrauen.jpg",
+"tag": 88,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-088.png",
+"w": 739,
+"h": 404
+},
+{
+"titel": "Lahnstein",
+"zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:Lahnstein_(Merian).jpg",
+"tag": 89,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-089.png",
+"w": 752,
+"h": 317
+},
+{
+"titel": "Kalkar by Braun & Hogenberg",
+"zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+"jahr": 1647,
+"seite": "https://commons.wikimedia.org/wiki/File:De_merian_Westphaliae_105.jpg",
+"tag": 90,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-090.png",
+"w": 620,
+"h": 404
+},
+{
+"titel": "Dresden",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Dresden_1650_Merian.jpg",
+"tag": 91,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-091.png",
+"w": 752,
+"h": 243
+},
+{
+"titel": "Nördlingen",
+"zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+"jahr": 1643,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Sueviae_188.jpg",
+"tag": 92,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-092.png",
+"w": 608,
+"h": 404
+},
+{
+"titel": "Göttingen",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:G%C3%B6ttingen_(Merian).jpg",
+"tag": 93,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-093.png",
+"w": 580,
+"h": 404
+},
+{
+"titel": "Luzern",
+"zeile": "Matthäus Merian · Topographia Helvetiae · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Helvetiae,_Rhaetiae_et_Valesiae_1654_(1126792).jpg",
+"tag": 94,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-094.png",
+"w": 651,
+"h": 404
+},
+{
+"titel": "Greifswald",
+"zeile": "Matthäus Merian · Topographia Electoratus Brandenburgici · 1652",
+"jahr": 1652,
+"seite": "https://commons.wikimedia.org/wiki/File:Caspar_Merian_-_Gryphiswaldia.jpg",
+"tag": 95,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-095.png",
+"w": 599,
+"h": 404
+},
+{
+"titel": "Mülhausen",
+"zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_016.JPG",
+"tag": 96,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-096.png",
+"w": 514,
+"h": 404
+},
+{
+"titel": "Zittau",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:Zittaw_(Merian).jpg",
+"tag": 97,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-097.png",
+"w": 519,
+"h": 404
+},
+{
+"titel": "Kiel",
+"zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+"jahr": 1653,
+"seite": "https://commons.wikimedia.org/wiki/File:Saxoniae_Inferioris_(Merian)_b_007.jpg",
+"tag": 98,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-098.png",
+"w": 628,
+"h": 404
+},
+{
+"titel": "Newen Closter",
+"zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+"jahr": 1653,
+"seite": "https://commons.wikimedia.org/wiki/File:Newen_Closter_(Merian).jpg",
+"tag": 99,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-099.png",
+"w": 546,
+"h": 404
+},
+{
+"titel": "Wolfenbüttel",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Wolfenb%C3%BCttel_Schlo%C3%9F_(Merian).jpg",
+"tag": 100,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-100.png",
+"w": 752,
+"h": 393
+},
+{
+"titel": "Hamm",
+"zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+"jahr": 1647,
+"seite": "https://commons.wikimedia.org/wiki/File:Hamm_(Merian).jpg",
+"tag": 101,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-101.png",
+"w": 646,
+"h": 404
+},
+{
+"titel": "Lawenaw",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Lawenaw_(Merian).jpg",
+"tag": 102,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-102.png",
+"w": 751,
+"h": 404
+},
+{
+"titel": "Mühlhausen",
+"zeile": "Matthäus Merian · Topographia Helvetiae · 1642",
+"jahr": 1642,
+"seite": "https://commons.wikimedia.org/wiki/File:M%C3%BChlhausen_CH_(Merian).jpg",
+"tag": 103,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-103.png",
+"w": 718,
+"h": 404
+},
+{
+"titel": "Augsburg",
+"zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+"jahr": 1643,
+"seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Sueviae_027.jpg",
+"tag": 104,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-104.png",
+"w": 547,
+"h": 404
+},
+{
+"titel": "Halle",
+"zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+"jahr": 1653,
+"seite": "https://commons.wikimedia.org/wiki/File:Halle-1653-Merian.jpg",
+"tag": 105,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-105.png",
+"w": 752,
+"h": 317
+},
+{
+"titel": "Basel",
+"zeile": "Matthäus Merian · Topographia Helvetiae · 1642",
+"jahr": 1642,
+"seite": "https://commons.wikimedia.org/wiki/File:Zentralbibliothek_Z%C3%BCrich_-_Basilea_-_991095345659705501.jpg",
+"tag": 106,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-106.png",
+"w": 752,
+"h": 375
+},
+{
+"titel": "Idstein",
+"zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:Idstein_(Merian).jpg",
+"tag": 107,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-107.png",
+"w": 651,
+"h": 404
+},
+{
+"titel": "Braunschweig",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Karte_Wolfenb%C3%BCttel-Braunschweig_(Merian).jpg",
+"tag": 108,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-108.png",
+"w": 563,
+"h": 404
+},
+{
+"titel": "Lausanne",
+"zeile": "Matthäus Merian · Topographia Helvetiae · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Helvetiae,_Rhaetiae_et_Valesiae_1654_(1126749).jpg",
+"tag": 109,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-109.png",
+"w": 639,
+"h": 404
+},
+{
+"titel": "Schaffhausen",
+"zeile": "Matthäus Merian · Topographia Helvetiae · 1642",
+"jahr": 1642,
+"seite": "https://commons.wikimedia.org/wiki/File:Merian_Schaffhausen_1642.jpg",
+"tag": 110,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-110.png",
+"w": 722,
+"h": 404
+},
+{
+"titel": "Sintzheim",
+"zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+"jahr": 1645,
+"seite": "https://commons.wikimedia.org/wiki/File:Sintzheim_(Merian).jpg",
+"tag": 111,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-111.png",
+"w": 752,
+"h": 369
+},
+{
+"titel": "Hofheim",
+"zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:Hofheim_(Merian).jpg",
+"tag": 112,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-112.png",
+"w": 752,
+"h": 389
+},
+{
+"titel": "Straßburg",
+"zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_023.JPG",
+"tag": 113,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-113.png",
+"w": 642,
+"h": 404
+},
+{
+"titel": "Hovegeismar",
+"zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:Hovegeismar_(Merian).jpg",
+"tag": 114,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-114.png",
+"w": 629,
+"h": 404
+},
+{
+"titel": "Landshut",
+"zeile": "Matthäus Merian · Topographia Bavariae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Topographia_Bavariae_(Merian)_b_09-alt_3a.jpg",
+"tag": 115,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-115.png",
+"w": 638,
+"h": 404
+},
+{
+"titel": "Fulda",
+"zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+"jahr": 1646,
+"seite": "https://commons.wikimedia.org/wiki/File:Fulda_(Merian).jpg",
+"tag": 116,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-116.png",
+"w": 752,
+"h": 260
+},
+{
+"titel": "Lüneburg",
+"zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+"jahr": 1654,
+"seite": "https://commons.wikimedia.org/wiki/File:Lueneburg-1654-Merian-Kloster.jpg",
+"tag": 117,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-117.png",
+"w": 717,
+"h": 404
+},
+{
+"titel": "Görlitz",
+"zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+"jahr": 1650,
+"seite": "https://commons.wikimedia.org/wiki/File:G%C3%B6rlitz_1650_Merian.jpg",
+"tag": 118,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-118.png",
+"w": 509,
+"h": 404
+},
+{
+"titel": "Paris",
+"zeile": "Merian & Zeiller · Topographia Galliae · 1655",
+"jahr": 1655,
+"seite": "https://commons.wikimedia.org/wiki/File:Paris_1655_Zeiller_13692.jpg",
+"tag": 119,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-119.png",
+"w": 752,
+"h": 245
+},
+{
+"titel": "Landau in der Pfalz",
+"zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+"jahr": 1644,
+"seite": "https://commons.wikimedia.org/wiki/File:Landau_in_der_Pfalz_Ansicht_Buno_Merian_koloriert.jpg",
+"tag": 120,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/merian/merian-120.png",
+"w": 572,
+"h": 404
+}
+],
+"quelle": "Wikimedia Commons, gemeinfrei",
+"stand": "2026-10-29"
+}

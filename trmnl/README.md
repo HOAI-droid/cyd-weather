@@ -60,7 +60,7 @@ Zwei eigenständige Plugins nach den Artefakten „Flur-Rahmen Datenkunst“ (Sc
 - Nur die Gebäude aus OpenStreetMap, alle Orte im selben Maßstab (2,6 km Bildbreite, am 7,5-Zoll-Display etwa 1:17.000), dazu Nordpfeil, Maßstabsbalken und Ortsname.
 - Einstellungen: **Darstellung** (Schwarz auf Weiß oder invertiert), **Beschriftung** (mit Ortsname oder nur der Plan), Rand, Uhrzeit für den Tageswechsel.
 - Die Orte stehen mit Tag, Name, Viertel und Koordinaten in [`kunst/schwarzplan/orte.json`](kunst/schwarzplan/orte.json). Darunter sind Deutschland (40), Westeuropa (60), Südeuropa (55), Nord- und Osteuropa (50), Nahost und Afrika (45), Asien (60), Amerika (45) und Ozeanien (10).
-- Die GitHub Action „Schwarzpläne erzeugen“ zeichnet die Pläne aus OpenStreetMap. Weil der Dienst langsam ist, arbeitet sie in Runden von etwa 50 Minuten und startet sich selbst neu, bis alle fertig sind. Fertige Pläne bleiben im Release liegen. Solange ein Tag noch keinen Plan hat, zeigt das Plugin der Reihe nach einen der vorhandenen. Ändert man `orte.json`, werden nur die neuen Orte gezeichnet.
+- Die GitHub Action „Schwarzpläne erzeugen“ zeichnet die Pläne aus OpenStreetMap. Weil der Dienst langsam ist, arbeitet sie in Runden von etwa 50 Minuten und startet sich selbst neu, bis alle fertig sind. Fertige Pläne liegen in `trmnl/bilder/schwarzplan/` im Repository (GitHub liefert sie dort als PNG aus; aus dem Release kämen sie nur als Datei-Download), die Liste `schwarzplan.json` zusätzlich im Release. Solange ein Tag noch keinen Plan hat, zeigt das Plugin der Reihe nach einen der vorhandenen. Ändert man `orte.json`, werden nur die neuen Orte gezeichnet.
 
 ### Tafel der Luftfahrzeuge (`trmnl-flugzeuge.zip`)
 
@@ -104,3 +104,7 @@ trmnl/
 - Uhrzeit und Datum werden ohne Datumsfilter berechnet: aus `trmnl.system.timestamp_utc` und dem UTC-Versatz von Open-Meteo. Das funktioniert unabhängig von der Zeitzone des LaraPaper-Servers.
 - Alles ist nur Schwarz/Weiß ohne Graustufen gestaltet und mit eigenem Stil, unabhängig vom TRMNL-Framework.
 - Eigenheiten der Liquid-Engine in LaraPaper: `slice` mit negativem Start liefert bei kurzen Texten nichts, und `"" | split` ergibt einen Eintrag. Deshalb wird beides hier vermieden.
+
+### Wo die Bilder liegen
+
+Alle erzeugten Bilder (Schwarzpläne, Merian, Vögel, Karten) liegen unter `trmnl/bilder/<sammlung>/` im Repository und werden über `raw.githubusercontent.com` als `image/png` abgerufen. Die Listen (`<sammlung>.json`) liegen zusätzlich im Release, damit die Adresse in den Plugin-Einstellungen gleich bleibt.

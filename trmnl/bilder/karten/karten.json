@@ -1,0 +1,1208 @@
+{
+"sammlung": "karten",
+"anzahl": 120,
+"bilder": [
+{
+"titel": "Abrahami Patriarchae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_and_images_of_the_peregrination_of_Abraham_the_Patriarch_by_Abraham_Ortelius.jpeg",
+"tag": 1,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-001.png",
+"w": 403,
+"h": 350
+},
+{
+"titel": "Caletensium et Bononiensium",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Calais_and_Boulogne_and_of_Vermandois_by_Abraham_Ortelius.jpeg",
+"tag": 2,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-002.png",
+"w": 482,
+"h": 350
+},
+{
+"titel": "Cuba et Hispaniolae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Culiac%C3%A1n_and_of_Hispaniola_and_Cuba_by_Abraham_Ortelius.jpeg",
+"tag": 3,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-003.png",
+"w": 368,
+"h": 350
+},
+{
+"titel": "Nova Et Accvrata Comitatvs Et Ditionis Alostanæ Tabvla",
+"zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Nova_Et_Accvrata_Comitatvs_Et_Ditionis_Alostan%C3%A6%E2%80%A6_Tabvla_-_Atlas_Maior,_vol_4,_map_24_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(24).jpg",
+"tag": 4,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-004.png",
+"w": 430,
+"h": 350
+},
+{
+"titel": "Brabantiae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Brabant_by_Abraham_Ortelius.jpeg",
+"tag": 5,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-005.png",
+"w": 359,
+"h": 350
+},
+{
+"titel": "Paraqvaria Vulgo Paragvay",
+"zeile": "Joan Blaeu · Atlas Maior, Band 12 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Paraqvaria_Vulgo_Paragvay_-_Atlas_Maior,_vol_12,_map_15_-_Joan_Blaeu,_1667_-_BL_114.h(star).12.(15).jpg",
+"tag": 6,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-006.png",
+"w": 360,
+"h": 350
+},
+{
+"titel": "Hertfordia Comitatvs",
+"zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Hertfordia_Comitatvs_-_Atlas_Maior,_vol_5,_map_18_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(18).jpg",
+"tag": 7,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-007.png",
+"w": 439,
+"h": 350
+},
+{
+"titel": "Bughaviae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Buchonia_and_of_the_County_of_Waldeck_by_Abraham_Ortelius.jpeg",
+"tag": 8,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-008.png",
+"w": 435,
+"h": 350
+},
+{
+"titel": "Zeelandia Comitatus",
+"zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Zeelandia_Comitatus_-_Atlas_Maior,_vol_4,_map_53_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(53).jpg",
+"tag": 9,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-009.png",
+"w": 451,
+"h": 350
+},
+{
+"titel": "Apuliae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Apulia_and_of_Calabria_by_Abraham_Ortelius.jpeg",
+"tag": 10,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-010.png",
+"w": 417,
+"h": 350
+},
+{
+"titel": "Territorio Di Vicenza",
+"zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Territorio_Di_Vicenza_-_Atlas_Maior,_vol_9,_map_23_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(23).jpg",
+"tag": 11,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-011.png",
+"w": 417,
+"h": 350
+},
+{
+"titel": "Petrocorivm Comitatvs",
+"zeile": "Joan Blaeu · Atlas Maior, Band 8 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Petrocorivm_Comitatvs_-_Atlas_Maior,_vol_8,_map_3_-_Joan_Blaeu,_1667_-_BL_114.h(star).8.(3).jpg",
+"tag": 12,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-012.png",
+"w": 469,
+"h": 350
+},
+{
+"titel": "Acores Insulae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_Azore_Islands_by_Abraham_Ortelius.jpeg",
+"tag": 13,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-013.png",
+"w": 353,
+"h": 350
+},
+{
+"titel": "Insvlæ Tremitanæ",
+"zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Insvl%C3%A6_Tremitan%C3%A6_-_Atlas_Maior,_vol_9,_map_52_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(52).jpg",
+"tag": 14,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-014.png",
+"w": 440,
+"h": 350
+},
+{
+"titel": "Nova & Accvratissima Dvcatvs Holsatiæ Tabvla",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Nova_%26_Accvratissima_Dvcatvs_Holsati%C3%A6_Tabvla_-_Atlas_Maior,_vol_3,_map_42_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(42).jpg",
+"tag": 15,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-015.png",
+"w": 503,
+"h": 350
+},
+{
+"titel": "Herefordia Comitatvs",
+"zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Herefordia_Comitatvs_-_Atlas_Maior,_vol_5,_map_37_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(37).jpg",
+"tag": 16,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-016.png",
+"w": 410,
+"h": 350
+},
+{
+"titel": "Dvcatvs Silesiæ Schwidnicensis",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Dvcatvs_Silesi%C3%A6_Schwidnicensis_-_Atlas_Maior,_vol_3,_map_14_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(14).jpg",
+"tag": 17,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-017.png",
+"w": 426,
+"h": 350
+},
+{
+"titel": "Rvtlandia Comitatus",
+"zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Rvtlandia_Comitatus_-_Atlas_Maior,_vol_5,_map_28_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(28).jpg",
+"tag": 18,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-018.png",
+"w": 453,
+"h": 350
+},
+{
+"titel": "Dvcatus Tvronensis",
+"zeile": "Joan Blaeu · Atlas Maior, Band 7 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Dvcatus_Tvronensis_-_Atlas_Maior,_vol_7,_map_30_-_Joan_Blaeu,_1667_-_BL_114.h(star).7.(30).jpg",
+"tag": 19,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-019.png",
+"w": 450,
+"h": 350
+},
+{
+"titel": "Africa",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1572",
+"jahr": 1572,
+"seite": "https://commons.wikimedia.org/wiki/File:Theatrum_Orbis_Terrarum,_by_Abraham_Ortelius,_Africa,_1572.jpg",
+"tag": 20,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-020.png",
+"w": 475,
+"h": 350
+},
+{
+"titel": "Anjou",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Anjou_by_Abraham_Ortelius.jpeg",
+"tag": 21,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-021.png",
+"w": 359,
+"h": 350
+},
+{
+"titel": "Arçobispado de Çaragossa",
+"zeile": "Joan Blaeu · Atlas Maior, Band 10 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Ar%C3%A7obispado_de_%C3%87aragossa_-_Atlas_Maior,_vol_10,_map_11_-_Joan_Blaeu,_1667_-_BL_114.h(star).10.(11).jpg",
+"tag": 22,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-022.png",
+"w": 444,
+"h": 350
+},
+{
+"titel": "Moravia Marchionatvs",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Moravia_Marchionatvs_-_Atlas_Maior,_vol_3,_map_4_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(4).jpg",
+"tag": 23,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-023.png",
+"w": 450,
+"h": 350
+},
+{
+"titel": "Barbariae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Barbary_by_Abraham_Ortelius.jpeg",
+"tag": 24,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-024.png",
+"w": 442,
+"h": 350
+},
+{
+"titel": "Coloniensis Archiepiscopatus",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Coloniensis_Archiepiscopatus_-_Atlas_Maior,_vol_3,_map_73_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(73).jpg",
+"tag": 25,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-025.png",
+"w": 439,
+"h": 350
+},
+{
+"titel": "Iprensis Episcopatus",
+"zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Iprensis_Episcopatus_-_Atlas_Maior,_vol_4,_map_15_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(15).jpg",
+"tag": 26,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-026.png",
+"w": 378,
+"h": 350
+},
+{
+"titel": "Erythraei Rubri Maris Periplvs",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_the_peregrination_of_Ulysses_by_Abraham_Ortelius.jpeg",
+"tag": 27,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-027.png",
+"w": 382,
+"h": 350
+},
+{
+"titel": "Europam",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Europe_2_by_Abraham_Ortelius.jpeg",
+"tag": 28,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-028.png",
+"w": 421,
+"h": 350
+},
+{
+"titel": "Ducatus Mediolanensis",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_Duchy_of_Milan_by_Abraham_Ortelius.jpeg",
+"tag": 29,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-029.png",
+"w": 405,
+"h": 350
+},
+{
+"titel": "Angliae Regni Florentis",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_England_by_Abraham_Ortelius.jpeg",
+"tag": 30,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-030.png",
+"w": 389,
+"h": 350
+},
+{
+"titel": "Tertia Pars Brabantiæ",
+"zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Tertia_Pars_Brabanti%C3%A6_-_Atlas_Maior,_vol_4,_map_5_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(5).jpg",
+"tag": 31,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-031.png",
+"w": 419,
+"h": 350
+},
+{
+"titel": "Marchionatus Brandenburgici Pars, quæ Marcha Vetus",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Marchionatus_Brandenburgici_Pars,_qu%C3%A6_Marcha_Vetus%E2%80%A6_-_Atlas_Maior,_vol_3,_map_33_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(33).jpg",
+"tag": 32,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-032.png",
+"w": 439,
+"h": 350
+},
+{
+"titel": "Waldeck Comitatvs",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Waldeck_Comitatvs_-_Atlas_Maior,_vol_3,_map_82_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(82).jpg",
+"tag": 33,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-033.png",
+"w": 450,
+"h": 350
+},
+{
+"titel": "Westphalia Ducatus",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Westphalia_Ducatus_-_Atlas_Maior,_vol_3,_map_63_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(63).jpg",
+"tag": 34,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-034.png",
+"w": 435,
+"h": 350
+},
+{
+"titel": "Gvinea",
+"zeile": "Joan Blaeu · Atlas Maior, Band 10 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Gvinea_-_Atlas_Maior,_vol_10,_map_29_-_Joan_Blaeu,_1667_-_BL_114.h(star).10.(29).jpg",
+"tag": 35,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-035.png",
+"w": 466,
+"h": 350
+},
+{
+"titel": "Gallia Vetus",
+"zeile": "Joan Blaeu · Atlas Maior, Band 7 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Gallia_Vetus_-_Atlas_Maior,_vol_7,_map_1_-_Joan_Blaeu,_1667_-_BL_114.h(star).7.(1).jpg",
+"tag": 36,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-036.png",
+"w": 443,
+"h": 350
+},
+{
+"titel": "Britannicarum Insularum Typus",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_British_Isles_by_Abraham_Ortelius.jpeg",
+"tag": 37,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-037.png",
+"w": 437,
+"h": 350
+},
+{
+"titel": "Moravia Scotiæ Provincia",
+"zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Moravia_Scoti%C3%A6_Provincia_-_Atlas_Maior,_vol_6,_map_38_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(38).jpg",
+"tag": 38,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-038.png",
+"w": 461,
+"h": 350
+},
+{
+"titel": "Vtrivsque Castiliæ nova descriptio",
+"zeile": "Joan Blaeu · Atlas Maior, Band 10 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Vtrivsque_Castili%C3%A6_nova_descriptio_-_Atlas_Maior,_vol_10,_map_2_-_Joan_Blaeu,_1667_-_BL_114.h(star).10.(2).jpg",
+"tag": 39,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-039.png",
+"w": 404,
+"h": 350
+},
+{
+"titel": "Dioecesis Ebroicensis",
+"zeile": "Joan Blaeu · Atlas Maior, Band 7 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Dioecesis_Ebroicensis%E2%80%A6_-_Atlas_Maior,_vol_7,_map_21_-_Joan_Blaeu,_1667_-_BL_114.h(star).7.(21).jpg",
+"tag": 40,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-040.png",
+"w": 427,
+"h": 350
+},
+{
+"titel": "Asia",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1572",
+"jahr": 1572,
+"seite": "https://commons.wikimedia.org/wiki/File:Theatrum_Orbis_Terrarum,_by_Abraham_Ortelius,_Asia,_1572.jpg",
+"tag": 41,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-041.png",
+"w": 471,
+"h": 350
+},
+{
+"titel": "Angliae et Hiberniae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_England_and_Ireland,_and_the_Progeny_of_the_kings_of_England_by_Abraham_Ortelius.jpeg",
+"tag": 42,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-042.png",
+"w": 427,
+"h": 350
+},
+{
+"titel": "Daciarum, Moesiarum",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Dacia_and_Moesia_by_Abraham_Ortelius.jpeg",
+"tag": 43,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-043.png",
+"w": 350,
+"h": 350
+},
+{
+"titel": "Florentini",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Florence_by_Abraham_Ortelius.jpeg",
+"tag": 44,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-044.png",
+"w": 474,
+"h": 350
+},
+{
+"titel": "Qvarta Pars Brabantiæ",
+"zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Qvarta_Pars_Brabanti%C3%A6%E2%80%A6_-_Atlas_Maior,_vol_4,_map_62_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(62).jpg",
+"tag": 45,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-045.png",
+"w": 449,
+"h": 350
+},
+{
+"titel": "Caricta Borealis",
+"zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Caricta_Borealis_-_Atlas_Maior,_vol_6,_map_18_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(18).jpg",
+"tag": 46,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-046.png",
+"w": 413,
+"h": 350
+},
+{
+"titel": "Les environs de L'Estang De Longpendv",
+"zeile": "Joan Blaeu · Atlas Maior, Band 8 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Les_environs_de_L%27Estang_De_Longpendv_-_Atlas_Maior,_vol_8,_map_22_-_Joan_Blaeu,_1667_-_BL_114.h(star).8.(22).jpg",
+"tag": 47,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-047.png",
+"w": 463,
+"h": 350
+},
+{
+"titel": "Frisiae Occidentalis",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_West_Friesland_and_inset_map_of_ancient_Frisia_as_it_was_in_the_time_of_Emperor_Augustus_by_Abraham_Ortelius.jpeg",
+"tag": 48,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-048.png",
+"w": 418,
+"h": 350
+},
+{
+"titel": "Angliae, Scotiae, et Hiberniae, sive Britannica",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_England,_Scotland,_and_Ireland_by_Abraham_Ortelius.jpeg",
+"tag": 49,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-049.png",
+"w": 377,
+"h": 350
+},
+{
+"titel": "Candia Insula",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Crete,_of_Lesbos,_of_Cythera,_of_Karpathos,_of_Naxos,_of_Santorini,_of_Milos,_of_Lemnos,_of_Euboea,_of_Rhodes,_and_of_Chios_by_Abraham_Ortelius.jpeg",
+"tag": 50,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-050.png",
+"w": 431,
+"h": 350
+},
+{
+"titel": "Fessae et Marocchi Regna Africae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_kingdoms_of_Fes_and_Morocco_and_inset_map_of_the_Kingdom_of_Kongo_by_Abraham_Ortelius.jpeg",
+"tag": 51,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-051.png",
+"w": 414,
+"h": 350
+},
+{
+"titel": "Nova Et Accvratissima Totius Terrarvm Orbis Tabvla",
+"zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Nova_Et_Accvratissima_Totius_Terrarvm_Orbis_Tabvla_-_Atlas_Maior,_vol_1,_map_1_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(1).jpg",
+"tag": 52,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-052.png",
+"w": 464,
+"h": 350
+},
+{
+"titel": "Europe",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1572",
+"jahr": 1572,
+"seite": "https://commons.wikimedia.org/wiki/File:Theatrum_Orbis_Terrarum,_by_Abraham_Ortelius,_Europe,_1572.jpg",
+"tag": 53,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-053.png",
+"w": 477,
+"h": 350
+},
+{
+"titel": "Flandriae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Flanders_and_inset_map_of_part_of_Zeeland_by_Abraham_Ortelius.jpeg",
+"tag": 54,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-054.png",
+"w": 406,
+"h": 350
+},
+{
+"titel": "Græcia",
+"zeile": "Joan Blaeu · Atlas Maior, Band 2 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Gr%C3%A6cia_-_Atlas_Maior,_vol_2,_map_34_-_Joan_Blaeu,_1667_-_BL_114.h(star).2.(34).jpg",
+"tag": 55,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-055.png",
+"w": 445,
+"h": 350
+},
+{
+"titel": "Præfectura Renfroana",
+"zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Pr%C3%A6fectura_Renfroana_-_Atlas_Maior,_vol_6,_map_27_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(27).jpg",
+"tag": 56,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-056.png",
+"w": 452,
+"h": 350
+},
+{
+"titel": "Stellæburgum sive Observatorivm Subterranevm",
+"zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Stell%C3%A6burgum_sive_Observatorivm_Subterranevm%E2%80%A6_-_Atlas_Maior,_vol_1,_map_29_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(29).jpg",
+"tag": 57,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-057.png",
+"w": 450,
+"h": 350
+},
+{
+"titel": "Bavariae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Bavaria_by_Abraham_Ortelius.jpeg",
+"tag": 58,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-058.png",
+"w": 403,
+"h": 350
+},
+{
+"titel": "Carinthiae Ducatcus",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_the_Duchy_of_Carinthia_and_the_County_Palatine_of_Gorizia,_of_Istria,_and_of_Zadar_and_%C5%A0ibenik_by_Abraham_Ortelius.jpeg",
+"tag": 59,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-059.png",
+"w": 433,
+"h": 350
+},
+{
+"titel": "Helvetia cum finitimis regionibus confoederatis",
+"zeile": "Joan Blaeu · Atlas Maior, Band 8 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Helvetia_cum_finitimis_regionibus_confoederatis_-_Atlas_Maior,_vol_8,_map_31_-_Joan_Blaeu,_1667_-_BL_114.h(star).8.(31).jpg",
+"tag": 60,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-060.png",
+"w": 452,
+"h": 350
+},
+{
+"titel": "Dvcatvs Eboracensis",
+"zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Dvcatvs_Eboracensis_-_Atlas_Maior,_vol_5,_map_47_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(47).jpg",
+"tag": 61,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-061.png",
+"w": 410,
+"h": 350
+},
+{
+"titel": "Cyprvs Insvla",
+"zeile": "Joan Blaeu · Atlas Maior, Band 11 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Cyprvs_Insvla_-_Atlas_Maior,_vol_11,_map_4_-_Joan_Blaeu,_1667_-_BL_114.h(star).11.(4).jpg",
+"tag": 62,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-062.png",
+"w": 450,
+"h": 350
+},
+{
+"titel": "Signoria di Vercelli",
+"zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Signoria_di_Vercelli_-_Atlas_Maior,_vol_9,_map_5_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(5).jpg",
+"tag": 63,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-063.png",
+"w": 414,
+"h": 350
+},
+{
+"titel": "Fori Iulii",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Forum_Julii_by_Abraham_Ortelius.jpeg",
+"tag": 64,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-064.png",
+"w": 426,
+"h": 350
+},
+{
+"titel": "Ingria",
+"zeile": "Joan Blaeu · Atlas Maior, Band 2 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Ingria_-_Atlas_Maior,_vol_2,_map_9_-_Joan_Blaeu,_1667_-_BL_114.h(star).2.(9).jpg",
+"tag": 65,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-065.png",
+"w": 200,
+"h": 350
+},
+{
+"titel": "Cypri Insulae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Cyprus_and_inset_map_of_Lemnos_by_Abraham_Ortelius.jpeg",
+"tag": 66,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-066.png",
+"w": 431,
+"h": 350
+},
+{
+"titel": "Blaisois",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_the_Blois_region_and_of_Limousin_by_Abraham_Ortelius.jpeg",
+"tag": 67,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-067.png",
+"w": 350,
+"h": 350
+},
+{
+"titel": "Asiae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Asia_by_Abraham_Ortelius.jpeg",
+"tag": 68,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-068.png",
+"w": 371,
+"h": 350
+},
+{
+"titel": "Valesivm Dvcatvs Valois",
+"zeile": "Joan Blaeu · Atlas Maior, Band 7 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Valesivm_Dvcatvs_Valois_-_Atlas_Maior,_vol_7,_map_10_-_Joan_Blaeu,_1667_-_BL_114.h(star).7.(10).jpg",
+"tag": 69,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-069.png",
+"w": 431,
+"h": 350
+},
+{
+"titel": "Dithmarsiæ Pars Septentrionalis",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Dithmarsi%C3%A6_Pars_Septentrionalis_-_Atlas_Maior,_vol_3,_map_54_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(54).jpg",
+"tag": 70,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-070.png",
+"w": 505,
+"h": 350
+},
+{
+"titel": "Insvla Sacra",
+"zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Insvla_Sacra%E2%80%A6_-_Atlas_Maior,_vol_5,_map_57_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(57).jpg",
+"tag": 71,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-071.png",
+"w": 401,
+"h": 350
+},
+{
+"titel": "Brixani",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_liberties_of_Brest_by_Abraham_Ortelius.jpeg",
+"tag": 72,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-072.png",
+"w": 435,
+"h": 350
+},
+{
+"titel": "Nova Virginiæ Tabvla",
+"zeile": "Joan Blaeu · Atlas Maior, Band 12 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Nova_Virgini%C3%A6_Tabvla_-_Atlas_Maior,_vol_12,_map_4_-_Joan_Blaeu,_1667_-_BL_114.h(star).12.(4).jpg",
+"tag": 73,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-073.png",
+"w": 444,
+"h": 350
+},
+{
+"titel": "Aeneae Troiani",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_voyage_of_Aeneas_by_Abraham_Ortelius.jpeg",
+"tag": 74,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-074.png",
+"w": 416,
+"h": 350
+},
+{
+"titel": "Argonautica",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_the_Argonautica_by_Abraham_Ortelius.jpeg",
+"tag": 75,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-075.png",
+"w": 437,
+"h": 350
+},
+{
+"titel": "Palatinatvs Posnaniensis Nova Delineatio",
+"zeile": "Joan Blaeu · Atlas Maior, Band 2 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Palatinatvs_Posnaniensis%E2%80%A6_Nova_Delineatio_-_Atlas_Maior,_vol_2,_map_20_-_Joan_Blaeu,_1667_-_BL_114.h(star).2.(20).jpg",
+"tag": 76,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-076.png",
+"w": 444,
+"h": 350
+},
+{
+"titel": "Daphne",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Image_of_Daphne_by_Abraham_Ortelius.jpeg",
+"tag": 77,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-077.png",
+"w": 418,
+"h": 350
+},
+{
+"titel": "Brandenburgensis",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Brandenburg_by_Abraham_Ortelius.jpeg",
+"tag": 78,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-078.png",
+"w": 426,
+"h": 350
+},
+{
+"titel": "Bretteniae et Normandiae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Le_Maine_(province_in_France)_and_of_Brittany_and_Normandy_by_Abraham_Ortelius.jpeg",
+"tag": 79,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-079.png",
+"w": 383,
+"h": 350
+},
+{
+"titel": "Aevi Veteris Typus Geographicus",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_ancient_geography_by_Abraham_Ortelius.jpeg",
+"tag": 80,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-080.png",
+"w": 412,
+"h": 350
+},
+{
+"titel": "Belgii Veteris Typus",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Gallia_Belgica_by_Abraham_Ortelius.jpeg",
+"tag": 81,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-081.png",
+"w": 411,
+"h": 350
+},
+{
+"titel": "Evropa recens descripta",
+"zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Evropa_recens_descripta_-_Atlas_Maior,_vol_1,_map_10_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(10).jpg",
+"tag": 82,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-082.png",
+"w": 468,
+"h": 350
+},
+{
+"titel": "Creta",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Corsica,_of_the_islands_of_the_Ionian_Sea,_of_Sardinia,_and_of_Crete_by_Abraham_Ortelius.jpeg",
+"tag": 83,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-083.png",
+"w": 370,
+"h": 350
+},
+{
+"titel": "Pars Avstralior Ivtiæ Septentrionalis",
+"zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Pars_Avstralior_Ivti%C3%A6_Septentrionalis_-_Atlas_Maior,_vol_1,_map_20_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(20).jpg",
+"tag": 84,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-084.png",
+"w": 449,
+"h": 350
+},
+{
+"titel": "Daniae Regni Typus",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Denmark_and_of_the_Cimbrian_(Jutland)_Peninsula_by_Abraham_Ortelius.jpeg",
+"tag": 85,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-085.png",
+"w": 432,
+"h": 350
+},
+{
+"titel": "Frisiae Orientalis",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_East_Friesland_and_inset_map_of_part_of_Reiderland_by_Abraham_Ortelius.jpeg",
+"tag": 86,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-086.png",
+"w": 379,
+"h": 350
+},
+{
+"titel": "Præfectvra Apenrade",
+"zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Pr%C3%A6fectvra_Apenrade_-_Atlas_Maior,_vol_1,_map_40_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(40).jpg",
+"tag": 87,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-087.png",
+"w": 431,
+"h": 350
+},
+{
+"titel": "Fossa Sanctæ Mariæ",
+"zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Fossa_Sanct%C3%A6_Mari%C3%A6_-_Atlas_Maior,_vol_4,_map_34_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(34).jpg",
+"tag": 88,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-088.png",
+"w": 446,
+"h": 350
+},
+{
+"titel": "Alexandri Magni",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_voyage_of_Alexander_the_Great_and_inset_image_of_the_Temple_of_Jupiter_Ammon_by_Abraham_Ortelius.jpeg",
+"tag": 89,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-089.png",
+"w": 384,
+"h": 350
+},
+{
+"titel": "Ducato Di Ferrara",
+"zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Ducato_Di_Ferrara_-_Atlas_Maior,_vol_9,_map_33_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(33).jpg",
+"tag": 90,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-090.png",
+"w": 453,
+"h": 350
+},
+{
+"titel": "Pecheli Sive Peking",
+"zeile": "Joan Blaeu · Atlas Maior, Band 11 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Pecheli_Sive_Peking_-_Atlas_Maior,_vol_11,_map_13_-_Joan_Blaeu,_1667_-_BL_114.h(star).11.(13).jpg",
+"tag": 91,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-091.png",
+"w": 414,
+"h": 350
+},
+{
+"titel": "Agri Cremonensis",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_liberties_of_Cremona_and_inset_map_of_the_liberties_of_Crema_by_Abraham_Ortelius.jpeg",
+"tag": 92,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-092.png",
+"w": 436,
+"h": 350
+},
+{
+"titel": "Europae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Europe_1_by_Abraham_Ortelius.jpeg",
+"tag": 93,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-093.png",
+"w": 413,
+"h": 350
+},
+{
+"titel": "America",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1572",
+"jahr": 1572,
+"seite": "https://commons.wikimedia.org/wiki/File:Theatrum_Orbis_Terrarum,_by_Abraham_Ortelius,_America,_1572.jpg",
+"tag": 94,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-094.png",
+"w": 486,
+"h": 350
+},
+{
+"titel": "Fimbriæ Vulgo Femeren Delineatio Geometrica",
+"zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Fimbri%C3%A6_Vulgo_Femeren_Delineatio_Geometrica_-_Atlas_Maior,_vol_1,_map_51_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(51).jpg",
+"tag": 95,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-095.png",
+"w": 344,
+"h": 350
+},
+{
+"titel": "Zvydhollandia stricte sumta",
+"zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Zvydhollandia_stricte_sumta_-_Atlas_Maior,_vol_4,_map_43_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(43).jpg",
+"tag": 96,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-096.png",
+"w": 455,
+"h": 350
+},
+{
+"titel": "Fokien",
+"zeile": "Joan Blaeu · Atlas Maior, Band 11 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Fokien_-_Atlas_Maior,_vol_11,_map_23_-_Joan_Blaeu,_1667_-_BL_114.h(star).11.(23).jpg",
+"tag": 97,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-097.png",
+"w": 414,
+"h": 350
+},
+{
+"titel": "Americae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_Americas_by_Abraham_Ortelius.jpeg",
+"tag": 98,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-098.png",
+"w": 426,
+"h": 350
+},
+{
+"titel": "Eposcopatvs Albiensis",
+"zeile": "Joan Blaeu · Atlas Maior, Band 8 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Eposcopatvs_Albiensis_-_Atlas_Maior,_vol_8,_map_12_-_Joan_Blaeu,_1667_-_BL_114.h(star).8.(12).jpg",
+"tag": 99,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-099.png",
+"w": 446,
+"h": 350
+},
+{
+"titel": "Hantoniae sive Sovthantonensis Comitatvs",
+"zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Hantoniae_sive_Sovthantonensis_Comitatvs_-_Atlas_Maior,_vol_5,_map_9_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(9).jpg",
+"tag": 100,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-100.png",
+"w": 402,
+"h": 350
+},
+{
+"titel": "Dominio Fiorentino",
+"zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Dominio_Fiorentino_-_Atlas_Maior,_vol_9,_map_43_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(43).jpg",
+"tag": 101,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-101.png",
+"w": 452,
+"h": 350
+},
+{
+"titel": "Cambriae Typus",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Wales_by_Abraham_Ortelius.jpeg",
+"tag": 102,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-102.png",
+"w": 370,
+"h": 350
+},
+{
+"titel": "Artrebatum Regionis",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Artois_by_Abraham_Ortelius.jpeg",
+"tag": 103,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-103.png",
+"w": 406,
+"h": 350
+},
+{
+"titel": "Africae Propriae Tabula",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Roman_Africa_and_inset_map_of_Carthage_by_Abraham_Ortelius.jpeg",
+"tag": 104,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-104.png",
+"w": 367,
+"h": 350
+},
+{
+"titel": "Portvgallia et Algarbia",
+"zeile": "Joan Blaeu · Atlas Maior, Band 10 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Portvgallia_et_Algarbia%E2%80%A6_-_Atlas_Maior,_vol_10,_map_21_-_Joan_Blaeu,_1667_-_BL_114.h(star).10.(21).jpg",
+"tag": 105,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-105.png",
+"w": 507,
+"h": 350
+},
+{
+"titel": "Descripción del Reyno de Galizia",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Galicia_by_Abraham_Ortelius.jpeg",
+"tag": 106,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-106.png",
+"w": 367,
+"h": 350
+},
+{
+"titel": "Territorii Novoforensis Accurata Descriptio",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Territorii_Novoforensis%E2%80%A6_Accurata_Descriptio_-_Atlas_Maior,_vol_3,_map_23_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(23).jpg",
+"tag": 107,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-107.png",
+"w": 433,
+"h": 350
+},
+{
+"titel": "Alemannia Sive Svevia Svperior",
+"zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Alemannia_Sive_Svevia_Svperior_-_Atlas_Maior,_vol_3,_map_92_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(92).jpg",
+"tag": 108,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-108.png",
+"w": 433,
+"h": 350
+},
+{
+"titel": "Skia vel Skiana",
+"zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Skia_vel_Skiana_-_Atlas_Maior,_vol_6,_map_47_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(47).jpg",
+"tag": 109,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-109.png",
+"w": 433,
+"h": 350
+},
+{
+"titel": "Frisiorum",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Friesland_by_Abraham_Ortelius.jpeg",
+"tag": 110,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-110.png",
+"w": 447,
+"h": 350
+},
+{
+"titel": "Africae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Africa_by_Abraham_Ortelius.jpeg",
+"tag": 111,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-111.png",
+"w": 384,
+"h": 350
+},
+{
+"titel": "Burgundiae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_County_of_Burgundy_by_Abraham_Ortelius.jpeg",
+"tag": 112,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-112.png",
+"w": 367,
+"h": 350
+},
+{
+"titel": "Territorio Di Cremona",
+"zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Territorio_Di_Cremona_-_Atlas_Maior,_vol_9,_map_14_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(14).jpg",
+"tag": 113,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-113.png",
+"w": 454,
+"h": 350
+},
+{
+"titel": "Carpentiae, Guip",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Carpetania,_of_Gipuzkoa,_and_of_Cadiz_by_Abraham_Ortelius.jpeg",
+"tag": 114,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-114.png",
+"w": 367,
+"h": 350
+},
+{
+"titel": "Franciae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Franconia_and_of_the_Bishopric_of_M%C3%BCnster_by_Abraham_Ortelius.jpeg",
+"tag": 115,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-115.png",
+"w": 437,
+"h": 350
+},
+{
+"titel": "Aegyptus Antiqua",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_ancient_Egypt_and_inset_map_of_the_area_around_Alexandria_by_Abraham_Ortelius.jpeg",
+"tag": 116,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-116.png",
+"w": 439,
+"h": 350
+},
+{
+"titel": "Lothian and Linlitqvo",
+"zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+"jahr": 1667,
+"seite": "https://commons.wikimedia.org/wiki/File:Lothian_and_Linlitqvo_-_Atlas_Maior,_vol_6,_map_8_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(8).jpg",
+"tag": 117,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-117.png",
+"w": 494,
+"h": 350
+},
+{
+"titel": "Braunswickensis",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Braunschweig_and_L%C3%BCneberg_and_of_the_territory_of_Nuremberg_by_Abraham_Ortelius.jpeg",
+"tag": 118,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-118.png",
+"w": 403,
+"h": 350
+},
+{
+"titel": "Chinae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_China_by_Abraham_Ortelius.jpeg",
+"tag": 119,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-119.png",
+"w": 450,
+"h": 350
+},
+{
+"titel": "Austriae",
+"zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+"jahr": 1608,
+"seite": "https://commons.wikimedia.org/wiki/File:Map_of_Austria_by_Abraham_Ortelius.jpeg",
+"tag": 120,
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/karten/karten-120.png",
+"w": 415,
+"h": 350
+}
+],
+"quelle": "Wikimedia Commons, gemeinfrei",
+"stand": "2026-10-29"
+}

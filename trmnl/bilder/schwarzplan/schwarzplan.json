@@ -1,0 +1,836 @@
+{
+"m_pro_px": 3.4574,
+"breite": 800,
+"hoehe": 480,
+"anzahl": 118,
+"orte": [
+{
+"tag": 1,
+"id": "darmstadt-arheilgen-rund-um-im-fiedlersee",
+"n": "Darmstadt-Arheilgen",
+"sub": "Rund um Im Fiedlersee",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-darmstadt-arheilgen-rund-um-im-fiedlersee.png"
+},
+{
+"tag": 2,
+"id": "toulouse-capitole",
+"n": "Toulouse",
+"sub": "Capitole",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-toulouse-capitole.png"
+},
+{
+"tag": 3,
+"id": "bangkok-rattanakosin",
+"n": "Bangkok",
+"sub": "Rattanakosin",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-bangkok-rattanakosin.png"
+},
+{
+"tag": 4,
+"id": "genua-centro-storico",
+"n": "Genua",
+"sub": "Centro Storico",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-genua-centro-storico.png"
+},
+{
+"tag": 5,
+"id": "oslo-sentrum",
+"n": "Oslo",
+"sub": "Sentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-oslo-sentrum.png"
+},
+{
+"tag": 6,
+"id": "isfahan-naqsch-e-dschahan",
+"n": "Isfahan",
+"sub": "Naqsch-e Dschahan",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-isfahan-naqsch-e-dschahan.png"
+},
+{
+"tag": 7,
+"id": "lima-centro-historico",
+"n": "Lima",
+"sub": "Centro Histórico",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-lima-centro-historico.png"
+},
+{
+"tag": 8,
+"id": "london-notting-hill",
+"n": "London",
+"sub": "Notting Hill",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-london-notting-hill.png"
+},
+{
+"tag": 9,
+"id": "nara-naramachi",
+"n": "Nara",
+"sub": "Naramachi",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-nara-naramachi.png"
+},
+{
+"tag": 10,
+"id": "venedig-san-marco-und-rialto",
+"n": "Venedig",
+"sub": "San Marco und Rialto",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-venedig-san-marco-und-rialto.png"
+},
+{
+"tag": 11,
+"id": "budapest-burgviertel",
+"n": "Budapest",
+"sub": "Burgviertel",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-budapest-burgviertel.png"
+},
+{
+"tag": 12,
+"id": "kairouan-medina",
+"n": "Kairouan",
+"sub": "Medina",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-kairouan-medina.png"
+},
+{
+"tag": 13,
+"id": "la-paz-zentrum",
+"n": "La Paz",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-la-paz-zentrum.png"
+},
+{
+"tag": 14,
+"id": "wiesbaden-innenstadt",
+"n": "Wiesbaden",
+"sub": "Innenstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-wiesbaden-innenstadt.png"
+},
+{
+"tag": 15,
+"id": "utrecht-binnenstad",
+"n": "Utrecht",
+"sub": "Binnenstad",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-utrecht-binnenstad.png"
+},
+{
+"tag": 16,
+"id": "lhasa-barkhor",
+"n": "Lhasa",
+"sub": "Barkhor",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-lhasa-barkhor.png"
+},
+{
+"tag": 17,
+"id": "porto-ribeira",
+"n": "Porto",
+"sub": "Ribeira",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-porto-ribeira.png"
+},
+{
+"tag": 18,
+"id": "riga-altstadt",
+"n": "Riga",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-riga-altstadt.png"
+},
+{
+"tag": 19,
+"id": "canberra-parliamentary-triangle",
+"n": "Canberra",
+"sub": "Parliamentary Triangle",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-canberra-parliamentary-triangle.png"
+},
+{
+"tag": 20,
+"id": "kairo-islamisches-kairo",
+"n": "Kairo",
+"sub": "Islamisches Kairo",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-kairo-islamisches-kairo.png"
+},
+{
+"tag": 21,
+"id": "cartagena-ciudad-amurallada",
+"n": "Cartagena",
+"sub": "Ciudad Amurallada",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-cartagena-ciudad-amurallada.png"
+},
+{
+"tag": 22,
+"id": "rotterdam-centrum",
+"n": "Rotterdam",
+"sub": "Centrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-rotterdam-centrum.png"
+},
+{
+"tag": 23,
+"id": "buchara-altstadt",
+"n": "Buchara",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-buchara-altstadt.png"
+},
+{
+"tag": 24,
+"id": "berlin-mitte-und-kreuzberg",
+"n": "Berlin",
+"sub": "Mitte und Kreuzberg",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-berlin-mitte-und-kreuzberg.png"
+},
+{
+"tag": 25,
+"id": "alberobello-trulli",
+"n": "Alberobello",
+"sub": "Trulli",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-alberobello-trulli.png"
+},
+{
+"tag": 26,
+"id": "visby-altstadt-im-mauerring",
+"n": "Visby",
+"sub": "Altstadt im Mauerring",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-visby-altstadt-im-mauerring.png"
+},
+{
+"tag": 27,
+"id": "nizza-vieux-nice",
+"n": "Nizza",
+"sub": "Vieux-Nice",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-nizza-vieux-nice.png"
+},
+{
+"tag": 28,
+"id": "varanasi-ghats",
+"n": "Varanasi",
+"sub": "Ghats",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-varanasi-ghats.png"
+},
+{
+"tag": 29,
+"id": "doha-souq-waqif",
+"n": "Doha",
+"sub": "Souq Waqif",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-doha-souq-waqif.png"
+},
+{
+"tag": 30,
+"id": "havanna-vedado",
+"n": "Havanna",
+"sub": "Vedado",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-havanna-vedado.png"
+},
+{
+"tag": 31,
+"id": "barcelona-gotic-und-born",
+"n": "Barcelona",
+"sub": "Gòtic und Born",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-barcelona-gotic-und-born.png"
+},
+{
+"tag": 32,
+"id": "darmstadt-mathildenhohe-und-woogsviertel",
+"n": "Darmstadt",
+"sub": "Mathildenhöhe und Woogsviertel",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-darmstadt-mathildenhohe-und-woogsviertel.png"
+},
+{
+"tag": 33,
+"id": "brunn-zentrum",
+"n": "Brünn",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-brunn-zentrum.png"
+},
+{
+"tag": 34,
+"id": "paris-montmartre",
+"n": "Paris",
+"sub": "Montmartre",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-paris-montmartre.png"
+},
+{
+"tag": 35,
+"id": "busan-jung-gu",
+"n": "Busan",
+"sub": "Jung-gu",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-busan-jung-gu.png"
+},
+{
+"tag": 36,
+"id": "ronda-altstadt",
+"n": "Ronda",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-ronda-altstadt.png"
+},
+{
+"tag": 37,
+"id": "luanda-baixa",
+"n": "Luanda",
+"sub": "Baixa",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-luanda-baixa.png"
+},
+{
+"tag": 38,
+"id": "new-york-midtown-manhattan",
+"n": "New York",
+"sub": "Midtown Manhattan",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-new-york-midtown-manhattan.png"
+},
+{
+"tag": 39,
+"id": "la-chaux-de-fonds-uhrmacherstadt",
+"n": "La Chaux-de-Fonds",
+"sub": "Uhrmacherstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-la-chaux-de-fonds-uhrmacherstadt.png"
+},
+{
+"tag": 40,
+"id": "hongkong-central-und-sheung-wan",
+"n": "Hongkong",
+"sub": "Central und Sheung Wan",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-hongkong-central-und-sheung-wan.png"
+},
+{
+"tag": 41,
+"id": "eriwan-zentrum",
+"n": "Eriwan",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-eriwan-zentrum.png"
+},
+{
+"tag": 42,
+"id": "regensburg-altstadt",
+"n": "Regensburg",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-regensburg-altstadt.png"
+},
+{
+"tag": 43,
+"id": "rom-centro-storico",
+"n": "Rom",
+"sub": "Centro Storico",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-rom-centro-storico.png"
+},
+{
+"tag": 44,
+"id": "marrakesch-medina",
+"n": "Marrakesch",
+"sub": "Medina",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-marrakesch-medina.png"
+},
+{
+"tag": 45,
+"id": "toronto-downtown",
+"n": "Toronto",
+"sub": "Downtown",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-toronto-downtown.png"
+},
+{
+"tag": 46,
+"id": "avignon-intra-muros",
+"n": "Avignon",
+"sub": "Intra-muros",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-avignon-intra-muros.png"
+},
+{
+"tag": 47,
+"id": "tokio-shibuya",
+"n": "Tokio",
+"sub": "Shibuya",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-tokio-shibuya.png"
+},
+{
+"tag": 48,
+"id": "prag-altstadt-und-kleinseite",
+"n": "Prag",
+"sub": "Altstadt und Kleinseite",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-prag-altstadt-und-kleinseite.png"
+},
+{
+"tag": 49,
+"id": "rhodos-altstadt",
+"n": "Rhodos",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-rhodos-altstadt.png"
+},
+{
+"tag": 50,
+"id": "hamburg-speicherstadt-und-hafencity",
+"n": "Hamburg",
+"sub": "Speicherstadt und HafenCity",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-hamburg-speicherstadt-und-hafencity.png"
+},
+{
+"tag": 51,
+"id": "groningen-binnenstad",
+"n": "Groningen",
+"sub": "Binnenstad",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-groningen-binnenstad.png"
+},
+{
+"tag": 52,
+"id": "dhaka-altstadt",
+"n": "Dhaka",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-dhaka-altstadt.png"
+},
+{
+"tag": 53,
+"id": "dubai-al-fahidi-und-bur-dubai",
+"n": "Dubai",
+"sub": "Al Fahidi und Bur Dubai",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-dubai-al-fahidi-und-bur-dubai.png"
+},
+{
+"tag": 54,
+"id": "oaxaca-centro",
+"n": "Oaxaca",
+"sub": "Centro",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-oaxaca-centro.png"
+},
+{
+"tag": 55,
+"id": "lwiw-altstadt",
+"n": "Lwiw",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-lwiw-altstadt.png"
+},
+{
+"tag": 56,
+"id": "adelaide-planstadt",
+"n": "Adelaide",
+"sub": "Planstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-adelaide-planstadt.png"
+},
+{
+"tag": 57,
+"id": "kotor-altstadt",
+"n": "Kotor",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-kotor-altstadt.png"
+},
+{
+"tag": 58,
+"id": "bern-altstadt",
+"n": "Bern",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-bern-altstadt.png"
+},
+{
+"tag": 59,
+"id": "bangalore-zentrum",
+"n": "Bangalore",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-bangalore-zentrum.png"
+},
+{
+"tag": 60,
+"id": "frankfurt-am-main-nordend-und-bornheim",
+"n": "Frankfurt am Main",
+"sub": "Nordend und Bornheim",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-frankfurt-am-main-nordend-und-bornheim.png"
+},
+{
+"tag": 61,
+"id": "asmara-moderne-kolonialstadt",
+"n": "Asmara",
+"sub": "Moderne Kolonialstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-asmara-moderne-kolonialstadt.png"
+},
+{
+"tag": 62,
+"id": "buenos-aires-san-nicolas-und-monserrat",
+"n": "Buenos Aires",
+"sub": "San Nicolás und Monserrat",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-buenos-aires-san-nicolas-und-monserrat.png"
+},
+{
+"tag": 63,
+"id": "istanbul-sultanahmet-und-eminonu",
+"n": "Istanbul",
+"sub": "Sultanahmet und Eminönü",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-istanbul-sultanahmet-und-eminonu.png"
+},
+{
+"tag": 64,
+"id": "mdina-stille-stadt",
+"n": "Mdina",
+"sub": "Stille Stadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-mdina-stille-stadt.png"
+},
+{
+"tag": 65,
+"id": "lyon-presqu-ile",
+"n": "Lyon",
+"sub": "Presqu'île",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-lyon-presqu-ile.png"
+},
+{
+"tag": 66,
+"id": "jakarta-kota-tua",
+"n": "Jakarta",
+"sub": "Kota Tua",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-jakarta-kota-tua.png"
+},
+{
+"tag": 67,
+"id": "konstanz-altstadt",
+"n": "Konstanz",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-konstanz-altstadt.png"
+},
+{
+"tag": 68,
+"id": "johannesburg-innenstadt",
+"n": "Johannesburg",
+"sub": "Innenstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-johannesburg-innenstadt.png"
+},
+{
+"tag": 69,
+"id": "bogota-la-candelaria",
+"n": "Bogotá",
+"sub": "La Candelaria",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-bogota-la-candelaria.png"
+},
+{
+"tag": 70,
+"id": "kopenhagen-christianshavn",
+"n": "Kopenhagen",
+"sub": "Christianshavn",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-kopenhagen-christianshavn.png"
+},
+{
+"tag": 71,
+"id": "cuenca-altstadt",
+"n": "Cuenca",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-cuenca-altstadt.png"
+},
+{
+"tag": 72,
+"id": "liverpool-zentrum",
+"n": "Liverpool",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-liverpool-zentrum.png"
+},
+{
+"tag": 73,
+"id": "gyeongju-hwangnam",
+"n": "Gyeongju",
+"sub": "Hwangnam",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-gyeongju-hwangnam.png"
+},
+{
+"tag": 74,
+"id": "innsbruck-altstadt",
+"n": "Innsbruck",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-innsbruck-altstadt.png"
+},
+{
+"tag": 75,
+"id": "macau-altstadt",
+"n": "Macau",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-macau-altstadt.png"
+},
+{
+"tag": 76,
+"id": "nikosia-altstadt-im-mauerring",
+"n": "Nikosia",
+"sub": "Altstadt im Mauerring",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-nikosia-altstadt-im-mauerring.png"
+},
+{
+"tag": 77,
+"id": "breslau-altstadt",
+"n": "Breslau",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-breslau-altstadt.png"
+},
+{
+"tag": 79,
+"id": "guanajuato-altstadt",
+"n": "Guanajuato",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-guanajuato-altstadt.png"
+},
+{
+"tag": 80,
+"id": "mainz-altstadt",
+"n": "Mainz",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-mainz-altstadt.png"
+},
+{
+"tag": 81,
+"id": "dublin-zentrum",
+"n": "Dublin",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-dublin-zentrum.png"
+},
+{
+"tag": 82,
+"id": "jaipur-pink-city",
+"n": "Jaipur",
+"sub": "Pink City",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-jaipur-pink-city.png"
+},
+{
+"tag": 83,
+"id": "madrid-centro",
+"n": "Madrid",
+"sub": "Centro",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-madrid-centro.png"
+},
+{
+"tag": 84,
+"id": "vilnius-altstadt",
+"n": "Vilnius",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-vilnius-altstadt.png"
+},
+{
+"tag": 85,
+"id": "tel-aviv-weisse-stadt",
+"n": "Tel Aviv",
+"sub": "Weiße Stadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-tel-aviv-weisse-stadt.png"
+},
+{
+"tag": 86,
+"id": "savannah-historischer-stadtplan",
+"n": "Savannah",
+"sub": "Historischer Stadtplan",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-savannah-historischer-stadtplan.png"
+},
+{
+"tag": 87,
+"id": "karlsruhe-schloss-und-facherstadt",
+"n": "Karlsruhe",
+"sub": "Schloss und Fächerstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-karlsruhe-schloss-und-facherstadt.png"
+},
+{
+"tag": 88,
+"id": "neuf-brisach-festungsstadt",
+"n": "Neuf-Brisach",
+"sub": "Festungsstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-neuf-brisach-festungsstadt.png"
+},
+{
+"tag": 89,
+"id": "chengdu-zentrum",
+"n": "Chengdu",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-chengdu-zentrum.png"
+},
+{
+"tag": 90,
+"id": "ravenna-centro",
+"n": "Ravenna",
+"sub": "Centro",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-ravenna-centro.png"
+},
+{
+"tag": 91,
+"id": "alesund-jugendstilstadt",
+"n": "Ålesund",
+"sub": "Jugendstilstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-alesund-jugendstilstadt.png"
+},
+{
+"tag": 92,
+"id": "wellington-zentrum",
+"n": "Wellington",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-wellington-zentrum.png"
+},
+{
+"tag": 93,
+"id": "teheran-zentrum",
+"n": "Teheran",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-teheran-zentrum.png"
+},
+{
+"tag": 94,
+"id": "new-orleans-french-quarter",
+"n": "New Orleans",
+"sub": "French Quarter",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-new-orleans-french-quarter.png"
+},
+{
+"tag": 95,
+"id": "le-havre-wiederaufbau-von-auguste-perret",
+"n": "Le Havre",
+"sub": "Wiederaufbau von Auguste Perret",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-le-havre-wiederaufbau-von-auguste-perret.png"
+},
+{
+"tag": 96,
+"id": "kolkata-bbd-bagh",
+"n": "Kolkata",
+"sub": "BBD Bagh",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-kolkata-bbd-bagh.png"
+},
+{
+"tag": 97,
+"id": "nordlingen-altstadt-im-mauerring",
+"n": "Nördlingen",
+"sub": "Altstadt im Mauerring",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-nordlingen-altstadt-im-mauerring.png"
+},
+{
+"tag": 98,
+"id": "cadiz-altstadt",
+"n": "Cádiz",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-cadiz-altstadt.png"
+},
+{
+"tag": 99,
+"id": "bukarest-centrul-vechi",
+"n": "Bukarest",
+"sub": "Centrul Vechi",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-bukarest-centrul-vechi.png"
+},
+{
+"tag": 100,
+"id": "monaco-monte-carlo-und-la-condamine",
+"n": "Monaco",
+"sub": "Monte-Carlo und La Condamine",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-monaco-monte-carlo-und-la-condamine.png"
+},
+{
+"tag": 101,
+"id": "taipeh-zhongzheng",
+"n": "Taipeh",
+"sub": "Zhongzheng",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-taipeh-zhongzheng.png"
+},
+{
+"tag": 103,
+"id": "ouro-preto-altstadt",
+"n": "Ouro Preto",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-ouro-preto-altstadt.png"
+},
+{
+"tag": 104,
+"id": "san-sebastian-parte-vieja-und-centro",
+"n": "San Sebastián",
+"sub": "Parte Vieja und Centro",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-san-sebastian-parte-vieja-und-centro.png"
+},
+{
+"tag": 105,
+"id": "koln-altstadt-und-dom",
+"n": "Köln",
+"sub": "Altstadt und Dom",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-koln-altstadt-und-dom.png"
+},
+{
+"tag": 106,
+"id": "turku-zentrum",
+"n": "Turku",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-turku-zentrum.png"
+},
+{
+"tag": 107,
+"id": "hallstatt-seeufer",
+"n": "Hallstatt",
+"sub": "Seeufer",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-hallstatt-seeufer.png"
+},
+{
+"tag": 108,
+"id": "yangon-downtown",
+"n": "Yangon",
+"sub": "Downtown",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-yangon-downtown.png"
+},
+{
+"tag": 109,
+"id": "lissabon-baixa-und-alfama",
+"n": "Lissabon",
+"sub": "Baixa und Alfama",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-lissabon-baixa-und-alfama.png"
+},
+{
+"tag": 110,
+"id": "beirut-zentrum",
+"n": "Beirut",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-beirut-zentrum.png"
+},
+{
+"tag": 111,
+"id": "washington-mall-und-capitol-hill",
+"n": "Washington",
+"sub": "Mall und Capitol Hill",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-washington-mall-und-capitol-hill.png"
+},
+{
+"tag": 112,
+"id": "maastricht-binnenstad",
+"n": "Maastricht",
+"sub": "Binnenstad",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-maastricht-binnenstad.png"
+},
+{
+"tag": 113,
+"id": "ulaanbaatar-zentrum",
+"n": "Ulaanbaatar",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-ulaanbaatar-zentrum.png"
+},
+{
+"tag": 114,
+"id": "sibiu-altstadt",
+"n": "Sibiu",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-sibiu-altstadt.png"
+},
+{
+"tag": 115,
+"id": "trier-altstadt",
+"n": "Trier",
+"sub": "Altstadt",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-trier-altstadt.png"
+},
+{
+"tag": 116,
+"id": "split-diokletianpalast",
+"n": "Split",
+"sub": "Diokletianpalast",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-split-diokletianpalast.png"
+},
+{
+"tag": 117,
+"id": "abu-dhabi-zentrum",
+"n": "Abu Dhabi",
+"sub": "Zentrum",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-abu-dhabi-zentrum.png"
+},
+{
+"tag": 118,
+"id": "montreal-vieux-montreal-und-centre",
+"n": "Montréal",
+"sub": "Vieux-Montréal und Centre",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-montreal-vieux-montreal-und-centre.png"
+},
+{
+"tag": 119,
+"id": "leiden-binnenstad",
+"n": "Leiden",
+"sub": "Binnenstad",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-leiden-binnenstad.png"
+},
+{
+"tag": 120,
+"id": "shanghai-bund-und-huangpu",
+"n": "Shanghai",
+"sub": "Bund und Huangpu",
+"bild": "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/bilder/schwarzplan/schwarzplan-shanghai-bund-und-huangpu.png"
+}
+],
+"quelle": "Gebäude © OpenStreetMap-Mitwirkende (ODbL)",
+"stand": "2026-10-29"
+}

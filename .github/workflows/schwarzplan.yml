@@ -78,6 +78,8 @@ jobs:
       RELEASE_TAG: ${{ needs.tag.outputs.tag }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -89,7 +91,22 @@ jobs:
           gh release download "$RELEASE_TAG" --pattern 'schwarzplan-*.png' --dir plaene || true
           gh release download "$RELEASE_TAG" --pattern 'fehlgeschlagen*.json' --dir plaene || true
           python3 trmnl/kunst/schwarzplan/erzeugen.py --orte trmnl/kunst/schwarzplan/orte.json --ziel plaene --minuten 0 --anzahl 120 \
-            --basis-url "https://github.com/${GITHUB_REPOSITORY}/releases/download/${RELEASE_TAG}/" --hochladen ""
+            --basis-url "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}/trmnl/bilder/schwarzplan/" --hochladen ""
+      # Bilder ins Repository (als image/png abrufbar), die Liste zusätzlich unter der bisherigen Release-Adresse
+      - name: Ins Repository und Release legen
+        run: |
+          mkdir -p trmnl/bilder/schwarzplan
+          cp plaene/schwarzplan-*.png plaene/schwarzplan.json trmnl/bilder/schwarzplan/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add trmnl/bilder/schwarzplan
+          if ! git diff --cached --quiet; then
+            git commit -q -m "Schwarzpläne aktualisiert"
+            for i in 1 2 3 4 5 6; do
+              git pull -q --rebase origin "$GITHUB_REF_NAME" && git push -q origin "HEAD:$GITHUB_REF_NAME" && break
+              sleep $((i * 7))
+            done
+          fi
           gh release upload "$RELEASE_TAG" plaene/schwarzplan.json --clobber
       - name: Nächste Runde starten, falls noch Orte fehlen
         if: ${{ steps.liste.outputs.fehlend != '0' && github.event.inputs.nur == '' }}

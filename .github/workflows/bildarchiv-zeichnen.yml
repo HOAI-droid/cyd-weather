@@ -31,6 +31,8 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -59,10 +61,23 @@ jobs:
         run: |
           python3 trmnl/kunst/bildarchiv/zeichnen.py --sammlungen trmnl/kunst/bildarchiv/sammlungen.json \
             --auswahl auswahl --ziel bilder --nur ${{ matrix.sammlung }} --minuten 45 \
-            --basis-url "https://github.com/${GITHUB_REPOSITORY}/releases/download/${{ steps.tag.outputs.tag }}/"
+            --basis-url "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}/trmnl/bilder/${{ matrix.sammlung }}/"
 
-      - name: Ins Release legen
+      # Bilder ins Repository (raw.githubusercontent.com liefert sie als image/png aus; aus dem Release
+      # kämen sie als Datei-Download), die Liste zusätzlich unter der bisherigen Release-Adresse.
+      - name: Ins Repository und Release legen
         run: |
-          ls bilder | head
-          gh release upload "${{ steps.tag.outputs.tag }}" bilder/${{ matrix.sammlung }}-*.png --clobber
-          gh release upload "${{ steps.tag.outputs.tag }}" bilder/${{ matrix.sammlung }}.json --clobber
+          S=${{ matrix.sammlung }}
+          rm -rf "trmnl/bilder/$S" && mkdir -p "trmnl/bilder/$S"
+          cp bilder/$S-*.png bilder/$S.json "trmnl/bilder/$S/"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add trmnl/bilder/$S
+          if ! git diff --cached --quiet; then
+            git commit -q -m "Bildarchiv $S aktualisiert"
+            for i in 1 2 3 4 5 6; do
+              git pull -q --rebase origin "$GITHUB_REF_NAME" && git push -q origin "HEAD:$GITHUB_REF_NAME" && break
+              sleep $((i * 7))
+            done
+          fi
+          gh release upload "${{ steps.tag.outputs.tag }}" "bilder/$S.json" --clobber
