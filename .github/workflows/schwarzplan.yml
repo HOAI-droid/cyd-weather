@@ -1,7 +1,8 @@
 # Erzeugt die Schwarzpläne (Gebäude aus OpenStreetMap) für das TRMNL-Plugin "Schwarzplan"
 # und legt Bilder und Liste (schwarzplan.json) im selben Release ab wie die Plugin-ZIPs.
-# Overpass ist langsam: jede Runde zeichnet höchstens 50 Minuten, lädt hoch und startet
-# sich selbst neu, bis alle Orte aus orte.json fertig sind. Fertige Pläne werden nicht neu gezeichnet.
+# Overpass ist langsam: Sechs Teile zeichnen gleichzeitig (jeder Rechner hat sein eigenes Kontingent),
+# jedes fertige Bild wird sofort hochgeladen. Nach höchstens 50 Minuten schreibt ein letzter Schritt
+# die Liste und startet die nächste Runde, bis alle Orte aus orte.json fertig sind.
 name: Schwarzpläne erzeugen
 
 on:
@@ -22,24 +23,15 @@ permissions:
 
 concurrency:
   group: schwarzplan-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  plaene:
+  tag:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    outputs:
+      tag: ${{ steps.t.outputs.tag }}
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Pillow installieren
-        run: pip install pillow
-
-      - name: Release-Name bestimmen
-        id: tag
+      - id: t
         env:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
@@ -47,36 +39,58 @@ jobs:
           if [ "$BRANCH" = "$DEFAULT_BRANCH" ]; then TAG=trmnl; else TAG="trmnl-$(echo "$BRANCH" | sed 's#^claude/##; s#[^A-Za-z0-9._-]#-#g')"; fi
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
-      - name: Fertige Pläne aus dem Release holen
-        env:
-          GH_TOKEN: ${{ github.token }}
+  plaene:
+    needs: tag
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    strategy:
+      fail-fast: false
+      matrix:
+        teil: [0, 1, 2, 3, 4, 5]
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ needs.tag.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Fertige Pläne holen
         run: |
           mkdir -p plaene
-          gh release download "${{ steps.tag.outputs.tag }}" --pattern 'schwarzplan-*.png' --dir plaene || true
-          gh release download "${{ steps.tag.outputs.tag }}" --pattern 'fehlgeschlagen.json' --dir plaene || true
-          ls plaene | wc -l
-
-      - name: Pläne aus OpenStreetMap zeichnen (höchstens 50 Minuten)
-        id: zeichnen
+          gh release download "$RELEASE_TAG" --pattern 'schwarzplan-*.png' --dir plaene || true
+          gh release download "$RELEASE_TAG" --pattern 'fehlgeschlagen*.json' --dir plaene || true
+      - name: Teil ${{ matrix.teil }} zeichnen (höchstens 50 Minuten, jedes Bild sofort hochladen)
         run: |
           python3 trmnl/kunst/schwarzplan/erzeugen.py --orte trmnl/kunst/schwarzplan/orte.json --ziel plaene --minuten 50 \
-            --basis-url "https://github.com/${GITHUB_REPOSITORY}/releases/download/${{ steps.tag.outputs.tag }}/" \
-            --nur "${{ github.event.inputs.nur }}"
+            --teil ${{ matrix.teil }} --teile 6 --nur "${{ github.event.inputs.nur }}" --ausgabe /dev/null
+      - name: Fehlschläge dieses Teils ablegen
+        if: always()
+        run: gh release upload "$RELEASE_TAG" plaene/fehlgeschlagen-${{ matrix.teil }}.json --clobber || true
 
-      - name: Ins Release hochladen
-        env:
-          GH_TOKEN: ${{ github.token }}
+  liste:
+    needs: [tag, plaene]
+    if: always()
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ needs.tag.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Liste aller fertigen Pläne schreiben
+        id: liste
         run: |
-          TAG="${{ steps.tag.outputs.tag }}"
-          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "TRMNL-Plugins (${GITHUB_REF_NAME})" --notes "TRMNL-Plugins und Schwarzpläne" --target "$GITHUB_SHA" --prerelease
-          cd plaene
-          # nur neue Bilder hochladen, die Liste immer
-          gh release view "$TAG" --json assets --jq '.assets[].name' > ../vorhanden.txt
-          for f in schwarzplan-*.png; do grep -qx "$f" ../vorhanden.txt || gh release upload "$TAG" "$f"; done
-          gh release upload "$TAG" schwarzplan.json fehlgeschlagen.json --clobber
-
+          mkdir -p plaene
+          gh release download "$RELEASE_TAG" --pattern 'schwarzplan-*.png' --dir plaene || true
+          gh release download "$RELEASE_TAG" --pattern 'fehlgeschlagen*.json' --dir plaene || true
+          python3 trmnl/kunst/schwarzplan/erzeugen.py --orte trmnl/kunst/schwarzplan/orte.json --ziel plaene --minuten 0 \
+            --basis-url "https://github.com/${GITHUB_REPOSITORY}/releases/download/${RELEASE_TAG}/" --hochladen ""
+          gh release upload "$RELEASE_TAG" plaene/schwarzplan.json --clobber
       - name: Nächste Runde starten, falls noch Orte fehlen
-        if: ${{ steps.zeichnen.outputs.fehlend != '0' && steps.zeichnen.outputs.neu != '0' && github.event.inputs.nur == '' }}
-        env:
-          GH_TOKEN: ${{ github.token }}
+        if: ${{ steps.liste.outputs.fehlend != '0' && github.event.inputs.nur == '' }}
         run: gh workflow run schwarzplan.yml --ref "${GITHUB_REF_NAME}"

@@ -14,6 +14,7 @@ import argparse
 import json
 import math
 import os
+import subprocess
 import sys
 import time
 import urllib.parse
@@ -90,18 +91,27 @@ def main():
     ap.add_argument("--nur", default="", help="nur diese Orte neu zeichnen (Kürzel mit Komma)")
     ap.add_argument("--minuten", type=float, default=50, help="Zeitbudget; danach keine neuen Orte mehr anfangen")
     ap.add_argument("--ausgabe", default=os.environ.get("GITHUB_OUTPUT", ""), help="Datei für fertig/fehlend (GitHub Actions)")
+    ap.add_argument("--teil", type=int, default=0, help="nur jeden n-ten Ort (für parallele Läufe): dieser Teil")
+    ap.add_argument("--teile", type=int, default=1, help="Anzahl paralleler Teile")
+    ap.add_argument("--hochladen", default=os.environ.get("RELEASE_TAG", ""), help="jedes fertige Bild sofort in dieses Release laden")
     a = ap.parse_args()
     orte = json.load(open(a.orte, encoding="utf-8"))
     os.makedirs(a.ziel, exist_ok=True)
     nur = set(filter(None, a.nur.split(",")))
     halb_x, halb_y = BREITE / 2 * M_PRO_PX + 30, HOEHE / 2 * M_PRO_PX + 30
-    fehlpfad = os.path.join(a.ziel, "fehlgeschlagen.json")
-    try:
-        fehl = json.load(open(fehlpfad, encoding="utf-8"))
-    except (OSError, ValueError):
-        fehl = {}
+    fehlpfad = os.path.join(a.ziel, f"fehlgeschlagen-{a.teil}.json" if a.teile > 1 else "fehlgeschlagen.json")
+    fehl = {}
+    for f in os.listdir(a.ziel):  # Fehlschläge aller Teile zusammenführen
+        if f.startswith("fehlgeschlagen") and f.endswith(".json"):
+            try:
+                for k, v in json.load(open(os.path.join(a.ziel, f), encoding="utf-8")).items():
+                    fehl[k] = max(fehl.get(k, 0), v)
+            except (OSError, ValueError):
+                pass
     start, neu = time.time(), 0
-    for o in orte:
+    for i, o in enumerate(orte):
+        if i % a.teile != a.teil:
+            continue
         pfad = os.path.join(a.ziel, f"schwarzplan-{o['id']}.png")
         if nur:
             if o["id"] not in nur:
@@ -118,6 +128,8 @@ def main():
                 raise RuntimeError(f"nur {n} Gebäude gefunden")
             bild.save(pfad, optimize=True)
             neu += 1
+            if a.hochladen:
+                subprocess.run(["gh", "release", "upload", a.hochladen, pfad, "--clobber"], check=False)
             fehl.pop(o["id"], None)
             print(f"  {n} Gebäude, {os.path.getsize(pfad) // 1024} KB", flush=True)
         except Exception as ex:
