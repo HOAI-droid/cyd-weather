@@ -11,7 +11,7 @@ for dir in plugins/*/; do
   mkdir -p "$out"
   cp "$dir/settings.yml" "$out/"
   # shared.liquid = gemeinsame Grundlage + Logik der Seite (wird vor jedes Layout gesetzt)
-  cat common/basis.liquid "$dir/logik.liquid" common/spruch.liquid > "$out/shared.liquid"
+  cat common/basis.liquid $(ls "$dir"/zusatz-*.liquid 2>/dev/null) "$dir/logik.liquid" common/spruch.liquid > "$out/shared.liquid"
   for layout in full half_horizontal half_vertical quadrant; do
     if [ -f "$dir/$layout.liquid" ]; then cp "$dir/$layout.liquid" "$out/"
     elif [ -f "$dir/kompakt.liquid" ] && [ "$layout" != full ]; then cp "$dir/kompakt.liquid" "$out/$layout.liquid"; fi

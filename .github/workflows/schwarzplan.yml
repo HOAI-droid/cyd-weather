@@ -1,5 +1,7 @@
 # Erzeugt die Schwarzpläne (Gebäude aus OpenStreetMap) für das TRMNL-Plugin "Schwarzplan"
 # und legt Bilder und Liste (schwarzplan.json) im selben Release ab wie die Plugin-ZIPs.
+# Overpass ist langsam: jede Runde zeichnet höchstens 50 Minuten, lädt hoch und startet
+# sich selbst neu, bis alle Orte aus orte.json fertig sind. Fertige Pläne werden nicht neu gezeichnet.
 name: Schwarzpläne erzeugen
 
 on:
@@ -10,17 +12,22 @@ on:
   workflow_dispatch:
     inputs:
       nur:
-        description: "Nur diese Orte neu (Kürzel mit Komma, leer = alle)"
+        description: "Nur diese Orte neu zeichnen (Kürzel mit Komma, leer = alle fehlenden)"
         required: false
         default: ""
 
 permissions:
   contents: write
+  actions: write
+
+concurrency:
+  group: schwarzplan-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   plaene:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
 
@@ -40,25 +47,21 @@ jobs:
           if [ "$BRANCH" = "$DEFAULT_BRANCH" ]; then TAG=trmnl; else TAG="trmnl-$(echo "$BRANCH" | sed 's#^claude/##; s#[^A-Za-z0-9._-]#-#g')"; fi
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
-      - name: Bisherige Bilder holen (falls nur einzelne Orte neu erzeugt werden)
-        if: ${{ github.event.inputs.nur != '' }}
+      - name: Fertige Pläne aus dem Release holen
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p plaene
           gh release download "${{ steps.tag.outputs.tag }}" --pattern 'schwarzplan-*.png' --dir plaene || true
+          gh release download "${{ steps.tag.outputs.tag }}" --pattern 'fehlgeschlagen.json' --dir plaene || true
+          ls plaene | wc -l
 
-      - name: Pläne aus OpenStreetMap zeichnen
+      - name: Pläne aus OpenStreetMap zeichnen (höchstens 50 Minuten)
+        id: zeichnen
         run: |
-          python3 trmnl/kunst/schwarzplan/erzeugen.py --orte trmnl/kunst/schwarzplan/orte.json --ziel plaene \
+          python3 trmnl/kunst/schwarzplan/erzeugen.py --orte trmnl/kunst/schwarzplan/orte.json --ziel plaene --minuten 50 \
             --basis-url "https://github.com/${GITHUB_REPOSITORY}/releases/download/${{ steps.tag.outputs.tag }}/" \
             --nur "${{ github.event.inputs.nur }}"
-          ls -l plaene
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: schwarzplaene
-          path: plaene/
 
       - name: Ins Release hochladen
         env:
@@ -66,4 +69,14 @@ jobs:
         run: |
           TAG="${{ steps.tag.outputs.tag }}"
           gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "TRMNL-Plugins (${GITHUB_REF_NAME})" --notes "TRMNL-Plugins und Schwarzpläne" --target "$GITHUB_SHA" --prerelease
-          gh release upload "$TAG" plaene/*.png plaene/schwarzplan.json --clobber
+          cd plaene
+          # nur neue Bilder hochladen, die Liste immer
+          gh release view "$TAG" --json assets --jq '.assets[].name' > ../vorhanden.txt
+          for f in schwarzplan-*.png; do grep -qx "$f" ../vorhanden.txt || gh release upload "$TAG" "$f"; done
+          gh release upload "$TAG" schwarzplan.json fehlgeschlagen.json --clobber
+
+      - name: Nächste Runde starten, falls noch Orte fehlen
+        if: ${{ steps.zeichnen.outputs.fehlend != '0' && steps.zeichnen.outputs.neu != '0' && github.event.inputs.nur == '' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run schwarzplan.yml --ref "${GITHUB_REF_NAME}"

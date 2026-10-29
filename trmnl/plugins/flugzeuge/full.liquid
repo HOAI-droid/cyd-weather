@@ -25,25 +25,30 @@
   .tf .sek.g .raster { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); }
   .tf .fig { display: flex; flex-direction: column; justify-content: flex-end; min-width: 0; }
   .tf .fig .bild { flex: 1 1 auto; display: flex; align-items: flex-end; justify-content: center; min-height: 0; }
-  .tf .fig img { display: block; max-height: 82px; max-width: 100%; }
-  .tf .fig .cap { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; border-top: .5px solid #000; padding-top: 1px; }
+  .tf .fig img { display: block; max-height: 64px; max-width: 100%; }
+  .tf .fig .cap { display: flex; flex-direction: column; border-top: .5px solid #000; padding-top: 1px; line-height: 1.12; }
   .tf .fig .cap .nm { font-size: 15px; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .tf .fig .cap .nm .sc { font-style: normal; font-size: 12px; margin-right: 4px; }
   .tf .fig .cap .zz { font-size: 13px; white-space: nowrap; }
   .tf .leer { font-size: 15px; font-style: italic; padding: 10px 0; }
   .tf .weitere { font-size: 13px; font-style: italic; padding: 3px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0; }
   .tf .fuss { display: flex; justify-content: space-between; font-size: 13px; padding-top: 3px; flex-shrink: 0; }
+  .tf .platz { display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px dashed #000; padding: 2px 8px; }
+  .tf .platz .sc { font-size: 17px; letter-spacing: .1em; }
+  .tf .platz .it { font-size: 11px; }
   .tf .hinweis { flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: center; font-size: 19px; gap: 8px; padding: 0 30px; }
 </style>
 <div class="cw tf">
   <div class="kopf">
-    <div class="nr sc">Tafel {{ datum_text | default: "" }}</div>
-    <h1>DIE LUFTFAHRZEUGE ÜBER {{ ort | default: "ARHEILGEN" | upcase }}</h1>
-    <div class="sub">beobachtet im Umkreis von {{ fl_rw }} Kilometern in den letzten vierundzwanzig Stunden</div>
+    <div class="nr sc">In diesem Augenblick · {{ cw_uhr }} Uhr</div>
+    <h1>DIE LUFTFAHRZEUGE ÜBER {{ cf.ort | default: "Arheilgen" | upcase }}</h1>
+    <div class="sub">in der Luft im Umkreis von {{ fl_rw }} Kilometern, die nächsten zuerst</div>
     <div class="orn"><i></i><b></b><i></i></div>
   </div>
-  {%- if fl_ok == false -%}
-    <div class="hinweis"><span>Noch keine Beobachtungen.</span><span class="it" style="font-size:16px">Das Sammel-Skript schickt alle paar Minuten die Flugzeuge der letzten 24 Stunden an die Webhook-Adresse dieses Plugins. Anleitung: trmnl/README.md</span></div>
+  {%- if fl_fehler != "" or fl_ok == false -%}
+    <div class="hinweis"><span>{% if fl_fehler != "" %}{{ fl_fehler }}{% else %}Keine Daten von adsb.lol.{% endif %}</span><span class="it" style="font-size:16px">Beim nächsten Abruf in ein paar Minuten klappt es vielleicht wieder.</span></div>
+  {%- elsif fl_n == 0 -%}
+    <div class="hinweis"><span>Der Himmel über {{ cf.ort | default: "Arheilgen" }} ist gerade leer.</span><span class="it" style="font-size:16px">Kein Luftfahrzeug im Umkreis von {{ fl_rw }} Kilometern.</span></div>
   {%- else -%}
   <div class="koerper">
     <div class="sek j">
@@ -51,12 +56,16 @@
         <span class="mb"><span>20 m</span><span class="bar" style="width:61px"><i></i><i></i></span></span></div>
       <div class="raster">
         {%- assign nf = 0 -%}{%- assign nj = 0 -%}
-        {%- for x in typen -%}{%- if x.k == "jet" and x.bild != "" and nj < 6 -%}
-          {%- assign nj = nj | plus: 1 -%}{%- assign nf = nf | plus: 1 -%}{%- assign w = x.bw | times: 0.32 | round -%}
-          <div class="fig"><div class="bild"><img src="{{ fl_basis }}{{ x.bild }}{{ fl_endung }}" style="width: {{ w }}px" alt=""></div>
-            <div class="cap"><span class="nm"><span class="sc">Fig. {{ nf }}.</span>{{ x.name }}{% if x.neu == 1 %} *{% endif %}</span><span class="zz">{{ x.n }} × · Ø {{ x.alt | number_with_delimiter: "." }} m</span></div></div>
-        {%- endif -%}{%- endfor -%}
-        {%- if nj == 0 -%}<div class="leer">Heute keine Verkehrsflugzeuge mit Zeichnung.</div>{%- endif -%}
+        {%- for e in fl_liste -%}{%- if e == "" -%}{%- continue -%}{%- endif -%}{%- assign x = e | split: "^" -%}
+          {%- if x[4] == "jet" and nj < 6 -%}
+          {%- assign nj = nj | plus: 1 -%}{%- assign nf = nf | plus: 1 -%}
+          <div class="fig"><div class="bild">
+            {%- if x[3] != "" -%}{%- assign w = x[5] | times: 0.32 | round -%}<img src="{{ fl_basis }}{{ x[3] }}{{ fl_endung }}" style="width: {{ w }}px" alt="">
+            {%- else -%}<div class="platz"><span class="sc">{{ x[1] | default: "?" }}</span><span class="it">ohne Zeichnung</span></div>{%- endif -%}</div>
+            <div class="cap"><span class="nm"><span class="sc">Fig. {{ nf }}.</span>{{ x[2] }}</span><span class="zz">{% if x[6] != "" %}{{ x[6] }} · {% endif %}{{ x[7] | number_with_delimiter: "." }} m hoch · {{ x[0] }} km entfernt</span></div></div>
+          {%- endif -%}
+        {%- endfor -%}
+        {%- if nj == 0 -%}<div class="leer">Gerade kein Verkehrsflugzeug in der Nähe.</div>{%- endif -%}
       </div>
     </div>
     <div class="sek g">
@@ -64,31 +73,30 @@
         <span class="mb"><span>5 m</span><span class="bar" style="width:50px"><i></i><i></i></span></span></div>
       <div class="raster">
         {%- assign ng = 0 -%}
-        {%- for x in typen -%}{%- if x.k != "jet" and x.bild != "" and ng < 3 -%}
-          {%- assign ng = ng | plus: 1 -%}{%- assign nf = nf | plus: 1 -%}{%- assign w = x.bw | times: 0.30 | round -%}
-          <div class="fig"><div class="bild"><img src="{{ fl_basis }}{{ x.bild }}{{ fl_endung }}" style="width: {{ w }}px" alt=""></div>
-            <div class="cap"><span class="nm"><span class="sc">Fig. {{ nf }}.</span>{{ x.name }}{% if x.neu == 1 %} *{% endif %}</span><span class="zz">{{ x.n }} ×</span></div></div>
-        {%- endif -%}{%- endfor -%}
-        {%- if ng == 0 -%}<div class="leer">Heute keine kleinen Flugzeuge oder Hubschrauber mit Zeichnung.</div>{%- endif -%}
+        {%- for e in fl_liste -%}{%- if e == "" -%}{%- continue -%}{%- endif -%}{%- assign x = e | split: "^" -%}
+          {%- if x[4] != "jet" and ng < 3 -%}
+          {%- assign ng = ng | plus: 1 -%}{%- assign nf = nf | plus: 1 -%}
+          <div class="fig"><div class="bild">
+            {%- if x[3] != "" -%}{%- assign w = x[5] | times: 0.30 | round -%}<img src="{{ fl_basis }}{{ x[3] }}{{ fl_endung }}" style="width: {{ w }}px" alt="">
+            {%- else -%}<div class="platz"><span class="sc">{{ x[1] | default: "?" }}</span><span class="it">ohne Zeichnung</span></div>{%- endif -%}</div>
+            <div class="cap"><span class="nm"><span class="sc">Fig. {{ nf }}.</span>{{ x[2] }}</span><span class="zz">{% if x[6] != "" %}{{ x[6] }} · {% endif %}{{ x[7] | number_with_delimiter: "." }} m · {{ x[0] }} km</span></div></div>
+          {%- endif -%}
+        {%- endfor -%}
+        {%- if ng == 0 -%}<div class="leer">Gerade keine kleinen Flugzeuge oder Hubschrauber.</div>{%- endif -%}
       </div>
     </div>
   </div>
-  {%- comment -%} Alles, was keine Zeichnung hat oder nicht mehr auf die Tafel passt {%- endcomment -%}
   {%- assign nj2 = 0 -%}{%- assign ng2 = 0 -%}
   {%- capture weitere -%}
-    {%- for x in typen -%}
-      {%- assign drauf = false -%}
-      {%- if x.bild != "" -%}
-        {%- if x.k == "jet" -%}{%- assign nj2 = nj2 | plus: 1 -%}{%- if nj2 <= 6 -%}{%- assign drauf = true -%}{%- endif -%}
-        {%- else -%}{%- assign ng2 = ng2 | plus: 1 -%}{%- if ng2 <= 3 -%}{%- assign drauf = true -%}{%- endif -%}{%- endif -%}
-      {%- endif -%}
-      {%- unless drauf -%}{{ x.name }} ({{ x.n }}){{ " · " }}{%- endunless -%}
+    {%- for e in fl_liste -%}{%- if e == "" -%}{%- continue -%}{%- endif -%}{%- assign x = e | split: "^" -%}
+      {%- if x[4] == "jet" -%}{%- assign nj2 = nj2 | plus: 1 -%}{%- if nj2 > 6 -%}{{ x[2] }} ({{ x[0] }} km){{ " · " }}{%- endif -%}
+      {%- else -%}{%- assign ng2 = ng2 | plus: 1 -%}{%- if ng2 > 3 -%}{{ x[2] }} ({{ x[0] }} km){{ " · " }}{%- endif -%}{%- endif -%}
     {%- endfor -%}
   {%- endcapture -%}
-  {%- if weitere != "" -%}<div class="weitere">Ferner beobachtet: {{ weitere | strip | remove_last: " ·" }}</div>{%- endif -%}
+  {%- if weitere != "" -%}<div class="weitere">Ferner in der Luft: {{ weitere | strip | remove_last: " ·" }}</div>{%- endif -%}
   <div class="fuss">
     <span class="it">Gezeichnet nach 3D-Modellen, alle im selben Maßstab</span>
-    <span>{{ anzahl_typen }} Typen · {{ ueberfluege | number_with_delimiter: "." }} Überflüge · Ø Flughöhe{% if fl_alt > 3600 %} · <b>keine neuen Daten seit {{ stand_text }}</b>{% else %} · Stand {{ stand_text }} Uhr{% endif %}</span>
+    <span>{{ fl_n }} Luftfahrzeug{% if fl_n != 1 %}e{% endif %} in der Luft · Stand {{ cw_uhr }} Uhr</span>
     <span class="it">Daten: adsb.lol</span>
   </div>
   {%- endif -%}

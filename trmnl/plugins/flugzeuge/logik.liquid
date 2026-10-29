@@ -1,13 +1,33 @@
 {%- comment -%}
-  Tafel der Luftfahrzeuge. Daten vom Sammel-Skript (Webhook): ort, radius_km, stand, stand_text, datum_text,
-  ueberfluege, anzahl_typen, typen[] mit t, name, bild, bw (Bildbreite), k (jet/ga/heli), n, alt, neu
+  Tafel der Luftfahrzeuge, live: Antwort von adsb.lol (/v2/point) mit ac[]: hex, flight, t (ICAO-Typ), desc,
+  alt_baro (Fuß oder "ground"), dst (Entfernung in Seemeilen), category.
+  Ergebnis: fl_liste = je Flugzeug "Abstand^Typ^Name^Zeichnung^Kategorie^Bildbreite^Flugnummer^Höhe" (nächste zuerst)
 {%- endcomment -%}
 {%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
-{%- assign fl_ok = false -%}{%- if typen -%}{%- assign fl_ok = true -%}{%- endif -%}
+{%- assign fl_ok = false -%}{%- if ac -%}{%- assign fl_ok = true -%}{%- endif -%}
+{%- assign fl_fehler = "" -%}{%- if error -%}{%- assign fl_fehler = "adsb.lol ist gerade nicht erreichbar." -%}{%- endif -%}
 {%- assign fl_endung = ".png" -%}{%- if cf.schraffur == "linien" -%}{%- assign fl_endung = "_linien.png" -%}{%- endif -%}
 {%- assign fl_basis = cf.bilder | default: "https://raw.githubusercontent.com/HOAI-droid/cyd-weather/claude/trmnl-app/trmnl/kunst/flugzeuge/bilder/" -%}
-{%- assign fl_alt = trmnl.system.timestamp_utc | minus: stand | default: 0 -%}
-{%- assign fl_radius = radius_km | default: 20 | plus: 0.5 | floor -%}
-{%- case fl_radius -%}{%- when 10 -%}{%- assign fl_rw = "zehn" -%}{%- when 15 -%}{%- assign fl_rw = "fünfzehn" -%}{%- when 20 -%}{%- assign fl_rw = "zwanzig" -%}{%- when 25 -%}{%- assign fl_rw = "fünfundzwanzig" -%}{%- when 30 -%}{%- assign fl_rw = "dreißig" -%}{%- else -%}{%- capture fl_rw -%}{{ fl_radius }}{%- endcapture -%}{%- endcase -%}
-{%- comment -%} Römische Tafelnummer = Tag im Jahr (wie bei einer fortlaufenden Sammlung) {%- endcomment -%}
-{%- assign rz = cw_tag0 | modulo: 1000 -%}
+{%- assign fl_km = cf.radius | default: "10.8" | times: 1.852 | plus: 0.5 | floor -%}
+{%- case fl_km -%}{%- when 10 -%}{%- assign fl_rw = "zehn" -%}{%- when 15 -%}{%- assign fl_rw = "fünfzehn" -%}{%- when 20 -%}{%- assign fl_rw = "zwanzig" -%}{%- when 30 -%}{%- assign fl_rw = "dreißig" -%}{%- else -%}{%- capture fl_rw -%}{{ fl_km }}{%- endcapture -%}{%- endcase -%}
+{%- assign fl_sortiert = ac | sort: "dst" -%}
+{%- assign fl_n = 0 -%}
+{%- capture fl_text -%}
+{%- for a in fl_sortiert -%}
+  {%- if a.alt_baro == nil or a.alt_baro == "ground" -%}{%- continue -%}{%- endif -%}
+  {%- assign t = a.t | default: "" | upcase -%}
+  {%- capture info -%}{% render "fl_typ", t: t %}{%- endcapture -%}
+  {%- assign i = info | strip | split: "^" -%}
+  {%- assign name = i[0] -%}{%- assign bild = i[1] | default: "" -%}{%- assign k = i[2] | default: "" -%}{%- assign bw = i[3] | default: "0" -%}
+  {%- if name == blank -%}{%- if a.desc != blank -%}{%- assign name = a.desc -%}{%- elsif t != "" -%}{%- assign name = t -%}{%- else -%}{%- assign name = "Unbekannter Typ" -%}{%- endif -%}{%- endif -%}
+  {%- if k == "" -%}
+    {%- assign kat = a.category | default: "" | upcase -%}
+    {%- if kat == "A7" -%}{%- assign k = "heli" -%}{%- elsif kat == "A1" or kat == "A2" or kat == "B1" or kat == "B4" -%}{%- assign k = "ga" -%}{%- else -%}{%- assign k = "jet" -%}{%- endif -%}
+  {%- endif -%}
+  {%- assign hoehe = a.alt_baro | times: 0.3048 | divided_by: 50 | round | times: 50 -%}
+  {%- assign km = a.dst | default: 0 | times: 1.852 | round -%}
+  {{ km }}^{{ t }}^{{ name | replace: "^", " " }}^{{ bild }}^{{ k }}^{{ bw }}^{{ a.flight | default: a.r | default: "" | strip }}^{{ hoehe }}~
+  {%- assign fl_n = fl_n | plus: 1 -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign fl_liste = fl_text | strip | split: "~" -%}

@@ -1,13 +1,19 @@
 {%- comment -%}
-  Schwarzplan: Liste aus schwarzplan.json (orte, m_pro_px). Jede volle Stunde der nächste Ort,
-  jeden Tag um 7 Plätze versetzt, damit jeder Ort mit der Zeit zu jeder Stunde einmal drankommt.
+  Schwarzplan: Liste aus schwarzplan.json (orte[] mit tag 1–365, m_pro_px). Jeden Tag im Jahr ein Ort:
+  der Eintrag mit tag = Tag im Jahr; fehlt er (noch nicht erzeugt), der Reihe nach einer der vorhandenen.
 {%- endcomment -%}
 {%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
 {%- assign sp_orte = orte -%}
 {%- assign sp_n = 0 -%}{%- if sp_orte -%}{%- assign sp_n = sp_orte.size -%}{%- endif -%}
+{%- comment -%} Tag im Jahr: lokale Tagesnummer minus Tagesnummer des 1. Januar (days_from_civil für y-1, März-Basis) {%- endcomment -%}
+{%- assign jy = cw_jahr | minus: 1 -%}{%- assign jera = jy | divided_by: 400 -%}{%- assign jyoe = jera | times: -400 | plus: jy -%}
+{%- assign j1 = jyoe | times: 365 -%}{%- assign j2 = jyoe | divided_by: 4 -%}{%- assign j3 = jyoe | divided_by: 100 -%}
+{%- assign jan1 = jera | times: 146097 | plus: j1 | plus: j2 | minus: j3 | plus: 306 | minus: 719468 -%}
+{%- assign sp_tag = cw_tag0 | minus: jan1 | plus: 1 -%}
 {%- if sp_n > 0 -%}
-  {%- assign sp_i = cw_tag0 | times: 7 | plus: cw_h | modulo: sp_n -%}
-  {%- assign sp = sp_orte[sp_i] -%}
+  {%- assign sp = nil -%}
+  {%- for o in sp_orte -%}{%- if o.tag == sp_tag -%}{%- assign sp = o -%}{%- break -%}{%- endif -%}{%- endfor -%}
+  {%- if sp == nil -%}{%- assign sp_i = sp_tag | minus: 1 | modulo: sp_n -%}{%- assign sp = sp_orte[sp_i] -%}{%- endif -%}
 {%- endif -%}
 {%- assign sp_mpp = m_pro_px | default: 3.4574 | plus: 0 -%}
 {%- comment -%} Maßstabsbalken 500 m; Maßstab am 7,5-Zoll-Display (800 Pixel ≈ 163 mm) {%- endcomment -%}

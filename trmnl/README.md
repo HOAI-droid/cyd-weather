@@ -56,27 +56,18 @@ Zwei eigenständige Plugins nach den Artefakten „Flur-Rahmen Datenkunst“ (Sc
 
 ### Schwarzplan (`trmnl-schwarzplan.zip`)
 
-- Jede volle Stunde ein anderer Ort, also höchstens 24 Bilder am Tag. Jeden Tag verschiebt sich die Reihenfolge um 7 Orte, so kommt jeder Ort mit der Zeit zu jeder Uhrzeit dran.
+- **Jeden Tag im Jahr ein anderer Ort**, 365 Schwarzpläne aus aller Welt. Am 1. Januar kommt Arheilgen. Danach wechselt die Weltgegend Tag für Tag, und dieselbe Stadt kommt frühestens nach gut drei Monaten wieder (andere Viertel derselben Stadt).
 - Nur die Gebäude aus OpenStreetMap, alle Orte im selben Maßstab (2,6 km Bildbreite, am 7,5-Zoll-Display etwa 1:17.000), dazu Nordpfeil, Maßstabsbalken und Ortsname.
-- Einstellungen: **Darstellung** (Schwarz auf Weiß oder invertiert), **Beschriftung** (mit Ortsname oder nur der Plan), Rand, Uhrzeit (Deutschland oder Zeitzone aus LaraPaper).
-- Die 24 Orte stehen in [`kunst/schwarzplan/orte.json`](kunst/schwarzplan/orte.json). Ändert man die Datei, zeichnet die GitHub Action „Schwarzpläne erzeugen“ die Pläne neu und legt sie mit der Liste `schwarzplan.json` im Release ab. Das Plugin holt sich die Liste von dort, ein neuer Import ist nicht nötig.
+- Einstellungen: **Darstellung** (Schwarz auf Weiß oder invertiert), **Beschriftung** (mit Ortsname oder nur der Plan), Rand, Uhrzeit für den Tageswechsel.
+- Die Orte stehen mit Tag, Name, Viertel und Koordinaten in [`kunst/schwarzplan/orte.json`](kunst/schwarzplan/orte.json). Darunter sind Deutschland (40), Westeuropa (60), Südeuropa (55), Nord- und Osteuropa (50), Nahost und Afrika (45), Asien (60), Amerika (45) und Ozeanien (10).
+- Die GitHub Action „Schwarzpläne erzeugen“ zeichnet die Pläne aus OpenStreetMap. Weil der Dienst langsam ist, arbeitet sie in Runden von etwa 50 Minuten und startet sich selbst neu, bis alle fertig sind. Fertige Pläne bleiben im Release liegen. Solange ein Tag noch keinen Plan hat, zeigt das Plugin der Reihe nach einen der vorhandenen. Ändert man `orte.json`, werden nur die neuen Orte gezeichnet.
 
 ### Tafel der Luftfahrzeuge (`trmnl-flugzeuge.zip`)
 
-- Alle Flugzeugtypen, die in den letzten 24 Stunden im Umkreis von 20 km über Arheilgen geflogen sind. Gezeigt werden sie als gestochene Seitenansichten aus der Tafel, alle im selben Maßstab: links bis zu 6 Verkehrsflugzeuge, rechts bis zu 3 kleine Flugzeuge oder Hubschrauber, jeweils mit Anzahl der Überflüge und mittlerer Flughöhe. Typen ohne Zeichnung stehen unter „Ferner beobachtet“. Ein Stern markiert Typen, die zum ersten Mal gesehen wurden.
-- Einstellung **Zeichnung**: Stich mit Schraffur oder nur Linien.
-- Die Daten kommen von [adsb.lol](https://adsb.lol), kostenlos und ohne Schlüssel, oder vom eigenen ADS-B-Empfänger. Weil die 24 Stunden mitgeschrieben werden müssen, läuft dafür ein kleines Sammel-Skript auf deinem Rechner, zum Beispiel neben LaraPaper. Es schickt die Auswertung alle 5 Minuten an das Plugin.
-
-**Sammler einrichten:**
-1. `trmnl-flugzeuge.zip` in LaraPaper importieren. Auf der Seite des Plugins steht die **Webhook URL** (`…/api/custom_plugins/…`).
-2. [`kunst/flugzeuge/sammler.py`](kunst/flugzeuge/sammler.py) auf den Rechner mit LaraPaper kopieren. Es braucht nur Python 3, keine Pakete.
-3. Eine der beiden Varianten wählen:
-   - **cron**, alle 5 Minuten:
-     `*/5 * * * * python3 /pfad/sammler.py --webhook "WEBHOOK-URL" >> /tmp/sammler.log 2>&1`
-   - **Docker:** In [`kunst/flugzeuge/docker-compose.yml`](kunst/flugzeuge/docker-compose.yml) die `WEBHOOK_URL` eintragen und im selben Ordner `docker compose up -d` ausführen.
-4. Nach 24 Stunden ist die Tafel vollständig. Testen ohne Senden: `python3 sammler.py --trocken`.
-
-Mit eigenem Empfänger (readsb/tar1090): `--quelle http://raspberrypi.local/tar1090/data/aircraft.json`. Umkreis, Ort und Koordinaten lassen sich mit `--radius`, `--ort`, `--lat` und `--lon` ändern.
+- Alle Luftfahrzeuge, die **gerade jetzt** im Umkreis von Arheilgen in der Luft sind, die nächsten zuerst. Gezeigt werden sie als gestochene Seitenansichten aus der Tafel, alle im selben Maßstab: links bis zu 6 Verkehrsflugzeuge, rechts bis zu 3 kleine Flugzeuge oder Hubschrauber, jeweils mit Flugnummer, Höhe und Entfernung. Wer nicht mehr auf die Tafel passt, steht unter „Ferner in der Luft“.
+- **Typen ohne Zeichnung** (zum Beispiel ATR 72 oder Boeing 767) bekommen ein gestricheltes Typenschild mit ihrem ICAO-Kürzel. Für 17 Grundtypen gibt es Zeichnungen, verwandte Typen nutzen die Zeichnung ihrer Familie (A319 und A320 die des A320neo, alle 737 die der 737-800 und so weiter). Die Zuordnung steht in [`kunst/flugzeuge/typen.py`](kunst/flugzeuge/typen.py).
+- Daten: LaraPaper fragt alle 5 Minuten [adsb.lol](https://adsb.lol) ab, kostenlos und ohne Schlüssel. Es läuft kein Skript bei dir.
+- Einstellungen: Ort und Koordinaten, Umkreis (10 bis 30 km), **Zeichnung** (Stich mit Schraffur oder nur Linien), Rand.
 
 ## Datenquellen (alle ohne API-Schlüssel)
 

@@ -1,10 +1,10 @@
 ---
-# Kunst: jede volle Stunde ein anderer Schwarzplan (nur Gebäude, alle Orte im selben Maßstab)
+# Kunst: jeden Tag im Jahr ein anderer Schwarzplan aus aller Welt (nur Gebäude, alle Orte im selben Maßstab)
 name: "Schwarzplan"
 id: cyd-schwarzplan
 strategy: polling
 polling_verb: get
-refresh_interval: 10
+refresh_interval: 60
 no_screen_padding: "yes"
 dark_mode: "no"
 # Liste der Orte und Bilder; wird von der GitHub Action aus OpenStreetMap erzeugt (trmnl/kunst/schwarzplan)
@@ -13,7 +13,7 @@ custom_fields:
   - keyname: info
     field_type: author_bio
     name: "Über dieses Plugin"
-    description: "Jede volle Stunde ein anderer Schwarzplan: nur die Gebäude eines Ortes, alle im selben Maßstab. Gebäude © OpenStreetMap-Mitwirkende."
+    description: "Jeden Tag ein anderer Schwarzplan: 365 Orte aus aller Welt, nur die Gebäude, alle im selben Maßstab. Gebäude © OpenStreetMap-Mitwirkende."
   - keyname: darstellung
     field_type: select
     name: "Darstellung"
@@ -41,7 +41,7 @@ custom_fields:
     default: "20"
   - keyname: zeitzone
     field_type: select
-    name: "Uhrzeit für den Stundenwechsel"
+    name: "Uhrzeit für den Tageswechsel"
     options:
       - "Deutschland (MEZ/MESZ)": deutschland
       - "Zeitzone aus LaraPaper": larapaper

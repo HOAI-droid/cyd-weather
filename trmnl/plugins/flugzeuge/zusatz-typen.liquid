@@ -1,0 +1,111 @@
+{%- comment -%}
+  ICAO-Flugzeugtyp -> "Name^Zeichnung^Kategorie^Bildbreite". Aufruf:
+  {% capture info %}{% render "fl_typ", t: "A20N" %}{% endcapture %}
+  Erzeugt aus kunst/flugzeuge/typen.py, nicht von Hand ändern.
+{%- endcomment -%}
+{% template fl_typ %}{%- case t -%}
+{%- when "A124" -%}Antonow An-124^^jet^0
+{%- when "A139" -%}Leonardo AW139^^heli^0
+{%- when "A169" -%}Leonardo AW169^^heli^0
+{%- when "A19N" -%}Airbus A319neo^A20N^jet^372
+{%- when "A20N" -%}Airbus A320neo^A20N^jet^372
+{%- when "A21N" -%}Airbus A321neo^A21N^jet^439
+{%- when "A306" -%}Airbus A300-600^^jet^0
+{%- when "A310" -%}Airbus A310^^jet^0
+{%- when "A318" -%}Airbus A318^A20N^jet^372
+{%- when "A319" -%}Airbus A319^A20N^jet^372
+{%- when "A320" -%}Airbus A320^A20N^jet^372
+{%- when "A321" -%}Airbus A321^A21N^jet^439
+{%- when "A332" -%}Airbus A330-200^A333^jet^617
+{%- when "A333" -%}Airbus A330-300^A333^jet^617
+{%- when "A338" -%}Airbus A330-800neo^A333^jet^617
+{%- when "A339" -%}Airbus A330-900neo^A333^jet^617
+{%- when "A343" -%}Airbus A340-300^^jet^0
+{%- when "A346" -%}Airbus A340-600^^jet^0
+{%- when "A359" -%}Airbus A350-900^A359^jet^655
+{%- when "A35K" -%}Airbus A350-1000^A359^jet^655
+{%- when "A388" -%}Airbus A380-800^A388^jet^713
+{%- when "A400" -%}Airbus A400M^^jet^0
+{%- when "AT45" -%}ATR 42-500^^jet^0
+{%- when "AT46" -%}ATR 42-600^^jet^0
+{%- when "AT75" -%}ATR 72-500^^jet^0
+{%- when "AT76" -%}ATR 72-600^^jet^0
+{%- when "B37M" -%}Boeing 737 MAX 7^B738^jet^390
+{%- when "B38M" -%}Boeing 737 MAX 8^B738^jet^390
+{%- when "B39M" -%}Boeing 737 MAX 9^B738^jet^390
+{%- when "B3XM" -%}Boeing 737 MAX 10^B738^jet^390
+{%- when "B736" -%}Boeing 737-600^B738^jet^390
+{%- when "B737" -%}Boeing 737-700^B738^jet^390
+{%- when "B738" -%}Boeing 737-800^B738^jet^390
+{%- when "B739" -%}Boeing 737-900^B738^jet^390
+{%- when "B744" -%}Boeing 747-400^B748^jet^747
+{%- when "B748" -%}Boeing 747-8^B748^jet^747
+{%- when "B752" -%}Boeing 757-200^^jet^0
+{%- when "B753" -%}Boeing 757-300^^jet^0
+{%- when "B762" -%}Boeing 767-200^^jet^0
+{%- when "B763" -%}Boeing 767-300^^jet^0
+{%- when "B764" -%}Boeing 767-400^^jet^0
+{%- when "B772" -%}Boeing 777-200^B77L^jet^630
+{%- when "B773" -%}Boeing 777-300^B77L^jet^630
+{%- when "B778" -%}Boeing 777-8^B77L^jet^630
+{%- when "B779" -%}Boeing 777-9^B77L^jet^630
+{%- when "B77L" -%}Boeing 777-200LR/F^B77L^jet^630
+{%- when "B77W" -%}Boeing 777-300ER^B77L^jet^630
+{%- when "B788" -%}Boeing 787-8^B789^jet^629
+{%- when "B789" -%}Boeing 787-9^B789^jet^629
+{%- when "B78X" -%}Boeing 787-10^B789^jet^629
+{%- when "BCS1" -%}Airbus A220-100^BCS3^jet^378
+{%- when "BCS3" -%}Airbus A220-300^BCS3^jet^378
+{%- when "BE20" -%}Beechcraft King Air 200^^ga^0
+{%- when "C130" -%}Lockheed C-130 Hercules^^jet^0
+{%- when "C150" -%}Cessna 150^C172^ga^282
+{%- when "C152" -%}Cessna 152^C172^ga^282
+{%- when "C17" -%}Boeing C-17 Globemaster^^jet^0
+{%- when "C172" -%}Cessna 172^C172^ga^282
+{%- when "C182" -%}Cessna 182^C172^ga^282
+{%- when "C206" -%}Cessna 206^C172^ga^282
+{%- when "C208" -%}Cessna 208 Caravan^^ga^0
+{%- when "C56X" -%}Cessna Citation Excel^C750^ga^736
+{%- when "C680" -%}Cessna Citation Sovereign^C750^ga^736
+{%- when "C68A" -%}Cessna Citation Latitude^C750^ga^736
+{%- when "C700" -%}Cessna Citation Longitude^C750^ga^736
+{%- when "C750" -%}Cessna Citation X^C750^ga^736
+{%- when "CL35" -%}Bombardier Challenger 350^^ga^0
+{%- when "CRJ7" -%}Bombardier CRJ700^^jet^0
+{%- when "CRJ9" -%}Bombardier CRJ900^^jet^0
+{%- when "CRJX" -%}Bombardier CRJ1000^^jet^0
+{%- when "DA20" -%}Diamond DA20^^ga^0
+{%- when "DA40" -%}Diamond DA40^^ga^0
+{%- when "DA42" -%}Diamond DA42^DA42^ga^294
+{%- when "DA62" -%}Diamond DA62^DA42^ga^294
+{%- when "DH8D" -%}De Havilland Dash 8-400^^jet^0
+{%- when "DR40" -%}Robin DR400^^ga^0
+{%- when "E170" -%}Embraer 170^E190^jet^356
+{%- when "E190" -%}Embraer 190^E190^jet^356
+{%- when "E195" -%}Embraer 195^E190^jet^356
+{%- when "E290" -%}Embraer E190-E2^E190^jet^356
+{%- when "E295" -%}Embraer E195-E2^E190^jet^356
+{%- when "E75L" -%}Embraer 175^E190^jet^356
+{%- when "E75S" -%}Embraer 175^E190^jet^356
+{%- when "EC30" -%}Airbus H130^EC45^heli^426
+{%- when "EC35" -%}Airbus H135^EC45^heli^426
+{%- when "EC45" -%}Airbus H145^EC45^heli^426
+{%- when "EC55" -%}Airbus H155^EC45^heli^426
+{%- when "F2TH" -%}Dassault Falcon 2000^^ga^0
+{%- when "FA7X" -%}Dassault Falcon 7X^^ga^0
+{%- when "GLEX" -%}Bombardier Global Express^^ga^0
+{%- when "GLF6" -%}Gulfstream G650^^ga^0
+{%- when "H145" -%}Airbus H145^EC45^heli^426
+{%- when "H160" -%}Airbus H160^EC45^heli^426
+{%- when "MD11" -%}McDonnell Douglas MD-11^^jet^0
+{%- when "NH90" -%}NH Industries NH90^^heli^0
+{%- when "P28A" -%}Piper PA-28^^ga^0
+{%- when "P28R" -%}Piper PA-28R Arrow^^ga^0
+{%- when "PC12" -%}Pilatus PC-12^PC12^ga^487
+{%- when "PC24" -%}Pilatus PC-24^^ga^0
+{%- when "R22" -%}Robinson R22^R44^heli^400
+{%- when "R44" -%}Robinson R44^R44^heli^400
+{%- when "R66" -%}Robinson R66^R44^heli^400
+{%- when "SR20" -%}Cirrus SR20^^ga^0
+{%- when "SR22" -%}Cirrus SR22^^ga^0
+{%- else -%}^^^0{%- endcase -%}{% endtemplate %}
