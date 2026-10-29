@@ -1,0 +1,35 @@
+---
+# Kunst: Heute vor … Jahren. Ereignisse, Geburts- und Todestage des Kalendertags aus der deutschen Wikipedia.
+name: "Heute vor … Jahren"
+id: cyd-almanach
+strategy: polling
+polling_verb: get
+refresh_interval: 60
+no_screen_padding: "yes"
+dark_mode: "no"
+# 1. ausgewählte Ereignisse, 2. Geburtstage, 3. Todestage (Wikimedia-Feed, ohne Schlüssel)
+polling_url: |-
+  https://api.wikimedia.org/feed/v1/wikipedia/de/onthisday/selected/{{ "now" | date: "%m/%d" }}
+  https://api.wikimedia.org/feed/v1/wikipedia/de/onthisday/births/{{ "now" | date: "%m/%d" }}
+  https://api.wikimedia.org/feed/v1/wikipedia/de/onthisday/deaths/{{ "now" | date: "%m/%d" }}
+custom_fields:
+  - keyname: info
+    field_type: author_bio
+    name: "Über dieses Plugin"
+    description: "Was an diesem Kalendertag geschah, gesetzt wie ein Almanach. Quelle: Wikipedia „Was geschah am …“."
+  - keyname: rand
+    field_type: select
+    name: "Rand (für Bilderrahmen)"
+    options:
+      - "Ohne": "0"
+      - "Schmal": "12"
+      - "Mittel": "20"
+      - "Breit": "30"
+    default: "20"
+  - keyname: zeitzone
+    field_type: select
+    name: "Uhrzeit für den Tageswechsel"
+    options:
+      - "Deutschland (MEZ/MESZ)": deutschland
+      - "Zeitzone aus LaraPaper": larapaper
+    default: deutschland

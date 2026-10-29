@@ -1,0 +1,24 @@
+{%- comment -%}
+  Almanach: IDX_0.selected[], IDX_1.births[], IDX_2.deaths[] (je text, year, pages[]).
+  Auswahl: fünf Ereignisse über die Jahrhunderte verteilt; je ein Geburts- und Todestag, runde Jahrestage bevorzugt.
+{%- endcomment -%}
+{%- assign cf = trmnl.plugin_settings.custom_fields_values -%}
+{%- assign al_ev = IDX_0.selected | sort: "year" -%}
+{%- assign al_n = 0 -%}{%- if al_ev -%}{%- assign al_n = al_ev.size -%}{%- endif -%}
+{%- comment -%} gleichmäßig verteilte Indizes 0, n/4, n/2, 3n/4, n-1 {%- endcomment -%}
+{%- capture al_idx -%}{%- if al_n <= 5 -%}{%- for i in (1..al_n) -%}{{ i | minus: 1 }},{%- endfor -%}{%- else -%}{%- assign m = al_n | minus: 1 -%}{%- for q in (0..4) -%}{{ m | times: q | divided_by: 4 }},{%- endfor -%}{%- endif -%}{%- endcapture -%}
+{%- assign al_ix = al_idx | split: "," -%}
+{%- comment -%} Tag im Jahr und Tage bis Silvester {%- endcomment -%}
+{%- assign jy = cw_jahr | minus: 1 -%}{%- assign jera = jy | divided_by: 400 -%}{%- assign jyoe = jera | times: -400 | plus: jy -%}
+{%- assign j1 = jyoe | times: 365 -%}{%- assign j2 = jyoe | divided_by: 4 -%}{%- assign j3 = jyoe | divided_by: 100 -%}
+{%- assign jan1 = jera | times: 146097 | plus: j1 | plus: j2 | minus: j3 | plus: 306 | minus: 719468 -%}
+{%- assign al_doy = cw_tag0 | minus: jan1 | plus: 1 -%}
+{%- assign r4 = cw_jahr | modulo: 4 -%}{%- assign r100 = cw_jahr | modulo: 100 -%}{%- assign r400 = cw_jahr | modulo: 400 -%}
+{%- assign al_len = 365 -%}{%- if r4 == 0 and r100 != 0 or r400 == 0 -%}{%- assign al_len = 366 -%}{%- endif -%}
+{%- assign al_rest = al_len | minus: al_doy -%}
+{%- comment -%} Geburts-/Todestag: runder Jahrestag (durch 50 teilbar) zuerst, sonst der erste mit Bild vor 1950 {%- endcomment -%}
+{%- assign al_geb = nil -%}{%- assign al_tod = nil -%}
+{%- for p in IDX_1.births -%}{%- assign d = cw_jahr | minus: p.year | modulo: 50 -%}{%- if d == 0 and p.year < 1990 -%}{%- assign al_geb = p -%}{%- break -%}{%- endif -%}{%- endfor -%}
+{%- if al_geb == nil -%}{%- for p in IDX_1.births -%}{%- if p.year < 1950 and p.pages[0].thumbnail -%}{%- assign al_geb = p -%}{%- break -%}{%- endif -%}{%- endfor -%}{%- endif -%}
+{%- for p in IDX_2.deaths -%}{%- assign d = cw_jahr | minus: p.year | modulo: 50 -%}{%- if d == 0 and p.year < 1990 -%}{%- assign al_tod = p -%}{%- break -%}{%- endif -%}{%- endfor -%}
+{%- if al_tod == nil -%}{%- for p in IDX_2.deaths -%}{%- if p.year < 1990 and p.pages[0].thumbnail -%}{%- assign al_tod = p -%}{%- break -%}{%- endif -%}{%- endfor -%}{%- endif -%}

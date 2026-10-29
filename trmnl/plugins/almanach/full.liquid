@@ -1,0 +1,46 @@
+<div class="view view--full">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=block">
+<style>
+  .al { font-family: "EB Garamond", Georgia, serif; }
+  .al .sc { font-family: "IM Fell English SC", "IM Fell English", Georgia, serif; }
+  .al .links { position: absolute; left: 0; top: 0; bottom: 24px; width: 220px; border-right: 3px double #000; padding-right: 16px; display: flex; flex-direction: column; }
+  .al .kl { font-size: 14px; letter-spacing: .18em; border-bottom: 1px solid #000; padding-bottom: 4px; }
+  .al .tag { font-family: "IM Fell English", serif; font-size: 150px; line-height: .95; margin-top: 6px; }
+  .al .mon { font-size: 30px; letter-spacing: .14em; }
+  .al .wt { font-style: italic; font-size: 20px; }
+  .al .rest { font-size: 15px; margin: 10px 0; line-height: 1.3; font-variant-numeric: lining-nums; }
+  .al .geb { font-size: 14px; line-height: 1.22; border-top: 1px solid #000; padding-top: 4px; margin-top: 6px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .al .geb .sc { display: block; font-size: 12px; letter-spacing: .14em; }
+  .al .zeit { position: absolute; left: 240px; right: 0; top: 0; bottom: 24px; display: flex; flex-direction: column; }
+  .al .ev { display: flex; gap: 14px; align-items: baseline; border-top: 1px solid #000; padding-top: 5px; flex: 1 1 0; min-height: 0; overflow: hidden; }
+  .al .ev:first-child { border-top: 0; }
+  .al .j { width: 78px; flex-shrink: 0; display: flex; flex-direction: column; }
+  .al .j b { font-family: "IM Fell English", serif; font-weight: 400; font-size: 30px; line-height: 1; }
+  .al .j span { font-size: 12px; font-style: italic; font-family: "Liberation Serif", "Times New Roman", serif; }
+  .al .t { font-size: 18px; line-height: 1.22; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .al .fuss { position: absolute; left: 0; right: 0; bottom: 0; font-family: "IM Fell English", serif; font-size: 12px; font-style: italic; text-align: right; border-top: 1px solid #000; padding-top: 3px; }
+  .al .leer { font-size: 20px; font-style: italic; padding-top: 40px; }
+</style>
+<div class="cw al">
+  <div class="links">
+    <div class="sc kl">Heute vor … Jahren</div>
+    <div class="tag">{{ cw_tag }}</div>
+    <div class="mon sc">{{ cw_monate[mi] }}</div>
+    <div class="wt">{{ cw_wochentage[cw_wt] }}</div>
+    <div class="rest">{{ al_doy }}. Tag des Jahres<br>{% if al_rest == 0 %}heute ist Silvester{% elsif al_rest == 1 %}morgen ist Silvester{% else %}noch {{ al_rest }} Tage bis Silvester{% endif %}</div>
+    {%- if al_geb -%}<div class="geb"><span class="sc">Geboren</span>{{ al_geb.year }} {{ al_geb.text }}</div>{%- endif -%}
+    {%- if al_tod -%}<div class="geb"><span class="sc">Gestorben</span>{{ al_tod.year }} {{ al_tod.text }}</div>{%- endif -%}
+  </div>
+  <div class="zeit">
+    {%- if al_n == 0 -%}<div class="leer">Wikipedia ist gerade nicht erreichbar.</div>
+    {%- else -%}
+      {%- assign zuletzt = -1 -%}
+      {%- for s in al_ix -%}{%- if s == "" -%}{%- continue -%}{%- endif -%}{%- assign i = s | plus: 0 -%}{%- if i == zuletzt -%}{%- continue -%}{%- endif -%}{%- assign zuletzt = i -%}
+        {%- assign e = al_ev[i] -%}{%- assign vor = cw_jahr | minus: e.year -%}
+        <div class="ev"><div class="j"><b>{{ e.year }}</b><span>vor {{ vor }} Jahr{% if vor != 1 %}en{% endif %}</span></div><div class="t">{{ e.text }}</div></div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+  <div class="fuss">Quelle: Wikipedia, „Was geschah am {{ cw_tag }}. {{ cw_monate[mi] }}“</div>
+</div>
+</div>

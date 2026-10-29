@@ -1,0 +1,28 @@
+{
+  "merian": {
+    "titel": "Merian",
+    "kategorien": ["Topographia Germaniae", "Topographia Galliae", "Topographia Italiae",
+                   "Topographia Helvetiae, Rhaetiae et Valesiae", "Matthäus Merian der Ältere"],
+    "tiefe": 3,
+    "mindestbreite": 1200,
+    "bildflaeche": [752, 404]
+  },
+  "voegel": {
+    "titel": "Vögel",
+    "kategorien": ["Brehms Het Leven der Dieren", "Brehms Tierleben", "Brehms Het Leven der Dieren Vogels",
+                   "Naturgeschichte der Vögel Mitteleuropas", "Johann Friedrich Naumann", "Bird illustrations by Gustav Mützel",
+                   "A History of British Birds (Bewick)"],
+    "tiefe": 3,
+    "mindestbreite": 700,
+    "bildflaeche": [430, 440]
+  },
+  "karten": {
+    "titel": "Karten",
+    "kategorien": ["Theatrum Orbis Terrarum", "Atlas Maior", "Maps by Joan Blaeu", "Maps by Willem Blaeu",
+                   "Maps by Gerardus Mercator", "Maps by Abraham Ortelius", "Maps by Johann Baptist Homann",
+                   "Civitates orbis terrarum"],
+    "tiefe": 2,
+    "mindestbreite": 1500,
+    "bildflaeche": [752, 350]
+  }
+}
