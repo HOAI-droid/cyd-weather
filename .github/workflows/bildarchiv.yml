@@ -5,7 +5,8 @@ name: Bildarchive holen
 on:
   push:
     paths:
-      - "trmnl/kunst/bildarchiv/**"
+      - "trmnl/kunst/bildarchiv/sammlungen.json"
+      - "trmnl/kunst/bildarchiv/entdecken.py"
       - ".github/workflows/bildarchiv.yml"
   workflow_dispatch:
     inputs:

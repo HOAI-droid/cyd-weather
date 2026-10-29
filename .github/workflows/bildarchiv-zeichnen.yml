@@ -1,0 +1,68 @@
+# Bildarchive, Schritt 2: Die Auswahl (trmnl/kunst/bildarchiv/auswahl/, von auswaehlen.py) laden,
+# für das Graustufen-Display umrechnen und mit der Liste <sammlung>.json ins Release legen.
+# Bei den Vögeln holt texte.py vorher deutschen Namen, Familie und Kurztext (Wikidata, Wikipedia).
+name: Bildarchive zeichnen
+
+on:
+  push:
+    paths:
+      - "trmnl/kunst/bildarchiv/auswahl/**"
+      - "trmnl/kunst/bildarchiv/zeichnen.py"
+      - "trmnl/kunst/bildarchiv/texte.py"
+      - ".github/workflows/bildarchiv-zeichnen.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bildarchiv-zeichnen-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  zeichnen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        sammlung: [merian, voegel, karten]
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+
+      - name: Release-Name bestimmen
+        id: tag
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          if [ "$BRANCH" = "$DEFAULT_BRANCH" ]; then TAG=trmnl; else TAG="trmnl-$(echo "$BRANCH" | sed 's#^claude/##; s#[^A-Za-z0-9._-]#-#g')"; fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Auswahl vorbereiten
+        run: |
+          mkdir -p auswahl bilder
+          if [ "${{ matrix.sammlung }}" = voegel ]; then
+            python3 trmnl/kunst/bildarchiv/texte.py --ein trmnl/kunst/bildarchiv/auswahl/auswahl-voegel.json \
+              --aus auswahl/auswahl-voegel.json --anzahl 120
+          else
+            cp trmnl/kunst/bildarchiv/auswahl/auswahl-${{ matrix.sammlung }}.json auswahl/
+          fi
+
+      - name: Bilder laden und umrechnen
+        run: |
+          python3 trmnl/kunst/bildarchiv/zeichnen.py --sammlungen trmnl/kunst/bildarchiv/sammlungen.json \
+            --auswahl auswahl --ziel bilder --nur ${{ matrix.sammlung }} --minuten 45 \
+            --basis-url "https://github.com/${GITHUB_REPOSITORY}/releases/download/${{ steps.tag.outputs.tag }}/"
+
+      - name: Ins Release legen
+        run: |
+          ls bilder | head
+          gh release upload "${{ steps.tag.outputs.tag }}" bilder/${{ matrix.sammlung }}-*.png --clobber
+          gh release upload "${{ steps.tag.outputs.tag }}" bilder/${{ matrix.sammlung }}.json --clobber

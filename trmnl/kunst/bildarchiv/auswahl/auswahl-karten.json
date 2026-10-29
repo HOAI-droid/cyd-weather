@@ -1,0 +1,962 @@
+[
+ {
+  "titel": "Abrahami Patriarchae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Map_and_images_of_the_peregrination_of_Abraham_the_Patriarch_by_Abraham_Ortelius.jpeg/1920px-Map_and_images_of_the_peregrination_of_Abraham_the_Patriarch_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_and_images_of_the_peregrination_of_Abraham_the_Patriarch_by_Abraham_Ortelius.jpeg",
+  "tag": 1
+ },
+ {
+  "titel": "Caletensium et Bononiensium",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Maps_of_Calais_and_Boulogne_and_of_Vermandois_by_Abraham_Ortelius.jpeg/1920px-Maps_of_Calais_and_Boulogne_and_of_Vermandois_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Calais_and_Boulogne_and_of_Vermandois_by_Abraham_Ortelius.jpeg",
+  "tag": 2
+ },
+ {
+  "titel": "Cuba et Hispaniolae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Maps_of_Culiac%C3%A1n_and_of_Hispaniola_and_Cuba_by_Abraham_Ortelius.jpeg/1920px-Maps_of_Culiac%C3%A1n_and_of_Hispaniola_and_Cuba_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Culiac%C3%A1n_and_of_Hispaniola_and_Cuba_by_Abraham_Ortelius.jpeg",
+  "tag": 3
+ },
+ {
+  "titel": "Nova Et Accvrata Comitatvs Et Ditionis Alostanæ Tabvla",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Nova_Et_Accvrata_Comitatvs_Et_Ditionis_Alostan%C3%A6%E2%80%A6_Tabvla_-_Atlas_Maior%2C_vol_4%2C_map_24_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2824%29.jpg/1920px-Nova_Et_Accvrata_Comitatvs_Et_Ditionis_Alostan%C3%A6%E2%80%A6_Tabvla_-_Atlas_Maior%2C_vol_4%2C_map_24_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2824%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Nova_Et_Accvrata_Comitatvs_Et_Ditionis_Alostan%C3%A6%E2%80%A6_Tabvla_-_Atlas_Maior,_vol_4,_map_24_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(24).jpg",
+  "tag": 4
+ },
+ {
+  "titel": "Brabantiae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Map_of_Brabant_by_Abraham_Ortelius.jpeg/1920px-Map_of_Brabant_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Brabant_by_Abraham_Ortelius.jpeg",
+  "tag": 5
+ },
+ {
+  "titel": "Paraqvaria Vulgo Paragvay",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 12 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Paraqvaria_Vulgo_Paragvay_-_Atlas_Maior%2C_vol_12%2C_map_15_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.12.%2815%29.jpg/1920px-Paraqvaria_Vulgo_Paragvay_-_Atlas_Maior%2C_vol_12%2C_map_15_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.12.%2815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Paraqvaria_Vulgo_Paragvay_-_Atlas_Maior,_vol_12,_map_15_-_Joan_Blaeu,_1667_-_BL_114.h(star).12.(15).jpg",
+  "tag": 6
+ },
+ {
+  "titel": "Hertfordia Comitatvs",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Hertfordia_Comitatvs_-_Atlas_Maior%2C_vol_5%2C_map_18_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2818%29.jpg/1920px-Hertfordia_Comitatvs_-_Atlas_Maior%2C_vol_5%2C_map_18_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2818%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Hertfordia_Comitatvs_-_Atlas_Maior,_vol_5,_map_18_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(18).jpg",
+  "tag": 7
+ },
+ {
+  "titel": "Bughaviae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Maps_of_Buchonia_and_of_the_County_of_Waldeck_by_Abraham_Ortelius.jpeg/1920px-Maps_of_Buchonia_and_of_the_County_of_Waldeck_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Buchonia_and_of_the_County_of_Waldeck_by_Abraham_Ortelius.jpeg",
+  "tag": 8
+ },
+ {
+  "titel": "Zeelandia Comitatus",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Zeelandia_Comitatus_-_Atlas_Maior%2C_vol_4%2C_map_53_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2853%29.jpg/1920px-Zeelandia_Comitatus_-_Atlas_Maior%2C_vol_4%2C_map_53_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2853%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Zeelandia_Comitatus_-_Atlas_Maior,_vol_4,_map_53_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(53).jpg",
+  "tag": 9
+ },
+ {
+  "titel": "Apuliae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Maps_of_Apulia_and_of_Calabria_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Apulia_and_of_Calabria_by_Abraham_Ortelius.jpeg",
+  "tag": 10
+ },
+ {
+  "titel": "Territorio Di Vicenza",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Territorio_Di_Vicenza_-_Atlas_Maior%2C_vol_9%2C_map_23_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2823%29.jpg/1920px-Territorio_Di_Vicenza_-_Atlas_Maior%2C_vol_9%2C_map_23_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Territorio_Di_Vicenza_-_Atlas_Maior,_vol_9,_map_23_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(23).jpg",
+  "tag": 11
+ },
+ {
+  "titel": "Petrocorivm Comitatvs",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 8 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Petrocorivm_Comitatvs_-_Atlas_Maior%2C_vol_8%2C_map_3_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.8.%283%29.jpg/1920px-Petrocorivm_Comitatvs_-_Atlas_Maior%2C_vol_8%2C_map_3_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.8.%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Petrocorivm_Comitatvs_-_Atlas_Maior,_vol_8,_map_3_-_Joan_Blaeu,_1667_-_BL_114.h(star).8.(3).jpg",
+  "tag": 12
+ },
+ {
+  "titel": "Acores Insulae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Map_of_the_Azore_Islands_by_Abraham_Ortelius.jpeg/1920px-Map_of_the_Azore_Islands_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_Azore_Islands_by_Abraham_Ortelius.jpeg",
+  "tag": 13
+ },
+ {
+  "titel": "Insvlæ Tremitanæ",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Insvl%C3%A6_Tremitan%C3%A6_-_Atlas_Maior%2C_vol_9%2C_map_52_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2852%29.jpg/1920px-Insvl%C3%A6_Tremitan%C3%A6_-_Atlas_Maior%2C_vol_9%2C_map_52_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2852%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Insvl%C3%A6_Tremitan%C3%A6_-_Atlas_Maior,_vol_9,_map_52_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(52).jpg",
+  "tag": 14
+ },
+ {
+  "titel": "Nova & Accvratissima Dvcatvs Holsatiæ Tabvla",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Nova_%26_Accvratissima_Dvcatvs_Holsati%C3%A6_Tabvla_-_Atlas_Maior%2C_vol_3%2C_map_42_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2842%29.jpg/1920px-Nova_%26_Accvratissima_Dvcatvs_Holsati%C3%A6_Tabvla_-_Atlas_Maior%2C_vol_3%2C_map_42_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2842%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Nova_%26_Accvratissima_Dvcatvs_Holsati%C3%A6_Tabvla_-_Atlas_Maior,_vol_3,_map_42_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(42).jpg",
+  "tag": 15
+ },
+ {
+  "titel": "Herefordia Comitatvs",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Herefordia_Comitatvs_-_Atlas_Maior%2C_vol_5%2C_map_37_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2837%29.jpg/1920px-Herefordia_Comitatvs_-_Atlas_Maior%2C_vol_5%2C_map_37_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2837%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Herefordia_Comitatvs_-_Atlas_Maior,_vol_5,_map_37_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(37).jpg",
+  "tag": 16
+ },
+ {
+  "titel": "Dvcatvs Silesiæ Schwidnicensis",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Dvcatvs_Silesi%C3%A6_Schwidnicensis_-_Atlas_Maior%2C_vol_3%2C_map_14_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2814%29.jpg/1920px-Dvcatvs_Silesi%C3%A6_Schwidnicensis_-_Atlas_Maior%2C_vol_3%2C_map_14_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2814%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Dvcatvs_Silesi%C3%A6_Schwidnicensis_-_Atlas_Maior,_vol_3,_map_14_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(14).jpg",
+  "tag": 17
+ },
+ {
+  "titel": "Rvtlandia Comitatus",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Rvtlandia_Comitatus_-_Atlas_Maior%2C_vol_5%2C_map_28_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2828%29.jpg/1920px-Rvtlandia_Comitatus_-_Atlas_Maior%2C_vol_5%2C_map_28_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Rvtlandia_Comitatus_-_Atlas_Maior,_vol_5,_map_28_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(28).jpg",
+  "tag": 18
+ },
+ {
+  "titel": "Dvcatus Tvronensis",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 7 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Dvcatus_Tvronensis_-_Atlas_Maior%2C_vol_7%2C_map_30_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.7.%2830%29.jpg/1920px-Dvcatus_Tvronensis_-_Atlas_Maior%2C_vol_7%2C_map_30_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.7.%2830%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Dvcatus_Tvronensis_-_Atlas_Maior,_vol_7,_map_30_-_Joan_Blaeu,_1667_-_BL_114.h(star).7.(30).jpg",
+  "tag": 19
+ },
+ {
+  "titel": "Africa",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1572",
+  "jahr": 1572,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_Africa%2C_1572.jpg/1920px-Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_Africa%2C_1572.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Theatrum_Orbis_Terrarum,_by_Abraham_Ortelius,_Africa,_1572.jpg",
+  "tag": 20
+ },
+ {
+  "titel": "Anjou",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Map_of_Anjou_by_Abraham_Ortelius.jpeg/1920px-Map_of_Anjou_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Anjou_by_Abraham_Ortelius.jpeg",
+  "tag": 21
+ },
+ {
+  "titel": "Arçobispado de Çaragossa",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 10 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Ar%C3%A7obispado_de_%C3%87aragossa_-_Atlas_Maior%2C_vol_10%2C_map_11_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.10.%2811%29.jpg/1920px-Ar%C3%A7obispado_de_%C3%87aragossa_-_Atlas_Maior%2C_vol_10%2C_map_11_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.10.%2811%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Ar%C3%A7obispado_de_%C3%87aragossa_-_Atlas_Maior,_vol_10,_map_11_-_Joan_Blaeu,_1667_-_BL_114.h(star).10.(11).jpg",
+  "tag": 22
+ },
+ {
+  "titel": "Moravia Marchionatvs",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Moravia_Marchionatvs_-_Atlas_Maior%2C_vol_3%2C_map_4_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%284%29.jpg/1920px-Moravia_Marchionatvs_-_Atlas_Maior%2C_vol_3%2C_map_4_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Moravia_Marchionatvs_-_Atlas_Maior,_vol_3,_map_4_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(4).jpg",
+  "tag": 23
+ },
+ {
+  "titel": "Barbariae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/9/92/Map_of_Barbary_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Barbary_by_Abraham_Ortelius.jpeg",
+  "tag": 24
+ },
+ {
+  "titel": "Coloniensis Archiepiscopatus",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Coloniensis_Archiepiscopatus_-_Atlas_Maior%2C_vol_3%2C_map_73_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2873%29.jpg/1920px-Coloniensis_Archiepiscopatus_-_Atlas_Maior%2C_vol_3%2C_map_73_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2873%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Coloniensis_Archiepiscopatus_-_Atlas_Maior,_vol_3,_map_73_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(73).jpg",
+  "tag": 25
+ },
+ {
+  "titel": "Iprensis Episcopatus",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Iprensis_Episcopatus_-_Atlas_Maior%2C_vol_4%2C_map_15_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2815%29.jpg/1920px-Iprensis_Episcopatus_-_Atlas_Maior%2C_vol_4%2C_map_15_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Iprensis_Episcopatus_-_Atlas_Maior,_vol_4,_map_15_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(15).jpg",
+  "tag": 26
+ },
+ {
+  "titel": "Erythraei Rubri Maris Periplvs",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Maps_of_the_peregrination_of_Ulysses_by_Abraham_Ortelius.jpeg/1920px-Maps_of_the_peregrination_of_Ulysses_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_the_peregrination_of_Ulysses_by_Abraham_Ortelius.jpeg",
+  "tag": 27
+ },
+ {
+  "titel": "Europam",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/7/73/Map_of_Europe_2_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Europe_2_by_Abraham_Ortelius.jpeg",
+  "tag": 28
+ },
+ {
+  "titel": "Ducatus Mediolanensis",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Map_of_the_Duchy_of_Milan_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_Duchy_of_Milan_by_Abraham_Ortelius.jpeg",
+  "tag": 29
+ },
+ {
+  "titel": "Angliae Regni Florentis",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Map_of_England_by_Abraham_Ortelius.jpeg/1920px-Map_of_England_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_England_by_Abraham_Ortelius.jpeg",
+  "tag": 30
+ },
+ {
+  "titel": "Tertia Pars Brabantiæ",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Tertia_Pars_Brabanti%C3%A6_-_Atlas_Maior%2C_vol_4%2C_map_5_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%285%29.jpg/1920px-Tertia_Pars_Brabanti%C3%A6_-_Atlas_Maior%2C_vol_4%2C_map_5_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Tertia_Pars_Brabanti%C3%A6_-_Atlas_Maior,_vol_4,_map_5_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(5).jpg",
+  "tag": 31
+ },
+ {
+  "titel": "Marchionatus Brandenburgici Pars, quæ Marcha Vetus",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Marchionatus_Brandenburgici_Pars%2C_qu%C3%A6_Marcha_Vetus%E2%80%A6_-_Atlas_Maior%2C_vol_3%2C_map_33_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2833%29.jpg/1920px-Marchionatus_Brandenburgici_Pars%2C_qu%C3%A6_Marcha_Vetus%E2%80%A6_-_Atlas_Maior%2C_vol_3%2C_map_33_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2833%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Marchionatus_Brandenburgici_Pars,_qu%C3%A6_Marcha_Vetus%E2%80%A6_-_Atlas_Maior,_vol_3,_map_33_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(33).jpg",
+  "tag": 32
+ },
+ {
+  "titel": "Waldeck Comitatvs",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Waldeck_Comitatvs_-_Atlas_Maior%2C_vol_3%2C_map_82_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2882%29.jpg/1920px-Waldeck_Comitatvs_-_Atlas_Maior%2C_vol_3%2C_map_82_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2882%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Waldeck_Comitatvs_-_Atlas_Maior,_vol_3,_map_82_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(82).jpg",
+  "tag": 33
+ },
+ {
+  "titel": "Westphalia Ducatus",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Westphalia_Ducatus_-_Atlas_Maior%2C_vol_3%2C_map_63_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2863%29.jpg/1920px-Westphalia_Ducatus_-_Atlas_Maior%2C_vol_3%2C_map_63_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2863%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Westphalia_Ducatus_-_Atlas_Maior,_vol_3,_map_63_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(63).jpg",
+  "tag": 34
+ },
+ {
+  "titel": "Gvinea",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 10 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Gvinea_-_Atlas_Maior%2C_vol_10%2C_map_29_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.10.%2829%29.jpg/1920px-Gvinea_-_Atlas_Maior%2C_vol_10%2C_map_29_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.10.%2829%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Gvinea_-_Atlas_Maior,_vol_10,_map_29_-_Joan_Blaeu,_1667_-_BL_114.h(star).10.(29).jpg",
+  "tag": 35
+ },
+ {
+  "titel": "Gallia Vetus",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 7 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Gallia_Vetus_-_Atlas_Maior%2C_vol_7%2C_map_1_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.7.%281%29.jpg/1920px-Gallia_Vetus_-_Atlas_Maior%2C_vol_7%2C_map_1_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.7.%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Gallia_Vetus_-_Atlas_Maior,_vol_7,_map_1_-_Joan_Blaeu,_1667_-_BL_114.h(star).7.(1).jpg",
+  "tag": 36
+ },
+ {
+  "titel": "Britannicarum Insularum Typus",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Map_of_the_British_Isles_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_British_Isles_by_Abraham_Ortelius.jpeg",
+  "tag": 37
+ },
+ {
+  "titel": "Moravia Scotiæ Provincia",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Moravia_Scoti%C3%A6_Provincia_-_Atlas_Maior%2C_vol_6%2C_map_38_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%2838%29.jpg/1920px-Moravia_Scoti%C3%A6_Provincia_-_Atlas_Maior%2C_vol_6%2C_map_38_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%2838%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Moravia_Scoti%C3%A6_Provincia_-_Atlas_Maior,_vol_6,_map_38_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(38).jpg",
+  "tag": 38
+ },
+ {
+  "titel": "Vtrivsque Castiliæ nova descriptio",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 10 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Vtrivsque_Castili%C3%A6_nova_descriptio_-_Atlas_Maior%2C_vol_10%2C_map_2_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.10.%282%29.jpg/1920px-Vtrivsque_Castili%C3%A6_nova_descriptio_-_Atlas_Maior%2C_vol_10%2C_map_2_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.10.%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Vtrivsque_Castili%C3%A6_nova_descriptio_-_Atlas_Maior,_vol_10,_map_2_-_Joan_Blaeu,_1667_-_BL_114.h(star).10.(2).jpg",
+  "tag": 39
+ },
+ {
+  "titel": "Dioecesis Ebroicensis",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 7 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Dioecesis_Ebroicensis%E2%80%A6_-_Atlas_Maior%2C_vol_7%2C_map_21_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.7.%2821%29.jpg/1920px-Dioecesis_Ebroicensis%E2%80%A6_-_Atlas_Maior%2C_vol_7%2C_map_21_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.7.%2821%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Dioecesis_Ebroicensis%E2%80%A6_-_Atlas_Maior,_vol_7,_map_21_-_Joan_Blaeu,_1667_-_BL_114.h(star).7.(21).jpg",
+  "tag": 40
+ },
+ {
+  "titel": "Asia",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1572",
+  "jahr": 1572,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_Asia%2C_1572.jpg/1920px-Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_Asia%2C_1572.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Theatrum_Orbis_Terrarum,_by_Abraham_Ortelius,_Asia,_1572.jpg",
+  "tag": 41
+ },
+ {
+  "titel": "Angliae et Hiberniae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Map_of_England_and_Ireland%2C_and_the_Progeny_of_the_kings_of_England_by_Abraham_Ortelius.jpeg/1920px-Map_of_England_and_Ireland%2C_and_the_Progeny_of_the_kings_of_England_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_England_and_Ireland,_and_the_Progeny_of_the_kings_of_England_by_Abraham_Ortelius.jpeg",
+  "tag": 42
+ },
+ {
+  "titel": "Daciarum, Moesiarum",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/6/69/Map_of_Dacia_and_Moesia_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Dacia_and_Moesia_by_Abraham_Ortelius.jpeg",
+  "tag": 43
+ },
+ {
+  "titel": "Florentini",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Map_of_Florence_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Florence_by_Abraham_Ortelius.jpeg",
+  "tag": 44
+ },
+ {
+  "titel": "Qvarta Pars Brabantiæ",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Qvarta_Pars_Brabanti%C3%A6%E2%80%A6_-_Atlas_Maior%2C_vol_4%2C_map_62_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2862%29.jpg/1920px-Qvarta_Pars_Brabanti%C3%A6%E2%80%A6_-_Atlas_Maior%2C_vol_4%2C_map_62_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2862%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Qvarta_Pars_Brabanti%C3%A6%E2%80%A6_-_Atlas_Maior,_vol_4,_map_62_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(62).jpg",
+  "tag": 45
+ },
+ {
+  "titel": "Caricta Borealis",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Caricta_Borealis_-_Atlas_Maior%2C_vol_6%2C_map_18_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%2818%29.jpg/1920px-Caricta_Borealis_-_Atlas_Maior%2C_vol_6%2C_map_18_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%2818%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Caricta_Borealis_-_Atlas_Maior,_vol_6,_map_18_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(18).jpg",
+  "tag": 46
+ },
+ {
+  "titel": "Les environs de L'Estang De Longpendv",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 8 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Les_environs_de_L%27Estang_De_Longpendv_-_Atlas_Maior%2C_vol_8%2C_map_22_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.8.%2822%29.jpg/1920px-Les_environs_de_L%27Estang_De_Longpendv_-_Atlas_Maior%2C_vol_8%2C_map_22_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.8.%2822%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Les_environs_de_L%27Estang_De_Longpendv_-_Atlas_Maior,_vol_8,_map_22_-_Joan_Blaeu,_1667_-_BL_114.h(star).8.(22).jpg",
+  "tag": 47
+ },
+ {
+  "titel": "Frisiae Occidentalis",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Map_of_West_Friesland_and_inset_map_of_ancient_Frisia_as_it_was_in_the_time_of_Emperor_Augustus_by_Abraham_Ortelius.jpeg/1920px-Map_of_West_Friesland_and_inset_map_of_ancient_Frisia_as_it_was_in_the_time_of_Emperor_Augustus_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_West_Friesland_and_inset_map_of_ancient_Frisia_as_it_was_in_the_time_of_Emperor_Augustus_by_Abraham_Ortelius.jpeg",
+  "tag": 48
+ },
+ {
+  "titel": "Angliae, Scotiae, et Hiberniae, sive Britannica",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Map_of_England%2C_Scotland%2C_and_Ireland_by_Abraham_Ortelius.jpeg/1920px-Map_of_England%2C_Scotland%2C_and_Ireland_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_England,_Scotland,_and_Ireland_by_Abraham_Ortelius.jpeg",
+  "tag": 49
+ },
+ {
+  "titel": "Candia Insula",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/2/26/Maps_of_Crete%2C_of_Lesbos%2C_of_Cythera%2C_of_Karpathos%2C_of_Naxos%2C_of_Santorini%2C_of_Milos%2C_of_Lemnos%2C_of_Euboea%2C_of_Rhodes%2C_and_of_Chios_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Crete,_of_Lesbos,_of_Cythera,_of_Karpathos,_of_Naxos,_of_Santorini,_of_Milos,_of_Lemnos,_of_Euboea,_of_Rhodes,_and_of_Chios_by_Abraham_Ortelius.jpeg",
+  "tag": 50
+ },
+ {
+  "titel": "Fessae et Marocchi Regna Africae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/4/47/Map_of_the_kingdoms_of_Fes_and_Morocco_and_inset_map_of_the_Kingdom_of_Kongo_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_kingdoms_of_Fes_and_Morocco_and_inset_map_of_the_Kingdom_of_Kongo_by_Abraham_Ortelius.jpeg",
+  "tag": 51
+ },
+ {
+  "titel": "Nova Et Accvratissima Totius Terrarvm Orbis Tabvla",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Nova_Et_Accvratissima_Totius_Terrarvm_Orbis_Tabvla_-_Atlas_Maior%2C_vol_1%2C_map_1_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%281%29.jpg/1920px-Nova_Et_Accvratissima_Totius_Terrarvm_Orbis_Tabvla_-_Atlas_Maior%2C_vol_1%2C_map_1_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Nova_Et_Accvratissima_Totius_Terrarvm_Orbis_Tabvla_-_Atlas_Maior,_vol_1,_map_1_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(1).jpg",
+  "tag": 52
+ },
+ {
+  "titel": "Europe",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1572",
+  "jahr": 1572,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_Europe%2C_1572.jpg/1920px-Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_Europe%2C_1572.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Theatrum_Orbis_Terrarum,_by_Abraham_Ortelius,_Europe,_1572.jpg",
+  "tag": 53
+ },
+ {
+  "titel": "Flandriae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Map_of_Flanders_and_inset_map_of_part_of_Zeeland_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Flanders_and_inset_map_of_part_of_Zeeland_by_Abraham_Ortelius.jpeg",
+  "tag": 54
+ },
+ {
+  "titel": "Græcia",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 2 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Gr%C3%A6cia_-_Atlas_Maior%2C_vol_2%2C_map_34_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.2.%2834%29.jpg/1920px-Gr%C3%A6cia_-_Atlas_Maior%2C_vol_2%2C_map_34_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.2.%2834%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Gr%C3%A6cia_-_Atlas_Maior,_vol_2,_map_34_-_Joan_Blaeu,_1667_-_BL_114.h(star).2.(34).jpg",
+  "tag": 55
+ },
+ {
+  "titel": "Præfectura Renfroana",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Pr%C3%A6fectura_Renfroana_-_Atlas_Maior%2C_vol_6%2C_map_27_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%2827%29.jpg/1920px-Pr%C3%A6fectura_Renfroana_-_Atlas_Maior%2C_vol_6%2C_map_27_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%2827%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Pr%C3%A6fectura_Renfroana_-_Atlas_Maior,_vol_6,_map_27_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(27).jpg",
+  "tag": 56
+ },
+ {
+  "titel": "Stellæburgum sive Observatorivm Subterranevm",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Stell%C3%A6burgum_sive_Observatorivm_Subterranevm%E2%80%A6_-_Atlas_Maior%2C_vol_1%2C_map_29_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2829%29.jpg/1920px-Stell%C3%A6burgum_sive_Observatorivm_Subterranevm%E2%80%A6_-_Atlas_Maior%2C_vol_1%2C_map_29_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2829%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Stell%C3%A6burgum_sive_Observatorivm_Subterranevm%E2%80%A6_-_Atlas_Maior,_vol_1,_map_29_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(29).jpg",
+  "tag": 57
+ },
+ {
+  "titel": "Bavariae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Map_of_Bavaria_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Bavaria_by_Abraham_Ortelius.jpeg",
+  "tag": 58
+ },
+ {
+  "titel": "Carinthiae Ducatcus",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/7/79/Maps_of_the_Duchy_of_Carinthia_and_the_County_Palatine_of_Gorizia%2C_of_Istria%2C_and_of_Zadar_and_%C5%A0ibenik_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_the_Duchy_of_Carinthia_and_the_County_Palatine_of_Gorizia,_of_Istria,_and_of_Zadar_and_%C5%A0ibenik_by_Abraham_Ortelius.jpeg",
+  "tag": 59
+ },
+ {
+  "titel": "Helvetia cum finitimis regionibus confoederatis",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 8 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Helvetia_cum_finitimis_regionibus_confoederatis_-_Atlas_Maior%2C_vol_8%2C_map_31_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.8.%2831%29.jpg/1920px-Helvetia_cum_finitimis_regionibus_confoederatis_-_Atlas_Maior%2C_vol_8%2C_map_31_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.8.%2831%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Helvetia_cum_finitimis_regionibus_confoederatis_-_Atlas_Maior,_vol_8,_map_31_-_Joan_Blaeu,_1667_-_BL_114.h(star).8.(31).jpg",
+  "tag": 60
+ },
+ {
+  "titel": "Dvcatvs Eboracensis",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Dvcatvs_Eboracensis_-_Atlas_Maior%2C_vol_5%2C_map_47_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2847%29.jpg/1920px-Dvcatvs_Eboracensis_-_Atlas_Maior%2C_vol_5%2C_map_47_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2847%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Dvcatvs_Eboracensis_-_Atlas_Maior,_vol_5,_map_47_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(47).jpg",
+  "tag": 61
+ },
+ {
+  "titel": "Cyprvs Insvla",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 11 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Cyprvs_Insvla_-_Atlas_Maior%2C_vol_11%2C_map_4_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.11.%284%29.jpg/1920px-Cyprvs_Insvla_-_Atlas_Maior%2C_vol_11%2C_map_4_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.11.%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Cyprvs_Insvla_-_Atlas_Maior,_vol_11,_map_4_-_Joan_Blaeu,_1667_-_BL_114.h(star).11.(4).jpg",
+  "tag": 62
+ },
+ {
+  "titel": "Signoria di Vercelli",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Signoria_di_Vercelli_-_Atlas_Maior%2C_vol_9%2C_map_5_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%285%29.jpg/1920px-Signoria_di_Vercelli_-_Atlas_Maior%2C_vol_9%2C_map_5_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Signoria_di_Vercelli_-_Atlas_Maior,_vol_9,_map_5_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(5).jpg",
+  "tag": 63
+ },
+ {
+  "titel": "Fori Iulii",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Map_of_Forum_Julii_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Forum_Julii_by_Abraham_Ortelius.jpeg",
+  "tag": 64
+ },
+ {
+  "titel": "Ingria",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 2 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Ingria_-_Atlas_Maior%2C_vol_2%2C_map_9_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.2.%289%29.jpg/1920px-Ingria_-_Atlas_Maior%2C_vol_2%2C_map_9_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.2.%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Ingria_-_Atlas_Maior,_vol_2,_map_9_-_Joan_Blaeu,_1667_-_BL_114.h(star).2.(9).jpg",
+  "tag": 65
+ },
+ {
+  "titel": "Cypri Insulae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Map_of_Cyprus_and_inset_map_of_Lemnos_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Cyprus_and_inset_map_of_Lemnos_by_Abraham_Ortelius.jpeg",
+  "tag": 66
+ },
+ {
+  "titel": "Blaisois",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Maps_of_the_Blois_region_and_of_Limousin_by_Abraham_Ortelius.jpeg/1920px-Maps_of_the_Blois_region_and_of_Limousin_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_the_Blois_region_and_of_Limousin_by_Abraham_Ortelius.jpeg",
+  "tag": 67
+ },
+ {
+  "titel": "Asiae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Map_of_Asia_by_Abraham_Ortelius.jpeg/1920px-Map_of_Asia_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Asia_by_Abraham_Ortelius.jpeg",
+  "tag": 68
+ },
+ {
+  "titel": "Valesivm Dvcatvs Valois",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 7 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Valesivm_Dvcatvs_Valois_-_Atlas_Maior%2C_vol_7%2C_map_10_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.7.%2810%29.jpg/1920px-Valesivm_Dvcatvs_Valois_-_Atlas_Maior%2C_vol_7%2C_map_10_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.7.%2810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Valesivm_Dvcatvs_Valois_-_Atlas_Maior,_vol_7,_map_10_-_Joan_Blaeu,_1667_-_BL_114.h(star).7.(10).jpg",
+  "tag": 69
+ },
+ {
+  "titel": "Dithmarsiæ Pars Septentrionalis",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Dithmarsi%C3%A6_Pars_Septentrionalis_-_Atlas_Maior%2C_vol_3%2C_map_54_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2854%29.jpg/1920px-Dithmarsi%C3%A6_Pars_Septentrionalis_-_Atlas_Maior%2C_vol_3%2C_map_54_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2854%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Dithmarsi%C3%A6_Pars_Septentrionalis_-_Atlas_Maior,_vol_3,_map_54_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(54).jpg",
+  "tag": 70
+ },
+ {
+  "titel": "Insvla Sacra",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Insvla_Sacra%E2%80%A6_-_Atlas_Maior%2C_vol_5%2C_map_57_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2857%29.jpg/1920px-Insvla_Sacra%E2%80%A6_-_Atlas_Maior%2C_vol_5%2C_map_57_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%2857%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Insvla_Sacra%E2%80%A6_-_Atlas_Maior,_vol_5,_map_57_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(57).jpg",
+  "tag": 71
+ },
+ {
+  "titel": "Brixani",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Map_of_the_liberties_of_Brest_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_liberties_of_Brest_by_Abraham_Ortelius.jpeg",
+  "tag": 72
+ },
+ {
+  "titel": "Nova Virginiæ Tabvla",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 12 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Nova_Virgini%C3%A6_Tabvla_-_Atlas_Maior%2C_vol_12%2C_map_4_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.12.%284%29.jpg/1920px-Nova_Virgini%C3%A6_Tabvla_-_Atlas_Maior%2C_vol_12%2C_map_4_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.12.%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Nova_Virgini%C3%A6_Tabvla_-_Atlas_Maior,_vol_12,_map_4_-_Joan_Blaeu,_1667_-_BL_114.h(star).12.(4).jpg",
+  "tag": 73
+ },
+ {
+  "titel": "Aeneae Troiani",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/3/39/Map_of_the_voyage_of_Aeneas_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_voyage_of_Aeneas_by_Abraham_Ortelius.jpeg",
+  "tag": 74
+ },
+ {
+  "titel": "Argonautica",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Maps_of_the_Argonautica_by_Abraham_Ortelius.jpeg/1920px-Maps_of_the_Argonautica_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_the_Argonautica_by_Abraham_Ortelius.jpeg",
+  "tag": 75
+ },
+ {
+  "titel": "Palatinatvs Posnaniensis Nova Delineatio",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 2 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Palatinatvs_Posnaniensis%E2%80%A6_Nova_Delineatio_-_Atlas_Maior%2C_vol_2%2C_map_20_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.2.%2820%29.jpg/1920px-Palatinatvs_Posnaniensis%E2%80%A6_Nova_Delineatio_-_Atlas_Maior%2C_vol_2%2C_map_20_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.2.%2820%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Palatinatvs_Posnaniensis%E2%80%A6_Nova_Delineatio_-_Atlas_Maior,_vol_2,_map_20_-_Joan_Blaeu,_1667_-_BL_114.h(star).2.(20).jpg",
+  "tag": 76
+ },
+ {
+  "titel": "Daphne",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Image_of_Daphne_by_Abraham_Ortelius.jpeg/1920px-Image_of_Daphne_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Image_of_Daphne_by_Abraham_Ortelius.jpeg",
+  "tag": 77
+ },
+ {
+  "titel": "Brandenburgensis",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Map_of_Brandenburg_by_Abraham_Ortelius.jpeg/1920px-Map_of_Brandenburg_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Brandenburg_by_Abraham_Ortelius.jpeg",
+  "tag": 78
+ },
+ {
+  "titel": "Bretteniae et Normandiae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Maps_of_Le_Maine_%28province_in_France%29_and_of_Brittany_and_Normandy_by_Abraham_Ortelius.jpeg/1920px-Maps_of_Le_Maine_%28province_in_France%29_and_of_Brittany_and_Normandy_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Le_Maine_(province_in_France)_and_of_Brittany_and_Normandy_by_Abraham_Ortelius.jpeg",
+  "tag": 79
+ },
+ {
+  "titel": "Aevi Veteris Typus Geographicus",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Map_of_ancient_geography_by_Abraham_Ortelius.jpeg/1920px-Map_of_ancient_geography_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_ancient_geography_by_Abraham_Ortelius.jpeg",
+  "tag": 80
+ },
+ {
+  "titel": "Belgii Veteris Typus",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Map_of_Gallia_Belgica_by_Abraham_Ortelius.jpeg/1920px-Map_of_Gallia_Belgica_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Gallia_Belgica_by_Abraham_Ortelius.jpeg",
+  "tag": 81
+ },
+ {
+  "titel": "Evropa recens descripta",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Evropa_recens_descripta_-_Atlas_Maior%2C_vol_1%2C_map_10_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2810%29.jpg/1920px-Evropa_recens_descripta_-_Atlas_Maior%2C_vol_1%2C_map_10_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Evropa_recens_descripta_-_Atlas_Maior,_vol_1,_map_10_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(10).jpg",
+  "tag": 82
+ },
+ {
+  "titel": "Creta",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Maps_of_Corsica%2C_of_the_islands_of_the_Ionian_Sea%2C_of_Sardinia%2C_and_of_Crete_by_Abraham_Ortelius.jpeg/1920px-Maps_of_Corsica%2C_of_the_islands_of_the_Ionian_Sea%2C_of_Sardinia%2C_and_of_Crete_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Corsica,_of_the_islands_of_the_Ionian_Sea,_of_Sardinia,_and_of_Crete_by_Abraham_Ortelius.jpeg",
+  "tag": 83
+ },
+ {
+  "titel": "Pars Avstralior Ivtiæ Septentrionalis",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Pars_Avstralior_Ivti%C3%A6_Septentrionalis_-_Atlas_Maior%2C_vol_1%2C_map_20_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2820%29.jpg/1920px-Pars_Avstralior_Ivti%C3%A6_Septentrionalis_-_Atlas_Maior%2C_vol_1%2C_map_20_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2820%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Pars_Avstralior_Ivti%C3%A6_Septentrionalis_-_Atlas_Maior,_vol_1,_map_20_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(20).jpg",
+  "tag": 84
+ },
+ {
+  "titel": "Daniae Regni Typus",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Maps_of_Denmark_and_of_the_Cimbrian_%28Jutland%29_Peninsula_by_Abraham_Ortelius.jpeg/1920px-Maps_of_Denmark_and_of_the_Cimbrian_%28Jutland%29_Peninsula_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Denmark_and_of_the_Cimbrian_(Jutland)_Peninsula_by_Abraham_Ortelius.jpeg",
+  "tag": 85
+ },
+ {
+  "titel": "Frisiae Orientalis",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Map_of_East_Friesland_and_inset_map_of_part_of_Reiderland_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_East_Friesland_and_inset_map_of_part_of_Reiderland_by_Abraham_Ortelius.jpeg",
+  "tag": 86
+ },
+ {
+  "titel": "Præfectvra Apenrade",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Pr%C3%A6fectvra_Apenrade_-_Atlas_Maior%2C_vol_1%2C_map_40_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2840%29.jpg/1920px-Pr%C3%A6fectvra_Apenrade_-_Atlas_Maior%2C_vol_1%2C_map_40_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2840%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Pr%C3%A6fectvra_Apenrade_-_Atlas_Maior,_vol_1,_map_40_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(40).jpg",
+  "tag": 87
+ },
+ {
+  "titel": "Fossa Sanctæ Mariæ",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Fossa_Sanct%C3%A6_Mari%C3%A6_-_Atlas_Maior%2C_vol_4%2C_map_34_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2834%29.jpg/1920px-Fossa_Sanct%C3%A6_Mari%C3%A6_-_Atlas_Maior%2C_vol_4%2C_map_34_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2834%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Fossa_Sanct%C3%A6_Mari%C3%A6_-_Atlas_Maior,_vol_4,_map_34_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(34).jpg",
+  "tag": 88
+ },
+ {
+  "titel": "Alexandri Magni",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Map_of_the_voyage_of_Alexander_the_Great_and_inset_image_of_the_Temple_of_Jupiter_Ammon_by_Abraham_Ortelius.jpeg/1920px-Map_of_the_voyage_of_Alexander_the_Great_and_inset_image_of_the_Temple_of_Jupiter_Ammon_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_voyage_of_Alexander_the_Great_and_inset_image_of_the_Temple_of_Jupiter_Ammon_by_Abraham_Ortelius.jpeg",
+  "tag": 89
+ },
+ {
+  "titel": "Ducato Di Ferrara",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Ducato_Di_Ferrara_-_Atlas_Maior%2C_vol_9%2C_map_33_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2833%29.jpg/1920px-Ducato_Di_Ferrara_-_Atlas_Maior%2C_vol_9%2C_map_33_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2833%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Ducato_Di_Ferrara_-_Atlas_Maior,_vol_9,_map_33_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(33).jpg",
+  "tag": 90
+ },
+ {
+  "titel": "Pecheli Sive Peking",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 11 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Pecheli_Sive_Peking_-_Atlas_Maior%2C_vol_11%2C_map_13_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.11.%2813%29.jpg/1920px-Pecheli_Sive_Peking_-_Atlas_Maior%2C_vol_11%2C_map_13_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.11.%2813%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Pecheli_Sive_Peking_-_Atlas_Maior,_vol_11,_map_13_-_Joan_Blaeu,_1667_-_BL_114.h(star).11.(13).jpg",
+  "tag": 91
+ },
+ {
+  "titel": "Agri Cremonensis",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Map_of_the_liberties_of_Cremona_and_inset_map_of_the_liberties_of_Crema_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_liberties_of_Cremona_and_inset_map_of_the_liberties_of_Crema_by_Abraham_Ortelius.jpeg",
+  "tag": 92
+ },
+ {
+  "titel": "Europae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Map_of_Europe_1_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Europe_1_by_Abraham_Ortelius.jpeg",
+  "tag": 93
+ },
+ {
+  "titel": "America",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1572",
+  "jahr": 1572,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_America%2C_1572.jpg/1920px-Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_America%2C_1572.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Theatrum_Orbis_Terrarum,_by_Abraham_Ortelius,_America,_1572.jpg",
+  "tag": 94
+ },
+ {
+  "titel": "Fimbriæ Vulgo Femeren Delineatio Geometrica",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 1 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Fimbri%C3%A6_Vulgo_Femeren_Delineatio_Geometrica_-_Atlas_Maior%2C_vol_1%2C_map_51_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2851%29.jpg/1920px-Fimbri%C3%A6_Vulgo_Femeren_Delineatio_Geometrica_-_Atlas_Maior%2C_vol_1%2C_map_51_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.1.%2851%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Fimbri%C3%A6_Vulgo_Femeren_Delineatio_Geometrica_-_Atlas_Maior,_vol_1,_map_51_-_Joan_Blaeu,_1667_-_BL_114.h(star).1.(51).jpg",
+  "tag": 95
+ },
+ {
+  "titel": "Zvydhollandia stricte sumta",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 4 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Zvydhollandia_stricte_sumta_-_Atlas_Maior%2C_vol_4%2C_map_43_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2843%29.jpg/1920px-Zvydhollandia_stricte_sumta_-_Atlas_Maior%2C_vol_4%2C_map_43_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.4.%2843%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Zvydhollandia_stricte_sumta_-_Atlas_Maior,_vol_4,_map_43_-_Joan_Blaeu,_1667_-_BL_114.h(star).4.(43).jpg",
+  "tag": 96
+ },
+ {
+  "titel": "Fokien",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 11 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Fokien_-_Atlas_Maior%2C_vol_11%2C_map_23_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.11.%2823%29.jpg/1920px-Fokien_-_Atlas_Maior%2C_vol_11%2C_map_23_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.11.%2823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Fokien_-_Atlas_Maior,_vol_11,_map_23_-_Joan_Blaeu,_1667_-_BL_114.h(star).11.(23).jpg",
+  "tag": 97
+ },
+ {
+  "titel": "Americae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Map_of_the_Americas_by_Abraham_Ortelius.jpeg/1920px-Map_of_the_Americas_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_Americas_by_Abraham_Ortelius.jpeg",
+  "tag": 98
+ },
+ {
+  "titel": "Eposcopatvs Albiensis",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 8 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Eposcopatvs_Albiensis_-_Atlas_Maior%2C_vol_8%2C_map_12_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.8.%2812%29.jpg/1920px-Eposcopatvs_Albiensis_-_Atlas_Maior%2C_vol_8%2C_map_12_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.8.%2812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Eposcopatvs_Albiensis_-_Atlas_Maior,_vol_8,_map_12_-_Joan_Blaeu,_1667_-_BL_114.h(star).8.(12).jpg",
+  "tag": 99
+ },
+ {
+  "titel": "Hantoniae sive Sovthantonensis Comitatvs",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 5 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hantoniae_sive_Sovthantonensis_Comitatvs_-_Atlas_Maior%2C_vol_5%2C_map_9_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%289%29.jpg/1920px-Hantoniae_sive_Sovthantonensis_Comitatvs_-_Atlas_Maior%2C_vol_5%2C_map_9_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.5.%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Hantoniae_sive_Sovthantonensis_Comitatvs_-_Atlas_Maior,_vol_5,_map_9_-_Joan_Blaeu,_1667_-_BL_114.h(star).5.(9).jpg",
+  "tag": 100
+ },
+ {
+  "titel": "Dominio Fiorentino",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Dominio_Fiorentino_-_Atlas_Maior%2C_vol_9%2C_map_43_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2843%29.jpg/1920px-Dominio_Fiorentino_-_Atlas_Maior%2C_vol_9%2C_map_43_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2843%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Dominio_Fiorentino_-_Atlas_Maior,_vol_9,_map_43_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(43).jpg",
+  "tag": 101
+ },
+ {
+  "titel": "Cambriae Typus",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Map_of_Wales_by_Abraham_Ortelius.jpeg/1920px-Map_of_Wales_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Wales_by_Abraham_Ortelius.jpeg",
+  "tag": 102
+ },
+ {
+  "titel": "Artrebatum Regionis",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Map_of_Artois_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Artois_by_Abraham_Ortelius.jpeg",
+  "tag": 103
+ },
+ {
+  "titel": "Africae Propriae Tabula",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Map_of_Roman_Africa_and_inset_map_of_Carthage_by_Abraham_Ortelius.jpeg/1920px-Map_of_Roman_Africa_and_inset_map_of_Carthage_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Roman_Africa_and_inset_map_of_Carthage_by_Abraham_Ortelius.jpeg",
+  "tag": 104
+ },
+ {
+  "titel": "Portvgallia et Algarbia",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 10 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Portvgallia_et_Algarbia%E2%80%A6_-_Atlas_Maior%2C_vol_10%2C_map_21_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.10.%2821%29.jpg/1920px-Portvgallia_et_Algarbia%E2%80%A6_-_Atlas_Maior%2C_vol_10%2C_map_21_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.10.%2821%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Portvgallia_et_Algarbia%E2%80%A6_-_Atlas_Maior,_vol_10,_map_21_-_Joan_Blaeu,_1667_-_BL_114.h(star).10.(21).jpg",
+  "tag": 105
+ },
+ {
+  "titel": "Descripción del Reyno de Galizia",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/4/46/Map_of_Galicia_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Galicia_by_Abraham_Ortelius.jpeg",
+  "tag": 106
+ },
+ {
+  "titel": "Territorii Novoforensis Accurata Descriptio",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Territorii_Novoforensis%E2%80%A6_Accurata_Descriptio_-_Atlas_Maior%2C_vol_3%2C_map_23_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2823%29.jpg/1920px-Territorii_Novoforensis%E2%80%A6_Accurata_Descriptio_-_Atlas_Maior%2C_vol_3%2C_map_23_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Territorii_Novoforensis%E2%80%A6_Accurata_Descriptio_-_Atlas_Maior,_vol_3,_map_23_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(23).jpg",
+  "tag": 107
+ },
+ {
+  "titel": "Alemannia Sive Svevia Svperior",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 3 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Alemannia_Sive_Svevia_Svperior_-_Atlas_Maior%2C_vol_3%2C_map_92_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2892%29.jpg/1920px-Alemannia_Sive_Svevia_Svperior_-_Atlas_Maior%2C_vol_3%2C_map_92_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.3.%2892%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Alemannia_Sive_Svevia_Svperior_-_Atlas_Maior,_vol_3,_map_92_-_Joan_Blaeu,_1667_-_BL_114.h(star).3.(92).jpg",
+  "tag": 108
+ },
+ {
+  "titel": "Skia vel Skiana",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Skia_vel_Skiana_-_Atlas_Maior%2C_vol_6%2C_map_47_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%2847%29.jpg/1920px-Skia_vel_Skiana_-_Atlas_Maior%2C_vol_6%2C_map_47_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%2847%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Skia_vel_Skiana_-_Atlas_Maior,_vol_6,_map_47_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(47).jpg",
+  "tag": 109
+ },
+ {
+  "titel": "Frisiorum",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Map_of_Friesland_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Friesland_by_Abraham_Ortelius.jpeg",
+  "tag": 110
+ },
+ {
+  "titel": "Africae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Map_of_Africa_by_Abraham_Ortelius.jpeg/1920px-Map_of_Africa_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Africa_by_Abraham_Ortelius.jpeg",
+  "tag": 111
+ },
+ {
+  "titel": "Burgundiae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Map_of_the_County_of_Burgundy_by_Abraham_Ortelius.jpeg/1920px-Map_of_the_County_of_Burgundy_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_the_County_of_Burgundy_by_Abraham_Ortelius.jpeg",
+  "tag": 112
+ },
+ {
+  "titel": "Territorio Di Cremona",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 9 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Territorio_Di_Cremona_-_Atlas_Maior%2C_vol_9%2C_map_14_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2814%29.jpg/1920px-Territorio_Di_Cremona_-_Atlas_Maior%2C_vol_9%2C_map_14_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.9.%2814%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Territorio_Di_Cremona_-_Atlas_Maior,_vol_9,_map_14_-_Joan_Blaeu,_1667_-_BL_114.h(star).9.(14).jpg",
+  "tag": 113
+ },
+ {
+  "titel": "Carpentiae, Guip",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Maps_of_Carpetania%2C_of_Gipuzkoa%2C_and_of_Cadiz_by_Abraham_Ortelius.jpeg/1920px-Maps_of_Carpetania%2C_of_Gipuzkoa%2C_and_of_Cadiz_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Carpetania,_of_Gipuzkoa,_and_of_Cadiz_by_Abraham_Ortelius.jpeg",
+  "tag": 114
+ },
+ {
+  "titel": "Franciae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Maps_of_Franconia_and_of_the_Bishopric_of_M%C3%BCnster_by_Abraham_Ortelius.jpeg/1920px-Maps_of_Franconia_and_of_the_Bishopric_of_M%C3%BCnster_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Franconia_and_of_the_Bishopric_of_M%C3%BCnster_by_Abraham_Ortelius.jpeg",
+  "tag": 115
+ },
+ {
+  "titel": "Aegyptus Antiqua",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Map_of_ancient_Egypt_and_inset_map_of_the_area_around_Alexandria_by_Abraham_Ortelius.jpeg/1920px-Map_of_ancient_Egypt_and_inset_map_of_the_area_around_Alexandria_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_ancient_Egypt_and_inset_map_of_the_area_around_Alexandria_by_Abraham_Ortelius.jpeg",
+  "tag": 116
+ },
+ {
+  "titel": "Lothian and Linlitqvo",
+  "zeile": "Joan Blaeu · Atlas Maior, Band 6 · 1667",
+  "jahr": 1667,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Lothian_and_Linlitqvo_-_Atlas_Maior%2C_vol_6%2C_map_8_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%288%29.jpg/1920px-Lothian_and_Linlitqvo_-_Atlas_Maior%2C_vol_6%2C_map_8_-_Joan_Blaeu%2C_1667_-_BL_114.h%28star%29.6.%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lothian_and_Linlitqvo_-_Atlas_Maior,_vol_6,_map_8_-_Joan_Blaeu,_1667_-_BL_114.h(star).6.(8).jpg",
+  "tag": 117
+ },
+ {
+  "titel": "Braunswickensis",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Maps_of_Braunschweig_and_L%C3%BCneberg_and_of_the_territory_of_Nuremberg_by_Abraham_Ortelius.jpeg/1920px-Maps_of_Braunschweig_and_L%C3%BCneberg_and_of_the_territory_of_Nuremberg_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maps_of_Braunschweig_and_L%C3%BCneberg_and_of_the_territory_of_Nuremberg_by_Abraham_Ortelius.jpeg",
+  "tag": 118
+ },
+ {
+  "titel": "Chinae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Map_of_China_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_China_by_Abraham_Ortelius.jpeg",
+  "tag": 119
+ },
+ {
+  "titel": "Austriae",
+  "zeile": "Abraham Ortelius · Theatrum Orbis Terrarum · 1608",
+  "jahr": 1608,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Map_of_Austria_by_Abraham_Ortelius.jpeg/1920px-Map_of_Austria_by_Abraham_Ortelius.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Map_of_Austria_by_Abraham_Ortelius.jpeg",
+  "tag": 120
+ }
+]

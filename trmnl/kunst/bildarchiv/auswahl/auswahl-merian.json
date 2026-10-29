@@ -1,0 +1,962 @@
+[
+ {
+  "titel": "Frankfurt am Main",
+  "zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/De_Merian_Hassiae_081.jpg/1920px-De_Merian_Hassiae_081.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Hassiae_081.jpg",
+  "tag": 1
+ },
+ {
+  "titel": "Kloppenburg",
+  "zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+  "jahr": 1647,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/2/29/Kloppenburg-1647-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Kloppenburg-1647-Merian.jpg",
+  "tag": 2
+ },
+ {
+  "titel": "Trier",
+  "zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1648",
+  "jahr": 1648,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Trier_1648_Merian%28045%29.jpg/1920px-Trier_1648_Merian%28045%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Trier_1648_Merian(045).jpg",
+  "tag": 3
+ },
+ {
+  "titel": "Erfurt",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Erfurt-1650-Merian.jpg/1920px-Erfurt-1650-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Erfurt-1650-Merian.jpg",
+  "tag": 4
+ },
+ {
+  "titel": "Stadt Tull",
+  "zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+  "jahr": 1645,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Stadt_Tull_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Stadt_Tull_(Merian).jpg",
+  "tag": 5
+ },
+ {
+  "titel": "Quedlinburg",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/6/67/Quedlinburg_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Quedlinburg_(Merian).jpg",
+  "tag": 6
+ },
+ {
+  "titel": "Lunel",
+  "zeile": "Merian & Zeiller · Topographia Galliae · 1657",
+  "jahr": 1657,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Lunel_1657_Zeiller_15228.jpg/1920px-Lunel_1657_Zeiller_15228.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lunel_1657_Zeiller_15228.jpg",
+  "tag": 7
+ },
+ {
+  "titel": "Breslau",
+  "zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+  "jahr": 1650,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/8/87/Wratislauia_Bre%C3%9Flaw_Breslau_17.Jh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Wratislauia_Bre%C3%9Flaw_Breslau_17.Jh.jpg",
+  "tag": 8
+ },
+ {
+  "titel": "Bonn",
+  "zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+  "jahr": 1646,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/5/54/BONN1646.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:BONN1646.jpg",
+  "tag": 9
+ },
+ {
+  "titel": "Lützen",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/9/92/L%C3%BCtzen_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:L%C3%BCtzen_(Merian).jpg",
+  "tag": 10
+ },
+ {
+  "titel": "Heidelberg",
+  "zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+  "jahr": 1645,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Palatinatus_Rheni_%28Merian%29_b_088_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Palatinatus_Rheni_(Merian)_b_088_1.jpg",
+  "tag": 11
+ },
+ {
+  "titel": "Havelberg",
+  "zeile": "Matthäus Merian · Topographia Electoratus Brandenburgici · 1652",
+  "jahr": 1652,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Havelberg-1652-Merian.jpg/1920px-Havelberg-1652-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Havelberg-1652-Merian.jpg",
+  "tag": 12
+ },
+ {
+  "titel": "Langenburg",
+  "zeile": "Matthäus Merian · Topographia Franconiae · 1648",
+  "jahr": 1648,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/De_Merian_Frankoniae_071.jpg/1920px-De_Merian_Frankoniae_071.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Frankoniae_071.jpg",
+  "tag": 13
+ },
+ {
+  "titel": "Leuk",
+  "zeile": "Matthäus Merian · Topographia Helvetiae · 1654",
+  "jahr": 1654,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Topographia_Helvetiae%2C_Rhaetiae_et_Valesiae_1654_%281127110%29.jpg/1920px-Topographia_Helvetiae%2C_Rhaetiae_et_Valesiae_1654_%281127110%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Helvetiae,_Rhaetiae_et_Valesiae_1654_(1127110).jpg",
+  "tag": 14
+ },
+ {
+  "titel": "Lindau",
+  "zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+  "jahr": 1643,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Lindaw_im_Bodensee_-_btv1b53238666w.jpg/1920px-Lindaw_im_Bodensee_-_btv1b53238666w.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lindaw_im_Bodensee_-_btv1b53238666w.jpg",
+  "tag": 15
+ },
+ {
+  "titel": "Peurbach",
+  "zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+  "jahr": 1649,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Peurbach_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Peurbach_(Merian).jpg",
+  "tag": 16
+ },
+ {
+  "titel": "Orléans",
+  "zeile": "Merian & Zeiller · Topographia Galliae · 1656",
+  "jahr": 1656,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Orl%C3%A9ans_J_Peeters_1656_Zeiller_15064.jpg/1920px-Orl%C3%A9ans_J_Peeters_1656_Zeiller_15064.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_J_Peeters_1656_Zeiller_15064.jpg",
+  "tag": 17
+ },
+ {
+  "titel": "Lübeck",
+  "zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1641",
+  "jahr": 1641,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Luebeck-1641-Merian.jpg/1920px-Luebeck-1641-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Luebeck-1641-Merian.jpg",
+  "tag": 18
+ },
+ {
+  "titel": "Grenoble",
+  "zeile": "Matthäus Merian · Topographia Germaniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Grenoble_Tassin_15808.jpg/1920px-Grenoble_Tassin_15808.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Grenoble_Tassin_15808.jpg",
+  "tag": 19
+ },
+ {
+  "titel": "Marburg",
+  "zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/De_Merian_Hassiae_151.jpg/1920px-De_Merian_Hassiae_151.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Hassiae_151.jpg",
+  "tag": 20
+ },
+ {
+  "titel": "Leütmaritz",
+  "zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Le%C3%BCtmaritz_%28Merian%29.jpg/1920px-Le%C3%BCtmaritz_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Le%C3%BCtmaritz_(Merian).jpg",
+  "tag": 21
+ },
+ {
+  "titel": "Heidenheim an der Brenz",
+  "zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+  "jahr": 1643,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Haydenheim.jpg/1920px-Haydenheim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Haydenheim.jpg",
+  "tag": 22
+ },
+ {
+  "titel": "Wittenberg",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/4/43/Wittenberg_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Wittenberg_(Merian).jpg",
+  "tag": 23
+ },
+ {
+  "titel": "Bremen",
+  "zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1641",
+  "jahr": 1641,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Bremen-1641-Merian.jpg/1920px-Bremen-1641-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Bremen-1641-Merian.jpg",
+  "tag": 24
+ },
+ {
+  "titel": "Gascogne",
+  "zeile": "Matthäus Merian · Topographia Germaniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Carte_Guienne_%26_Gascogne_15211.jpg/1920px-Carte_Guienne_%26_Gascogne_15211.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Carte_Guienne_%26_Gascogne_15211.jpg",
+  "tag": 25
+ },
+ {
+  "titel": "Leuenfohrt",
+  "zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+  "jahr": 1647,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Leuenfohrt_%28Merian%29.jpg/1920px-Leuenfohrt_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Leuenfohrt_(Merian).jpg",
+  "tag": 26
+ },
+ {
+  "titel": "Hildesheim",
+  "zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+  "jahr": 1653,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Saxoniae_Inferioris_%28Merian%29_b_019.jpg/1920px-Saxoniae_Inferioris_%28Merian%29_b_019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Saxoniae_Inferioris_(Merian)_b_019.jpg",
+  "tag": 27
+ },
+ {
+  "titel": "Heilbad Heiligenstadt",
+  "zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+  "jahr": 1646,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/3/32/Heilbad_Heiligenstadt_De_Merian_Hassiae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Heilbad_Heiligenstadt_De_Merian_Hassiae.jpg",
+  "tag": 28
+ },
+ {
+  "titel": "Freiburg im Breisgau",
+  "zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Topographia_Alsatiae_%28Merian%29_p_009.JPG/1920px-Topographia_Alsatiae_%28Merian%29_p_009.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_009.JPG",
+  "tag": 29
+ },
+ {
+  "titel": "Hannover",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Braunschweig_L%C3%BCneburg_%28Merian%29_149.jpg/1920px-Braunschweig_L%C3%BCneburg_%28Merian%29_149.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Braunschweig_L%C3%BCneburg_(Merian)_149.jpg",
+  "tag": 30
+ },
+ {
+  "titel": "Opole",
+  "zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Bohemiae_Moraviae_et_Silesiae_%28Merian%29_266.jpg/1920px-Bohemiae_Moraviae_et_Silesiae_%28Merian%29_266.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Bohemiae_Moraviae_et_Silesiae_(Merian)_266.jpg",
+  "tag": 31
+ },
+ {
+  "titel": "Pleyburg",
+  "zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+  "jahr": 1649,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Pleyburg_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Pleyburg_(Merian).jpg",
+  "tag": 32
+ },
+ {
+  "titel": "Lawenstein",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Lawenstein_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lawenstein_(Merian).jpg",
+  "tag": 33
+ },
+ {
+  "titel": "Riquewihr",
+  "zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Reichenweyer.jpg/1920px-Reichenweyer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Reichenweyer.jpg",
+  "tag": 34
+ },
+ {
+  "titel": "Maison Berny",
+  "zeile": "Merian & Zeiller · Topographia Galliae · 1657",
+  "jahr": 1657,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Maison_Berny_1657_Zeiller_5063.jpg/1920px-Maison_Berny_1657_Zeiller_5063.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Maison_Berny_1657_Zeiller_5063.jpg",
+  "tag": 35
+ },
+ {
+  "titel": "Kołobrzeg",
+  "zeile": "Matthäus Merian · Topographia Electoratus Brandenburgici · 1652",
+  "jahr": 1652,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Kolberg_1652_%28Merian%29.png/1920px-Kolberg_1652_%28Merian%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Kolberg_1652_(Merian).png",
+  "tag": 36
+ },
+ {
+  "titel": "Kaysersberg",
+  "zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Topographia_Alsatiae_%28Merian%29_p_012.JPG/1920px-Topographia_Alsatiae_%28Merian%29_p_012.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_012.JPG",
+  "tag": 37
+ },
+ {
+  "titel": "Salzburg",
+  "zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+  "jahr": 1649,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/5/57/Abersee_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Abersee_(Merian).jpg",
+  "tag": 38
+ },
+ {
+  "titel": "Eisenach",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1647",
+  "jahr": 1647,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Eisenach-1647-Merian.jpg/1920px-Eisenach-1647-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Eisenach-1647-Merian.jpg",
+  "tag": 39
+ },
+ {
+  "titel": "Bordeaux",
+  "zeile": "Merian & Zeiller · Topographia Galliae · 1661",
+  "jahr": 1661,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/BOrdeaux_1661_Zeiller_15215.jpg/1920px-BOrdeaux_1661_Zeiller_15215.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:BOrdeaux_1661_Zeiller_15215.jpg",
+  "tag": 40
+ },
+ {
+  "titel": "Lautenthal",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/1/19/Lautenthal_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lautenthal_(Merian).jpg",
+  "tag": 41
+ },
+ {
+  "titel": "Hornberg",
+  "zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+  "jahr": 1643,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Hornberg_%28Merian%29.jpg/1920px-Hornberg_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Hornberg_(Merian).jpg",
+  "tag": 42
+ },
+ {
+  "titel": "Jena",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Jena-1650-Merian.jpg/1920px-Jena-1650-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Jena-1650-Merian.jpg",
+  "tag": 43
+ },
+ {
+  "titel": "Berlin",
+  "zeile": "Matthäus Merian · Topographia Electoratus Brandenburgici · 1652",
+  "jahr": 1652,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Berlin-1652-Merian-vogel.jpg/1920px-Berlin-1652-Merian-vogel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Berlin-1652-Merian-vogel.jpg",
+  "tag": 44
+ },
+ {
+  "titel": "Coburg",
+  "zeile": "Matthäus Merian · Topographia Franconiae · 1648",
+  "jahr": 1648,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/De_Merian_Frankoniae_044.jpg/1920px-De_Merian_Frankoniae_044.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Frankoniae_044.jpg",
+  "tag": 45
+ },
+ {
+  "titel": "Lamspring",
+  "zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+  "jahr": 1653,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Lamspring_%28Merian%29.jpg/1920px-Lamspring_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lamspring_(Merian).jpg",
+  "tag": 46
+ },
+ {
+  "titel": "Konstanz",
+  "zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+  "jahr": 1643,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/De_Merian_Sueviae_078.jpg/1920px-De_Merian_Sueviae_078.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Sueviae_078.jpg",
+  "tag": 47
+ },
+ {
+  "titel": "Weimar",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Weimar-1650-Merian_bearbeitet.jpg/1920px-Weimar-1650-Merian_bearbeitet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Weimar-1650-Merian_bearbeitet.jpg",
+  "tag": 48
+ },
+ {
+  "titel": "Zürich",
+  "zeile": "Matthäus Merian · Topographia Helvetiae · 1642",
+  "jahr": 1642,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Zentralbibliothek_Z%C3%BCrich_-_Z%C3%BCrich_-_991102314679705501_cropped.jpg/1920px-Zentralbibliothek_Z%C3%BCrich_-_Z%C3%BCrich_-_991102314679705501_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Zentralbibliothek_Z%C3%BCrich_-_Z%C3%BCrich_-_991102314679705501_cropped.jpg",
+  "tag": 49
+ },
+ {
+  "titel": "Freiberg",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1647",
+  "jahr": 1647,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Freiberg-1647-Merian-Belagerung.jpg/1920px-Freiberg-1647-Merian-Belagerung.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Freiberg-1647-Merian-Belagerung.jpg",
+  "tag": 50
+ },
+ {
+  "titel": "Leipzig",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Leipzigk_%28Merian%29.png/1920px-Leipzigk_%28Merian%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Leipzigk_(Merian).png",
+  "tag": 51
+ },
+ {
+  "titel": "Olse",
+  "zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Olse_%28Merian%29.jpg/1920px-Olse_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Olse_(Merian).jpg",
+  "tag": 52
+ },
+ {
+  "titel": "St. Gallen",
+  "zeile": "Matthäus Merian · Topographia Helvetiae · 1654",
+  "jahr": 1654,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Topographia_Helvetiae%2C_Rhaetiae_et_Valesiae_1654_%281127057%29.jpg/1920px-Topographia_Helvetiae%2C_Rhaetiae_et_Valesiae_1654_%281127057%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Helvetiae,_Rhaetiae_et_Valesiae_1654_(1127057).jpg",
+  "tag": 53
+ },
+ {
+  "titel": "Dortmund",
+  "zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+  "jahr": 1647,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/De_merian_Westphaliae_110.jpg/1920px-De_merian_Westphaliae_110.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_merian_Westphaliae_110.jpg",
+  "tag": 54
+ },
+ {
+  "titel": "Orléanais",
+  "zeile": "Matthäus Merian · Topographia Germaniae · 1660",
+  "jahr": 1660,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Carte_gouvernement_Orl%C3%A9ans_1660_15052.jpg/1920px-Carte_gouvernement_Orl%C3%A9ans_1660_15052.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Carte_gouvernement_Orl%C3%A9ans_1660_15052.jpg",
+  "tag": 55
+ },
+ {
+  "titel": "Bautzen",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/4/49/Bautzen_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Bautzen_(Merian).jpg",
+  "tag": 56
+ },
+ {
+  "titel": "Neuenbürg",
+  "zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Prospect_der_Statt_Newenburg.jpg/1920px-Prospect_der_Statt_Newenburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Prospect_der_Statt_Newenburg.jpg",
+  "tag": 57
+ },
+ {
+  "titel": "Mainz",
+  "zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1648",
+  "jahr": 1648,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Mainz_1648_Merian_%28007%29.jpg/1920px-Mainz_1648_Merian_%28007%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Mainz_1648_Merian_(007).jpg",
+  "tag": 58
+ },
+ {
+  "titel": "Hamburg",
+  "zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+  "jahr": 1653,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Hambvrgvm_%28Merian%29.jpg/1920px-Hambvrgvm_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Hambvrgvm_(Merian).jpg",
+  "tag": 59
+ },
+ {
+  "titel": "Mante",
+  "zeile": "Merian & Zeiller · Topographia Galliae · 1657",
+  "jahr": 1657,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Mante_1657_Zeiller_15061.jpg/1920px-Mante_1657_Zeiller_15061.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Mante_1657_Zeiller_15061.jpg",
+  "tag": 60
+ },
+ {
+  "titel": "Colmar",
+  "zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Topographia_Alsatiae_%28Merian%29_p_007.JPG/1920px-Topographia_Alsatiae_%28Merian%29_p_007.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_007.JPG",
+  "tag": 61
+ },
+ {
+  "titel": "Paderborn",
+  "zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+  "jahr": 1647,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/De_merian_Westphaliae_143.jpg/1920px-De_merian_Westphaliae_143.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_merian_Westphaliae_143.jpg",
+  "tag": 62
+ },
+ {
+  "titel": "Mallersdorf",
+  "zeile": "Matthäus Merian · Topographia Bavariae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Mallersdorf_%28Merian%29.jpg/1920px-Mallersdorf_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Mallersdorf_(Merian).jpg",
+  "tag": 63
+ },
+ {
+  "titel": "Isen",
+  "zeile": "Matthäus Merian · Topographia Bavariae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Isen_%28Merian%29.jpg/1920px-Isen_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Isen_(Merian).jpg",
+  "tag": 64
+ },
+ {
+  "titel": "Keyserswerdt",
+  "zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Keyserswerdt_%28Merian%29.jpg/1920px-Keyserswerdt_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Keyserswerdt_(Merian).jpg",
+  "tag": 65
+ },
+ {
+  "titel": "Klingenberg",
+  "zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Klingenberg_%28Merian%29.jpg/1920px-Klingenberg_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Klingenberg_(Merian).jpg",
+  "tag": 66
+ },
+ {
+  "titel": "Herrenberg",
+  "zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+  "jahr": 1643,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/M_Merian_-_Ansicht_von_Herrenberg_-_Kupferst.kol._1643_%28BVuHSi14%29.jpg/1920px-M_Merian_-_Ansicht_von_Herrenberg_-_Kupferst.kol._1643_%28BVuHSi14%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:M_Merian_-_Ansicht_von_Herrenberg_-_Kupferst.kol._1643_(BVuHSi14).jpg",
+  "tag": 67
+ },
+ {
+  "titel": "Lauf an der Pegnitz",
+  "zeile": "Matthäus Merian · Topographia Franconiae · 1648",
+  "jahr": 1648,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Lauff.jpg/1920px-Lauff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lauff.jpg",
+  "tag": 68
+ },
+ {
+  "titel": "Nancy",
+  "zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+  "jahr": 1645,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Palatinatus_Rheni_%28Merian%29_265.jpg/1920px-Palatinatus_Rheni_%28Merian%29_265.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Palatinatus_Rheni_(Merian)_265.jpg",
+  "tag": 69
+ },
+ {
+  "titel": "Graz",
+  "zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+  "jahr": 1649,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Graz_im_17.Jahrhundert.png/1920px-Graz_im_17.Jahrhundert.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Graz_im_17.Jahrhundert.png",
+  "tag": 70
+ },
+ {
+  "titel": "Statt Blamont",
+  "zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+  "jahr": 1645,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Statt_Blamont_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Statt_Blamont_(Merian).jpg",
+  "tag": 71
+ },
+ {
+  "titel": "Kitzingen",
+  "zeile": "Matthäus Merian · Topographia Franconiae · 1648",
+  "jahr": 1648,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/De_Merian_Frankoniae_065.jpg/1920px-De_Merian_Frankoniae_065.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Frankoniae_065.jpg",
+  "tag": 72
+ },
+ {
+  "titel": "Hameln",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Hameln-1654-Merian.jpg/1920px-Hameln-1654-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Hameln-1654-Merian.jpg",
+  "tag": 73
+ },
+ {
+  "titel": "Mansfeld",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Mansfeld-1650-Merian.jpg/1920px-Mansfeld-1650-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Mansfeld-1650-Merian.jpg",
+  "tag": 74
+ },
+ {
+  "titel": "Lyon",
+  "zeile": "Matthäus Merian · Topographia Germaniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Port_royal_Lyon_15037.jpg/1920px-Port_royal_Lyon_15037.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Port_royal_Lyon_15037.jpg",
+  "tag": 75
+ },
+ {
+  "titel": "Oppenheim",
+  "zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/De_Merian_Hassiae_287.jpg/1920px-De_Merian_Hassiae_287.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Hassiae_287.jpg",
+  "tag": 76
+ },
+ {
+  "titel": "Überlingen",
+  "zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+  "jahr": 1643,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/De_Merian_Sueviae_252.jpg/1920px-De_Merian_Sueviae_252.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Sueviae_252.jpg",
+  "tag": 77
+ },
+ {
+  "titel": "Ober-Walsee",
+  "zeile": "Matthäus Merian · Topographia Provinciarum Austriacarum · 1649",
+  "jahr": 1649,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/0/06/Ober-Walsee_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Ober-Walsee_(Merian).jpg",
+  "tag": 78
+ },
+ {
+  "titel": "München",
+  "zeile": "Matthäus Merian · Topographia Bavariae · 1644",
+  "jahr": 1644,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/8/83/Muenchenmarkt_merian.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Muenchenmarkt_merian.JPG",
+  "tag": 79
+ },
+ {
+  "titel": "Celle",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/6/69/Celle-1654-Merian-Weinhausen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Celle-1654-Merian-Weinhausen.jpg",
+  "tag": 80
+ },
+ {
+  "titel": "Prag",
+  "zeile": "Matthäus Merian · Topographia Bohemiae, Moraviae et Silesiae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Bohemiae_Moraviae_et_Silesiae_%28Merian%29_102.jpg/1920px-Bohemiae_Moraviae_et_Silesiae_%28Merian%29_102.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Bohemiae_Moraviae_et_Silesiae_(Merian)_102.jpg",
+  "tag": 81
+ },
+ {
+  "titel": "Höchst",
+  "zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/H%C3%B6chst_%28Merian%29.jpg/1920px-H%C3%B6chst_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:H%C3%B6chst_(Merian).jpg",
+  "tag": 82
+ },
+ {
+  "titel": "Minden",
+  "zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+  "jahr": 1647,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/De_merian_Westphaliae_117.jpg/1920px-De_merian_Westphaliae_117.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_merian_Westphaliae_117.jpg",
+  "tag": 83
+ },
+ {
+  "titel": "Koblenz",
+  "zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/De_Merian_Mainz_Trier_K%C3%B6ln_057.jpg/1920px-De_Merian_Mainz_Trier_K%C3%B6ln_057.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Mainz_Trier_K%C3%B6ln_057.jpg",
+  "tag": 84
+ },
+ {
+  "titel": "Meissen",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Meissen-1650-Merian.jpg/1920px-Meissen-1650-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Meissen-1650-Merian.jpg",
+  "tag": 85
+ },
+ {
+  "titel": "Köln",
+  "zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1648",
+  "jahr": 1648,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/K%C3%B6ln_Plan_1648_Merian_%28075%29.jpg/1920px-K%C3%B6ln_Plan_1648_Merian_%28075%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:K%C3%B6ln_Plan_1648_Merian_(075).jpg",
+  "tag": 86
+ },
+ {
+  "titel": "Amiens",
+  "zeile": "Merian & Zeiller · Topographia Galliae · 1655",
+  "jahr": 1655,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Amiens_J_Peeters_1655_Zeiller_14356.jpg/1920px-Amiens_J_Peeters_1655_Zeiller_14356.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Amiens_J_Peeters_1655_Zeiller_14356.jpg",
+  "tag": 87
+ },
+ {
+  "titel": "Magdeburg",
+  "zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+  "jahr": 1653,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Magdeburg-1653-Merian-Siebenfrauen.jpg/1920px-Magdeburg-1653-Merian-Siebenfrauen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Magdeburg-1653-Merian-Siebenfrauen.jpg",
+  "tag": 88
+ },
+ {
+  "titel": "Lahnstein",
+  "zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Lahnstein_%28Merian%29.jpg/1920px-Lahnstein_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lahnstein_(Merian).jpg",
+  "tag": 89
+ },
+ {
+  "titel": "Kalkar by Braun & Hogenberg",
+  "zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+  "jahr": 1647,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/De_merian_Westphaliae_105.jpg/1920px-De_merian_Westphaliae_105.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_merian_Westphaliae_105.jpg",
+  "tag": 90
+ },
+ {
+  "titel": "Dresden",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Dresden_1650_Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Dresden_1650_Merian.jpg",
+  "tag": 91
+ },
+ {
+  "titel": "Nördlingen",
+  "zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+  "jahr": 1643,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/De_Merian_Sueviae_188.jpg/1920px-De_Merian_Sueviae_188.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Sueviae_188.jpg",
+  "tag": 92
+ },
+ {
+  "titel": "Göttingen",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/3/36/G%C3%B6ttingen_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:G%C3%B6ttingen_(Merian).jpg",
+  "tag": 93
+ },
+ {
+  "titel": "Luzern",
+  "zeile": "Matthäus Merian · Topographia Helvetiae · 1654",
+  "jahr": 1654,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Topographia_Helvetiae%2C_Rhaetiae_et_Valesiae_1654_%281126792%29.jpg/1920px-Topographia_Helvetiae%2C_Rhaetiae_et_Valesiae_1654_%281126792%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Helvetiae,_Rhaetiae_et_Valesiae_1654_(1126792).jpg",
+  "tag": 94
+ },
+ {
+  "titel": "Greifswald",
+  "zeile": "Matthäus Merian · Topographia Electoratus Brandenburgici · 1652",
+  "jahr": 1652,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Caspar_Merian_-_Gryphiswaldia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Caspar_Merian_-_Gryphiswaldia.jpg",
+  "tag": 95
+ },
+ {
+  "titel": "Mülhausen",
+  "zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Topographia_Alsatiae_%28Merian%29_p_016.JPG/1920px-Topographia_Alsatiae_%28Merian%29_p_016.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_016.JPG",
+  "tag": 96
+ },
+ {
+  "titel": "Zittau",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Zittaw_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Zittaw_(Merian).jpg",
+  "tag": 97
+ },
+ {
+  "titel": "Kiel",
+  "zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+  "jahr": 1653,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Saxoniae_Inferioris_%28Merian%29_b_007.jpg/1920px-Saxoniae_Inferioris_%28Merian%29_b_007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Saxoniae_Inferioris_(Merian)_b_007.jpg",
+  "tag": 98
+ },
+ {
+  "titel": "Newen Closter",
+  "zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+  "jahr": 1653,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Newen_Closter_%28Merian%29.jpg/1920px-Newen_Closter_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Newen_Closter_(Merian).jpg",
+  "tag": 99
+ },
+ {
+  "titel": "Wolfenbüttel",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Wolfenb%C3%BCttel_Schlo%C3%9F_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Wolfenb%C3%BCttel_Schlo%C3%9F_(Merian).jpg",
+  "tag": 100
+ },
+ {
+  "titel": "Hamm",
+  "zeile": "Matthäus Merian · Topographia Westphaliae · 1647",
+  "jahr": 1647,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Hamm_%28Merian%29.jpg/1920px-Hamm_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Hamm_(Merian).jpg",
+  "tag": 101
+ },
+ {
+  "titel": "Lawenaw",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Lawenaw_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lawenaw_(Merian).jpg",
+  "tag": 102
+ },
+ {
+  "titel": "Mühlhausen",
+  "zeile": "Matthäus Merian · Topographia Helvetiae · 1642",
+  "jahr": 1642,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/4/4e/M%C3%BChlhausen_CH_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:M%C3%BChlhausen_CH_(Merian).jpg",
+  "tag": 103
+ },
+ {
+  "titel": "Augsburg",
+  "zeile": "Matthäus Merian · Topographia Sueviae · 1643",
+  "jahr": 1643,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/De_Merian_Sueviae_027.jpg/1920px-De_Merian_Sueviae_027.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:De_Merian_Sueviae_027.jpg",
+  "tag": 104
+ },
+ {
+  "titel": "Halle",
+  "zeile": "Matthäus Merian · Topographia Saxoniae Inferioris · 1653",
+  "jahr": 1653,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Halle-1653-Merian.jpg/1920px-Halle-1653-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Halle-1653-Merian.jpg",
+  "tag": 105
+ },
+ {
+  "titel": "Basel",
+  "zeile": "Matthäus Merian · Topographia Helvetiae · 1642",
+  "jahr": 1642,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Zentralbibliothek_Z%C3%BCrich_-_Basilea_-_991095345659705501.jpg/1920px-Zentralbibliothek_Z%C3%BCrich_-_Basilea_-_991095345659705501.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Zentralbibliothek_Z%C3%BCrich_-_Basilea_-_991095345659705501.jpg",
+  "tag": 106
+ },
+ {
+  "titel": "Idstein",
+  "zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Idstein_%28Merian%29.jpg/1920px-Idstein_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Idstein_(Merian).jpg",
+  "tag": 107
+ },
+ {
+  "titel": "Braunschweig",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Karte_Wolfenb%C3%BCttel-Braunschweig_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Karte_Wolfenb%C3%BCttel-Braunschweig_(Merian).jpg",
+  "tag": 108
+ },
+ {
+  "titel": "Lausanne",
+  "zeile": "Matthäus Merian · Topographia Helvetiae · 1654",
+  "jahr": 1654,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Topographia_Helvetiae%2C_Rhaetiae_et_Valesiae_1654_%281126749%29.jpg/1920px-Topographia_Helvetiae%2C_Rhaetiae_et_Valesiae_1654_%281126749%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Helvetiae,_Rhaetiae_et_Valesiae_1654_(1126749).jpg",
+  "tag": 109
+ },
+ {
+  "titel": "Schaffhausen",
+  "zeile": "Matthäus Merian · Topographia Helvetiae · 1642",
+  "jahr": 1642,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Merian_Schaffhausen_1642.jpg/1920px-Merian_Schaffhausen_1642.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Merian_Schaffhausen_1642.jpg",
+  "tag": 110
+ },
+ {
+  "titel": "Sintzheim",
+  "zeile": "Matthäus Merian · Topographia Palatinatus Rheni · 1645",
+  "jahr": 1645,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/9/99/Sintzheim_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:Sintzheim_(Merian).jpg",
+  "tag": 111
+ },
+ {
+  "titel": "Hofheim",
+  "zeile": "Matthäus Merian · Topographia Archiepiscopatuum Moguntinensis, Treverensis et Coloniensis · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Hofheim_%28Merian%29.jpg/1920px-Hofheim_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Hofheim_(Merian).jpg",
+  "tag": 112
+ },
+ {
+  "titel": "Straßburg",
+  "zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Topographia_Alsatiae_%28Merian%29_p_023.JPG/1920px-Topographia_Alsatiae_%28Merian%29_p_023.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Alsatiae_(Merian)_p_023.JPG",
+  "tag": 113
+ },
+ {
+  "titel": "Hovegeismar",
+  "zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Hovegeismar_%28Merian%29.jpg/1920px-Hovegeismar_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Hovegeismar_(Merian).jpg",
+  "tag": 114
+ },
+ {
+  "titel": "Landshut",
+  "zeile": "Matthäus Merian · Topographia Bavariae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Topographia_Bavariae_%28Merian%29_b_09-alt_3a.jpg/1920px-Topographia_Bavariae_%28Merian%29_b_09-alt_3a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Topographia_Bavariae_(Merian)_b_09-alt_3a.jpg",
+  "tag": 115
+ },
+ {
+  "titel": "Fulda",
+  "zeile": "Matthäus Merian · Topographia Hassiae · 1646",
+  "jahr": 1646,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Fulda_%28Merian%29.jpg/1920px-Fulda_%28Merian%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Fulda_(Merian).jpg",
+  "tag": 116
+ },
+ {
+  "titel": "Lüneburg",
+  "zeile": "Matthäus Merian · Topographia Braunschweig und Lüneburg · 1654",
+  "jahr": 1654,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Lueneburg-1654-Merian-Kloster.jpg/1920px-Lueneburg-1654-Merian-Kloster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Lueneburg-1654-Merian-Kloster.jpg",
+  "tag": 117
+ },
+ {
+  "titel": "Görlitz",
+  "zeile": "Matthäus Merian · Topographia Superioris Saxoniae · 1650",
+  "jahr": 1650,
+  "quelle": "https://upload.wikimedia.org/wikipedia/commons/2/21/G%C3%B6rlitz_1650_Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "seite": "https://commons.wikimedia.org/wiki/File:G%C3%B6rlitz_1650_Merian.jpg",
+  "tag": 118
+ },
+ {
+  "titel": "Paris",
+  "zeile": "Merian & Zeiller · Topographia Galliae · 1655",
+  "jahr": 1655,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Paris_1655_Zeiller_13692.jpg/1920px-Paris_1655_Zeiller_13692.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Paris_1655_Zeiller_13692.jpg",
+  "tag": 119
+ },
+ {
+  "titel": "Landau in der Pfalz",
+  "zeile": "Matthäus Merian · Topographia Alsatiae · 1644",
+  "jahr": 1644,
+  "quelle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Landau_in_der_Pfalz_Ansicht_Buno_Merian_koloriert.jpg/1920px-Landau_in_der_Pfalz_Ansicht_Buno_Merian_koloriert.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "seite": "https://commons.wikimedia.org/wiki/File:Landau_in_der_Pfalz_Ansicht_Buno_Merian_koloriert.jpg",
+  "tag": 120
+ }
+]
